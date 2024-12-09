@@ -14,6 +14,15 @@ namespace Application
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+            // Register filter strategies
+            services.AddScoped<IPropertyListingFilterStrategy, TypeFilterStrategy>();
+            services.AddScoped<IPropertyListingFilterStrategy, PriceFilterStrategy>();
+            services.AddScoped<IPropertyListingFilterStrategy, SquareFootageFilterStrategy>();
+            services.AddScoped<IPropertyListingFilterStrategy, NumberOfBedroomsFilterStrategy>();
+            services.AddScoped<IPropertyListingFilterStrategy, NumberOfBathroomsFilterStrategy>();
+            services.AddScoped<IPropertyListingFilterStrategy, StatusFilterStrategy>();
+
             return services;
         }
    

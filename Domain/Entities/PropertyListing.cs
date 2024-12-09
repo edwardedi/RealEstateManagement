@@ -10,7 +10,6 @@
         public double SquareFootage { get; set; }
         public double NumberOfBedrooms { get; set; }
         public double NumberOfBathrooms { get; set; }
-        //title
         public string? Description { get; set; }
         public string? Status { get; set; }
         public DateTime ListingDate { get; set; }

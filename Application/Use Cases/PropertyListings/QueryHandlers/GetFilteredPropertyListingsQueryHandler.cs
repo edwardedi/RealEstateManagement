@@ -13,11 +13,14 @@ namespace Application.Use_Cases.PropertyListings.QueryHandlers
     {
         private readonly IPropertyListingRepository repository;
         private readonly IMapper mapper;
+        private readonly IEnumerable<IPropertyListingFilterStrategy> filterStrategies;
 
-        public GetFilteredPropertyListingsQueryHandler(IPropertyListingRepository repository, IMapper mapper)
+
+        public GetFilteredPropertyListingsQueryHandler(IPropertyListingRepository repository, IMapper mapper, IEnumerable<IPropertyListingFilterStrategy> filterStrategies)
         {
             this.repository = repository;
             this.mapper = mapper;
+            this.filterStrategies = filterStrategies;
         }
 
         public async Task<Result<PagedResult<PropertyListingDto>>> Handle(GetFilteredPropertyListingsQuery request, CancellationToken cancellationToken)
@@ -26,29 +29,9 @@ namespace Application.Use_Cases.PropertyListings.QueryHandlers
             var query = propertyListings.AsQueryable();
 
             //apply filter
-            if (!string.IsNullOrEmpty(request.Type))
+            foreach (var strategy in filterStrategies)
             {
-                query = query.Where(x => x.Type.ToLower() == request.Type.ToLower());
-            }
-            if (request.Price > 0)
-            {
-                query = query.Where(x => x.Price <= request.Price);
-            }
-            if (request.SquareFootage > 0)
-            {
-                query = query.Where(x => x.SquareFootage <= request.SquareFootage);
-            }
-            if (request.NumberOfBedrooms > 0)
-            {
-                query = query.Where(x => x.NumberOfBedrooms <= request.NumberOfBedrooms);
-            }
-            if (request.NumberOfBathrooms > 0)
-            {
-                query = query.Where(x => x.NumberOfBathrooms <= request.NumberOfBathrooms);
-            }
-            if (!string.IsNullOrEmpty(request.Status))
-            {
-                query = query.Where(x => x.Status == request.Status);
+                query = strategy.ApplyFilter(query, request);
             }
 
             //apply pagination

@@ -23,7 +23,7 @@ namespace RealEstateManagement.Controllers
         }
 
         [HttpPost]
-        
+        [Authorize]
         public async Task<ActionResult<Result<Guid>>> CreatePropertyListing(CreatePropertyListingCommand command)
         {
             var result = await mediator.Send(command);
