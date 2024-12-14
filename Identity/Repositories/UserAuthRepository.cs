@@ -24,7 +24,7 @@ namespace Identity.Repositories
         public async Task<string> Login(User user)
         {
             var existingUser = await context.Users.SingleOrDefaultAsync(u => u.Email == user.Email);
-            if (existingUser == null)
+            if (existingUser == null || !BCrypt.Net.BCrypt.Verify(user.PasswordHash, existingUser.PasswordHash))
             {
                 throw new UnauthorizedAccessException("Invalid credentials");
             }
@@ -33,7 +33,13 @@ namespace Identity.Repositories
             var key = Encoding.ASCII.GetBytes(configuration["Jwt:Key"]!);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.UserId.ToString()) }),
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, existingUser.UserId.ToString()),
+                    new Claim("name", existingUser.Name),
+                    new Claim(ClaimTypes.Email, existingUser.Email),
+                    new Claim("phone_number", existingUser.PhoneNumber)
+                }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
