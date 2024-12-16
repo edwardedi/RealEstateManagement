@@ -18,7 +18,7 @@ namespace RealEstateManagement.Controllers
         }
 
         [HttpPost("predict")]
-        public ActionResult<float> PredictPrice(PropertyListingData propertyListing)
+        public ActionResult<float> PredictPrice(PropertyListingDataInput propertyListing)
         {
             return propertyListingPricePredictionModel.Predict(propertyListing);
         }
