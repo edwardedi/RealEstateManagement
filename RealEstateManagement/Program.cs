@@ -74,6 +74,7 @@ app.UseCors("MyAllowSpecificOrigins");
 
 app.UseHttpsRedirection();
 
+app.UseMiddleware<ValidationExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 
