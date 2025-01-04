@@ -1,12 +1,13 @@
 ﻿using Application.DTOs;
 using Application.Use_Cases.ClientInquiries.Queries;
 using AutoMapper;
+using Domain.Common;
 using Domain.Repositories;
 using MediatR;                                      
 
 namespace Application.Use_Cases.ClientInquiries.QueryHandler
 {
-    public class GetInquiryByIdQueryHandler : IRequestHandler<GetInquiryByIdQuery, ClientInquiryDto>
+    public class GetInquiryByIdQueryHandler : IRequestHandler<GetInquiryByIdQuery, Result<ClientInquiryDto>>
     {
         private readonly IMapper mapper;
         private readonly IClientInquiryRepository repository;
@@ -17,15 +18,18 @@ namespace Application.Use_Cases.ClientInquiries.QueryHandler
             this.repository = repository;
         }
 
-        public async Task<ClientInquiryDto> Handle(GetInquiryByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Result<ClientInquiryDto>> Handle(GetInquiryByIdQuery request, CancellationToken cancellationToken)
         {
-            var inquiry = await repository.GetInquiryByIdAsync(request.InquiryId);
-            if (inquiry == null)
+            var result = await repository.GetInquiryByIdAsync(request.InquiryId);
+            if (result.IsSuccess)
             {
-                throw new KeyNotFoundException($"Client inquiry with ID {request.InquiryId} not found.");
+                var inquiryDto = mapper.Map<ClientInquiryDto>(result.Data);
+                return Result<ClientInquiryDto>.Success(inquiryDto);
             }
-            return mapper.Map<ClientInquiryDto>(inquiry);
-
+            else
+            {
+                return Result<ClientInquiryDto>.Failure($"Client inquiry with Id {request.InquiryId} not found");
+            }
         }
     }
 }

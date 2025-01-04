@@ -1,12 +1,13 @@
 ﻿using Application.DTOs;
 using Application.Use_Cases.ClientInquiries.Queries;
 using AutoMapper;
+using Domain.Common;
 using Domain.Repositories;
 using MediatR;
 
 namespace Application.Use_Cases.ClientInquiries.QueryHandler
 {
-    public class GetInquiryByClientIdQueryHandler : IRequestHandler<GetInquiryByClientIdQuery, List<ClientInquiryDto>>
+    public class GetInquiryByClientIdQueryHandler : IRequestHandler<GetInquiryByClientIdQuery, Result<List<ClientInquiryDto>>>
     {
         private readonly IMapper _mapper;
         private readonly IClientInquiryRepository _repository;
@@ -17,10 +18,18 @@ namespace Application.Use_Cases.ClientInquiries.QueryHandler
             _repository = repository;
         }
 
-        public async Task<List<ClientInquiryDto>> Handle(GetInquiryByClientIdQuery request, CancellationToken cancellationToken)
+        public async Task<Result<List<ClientInquiryDto>>> Handle(GetInquiryByClientIdQuery request, CancellationToken cancellationToken)
         {
-            var inquiries = await _repository.GetInquiriesByClientId(request.ClientId);
-            return inquiries.Select(inquiry => _mapper.Map<ClientInquiryDto>(inquiry)).ToList();
+            var result = await _repository.GetInquiriesByClientId(request.ClientId);
+            if (result.IsSuccess)
+            {
+                var inquiriesDto = result.Data.Select(inquiry => _mapper.Map<ClientInquiryDto>(inquiry)).ToList();
+                return Result<List<ClientInquiryDto>>.Success(inquiriesDto);
+            }
+            else
+            {
+                return Result<List<ClientInquiryDto>>.Failure(result.ErrorMessage);
+            }
         }
     }
 }
