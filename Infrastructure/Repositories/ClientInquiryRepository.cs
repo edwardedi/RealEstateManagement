@@ -107,5 +107,20 @@ namespace Infrastructure.Repositories
                 return Result<Guid>.Failure(errorMessage);
             }
         }
+
+        public async Task<Result<IEnumerable<PropertyListing>>> SearchAllPropertiesAsync(string searchQuery)
+        {
+            try
+            {
+                var properties = await context.PropertyListings
+                                        .Where(property => property.Title.ToUpper().Contains(searchQuery.ToUpper()) || property.Description.Contains(searchQuery))
+                                        .ToListAsync();
+                return Result<IEnumerable<PropertyListing>>.Success(properties);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<PropertyListing>>.Failure($"An error occurred while retrieving properties: {ex.Message}");
+            }
+        }
     }
 }

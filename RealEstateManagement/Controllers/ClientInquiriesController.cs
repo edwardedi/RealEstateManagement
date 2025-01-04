@@ -71,5 +71,12 @@ namespace RealEstateManagement.Controllers
             }
             return BadRequest(result.ErrorMessage);
         }
+
+        [HttpGet("search")]
+        public async Task<ActionResult<List<PropertyListingDto>>> SearchAllPropertiesAsync(string searchQuery)
+        {
+            var result = await mediator.Send(new SearchAllPropertiesQuery { SearchQuery = searchQuery });
+            return Ok(result);
+        }
     }
 }

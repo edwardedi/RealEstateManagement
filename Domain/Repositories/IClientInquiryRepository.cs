@@ -11,5 +11,7 @@ namespace Domain.Repositories
         Task<Result<Guid>> AddInquiryAsync(ClientInquiry inquiry);
         Task<Result<Guid>> UpdateInquiryAsync(ClientInquiry inquiry);
         Task<Result<Guid>> DeleteInquiryAsync(Guid id);
+
+        Task<Result<IEnumerable<PropertyListing>>> SearchAllPropertiesAsync(string searchQuery);
     }
 }
