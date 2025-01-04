@@ -45,6 +45,7 @@ namespace RealEstateManagement.Controllers
             return Ok(result);
         }
 
+
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateInquiry(Guid id, UpdateClientInquiryCommand command)
         {

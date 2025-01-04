@@ -88,6 +88,13 @@ namespace RealEstateManagement.Controllers
             return Ok(result);
         }
 
+        [HttpGet("user/{userId:guid}")]
+        public async Task<ActionResult<List<PropertyListingDto>>> GetListingsByUserId(Guid userId)
+        {
+            var result = await mediator.Send(new GetListingsByUserIdQuery { UserId = userId });
+            return Ok(result);
+        }
+
         [HttpDelete("{id:guid}")]
         [Authorize]
         public async Task<IActionResult> DeletePropertyListing(Guid id)
