@@ -25,7 +25,7 @@ namespace RealEstateManagement.Controllers
             _transactionRepository = transactionRepository;
         }
         [HttpPost]
-        public async Task<ActionResult<Guid>> AddTransaction([FromBody] AddTransactionCommand command)
+        public async Task<ActionResult<Guid>> AddTransaction([FromBody] CreateTransactionCommand command)
         {
             var transactionId = await _mediator.Send(command);
 

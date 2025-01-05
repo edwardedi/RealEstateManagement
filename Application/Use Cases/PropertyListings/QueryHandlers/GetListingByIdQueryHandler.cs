@@ -1,13 +1,14 @@
 ﻿using Application.DTOs;
 using Application.Use_Cases.Queries;
 using AutoMapper;
+using Domain.Common;
 using Domain.Repositories;
 using MediatR;
 
 
 namespace Application.Use_Cases.QueryHandlers
 {
-    public class GetListingByIdQueryHandler : IRequestHandler<GetListingByIdQuery, PropertyListingDto>
+    public class GetListingByIdQueryHandler : IRequestHandler<GetListingByIdQuery, Result<PropertyListingDto>>
     {
         private readonly IMapper mapper;
         private readonly IPropertyListingRepository repository;
@@ -18,14 +19,18 @@ namespace Application.Use_Cases.QueryHandlers
             this.repository = repository;
         }
 
-        public async Task<PropertyListingDto> Handle(GetListingByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Result<PropertyListingDto>> Handle(GetListingByIdQuery request, CancellationToken cancellationToken)
         {
-            var listing = await repository.GetListingByIdAsync(request.PropertyId);
-            if (listing == null)
+            var result = await repository.GetListingByIdAsync(request.PropertyId);
+            if ( result.IsSuccess)
             {
-                throw new KeyNotFoundException($"Property listing with ID {request.PropertyId} not found.");
+                var listingDto = mapper.Map<PropertyListingDto>(result.Data);
+                return Result<PropertyListingDto>.Success(listingDto);
             }
-            return mapper.Map<PropertyListingDto>(listing);
+            else
+            {
+                return Result<PropertyListingDto>.Failure(result.ErrorMessage);
+            }
         }
     }
 }

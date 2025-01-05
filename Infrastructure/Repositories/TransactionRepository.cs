@@ -41,44 +41,61 @@ namespace Infrastructure.Repositories
         }
 
 
-        public async Task<Transaction> AddTransactionAsync(Transaction transaction)
+        public async Task<Result<Guid>> AddTransactionAsync(Transaction transaction)
         {
-            await context.Transactions.AddAsync(transaction);
-            await context.SaveChangesAsync();
-            return transaction;
-        }
-
-        public async Task UpdateTransactionAsync(Transaction transaction)
-        {
-            var existingTransaction = await context.Transactions.FindAsync(transaction.TransactionId);
-            if (existingTransaction != null)
+            try
             {
-                existingTransaction.PropertyId = transaction.PropertyId;
-                existingTransaction.BuyerId = transaction.BuyerId;
-                existingTransaction.SellerId = transaction.SellerId;
-                existingTransaction.SalePrice = transaction.SalePrice;
-                existingTransaction.Status = transaction.Status;
-
-                context.Transactions.Update(existingTransaction);
+                await context.Transactions.AddAsync(transaction);
                 await context.SaveChangesAsync();
+                return Result<Guid>.Success(transaction.TransactionId);
             }
-            else
+            catch (Exception ex) 
             {
-                throw new Exception($"Transaction with ID {transaction.TransactionId} not found.");
+                return Result<Guid>.Failure(ex.InnerException!.ToString());
             }
         }
 
-        public async Task DeleteTransactionAsync(Guid id)
+        public async Task<Result<Guid>> UpdateTransactionAsync(Transaction transaction)
         {
-            var transaction = await context.Transactions.FindAsync(id);
-            if (transaction != null)
+            try
             {
-                context.Transactions.Remove(transaction);
-                await context.SaveChangesAsync();
+                var existingTransaction = await context.Transactions.FindAsync(transaction.TransactionId);
+                if (existingTransaction != null)
+                {
+                    context.Entry(existingTransaction).CurrentValues.SetValues(transaction);
+                    await context.SaveChangesAsync();
+                    return Result<Guid>.Success(transaction.TransactionId);
+                }
+                else
+                {
+                    return Result<Guid>.Failure("Transaction not found.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception($"Transaction with ID {id} not found.");
+                return Result<Guid>.Failure(ex.InnerException!.ToString());
+            }
+        }
+
+        public async Task<Result<Guid>> DeleteTransactionAsync(Guid id)
+        {
+            try
+            {
+                var transaction = await context.Transactions.FindAsync(id);
+                if (transaction != null)
+                {
+                    context.Transactions.Remove(transaction);
+                    await context.SaveChangesAsync();
+                    return Result<Guid>.Success(id);
+                }
+                else
+                {
+                    return Result<Guid>.Failure("Transaction not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Result<Guid>.Failure(ex.InnerException!.ToString());
             }
         }
 
@@ -99,14 +116,30 @@ namespace Infrastructure.Repositories
             }
         }
 
-        public async Task<IEnumerable<Transaction>> GetTransactionsByBuyerId(Guid userId)
+        public async Task<Result<IEnumerable<Transaction>>> GetTransactionsByBuyerId(Guid userId)
         {
-            return await context.Transactions.Where(t => t.BuyerId == userId).ToListAsync();
+            try
+            {
+                var transactions = await context.Transactions.Where(t => t.BuyerId == userId).ToListAsync();
+                return Result<IEnumerable<Transaction>>.Success(transactions);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<Transaction>>.Failure($"An error occurred while retrieving transactions: {ex.Message}");
+            }
         }
 
-        public async Task<IEnumerable<Transaction>> GetTransactionsBySellerId(Guid userId)
+        public async Task<Result<IEnumerable<Transaction>>> GetTransactionsBySellerId(Guid userId)
         {
-            return await context.Transactions.Where(t => t.SellerId == userId).ToListAsync();
+            try
+            {
+                var transactions = await context.Transactions.Where(t => t.SellerId == userId).ToListAsync();
+                return Result<IEnumerable<Transaction>>.Success(transactions);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<Transaction>>.Failure($"An error occurred while retrieving transactions: {ex.Message}");
+            }
         }
     }
 }

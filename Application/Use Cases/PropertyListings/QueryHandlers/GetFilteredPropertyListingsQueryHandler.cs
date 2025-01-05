@@ -25,7 +25,14 @@ namespace Application.Use_Cases.PropertyListings.QueryHandlers
 
         public async Task<Result<PagedResult<PropertyListingDto>>> Handle(GetFilteredPropertyListingsQuery request, CancellationToken cancellationToken)
         {
-            var propertyListings = await repository.GetAllListingsAsync();
+            var propertyListingsResult = await repository.GetAllListingsAsync();
+
+            if (!propertyListingsResult.IsSuccess)
+            {
+                return Result<PagedResult<PropertyListingDto>>.Failure(propertyListingsResult.ErrorMessage);
+            }
+
+            var propertyListings = propertyListingsResult.Data;
             var query = propertyListings.AsQueryable();
 
             //apply filter

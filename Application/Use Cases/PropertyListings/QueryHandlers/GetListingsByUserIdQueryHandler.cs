@@ -1,12 +1,13 @@
 ﻿using Application.DTOs;
 using Application.Use_Cases.PropertyListings.Queries;
 using AutoMapper;
+using Domain.Common;
 using Domain.Repositories;
 using MediatR;
 
 namespace Application.Use_Cases.PropertyListings.QueryHandlers
 {
-    public class GetListingsByUserIdQueryHandler : IRequestHandler<GetListingsByUserIdQuery, List<PropertyListingDto>>
+    public class GetListingsByUserIdQueryHandler : IRequestHandler<GetListingsByUserIdQuery, Result<List<PropertyListingDto>>>
     {
         private readonly IMapper mapper;
         private readonly IPropertyListingRepository repository;
@@ -17,10 +18,18 @@ namespace Application.Use_Cases.PropertyListings.QueryHandlers
             this.repository = repository;
         }
 
-        public async Task<List<PropertyListingDto>> Handle(GetListingsByUserIdQuery request, CancellationToken token)
+        public async Task<Result<List<PropertyListingDto>>> Handle(GetListingsByUserIdQuery request, CancellationToken token)
         {
-            var listings = await repository.GetListingsByUserId(request.UserId);
-            return listings.Select(listing => mapper.Map<PropertyListingDto>(listing)).ToList();
+            var result = await repository.GetListingsByUserId(request.UserId);
+            if (result.IsSuccess)
+            {
+                var listingsDto = result.Data.Select(listing => mapper.Map<PropertyListingDto>(listing)).ToList();
+                return Result<List<PropertyListingDto>>.Success(listingsDto);
+            }
+            else
+            {
+                return Result<List<PropertyListingDto>>.Failure(result.ErrorMessage);
+            }
         }
     }
 }

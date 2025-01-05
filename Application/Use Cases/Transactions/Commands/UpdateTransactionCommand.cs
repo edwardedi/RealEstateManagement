@@ -6,11 +6,11 @@ namespace RealEstateManagement.Application.Transactions.Commands
 {
     public class UpdateTransactionCommand : IRequest<Result<Guid>>
     {
-        public Transaction Transaction { get; set; }
-
-        public UpdateTransactionCommand(Transaction transaction)
-        {
-            Transaction = transaction;
-        }
+        public Guid TransactionId { get; set; }
+        public Guid PropertyId { get; set; }
+        public Guid BuyerId { get; set; }
+        public Guid SellerId { get; set; }
+        public double SalePrice { get; set; }
+        public string? Status { get; set; }
     }
 }

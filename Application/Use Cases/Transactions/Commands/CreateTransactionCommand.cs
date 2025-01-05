@@ -1,8 +1,9 @@
+using Domain.Common;
 using MediatR;
 
 namespace Application.Use_Cases.Transactions.Commands
 {
-    public class AddTransactionCommand : IRequest<Guid>
+    public class CreateTransactionCommand : IRequest<Result<Guid>>
     {
         public Guid PropertyId { get; set; }
         public Guid BuyerId { get; set; }

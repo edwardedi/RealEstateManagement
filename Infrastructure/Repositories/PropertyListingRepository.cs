@@ -14,21 +14,47 @@ namespace Infrastructure.Repositories
         {
             this.context = context;
         }
-        public async Task<IEnumerable<PropertyListing>> GetAllListingsAsync()
+        public async Task<Result<IEnumerable<PropertyListing>>> GetAllListingsAsync()
         {
-            return await context.PropertyListings.ToListAsync();
+            try
+            {
+                var listings = await context.PropertyListings.ToListAsync();
+                return Result<IEnumerable<PropertyListing>>.Success(listings);
+            }
+            catch(Exception ex)
+            {
+                return Result<IEnumerable<PropertyListing>>.Failure(ex.InnerException!.ToString());
+            }
+            
         }
 
-        public async Task<PropertyListing> GetListingByIdAsync(Guid id)
+        public async Task<Result<PropertyListing>> GetListingByIdAsync(Guid id)
         {
-            return await context.PropertyListings.FindAsync(id);
+            try
+            {
+                var listing = await context.PropertyListings.FindAsync(id);
+                return Result<PropertyListing>.Success(listing);
+            }
+            catch (Exception ex)
+            {
+                return Result<PropertyListing>.Failure(ex.InnerException!.ToString());
+            }
+
         }
 
-        public async Task<IEnumerable<PropertyListing>> GetListingsByUserId(Guid userId)
+        public async Task<Result<IEnumerable<PropertyListing>>> GetListingsByUserId(Guid userId)
         {
-            return await context.PropertyListings
+            try
+            {
+                var listings = await context.PropertyListings
                                 .Where(listing => listing.UserID == userId)
                                 .ToListAsync();
+                return Result<IEnumerable<PropertyListing>>.Success(listings);
+            }
+            catch (Exception ex)
+            {
+                return Result<IEnumerable<PropertyListing>>.Failure(ex.InnerException!.ToString());
+            }
         }
 
         public async Task<Result<Guid>> AddListingAsync(PropertyListing listing)
@@ -64,8 +90,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                var errorMessage = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                return Result<Guid>.Failure(errorMessage);
+                return Result<Guid>.Failure(ex.InnerException!.ToString());
             }
             
         }
@@ -85,8 +110,6 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                //var errorMessage = ex.InnerException != null ? ex.InnerException.ToString() : ex.Message;
-                //return Result<Guid>.Failure(errorMessage);
                 return Result<Guid>.Failure(ex.InnerException!.ToString());
             }
         }

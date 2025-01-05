@@ -8,10 +8,10 @@ namespace Domain.Repositories
         Task<Result<IEnumerable<Transaction>>> GetAllTransactionsAsync();
         Task<Result<Transaction>> GetTransactionByIdAsync(Guid id);
         Task<Result<Transaction>> GetTransactionByPropertyIdAsync(Guid id);
-        Task<IEnumerable<Transaction>> GetTransactionsByBuyerId(Guid userId);
-        Task<IEnumerable<Transaction>> GetTransactionsBySellerId(Guid userId);
-        Task<Transaction> AddTransactionAsync(Transaction transaction);
-        Task UpdateTransactionAsync(Transaction transaction);
-        Task DeleteTransactionAsync(Guid id);
+        Task<Result<IEnumerable<Transaction>>> GetTransactionsByBuyerId(Guid userId);
+        Task<Result<IEnumerable<Transaction>>> GetTransactionsBySellerId(Guid userId);
+        Task<Result<Guid>> AddTransactionAsync(Transaction transaction);
+        Task<Result<Guid>> UpdateTransactionAsync(Transaction transaction);
+        Task<Result<Guid>> DeleteTransactionAsync(Guid id);
     }
 }

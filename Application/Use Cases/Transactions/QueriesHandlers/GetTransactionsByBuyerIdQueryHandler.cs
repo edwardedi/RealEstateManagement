@@ -22,7 +22,12 @@ namespace Application.Use_Cases.Transactions.QueriesHandlers
 
         public async Task<Result<PagedResult<TransactionDto>>> Handle(GetTransactionsByBuyerIdQuery request, CancellationToken cancellationToken)
         {
-            var transactions = await repository.GetTransactionsByBuyerId(request.BuyerId);
+            var result = await repository.GetTransactionsByBuyerId(request.BuyerId);
+            if (!result.IsSuccess)
+            {
+                return Result<PagedResult<TransactionDto>>.Failure(result.ErrorMessage);
+            }
+            var transactions = result.Data;
             var query = transactions.AsQueryable();
 
             var pagedTransactions = query.ApplyPaging(request.Page, request.PageSize);

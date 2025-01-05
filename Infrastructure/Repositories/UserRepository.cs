@@ -92,16 +92,5 @@ namespace Infrastructure.Repositories
                 return Result<Guid>.Failure(ex.InnerException!.ToString());
             }
         }
-
-        public async Task<Result<IEnumerable<PropertyListing>>> GetListingsByUserId(Guid userId)
-        {
-            //return (IEnumerable<PropertyListing>)await context.PropertyListings.FindAsync(userId);
-            throw new NotImplementedException();
-        }
-        public async Task<Result<IEnumerable<ClientInquiry>>> GetClientInquiriesByUserId(Guid userId)
-        {
-            //return (IEnumerable<ClientInquiry>)await context.ClientInquiries.FindAsync(userId);
-            throw new NotImplementedException();
-        }
     }
 }
