@@ -1,6 +1,7 @@
+using Domain.Common;
 using MediatR;
 
-public class RegisterUserCommand : IRequest<Guid>
+public class RegisterUserCommand : IRequest<Result<Guid>>
 {
     public required string Email { get; set; }
     public required string Name { get; set; }

@@ -1,8 +1,9 @@
-﻿using Domain.Entities;
+﻿using Domain.Common;
+using Domain.Entities;
 using Domain.Repositories;
 using MediatR;
 
-public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, string>
+public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, Result<string>>
 {
     private readonly IUserAuthRepository userRepository;
 
@@ -11,14 +12,18 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, string>
         this.userRepository = userRepository;
     }
 
-    public async Task<string> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+    public async Task<Result<string>> Handle(LoginUserCommand request, CancellationToken cancellationToken)
     {
         var user = new User
         {
             Email = request.Email,
             PasswordHash = request.Password
         };
-        var token = await userRepository.Login(user);
-        return token;
+        var result = await userRepository.Login(user);
+        if (result.IsSuccess)
+        {
+            return Result<string>.Success(result.Data);
+        }
+        return Result<string>.Failure(result.ErrorMessage);
     }
 }

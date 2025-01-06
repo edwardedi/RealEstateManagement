@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.Common;
+using Domain.Entities;
 using Domain.Repositories;
 using Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
@@ -21,12 +22,12 @@ namespace Identity.Repositories
             this.configuration = configuration;
         }
 
-        public async Task<string> Login(User user)
+        public async Task<Result<string>> Login(User user)
         {
             var existingUser = await context.Users.SingleOrDefaultAsync(u => u.Email == user.Email);
             if (existingUser == null || !BCrypt.Net.BCrypt.Verify(user.PasswordHash, existingUser.PasswordHash))
             {
-                throw new UnauthorizedAccessException("Invalid credentials");
+                return Result<string>.Failure("Invalid email or password");
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -45,14 +46,20 @@ namespace Identity.Repositories
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            return Result<string>.Success(tokenHandler.WriteToken(token));
         }
 
-        public async Task<Guid> Register(User user, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Register(User user, CancellationToken cancellationToken)
         {
+            var existingUser = await context.Users.SingleOrDefaultAsync(u => u.Email == user.Email, cancellationToken);
+            if (existingUser != null)
+            {
+                return Result<Guid>.Failure("Email already in use");
+            }
+
             context.Users.Add(user);
             await context.SaveChangesAsync(cancellationToken);
-            return user.UserId;
+            return Result<Guid>.Success(user.UserId);
         }
     }
 }
