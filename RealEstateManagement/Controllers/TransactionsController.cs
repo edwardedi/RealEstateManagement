@@ -3,12 +3,12 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Entities;
 using Application.DTOs;
-using Application.Use_Cases.Queries;
-using Microsoft.AspNetCore.Components.Forms;
 using Application.Use_Cases.Transactions.Queries;
 using Domain.Common;
 using Application.Utils;
 using Application.Use_Cases.Transactions.Commands;
+using Application.Use_Cases.Commands;
+using AutoMapper;
 
 namespace RealEstateManagement.Controllers
 {
@@ -16,19 +16,33 @@ namespace RealEstateManagement.Controllers
     [ApiController]
     public class TransactionsController : ControllerBase
     {
-        private readonly IMediator _mediator;
-        private readonly ITransactionRepository _transactionRepository;
+        private readonly IMediator mediator;
+        private readonly ITransactionRepository transactionRepository;
+        private readonly IPropertyListingRepository propertyListingRepository;
+        private readonly IMapper mapper;
 
-        public TransactionsController(IMediator mediator, ITransactionRepository transactionRepository)
+        public TransactionsController(IMediator mediator, ITransactionRepository transactionRepository, IPropertyListingRepository propertyListingRepository, IMapper mapper)
         {
-            _mediator = mediator;
-            _transactionRepository = transactionRepository;
+            this.mediator = mediator;
+            this.transactionRepository = transactionRepository;
+            this.propertyListingRepository = propertyListingRepository;
+            this.mapper = mapper;
         }
+
         [HttpPost]
         public async Task<ActionResult<Guid>> AddTransaction([FromBody] CreateTransactionCommand command)
         {
-            var transactionId = await _mediator.Send(command);
+            var propertyListing = await propertyListingRepository.GetListingByIdAsync(command.PropertyId);
+            if (!propertyListing.IsSuccess)
+            {
+                return BadRequest(propertyListing.ErrorMessage);
+            }
 
+            var updatePropertyListingCommand = mapper.Map<UpdatePropertyListingCommand>(propertyListing.Data);
+            updatePropertyListingCommand.Status = "sold";
+            await mediator.Send(updatePropertyListingCommand);
+
+            var transactionId = await mediator.Send(command);
             return CreatedAtAction(nameof(AddTransaction), new { id = transactionId }, transactionId);
         }
 
@@ -42,7 +56,7 @@ namespace RealEstateManagement.Controllers
 
             try
             {
-                await _transactionRepository.UpdateTransactionAsync(transaction);
+                await transactionRepository.UpdateTransactionAsync(transaction);
             }
             catch (Exception ex)
             {
@@ -61,7 +75,7 @@ namespace RealEstateManagement.Controllers
         {
             try
             {
-                await _transactionRepository.DeleteTransactionAsync(id);
+                await transactionRepository.DeleteTransactionAsync(id);
             }
             catch (Exception ex)
             {
@@ -78,7 +92,7 @@ namespace RealEstateManagement.Controllers
         [HttpGet]
         public async Task<ActionResult<Result<List<TransactionDto>>>> GetAllTransactions()
         {
-            var result = await _mediator.Send(new GetAllTransactionsQuery());
+            var result = await mediator.Send(new GetAllTransactionsQuery());
             if (result.IsSuccess)
             {
                 return Ok(result.Data);
@@ -92,7 +106,7 @@ namespace RealEstateManagement.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TransactionDto>> GetTransactionById(Guid id)
         {
-            var result = await _mediator.Send(new GetTransactionByIdQuery { TransactionId = id });
+            var result = await mediator.Send(new GetTransactionByIdQuery { TransactionId = id });
             if (result.IsSuccess)
             {
                 return Ok(result.Data);
@@ -106,7 +120,7 @@ namespace RealEstateManagement.Controllers
         [HttpGet("property/{id}")]
         public async Task<ActionResult<TransactionDto>> GetTransactionByPropertyId(Guid id)
         {
-            var result = await _mediator.Send(new GetTransactionByPropertyIdQuery { PropertyId = id });
+            var result = await mediator.Send(new GetTransactionByPropertyIdQuery { PropertyId = id });
             if (result.IsSuccess)
             {
                 return Ok(result.Data);
@@ -120,7 +134,7 @@ namespace RealEstateManagement.Controllers
         [HttpGet("buyer/{id}")]
         public async Task<ActionResult<Result<PagedResult<TransactionDto>>>> GetTransactionsByBuyerId(Guid id, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
-            var result = await _mediator.Send(new GetTransactionsByBuyerIdQuery { BuyerId = id, Page = page, PageSize = pageSize });
+            var result = await mediator.Send(new GetTransactionsByBuyerIdQuery { BuyerId = id, Page = page, PageSize = pageSize });
             if (result.IsSuccess)
             {
                 return Ok(result.Data);
@@ -134,7 +148,7 @@ namespace RealEstateManagement.Controllers
         [HttpGet("seller/{id}")]
         public async Task<ActionResult<Result<PagedResult<TransactionDto>>>> GetTransactionsBySellerId(Guid id, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
-            var result = await _mediator.Send(new GetTransactionsBySellerIdQuery { SellerId = id, Page = page, PageSize = pageSize });
+            var result = await mediator.Send(new GetTransactionsBySellerIdQuery { SellerId = id, Page = page, PageSize = pageSize });
             if (result.IsSuccess)
             {
                 return Ok(result.Data);
@@ -143,8 +157,6 @@ namespace RealEstateManagement.Controllers
             {
                 return NotFound();
             }
-
-
         }
     }
 }
