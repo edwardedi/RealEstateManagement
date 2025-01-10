@@ -1,4 +1,6 @@
 ﻿using Microsoft.ML;
+using Microsoft.ML.Data;
+using Microsoft.ML.Trainers;
 
 namespace Application.AIML
 {
@@ -8,35 +10,33 @@ namespace Application.AIML
         private ITransformer model;
         public PropertyListingPricePredictionModel() => mlContext = new MLContext();
 
-        public void Train(List<PropertyListingData> trainingData)
+        public void Train(List<PropertyListingData> dataPoints)
         {
-            var dataView = mlContext.Data.LoadFromEnumerable(trainingData);
-            var pipeline = mlContext.Transforms.Conversion.ConvertType("NumberOfBedroomsFeaturized", nameof(PropertyListingData.NumberOfBedrooms))
-                    .Append(mlContext.Transforms.Conversion.ConvertType("SquareFootageFeaturized", nameof(PropertyListingData.SquareFootage)))
-                    .Append(mlContext.Transforms.Concatenate("Features", "NumberOfBedroomsFeaturized", "SquareFootageFeaturized"))
-                    .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: nameof(PropertyListingData.Price), maximumNumberOfIterations: 100));
-            
-            /*
-             public void Train(List<PropertyListingData> trainingData)
+            var trainingData = mlContext.Data.LoadFromEnumerable(dataPoints);
+            var options = new SdcaRegressionTrainer.Options
             {
-                var dataView = mlContext.Data.LoadFromEnumerable(trainingData);
-                var pipeline = mlContext.Transforms.NormalizeMinMax("NumberOfBedroomsNormalized", nameof(PropertyListingData.NumberOfBedrooms))
-                        .Append(mlContext.Transforms.NormalizeMinMax("SquareFootageNormalized", nameof(PropertyListingData.SquareFootage)))
-                        .Append(mlContext.Transforms.Concatenate("Features", "NumberOfBedroomsNormalized", "SquareFootageNormalized"))
-                        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: nameof(PropertyListingData.Price), maximumNumberOfIterations: 100));
-
-                model = pipeline.Fit(dataView);
-            }
-            */
-
-            model = pipeline.Fit(dataView);
+                LabelColumnName = nameof(PropertyListingData.Label),
+                FeatureColumnName = nameof(PropertyListingData.Features),
+                ConvergenceTolerance = 0.02f,
+                MaximumNumberOfIterations = 30,
+                BiasLearningRate = 0.1f
+            };
+            var pipeline = mlContext.Regression.Trainers.Sdca(options);
+            model = pipeline.Fit(trainingData);
         }
 
-        public float Predict(PropertyListingDataInput propertyListingDataInput)
+        public float Predict(PropertyListingData propertyListingData)
         {
-            var predictionEngine = mlContext.Model.CreatePredictionEngine<PropertyListingDataInput, PropertyListingDataPrediction>(model);
-            var prediction = predictionEngine.Predict(propertyListingDataInput);
-            return prediction.Price;
+            var singleTestData = mlContext.Data.LoadFromEnumerable(new[] { propertyListingData });
+            var transformedTestData = model.Transform(singleTestData);
+            var prediction = mlContext.Data.CreateEnumerable<Prediction>(transformedTestData, reuseRowObject: false).First();
+            return prediction.Score;
+        }
+
+        private class Prediction
+        {
+            public float Label { get; set; }
+            public float Score { get; set; }
         }
     }
 }

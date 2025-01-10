@@ -23,11 +23,14 @@ namespace Application.AIML
                 string Price = fields[0];
                 string NumberOfBedrooms = fields[1];
                 string SquareFootage = fields[2];
+                if (Price == null || NumberOfBedrooms == null || SquareFootage == null)
+                {
+                    continue;
+                }
                 PropertyListingData.Add(new PropertyListingData
                 {
-                    Price = float.Parse(Price),
-                    NumberOfBedrooms = float.Parse(NumberOfBedrooms),
-                    SquareFootage = float.Parse(SquareFootage)
+                    Label = float.Parse(Price),
+                    Features = new float[] { float.Parse(NumberOfBedrooms), float.Parse(SquareFootage) }
                 });
             }
             return PropertyListingData;
