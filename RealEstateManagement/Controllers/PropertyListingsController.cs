@@ -78,21 +78,49 @@ namespace RealEstateManagement.Controllers
         public async Task<ActionResult<PropertyListingDto>> GetListingByIdAsync(Guid id)
         {
             var result = await mediator.Send(new GetListingByIdQuery { PropertyId = id });
-            return Ok(result);
+            if (result.IsSuccess)
+            {
+                if (result.Data == null)
+                {
+                    return NotFound($"Listing with ID : {id} not found");
+                }
+                return Ok(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+           
         }
 
         [HttpGet]
         public async Task<ActionResult<List<PropertyListingDto>>> GetAllPropertyListingsAsync()
         {
             var result = await mediator.Send(new GetAllPropertyListingQuery());
-            return Ok(result);
+            if (result.IsSuccess)
+            {
+                if (result.Data == null) return NotFound("No listings found");
+                return Ok(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.ErrorMessage);
+            }
         }
 
         [HttpGet("user/{userId:guid}")]
         public async Task<ActionResult<List<PropertyListingDto>>> GetListingsByUserId(Guid userId)
         {
             var result = await mediator.Send(new GetListingsByUserIdQuery { UserId = userId });
-            return Ok(result);
+            if (result.IsSuccess)
+            {
+                if (result.Data == null) return NotFound($"No listings found for user with ID {userId}");
+                return Ok(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.ErrorMessage);
+            }
         }
 
         [HttpDelete("{id:guid}")]

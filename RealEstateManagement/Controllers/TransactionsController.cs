@@ -1,7 +1,6 @@
 ﻿using Domain.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Domain.Entities;
 using Application.DTOs;
 using Application.Use_Cases.Transactions.Queries;
 using Domain.Common;
@@ -9,6 +8,7 @@ using Application.Utils;
 using Application.Use_Cases.Transactions.Commands;
 using Application.Use_Cases.Commands;
 using AutoMapper;
+using RealEstateManagement.Application.Transactions.Commands;
 
 namespace RealEstateManagement.Controllers
 {
@@ -47,46 +47,35 @@ namespace RealEstateManagement.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTransaction(Guid id, Transaction transaction)
+        public async Task<IActionResult> UpdateTransaction(Guid id, UpdateTransactionCommand command)
         {
-            if (id != transaction.TransactionId)
+            if (id != command.TransactionId)
             {
-                return BadRequest();
+                return BadRequest("The provided id doesn't match the TransactionId");
             }
-
-            try
+            var result = await mediator.Send(command);
+            if (result.IsSuccess)
             {
-                await transactionRepository.UpdateTransactionAsync(transaction);
+                return NoContent();
             }
-            catch (Exception ex)
+            else
             {
-                if (ex.Message.Contains("not found"))
-                {
-                    return NotFound();
-                }
-                throw;
+                return BadRequest(result.ErrorMessage);
             }
-
-            return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTransaction(Guid id)
         {
-            try
+            var result = await mediator.Send(new DeleteTransactionCommand { TransactionId= id });
+            if (result.IsSuccess)
             {
-                await transactionRepository.DeleteTransactionAsync(id);
+                return NoContent();
             }
-            catch (Exception ex)
+            else
             {
-                if (ex.Message.Contains("not found"))
-                {
-                    return NotFound();
-                }
-                throw;
+                return BadRequest(result.ErrorMessage);
             }
-
-            return NoContent();
         }
 
         [HttpGet]
@@ -95,6 +84,10 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetAllTransactionsQuery());
             if (result.IsSuccess)
             {
+                if (result.Data == null)
+                {
+                    return NotFound("No transactions found");
+                }
                 return Ok(result.Data);
             }
             else
@@ -109,6 +102,10 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetTransactionByIdQuery { TransactionId = id });
             if (result.IsSuccess)
             {
+                if (result.Data == null)
+                {
+                    return NotFound($"Transaction with ID {id} not found");
+                }
                 return Ok(result.Data);
             }
             else
@@ -123,6 +120,10 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetTransactionByPropertyIdQuery { PropertyId = id });
             if (result.IsSuccess)
             {
+                if (result.Data == null)
+                {
+                    return NotFound($"Transaction with Property ID {id} not found");
+                }
                 return Ok(result.Data);
             }
             else
@@ -137,6 +138,10 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetTransactionsByBuyerIdQuery { BuyerId = id, Page = page, PageSize = pageSize });
             if (result.IsSuccess)
             {
+                if (result.Data == null)
+                {
+                    return NotFound($"Transaction with Buyer ID {id} not found");
+                }
                 return Ok(result.Data);
             }
             else
@@ -151,6 +156,10 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetTransactionsBySellerIdQuery { SellerId = id, Page = page, PageSize = pageSize });
             if (result.IsSuccess)
             {
+                if (result.Data == null)
+                {
+                    return NotFound($"Transaction with Seller ID {id} not found");
+                }
                 return Ok(result.Data);
             }
             else

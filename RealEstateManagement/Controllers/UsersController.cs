@@ -71,6 +71,7 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetAllUsersQuery());
             if (result.IsSuccess)
             {
+                if (result.Data == null) return NotFound("No users found");
                 return Ok(result.Data);
             }
             else
@@ -85,6 +86,7 @@ namespace RealEstateManagement.Controllers
             var result = await mediator.Send(new GetUserByIdQuery { UserId = id });
             if (result.IsSuccess)
             {
+                if (result.Data == null) return NotFound($"User with ID : {id} not found");
                 return Ok(result.Data);
             }
             else

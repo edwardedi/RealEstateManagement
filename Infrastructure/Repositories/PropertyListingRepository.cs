@@ -23,7 +23,7 @@ namespace Infrastructure.Repositories
             }
             catch(Exception ex)
             {
-                return Result<IEnumerable<PropertyListing>>.Failure(ex.InnerException!.ToString());
+                return Result<IEnumerable<PropertyListing>>.Failure($"An error occurred while retrieving property listings: {ex.Message}");
             }
             
         }
@@ -37,7 +37,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                return Result<PropertyListing>.Failure(ex.InnerException!.ToString());
+                return Result<PropertyListing>.Failure($"An error occurred while retrieving property listing: {ex.Message}");
             }
 
         }
@@ -53,7 +53,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                return Result<IEnumerable<PropertyListing>>.Failure(ex.InnerException!.ToString());
+                return Result<IEnumerable<PropertyListing>>.Failure($"An error occurred while retrieving property listing by user id: {ex.Message}");
             }
         }
 
@@ -67,7 +67,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                return Result<Guid>.Failure(ex.InnerException!.ToString());
+                return Result<Guid>.Failure($"An error occurred while creating property listing: {ex.Message}");
             }
         }
 
@@ -90,7 +90,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                return Result<Guid>.Failure(ex.InnerException!.ToString());
+                return Result<Guid>.Failure($"An error occurred while updating property listing: {ex.Message}");
             }
             
         }
@@ -110,7 +110,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                return Result<Guid>.Failure(ex.InnerException!.ToString());
+                return Result<Guid>.Failure($"An error occurred while deleting property listing: {ex.Message}");
             }
         }
     }

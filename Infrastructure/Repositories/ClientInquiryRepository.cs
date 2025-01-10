@@ -61,8 +61,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                var errorMessage = ex.InnerException != null ? ex.InnerException.ToString() : ex.Message;
-                return Result<Guid>.Failure(errorMessage);
+                return Result<Guid>.Failure($"An error occurred while adding inquiry: {ex.Message}");
             }
         }
         public async Task<Result<Guid>> UpdateInquiryAsync(ClientInquiry inquiry)
@@ -84,8 +83,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                var errorMessage = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                return Result<Guid>.Failure(errorMessage);
+                return Result<Guid>.Failure($"An error occurred while updating inquiry: {ex.Message}");
             }
         }
         public async Task<Result<Guid>> DeleteInquiryAsync(Guid id)
@@ -103,8 +101,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                var errorMessage = ex.InnerException != null ? ex.InnerException.ToString() : ex.Message;
-                return Result<Guid>.Failure(errorMessage);
+                return Result<Guid>.Failure($"An error occurred while deleting inquiry: {ex.Message}");
             }
         }
 

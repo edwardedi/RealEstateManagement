@@ -1,5 +1,4 @@
 ﻿using Application.AIML;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RealEstateManagement.Controllers

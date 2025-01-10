@@ -1,9 +1,6 @@
 ﻿using Domain.Common;
-using Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 
 [ApiController]
 [Route("api/[controller]")]

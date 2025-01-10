@@ -1,5 +1,4 @@
-﻿using Application.Use_Cases.Commands;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Application.Use_Cases.Users.Commands
 {
