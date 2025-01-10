@@ -1,107 +1,155 @@
-<<<<<<< Updated upstream
-Ó
-
-iC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IUserRepository.cs
-=======
-¼
-
+ž
 RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository.cs
->>>>>>> Stashed changes
-	namespace 	
-Domain
+	namespace 	
+Domain
  
-. 
-Repositories 
-{ 
-public 
+. 
+Repositories 
+{ 
+public 
 
-	interface 
-IUserRepository $
-{ 
-Task 
-< 
-IEnumerable 
-< 
-User 
-> 
-> 
-GetAllUsersAsync  0
-(0 1
-)1 2
-;2 3
+	interface 
+IUserRepository $
+{ 
 Task 
-< 
-User 
-> 
-GetUserByIdAsync #
-(# $
-Guid$ (
-id) +
-)+ ,
-;, -
+< 
+Result 
+< 
+IEnumerable 
+<  
+User  $
+>$ %
+>% &
+>& '
+GetAllUsersAsync( 8
+(8 9
+)9 :
+;: ;
 Task		 
-<		 
-IEnumerable		 
-<		 
-PropertyListing		 (
->		( )
->		) *
-GetListingsByUserId		+ >
-(		> ?
-Guid		? C
-userId		D J
-)		J K
-;		K L
+<		 
+Result		 
+<		 
+User		 
+>		 
+>		 
+GetUserByIdAsync		 +
+(		+ ,
+Guid		, 0
+id		1 3
+)		3 4
+;		4 5
 Task
 
  
 <
 
- 
-User
+ 
+Result
 
- 
+ 
+<
+
+ 
+Guid
+
+ 
 >
 
- 
+ 
+>
+
+ 
 AddUserAsync
 
- 
+ '
 (
 
-  
+' (
 User
 
-  $
+( ,
 user
 
-% )
+- 1
 )
 
-) *
+1 2
 ;
 
-* +
-Task 
-UpdateUserAsync 
-( 
-User !
-user" &
-)& '
-;' (
-Task 
-DeleteUserAsync 
-( 
-Guid !
-id" $
-)$ %
-;% &
+2 3
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+UpdateUserAsync *
+(* +
+User+ /
+user0 4
+)4 5
+;5 6
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+DeleteUserAsync *
+(* +
+Guid+ /
+id0 2
+)2 3
+;3 4
 } 
-<<<<<<< Updated upstream
-} ‹
-pC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\ITransactionRepository.cs
-=======
-} ‘
+} °
+VC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.cs
+	namespace 	
+Domain
+ 
+. 
+Repositories 
+{ 
+public 
+
+	interface 
+IUserAuthRepository (
+{ 
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+Register #
+(# $
+User$ (
+user) -
+,- .
+CancellationToken/ @
+cancellationTokenA R
+)R S
+;S T
+Task		 
+<		 
+Result		 
+<		 
+string		 
+>		 
+>		 
+Login		 "
+(		" #
+User		# '
+user		( ,
+)		, -
+;		- .
+}
+
+ 
+} Ÿ
 ]C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.cs
 	namespace 	
 Domain
@@ -115,26 +163,80 @@ pC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repos
 IPropertyListingRepository /
 { 
 Task 
-< 
-IEnumerable 
-< 
-PropertyListing (
->( )
->) *
-GetAllListingsAsync+ >
-(> ?
-)? @
-;@ A
+< 
+Result 
+< 
+IEnumerable 
+<  
+PropertyListing  /
+>/ 0
+>0 1
+>1 2
+GetAllListingsAsync3 F
+(F G
+)G H
+;H I
 Task		 
-<		 
-PropertyListing		 
->		 
-GetListingByIdAsync		 1
-(		1 2
-Guid		2 6
-id		7 9
-)		9 :
-;		: ;
+<		 
+Result		 
+<		 
+PropertyListing		 #
+>		# $
+>		$ %
+GetListingByIdAsync		& 9
+(		9 :
+Guid		: >
+id		? A
+)		A B
+;		B C
+Task
+
+ 
+<
+
+ 
+Result
+
+ 
+<
+
+ 
+IEnumerable
+
+ 
+<
+
+  
+PropertyListing
+
+  /
+>
+
+/ 0
+>
+
+0 1
+>
+
+1 2
+GetListingsByUserId
+
+3 F
+(
+
+F G
+Guid
+
+G K
+userId
+
+L R
+)
+
+R S
+;
+
+S T
 Task 
 < 
 Result 
@@ -175,9 +277,8 @@ pC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repos
 )5 6
 ;6 7
 } 
-} ô
+} Ç
 YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.cs
->>>>>>> Stashed changes
 	namespace 	
 Domain
  
@@ -256,137 +357,79 @@ YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRep
 
 J K
 Task 
-< 
-IEnumerable 
-< 
-Transaction $
->$ %
->% &$
-GetTransactionsByBuyerId' ?
-(? @
-Guid@ D
-userIdE K
-)K L
-;L M
-Task 
-< 
-IEnumerable 
-< 
-Transaction $
->$ %
->% &%
-GetTransactionsBySellerId' @
-(@ A
-GuidA E
-userIdF L
-)L M
-;M N
-Task 
-< 
-Transaction 
-> 
-AddTransactionAsync -
-(- .
-Transaction. 9
-transaction: E
-)E F
-;F G
-Task "
-UpdateTransactionAsync #
-(# $
-Transaction$ /
-transaction0 ;
-); <
-;< =
-Task "
-DeleteTransactionAsync #
-(# $
-Guid$ (
-id) +
-)+ ,
-;, -
-} 
-<<<<<<< Updated upstream
-} ¨
-tC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.cs
-	namespace 	
-Domain
- 
-. 
-Repositories 
-{ 
-public 
-
-	interface &
-IPropertyListingRepository /
-{ 
-Task 
-< 
-IEnumerable 
-< 
-PropertyListing (
->( )
->) *
-GetAllListingsAsync+ >
-(> ?
-)? @
-;@ A
-Task		 
-<		 
-PropertyListing		 
->		 
-GetListingByIdAsync		 1
-(		1 2
-Guid		2 6
-id		7 9
-)		9 :
-;		: ;
-Task 
 < 
 Result 
-< 
-Guid 
-> 
-> 
-AddListingAsync *
-(* +
-PropertyListing+ :
-listing; B
-)B C
-;C D
+< 
+IEnumerable 
+<  
+Transaction  +
+>+ ,
+>, -
+>- .$
+GetTransactionsByBuyerId/ G
+(G H
+GuidH L
+userIdM S
+)S T
+;T U
 Task 
 < 
 Result 
-< 
-Guid 
-> 
-> 
-UpdateListingAsync -
-(- .
-PropertyListing. =
-listing> E
-)E F
-;F G
+< 
+IEnumerable 
+<  
+Transaction  +
+>+ ,
+>, -
+>- .%
+GetTransactionsBySellerId/ H
+(H I
+GuidI M
+userIdN T
+)T U
+;U V
 Task 
 < 
 Result 
 < 
 Guid 
 > 
-> 
-DeleteListingAsync -
-(- .
-Guid. 2
-id3 5
-)5 6
-;6 7
-} 
-} ˜
-rC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.cs
-=======
-} 
+> 
+AddTransactionAsync .
+(. /
+Transaction/ :
+transaction; F
+)F G
+;G H
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> "
+UpdateTransactionAsync 1
+(1 2
+Transaction2 =
+transaction> I
+)I J
+;J K
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> "
+DeleteTransactionAsync 1
+(1 2
+Guid2 6
+id7 9
+)9 :
+;: ;
+} 
+} Í
 [C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.cs
->>>>>>> Stashed changes
 	namespace 	
 Domain
  
@@ -399,65 +442,80 @@ rC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repos
 IClientInquiryRepository -
 { 
 Task 
-< 
-IEnumerable 
-< 
-ClientInquiry &
->& '
->' ( 
-GetAllInquiriesAsync) =
-(= >
-)> ?
-;? @
+< 
+Result 
+< 
+IEnumerable 
+<  
+ClientInquiry  -
+>- .
+>. /
+>/ 0 
+GetAllInquiriesAsync1 E
+(E F
+)F G
+;G H
 Task		 
-<		 
-ClientInquiry		 
->		 
-GetInquiryByIdAsync		 /
-(		/ 0
-Guid		0 4
-id		5 7
-)		7 8
-;		8 9
+<		 
+Result		 
+<		 
+ClientInquiry		 !
+>		! "
+>		" #
+GetInquiryByIdAsync		$ 7
+(		7 8
+Guid		8 <
+id		= ?
+)		? @
+;		@ A
 Task
 
  
 <
 
- 
-IEnumerable
+ 
+Result
 
- 
+ 
 <
 
- 
+ 
+IEnumerable
+
+ 
+<
+
+  
 ClientInquiry
 
- &
+  -
 >
 
-& '
+- .
 >
 
-' ("
+. /
+>
+
+/ 0"
 GetInquiriesByClientId
 
-) ?
+1 G
 (
 
-? @
+G H
 Guid
 
-@ D
+H L
 clientId
 
-E M
+M U
 )
 
-M N
+U V
 ;
 
-N O
+V W
 Task 
 < 
 Result 
@@ -496,16 +554,26 @@ rC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repos
 Guid. 2
 id3 5
 )5 6
-;6 7
-} 
-<<<<<<< Updated upstream
-} …
-ZC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\User.cs
-=======
-} î
-
+;6 7
+Task 
+< 
+Result 
+< 
+IEnumerable 
+<  
+PropertyListing  /
+>/ 0
+>0 1
+>1 2$
+SearchAllPropertiesAsync3 K
+(K L
+stringL R
+searchQueryS ^
+)^ _
+;_ `
+} 
+} Ö
 CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
->>>>>>> Stashed changes
 	namespace 	
 Domain
  
@@ -536,16 +604,16 @@ CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
 set# &
 ;& '
 }( )
-public 
-string 
-? 
-Email 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
+public 
+required 
+string 
+Email $
+{% &
+get' *
+;* +
+set, /
+;/ 0
+}1 2
 public 
 string 
 ? 
@@ -556,312 +624,21 @@ CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
 set* -
 ;- .
 }/ 0
-public		 
-List		 
-<		 
-PropertyListing		 #
->		# $
-?		$ %
-propertyListings		& 6
-{		7 8
-get		9 <
-;		< =
-set		> A
-;		A B
-}		C D
-public
-
- 
-List
-
- 
-<
-
- 
-ClientInquiry
-
- !
->
-
-! "
-?
-
-" #
-clientInquiries
-
-$ 3
-{
-
-4 5
-get
-
-6 9
-;
-
-9 :
-set
-
-; >
-;
-
-> ?
+public		 
+required		 
+string		 
+PasswordHash		 +
+{		, -
+get		. 1
+;		1 2
+set		3 6
+;		6 7
+}		8 9
 }
 
-@ A
-} 
-<<<<<<< Updated upstream
-} Ý	
-aC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\Transaction.cs
-=======
-} Æ	
-JC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\Transaction.cs
->>>>>>> Stashed changes
-	namespace 	
-Domain
- 
-. 
-Entities 
-{ 
-public 
-
-class 
-Transaction 
-{ 
-public 
-Guid 
-TransactionId !
-{" #
-get$ '
-;' (
-set) ,
-;, -
-}. /
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-Guid 
-BuyerId 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-Guid 
-SellerId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public		 
-double		 
-	SalePrice		 
-{		  !
-get		" %
-;		% &
-set		' *
-;		* +
-}		, -
-public
-
- 
-string
-
- 
-?
-
- 
-Status
-
- 
-{
-
- 
-get
-
-  #
-;
-
-# $
-set
-
-% (
-;
-
-( )
-}
-
-* +
-} 
-<<<<<<< Updated upstream
-} Ý
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\PropertyListing.cs
-=======
-} Æ
-NC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\PropertyListing.cs
->>>>>>> Stashed changes
-	namespace 	
-Domain
- 
-. 
-Entities 
-{ 
-public 
-
-class 
-PropertyListing  
-{ 
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-string 
-? 
-Address 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-string 
-? 
-Type 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-double 
-Price 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public		 
-double		 
-SquareFootage		 #
-{		$ %
-get		& )
-;		) *
-set		+ .
-;		. /
-}		0 1
-public
-
- 
-double
-
- 
-NumberOfBedrooms
-
- &
-{
-
-' (
-get
-
-) ,
-;
-
-, -
-set
-
-. 1
-;
-
-1 2
-}
-
-3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-public 
-string 
-? 
-Description "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-string 
-? 
-Status 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-DateTime 
-ListingDate #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-string 
-? 
-	ImageURLs  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-public 
-Guid 
-UserID 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-<<<<<<< Updated upstream
-} ƒ
-cC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\ClientInquiry.cs
-=======
-} ì
+ 
+} ì
 LC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
->>>>>>> Stashed changes
 	namespace 	
 Domain
  
@@ -977,13 +754,226 @@ LC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
 ;2 3
 }4 5
 } 
-<<<<<<< Updated upstream
-} ë
-ZC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Common\Result.cs
-=======
-} Ô
+} 
+JC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\Transaction.cs
+	namespace 	
+Domain
+ 
+. 
+Entities 
+{ 
+public 
+
+class 
+Transaction 
+{ 
+public 
+Guid 
+TransactionId !
+{" #
+get$ '
+;' (
+set) ,
+;, -
+}. /
+public 
+Guid 
+
+PropertyId 
+{  
+get! $
+;$ %
+set& )
+;) *
+}+ ,
+public 
+Guid 
+BuyerId 
+{ 
+get !
+;! "
+set# &
+;& '
+}( )
+public 
+Guid 
+SellerId 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public		 
+double		 
+	SalePrice		 
+{		  !
+get		" %
+;		% &
+set		' *
+;		* +
+}		, -
+}
+
+ 
+} î
+NC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\PropertyListing.cs
+	namespace 	
+Domain
+ 
+. 
+Entities 
+{ 
+public 
+
+class 
+PropertyListing  
+{ 
+public 
+Guid 
+
+PropertyId 
+{  
+get! $
+;$ %
+set& )
+;) *
+}+ ,
+public 
+string 
+? 
+Title 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+string 
+? 
+Address 
+{  
+get! $
+;$ %
+set& )
+;) *
+}+ ,
+public 
+string 
+? 
+Type 
+{ 
+get !
+;! "
+set# &
+;& '
+}( )
+public		 
+double		 
+Price		 
+{		 
+get		 !
+;		! "
+set		# &
+;		& '
+}		( )
+public
+
+ 
+double
+
+ 
+SquareFootage
+
+ #
+{
+
+$ %
+get
+
+& )
+;
+
+) *
+set
+
++ .
+;
+
+. /
+}
+
+0 1
+public 
+double 
+NumberOfBedrooms &
+{' (
+get) ,
+;, -
+set. 1
+;1 2
+}3 4
+public 
+double 
+NumberOfBathrooms '
+{( )
+get* -
+;- .
+set/ 2
+;2 3
+}4 5
+public 
+string 
+? 
+Description "
+{# $
+get% (
+;( )
+set* -
+;- .
+}/ 0
+public 
+string 
+? 
+Status 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+public 
+DateTime 
+ListingDate #
+{$ %
+get& )
+;) *
+set+ .
+;. /
+}0 1
+public 
+string 
+? 
+	ImageURLs  
+{! "
+get# &
+;& '
+set( +
+;+ ,
+}- .
+public 
+Guid 
+UserID 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+} 
+} Ô
 CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Common\Result.cs
->>>>>>> Stashed changes
 	namespace 	
 Domain
  

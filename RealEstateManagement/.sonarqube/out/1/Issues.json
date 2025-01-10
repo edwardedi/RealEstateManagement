@@ -5,13 +5,9 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.11.0.0",
-<<<<<<< Updated upstream
-        "fileVersion": "4.11.0-3.24468.6 (b4e5d1dd)",
-=======
-        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
->>>>>>> Stashed changes
-        "semanticVersion": "4.11.0",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24523.4 (f3348c2a)",
+        "semanticVersion": "4.12.0",
         "language": "en-US"
       },
       "results": [
@@ -22,11 +18,7 @@
           "locations": [
             {
               "resultFile": {
-<<<<<<< Updated upstream
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/RealEstateManagement.IntegrationTests/UnitTest1.cs",
-=======
                 "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.IntegrationTests/UnitTest1.cs",
->>>>>>> Stashed changes
                 "region": {
                   "startLine": 6,
                   "startColumn": 21,

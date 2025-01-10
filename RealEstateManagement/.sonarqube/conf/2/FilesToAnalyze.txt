@@ -1,60 +1,9 @@
-<<<<<<< Updated upstream
-﻿C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DependencyInjection.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\PropertyListingDto.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\TransactionDto.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\UserDto.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\DeleteClientInquiryCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\UpdateClientInquiryCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\CreateClientInquiryCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\DeleteClientInquiryCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\UpdateClientInquiryCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetAllInquiriesQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByClientIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\CreatePropertyListingCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\DeletePropertyListingCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\UpdatePropertyListingCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommandValidator.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\DeletePropertyListingCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommandValidator.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetAllPropertyListingQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingByIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\AddTransactionCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\DeleteTransactionCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\UpdateTransactionCommandHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\AddTransactionCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\DeleteTransactionCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\UpdateTransactionCommand.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetAllTransactionsQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByPropertyIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsByBuyerIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsBySellerIdQueryHandler.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetAllTransactionsQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByPropertyIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsByBuyerIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsBySellerIdQuery.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\MappingProfile.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\PagedResult.cs
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\ValidationBehavior.cs
-=======
 ﻿C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\DependencyInjection.cs
-C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20241111082243_InitialCreate.cs
-C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20241111082243_InitialCreate.Designer.cs
+C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20250104134210_InitialCreate.cs
+C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20250104134210_InitialCreate.Designer.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Persistance\ApplicationDbContext.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\PropertyListingRepository.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\TransactionRepository.cs
 C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\UserRepository.cs
->>>>>>> Stashed changes

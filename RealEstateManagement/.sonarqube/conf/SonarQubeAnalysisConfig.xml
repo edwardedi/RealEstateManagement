@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-<<<<<<< Updated upstream
-  <SonarConfigDir>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf</SonarConfigDir>
-  <SonarOutputDir>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out</SonarOutputDir>
-  <SonarBinDir>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement</SonarScannerWorkingDirectory>
-  <JavaExePath>C:\Users\marin\.sonar\cache\4bafe2e94439c8193fc8c68247cb0dbaf4e80265b903288f63f128304f129bbe\OpenJDK17U-jre_x64_windows_hotspot_17.0.11_9.zip_extracted\jdk-17.0.11+9-jre/bin/java.exe</JavaExePath>
-=======
   <SonarConfigDir>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf</SonarConfigDir>
   <SonarOutputDir>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out</SonarOutputDir>
   <SonarBinDir>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\bin</SonarBinDir>
   <SonarScannerWorkingDirectory>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement</SonarScannerWorkingDirectory>
   <JavaExePath>C:\Users\cezar\.sonar\cache\4bafe2e94439c8193fc8c68247cb0dbaf4e80265b903288f63f128304f129bbe\OpenJDK17U-jre_x64_windows_hotspot_17.0.11_9.zip_extracted\jdk-17.0.11+9-jre/bin/java.exe</JavaExePath>
->>>>>>> Stashed changes
   <ScanAllAnalysis>true</ScanAllAnalysis>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
@@ -23,13 +15,8 @@
     <ConfigSetting Id="TfsUri" />
     <ConfigSetting Id="VsCoverageConverterToolPath" />
     <ConfigSetting Id="UnchangedFilesPath" />
-<<<<<<< Updated upstream
-    <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement" />
-    <ConfigSetting Id="settings.file.path" Value="C:\Users\marin\.dotnet\tools\.store\dotnet-sonarscanner\9.0.2\dotnet-sonarscanner\9.0.2\tools\netcoreapp3.1\any\SonarQube.Analysis.xml" />
-=======
     <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement" />
     <ConfigSetting Id="settings.file.path" Value="C:\Users\cezar\.dotnet\tools\.store\dotnet-sonarscanner\9.0.2\dotnet-sonarscanner\9.0.2\tools\netcoreapp3.1\any\SonarQube.Analysis.xml" />
->>>>>>> Stashed changes
   </AdditionalConfig>
   <ServerSettings>
     <Property Name="sonaranalyzer-cs.nuget.packageVersion">9.32.0.97167</Property>
@@ -151,13 +138,8 @@
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
-<<<<<<< Updated upstream
-    <Property Name="sonar.core.startTime">12/11/2024 16:28:22</Property>
-    <Property Name="sonar.core.id">147B411E-AZMgxo8v4K_QcsLXaSLq</Property>
-=======
-    <Property Name="sonar.core.startTime">11/12/2024 16:30:54</Property>
     <Property Name="sonar.core.id">147B411E-AZMgyOHPqO90bDCGvENw</Property>
->>>>>>> Stashed changes
+    <Property Name="sonar.core.startTime">1/10/2025 15:11:35</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.cs.vscoveragexml.reportsPaths">coverage.xml</Property>
@@ -167,19 +149,6 @@
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-<<<<<<< Updated upstream
-      <RulesetPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
-      <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="9.32.0.97167" StaticResourceName="SonarAnalyzer-9.32.0.97167.zip">
-          <AssemblyPaths>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CFG.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.ShimLayer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
-=======
       <RulesetPath>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
       <DeactivatedRulesetPath>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
@@ -191,52 +160,25 @@
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.ShimLayer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
->>>>>>> Stashed changes
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="9.32.0.97167" StaticResourceName="SonarAnalyzer-9.32.0.97167.zip">
           <AssemblyPaths>
-<<<<<<< Updated upstream
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.CFG.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.ShimLayer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
-=======
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.CFG.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.ShimLayer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
->>>>>>> Stashed changes
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-<<<<<<< Updated upstream
-        <Path>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\cs\SonarLint.xml</Path>
-=======
         <Path>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\cs\SonarLint.xml</Path>
->>>>>>> Stashed changes
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-<<<<<<< Updated upstream
-      <RulesetPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
-      <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="9.32.0.97167" StaticResourceName="SonarAnalyzer-9.32.0.97167.zip">
-          <AssemblyPaths>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CFG.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.ShimLayer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
-=======
       <RulesetPath>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
       <DeactivatedRulesetPath>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
@@ -248,35 +190,21 @@
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.ShimLayer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
->>>>>>> Stashed changes
           </AssemblyPaths>
         </AnalyzerPlugin>
         <AnalyzerPlugin Key="vbnet" Version="9.32.0.97167" StaticResourceName="SonarAnalyzer-9.32.0.97167.zip">
           <AssemblyPaths>
-<<<<<<< Updated upstream
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.CFG.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.ShimLayer.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
-            <Path>C:\Users\marin\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
-=======
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.CFG.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.ShimLayer.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
             <Path>C:\Users\cezar\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
->>>>>>> Stashed changes
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-<<<<<<< Updated upstream
-        <Path>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\vbnet\SonarLint.xml</Path>
-=======
         <Path>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\vbnet\SonarLint.xml</Path>
->>>>>>> Stashed changes
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

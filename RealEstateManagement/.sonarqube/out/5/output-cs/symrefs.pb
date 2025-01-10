@@ -1,140 +1,67 @@
-<<<<<<< Updated upstream
-¯
-bC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Program.csF
-=======
-·
-KC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Program.csF
->>>>>>> Stashed changes
-   # *
-
-   
- J
-<<<<<<< Updated upstream
-        	∞
-vC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\UsersController.cs
+{
+yC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetListingByIdQueryHandlerTests.cs‹
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\UpdatePropertyListingCommandHandlerTests.cs
 
-		  
-# + 
-) 1 $ò
-}C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\TransactionsController.cs
-=======
-        	ô
-_C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\UsersController.cs
+ 9P
+4 >    B L.. 11B L?? BBB LP
+! ' " (  N T--" (11N T>>" (BBN T
 
-		  
-# + 
-) 1 $Å
-fC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\TransactionsController.cs
->>>>>>> Stashed changes
+ z2
+ > EX _!!. 5%%$ +
+ * 9
+   !! &
+!! $$ %% 
 
- 'H
-# , PP (^^ (ll (zz (
-àà (2
-0 F "+ A,, ,?? ,
-0 8  
-Q f% :
+)) z
+,, --> E22. 5
+-- ..* 9
+11 22 &
+22 55 66 
+	:: É
+== >>> ECC. 5
+>> ??* 9
+BB CC &
+CC FF GG (
+JJ- Q >,, >== >{
+yC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetInquiryByIdQueryHandlerTests.csÑ
+ÅC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetAllPropertyListingsQueryHandlerTests.cs|
+zC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetAllInquiriesQueryHandlerTests.csì
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\DeletePropertyListingCommandHandlerTests.cs
 
-5 C
-P [V a
- "F Xj |
+ 9<
+4 >  !!B L00 44B L
 
-##) :
-##@ B%% 
-##P [%% !,,D O
+ s2
+ . 8* 4J T''& 0
+ > D
+ ""0 7
+!! ""! ((
+"" %% && '' 
 
-;;) :
-;;@ B??D F
+++ o
+.. 00* 411J T
+// 00> D
+11 550 7
+44 55! ((
+55 88 99 :: ˇ
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\CreatePropertyListingCommandHandlerTests.cs
 
-NNF X(
-PP QQ SS  WW" (
+ 9<
+4 >  ""B L11 44B L<
+! '  ""N T00 44N T
 
-\\8 J
-\\P R^^\ ^(
-^^ __ aa  ee" (
+ z(
+ : A( /##. 5
+ 9 H' 6
+ U _''$ .
+"" ## &
+## && '' 
 
-jj8 R
-jjX Zlla c
-ll mm oo  
-
-xxM e
-xxk mzz\ ^
-	xx Ézzg k
-
-xxô °	zzx Ä
-zz {{ }}  
-
-ÜÜM f
-
-ÜÜl n
-àà^ `
-ÜÜÄ Ñ
-àài m
-ÜÜö ¢ààz Ç$
-
-àà 
-ââ 
-<<<<<<< Updated upstream
-ãã  ∏
-ÅC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingsController.cs
-=======
-ãã  †
-jC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingsController.cs
->>>>>>> Stashed changes
-
- +F
-# +  '** '77 '>> 'EE '
-4 < $
-
-6 K
-i p- 4(
-      " (
-
-$$6 K
-$$Q S&& 
-$$r y&& **- 4
-** ++ 00" (
-
-55< O
-55U W77T V
-77 88 
-
-<<B ]
->> ?? 
-
-CC) >
-CCD FEE] _
-<<<<<<< Updated upstream
-EE FF LL" (ç
-ÄC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\ClientInquiriesController.cs
-=======
-EE FF LL" (ı
-iC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\ClientInquiriesController.cs
->>>>>>> Stashed changes
-
- *P
-# +  '   '&& ',, '77 'BB '
-3 ; $
-
-) 6
-R Y- 4(
-     $
-
-) 7
-= ?  S U
-   !! 
-
-$$B V
-&& '' 
-
-**@ V
-**\ d,,X `
-,, -- 
-
-11) 6
-11< >33 
-11[ b33 77- 4(
-77 88 ::  << $
-
-@@) 6
-@@< >BBZ \(
-BB CC EE  GG $
+++ z(
+.. //: A00( /55. 5
+// 009 H11' 6
+44 55 &
+55 88 99 
+<<- Q >.. >
+NN  7" 9//" 9x
+NNU \SS !TT UU VV  'WW# *XX$ +YY %ZZ  [[ %\\ #]]  

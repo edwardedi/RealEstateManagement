@@ -5,86 +5,13 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.11.0.0",
-<<<<<<< Updated upstream
-        "fileVersion": "4.11.0-3.24468.6 (b4e5d1dd)",
-=======
-        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
->>>>>>> Stashed changes
-        "semanticVersion": "4.11.0",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24523.4 (f3348c2a)",
+        "semanticVersion": "4.12.0",
         "language": "en-US"
       },
       "results": [
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-<<<<<<< Updated upstream
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Domain/Entities/User.cs",
-=======
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Domain/Entities/User.cs",
->>>>>>> Stashed changes
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 9,
-                  "endLine": 11,
-                  "endColumn": 70
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-<<<<<<< Updated upstream
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Domain/Repositories/IPropertyListingRepository.cs",
-=======
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Domain/Repositories/IPropertyListingRepository.cs",
->>>>>>> Stashed changes
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 9,
-                  "endLine": 10,
-                  "endColumn": 79
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        }
-      ],
-      "rules": {
-        "S125": {
-          "id": "S125",
-          "shortDescription": "Sections of code should not be commented out",
-          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        }
-      }
+      ]
     }
   ]
 }

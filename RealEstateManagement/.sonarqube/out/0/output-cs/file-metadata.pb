@@ -1,29 +1,14 @@
-<<<<<<< Updated upstream
-|
-qC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.csutf-8•
-‰C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8~
-sC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\obj\Debug\net8.0\Domain.GlobalUsings.g.csutf-8r
-iC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IUserRepository.csutf-8y
-pC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\ITransactionRepository.csutf-8}
-tC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.csutf-8{
-rC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.csutf-8c
-ZC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\User.csutf-8j
-aC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\Transaction.csutf-8n
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\PropertyListing.csutf-8l
-cC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Entities\ClientInquiry.csutf-8c
-ZC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Domain\Common\Result.csutf-8
-=======
 e
-ZC:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.csutf-8}
-rC:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8g
-\C:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net8.0\Domain.GlobalUsings.g.csutf-8[
-RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository.csutf-8f
+ZC:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.csutf-8}
+rC:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8g
+\C:\Users\cezar\Desktop\RealEstateManagement\Domain\obj\Debug\net9.0\Domain.GlobalUsings.g.csutf-8[
+RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository.csutf-8_
+VC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.csutf-8f
 ]C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.csutf-8b
 YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.csutf-8d
 [C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.csutf-8L
-CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.csutf-8S
+CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.csutf-8U
+LC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\ClientInquiry.csutf-8S
 JC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\Transaction.csutf-8W
-NC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\PropertyListing.csutf-8U
-LC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\ClientInquiry.csutf-8L
+NC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\PropertyListing.csutf-8L
 CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Common\Result.csutf-8
->>>>>>> Stashed changes

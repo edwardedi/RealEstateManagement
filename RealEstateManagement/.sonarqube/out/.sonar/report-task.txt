@@ -2,10 +2,5 @@ projectKey=RealEstateManagement
 serverUrl=http://localhost:9000
 serverVersion=10.7.0.96327
 dashboardUrl=http://localhost:9000/dashboard?id=RealEstateManagement
-<<<<<<< Updated upstream
-ceTaskId=4383bc4a-d187-48e8-9583-545faf1d0cf7
-ceTaskUrl=http://localhost:9000/api/ce/task?id=4383bc4a-d187-48e8-9583-545faf1d0cf7
-=======
-ceTaskId=c73f51fd-7f1c-4072-85d9-100480adb75f
-ceTaskUrl=http://localhost:9000/api/ce/task?id=c73f51fd-7f1c-4072-85d9-100480adb75f
->>>>>>> Stashed changes
+ceTaskId=c768b78b-6e47-4c95-b92b-e4cdfe90617e
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c768b78b-6e47-4c95-b92b-e4cdfe90617e

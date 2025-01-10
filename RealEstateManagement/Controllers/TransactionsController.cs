@@ -17,14 +17,12 @@ namespace RealEstateManagement.Controllers
     public class TransactionsController : ControllerBase
     {
         private readonly IMediator mediator;
-        private readonly ITransactionRepository transactionRepository;
         private readonly IPropertyListingRepository propertyListingRepository;
         private readonly IMapper mapper;
 
         public TransactionsController(IMediator mediator, ITransactionRepository transactionRepository, IPropertyListingRepository propertyListingRepository, IMapper mapper)
         {
             this.mediator = mediator;
-            this.transactionRepository = transactionRepository;
             this.propertyListingRepository = propertyListingRepository;
             this.mapper = mapper;
         }

@@ -1,4 +1,5 @@
 ﻿using Application.DTOs;
+using Application.Use_Cases.PropertyListings.Filtering;
 using Application.Use_Cases.PropertyListings.Queries;
 using Application.Utils;
 using AutoMapper;

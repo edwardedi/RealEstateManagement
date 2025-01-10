@@ -1,15 +1,6 @@
-<<<<<<< Updated upstream
-ª
-ØC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\RealEstateManagement.IntegrationTests.AssemblyInfo.csutf-8¥
-®C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Ω
-±C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\RealEstateManagement.IntegrationTests.GlobalUsings.g.csutf-8}
-rC:\Users\marin\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8~
-uC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement.IntegrationTests\UnitTest1.csutf-8
-=======
-¶
-öC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\RealEstateManagement.IntegrationTests.GlobalUsings.g.csutf-8g
-^C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\UnitTest1.csutf-8}
-rC:\Users\cezar\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8ù
-ëC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8§
-òC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net8.0\RealEstateManagement.IntegrationTests.AssemblyInfo.csutf-8
->>>>>>> Stashed changes
+§
+òC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net9.0\RealEstateManagement.IntegrationTests.AssemblyInfo.csutf-8ù
+ëC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8¶
+öC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\obj\Debug\net9.0\RealEstateManagement.IntegrationTests.GlobalUsings.g.csutf-8g
+^C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.IntegrationTests\UnitTest1.csutf-8~
+sC:\Users\cezar\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8

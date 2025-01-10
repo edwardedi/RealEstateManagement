@@ -1,7 +1,11 @@
 using Application.Use_Cases.PropertyListings.Queries;
 using Domain.Entities;
 
-public interface IPropertyListingFilterStrategy
+namespace Application.Use_Cases.PropertyListings.Filtering
 {
-    IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request);
+
+    public interface IPropertyListingFilterStrategy
+    {
+        IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request);
+    }
 }

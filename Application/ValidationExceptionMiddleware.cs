@@ -2,38 +2,40 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Text.Json;
-
-public class ValidationExceptionMiddleware
+namespace Application
 {
-    private readonly RequestDelegate _next;
-
-    public ValidationExceptionMiddleware(RequestDelegate next)
+    public class ValidationExceptionMiddleware
     {
-        _next = next;
-    }
+        private readonly RequestDelegate _next;
 
-    public async Task InvokeAsync(HttpContext context)
-    {
-        try
+        public ValidationExceptionMiddleware(RequestDelegate next)
         {
-            await _next(context);
+            _next = next;
         }
-        catch (ValidationException ex)
+
+        public async Task InvokeAsync(HttpContext context)
         {
-            await HandleValidationExceptionAsync(context, ex);
+            try
+            {
+                await _next(context);
+            }
+            catch (ValidationException ex)
+            {
+                await HandleValidationExceptionAsync(context, ex);
+            }
         }
-    }
 
-    private static Task HandleValidationExceptionAsync(HttpContext context, ValidationException exception)
-    {
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+        private static Task HandleValidationExceptionAsync(HttpContext context, ValidationException exception)
+        {
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
 
-        var errors = exception.Errors
-        .GroupBy(e => e.PropertyName)
-        .ToDictionary(g => g.Key, g => g.First().ErrorMessage);
+            var errors = exception.Errors
+            .GroupBy(e => e.PropertyName)
+            .ToDictionary(g => g.Key, g => g.First().ErrorMessage);
 
-        var result = JsonSerializer.Serialize(new { errors });
-        return context.Response.WriteAsync(result);
+            var result = JsonSerializer.Serialize(new { errors });
+            return context.Response.WriteAsync(result);
+        }
     }
 }

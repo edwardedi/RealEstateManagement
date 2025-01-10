@@ -5,33 +5,25 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.11.0.0",
-<<<<<<< Updated upstream
-        "fileVersion": "4.11.0-3.24468.6 (b4e5d1dd)",
-=======
-        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
->>>>>>> Stashed changes
-        "semanticVersion": "4.11.0",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24523.4 (f3348c2a)",
+        "semanticVersion": "4.12.0",
         "language": "en-US"
       },
       "results": [
         {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GenerateCreatePropertyListingCommand' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
-<<<<<<< Updated upstream
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/RealEstateManagement/appsettings.json",
-=======
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement/appsettings.json",
->>>>>>> Stashed changes
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
                 "region": {
-                  "startLine": 3,
-                  "startColumn": 27,
-                  "endLine": 3,
-                  "endColumn": 115
+                  "startLine": 60,
+                  "startColumn": 46,
+                  "endLine": 60,
+                  "endColumn": 82
                 }
               }
             }
@@ -41,22 +33,39 @@
           }
         },
         {
-          "ruleId": "S4487",
-          "level": "warning",
-          "message": "Remove this unread private field 'mediator' or refactor the code to use its value.",
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GeneratePropertyListing' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
-<<<<<<< Updated upstream
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/RealEstateManagement/Controllers/UsersController.cs",
-=======
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement/Controllers/UsersController.cs",
->>>>>>> Stashed changes
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
                 "region": {
-                  "startLine": 11,
-                  "startColumn": 36,
-                  "endLine": 11,
-                  "endColumn": 44
+                  "startLine": 78,
+                  "startColumn": 33,
+                  "endLine": 78,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GenerateUpdatePropertyListingCommand' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UpdatePropertyListingCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 46,
+                  "endLine": 74,
+                  "endColumn": 82
                 }
               }
             }
@@ -67,36 +76,19 @@
         }
       ],
       "rules": {
-        "S2068": {
-          "id": "S2068",
-          "shortDescription": "Hard-coded credentials are security-sensitive",
-          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Mark members as static",
+          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
           "properties": {
-            "category": "Blocker Security Hotspot",
+            "category": "Performance",
             "isEnabledByDefault": true,
             "tags": [
-              "C#",
-              "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S4487": {
-          "id": "S4487",
-          "shortDescription": "Unread \"private\" fields should be removed",
-          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
-          "properties": {
-            "category": "Critical Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
             ]
           }
         }

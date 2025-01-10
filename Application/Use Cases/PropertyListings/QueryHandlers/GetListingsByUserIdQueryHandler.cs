@@ -18,7 +18,7 @@ namespace Application.Use_Cases.PropertyListings.QueryHandlers
             this.repository = repository;
         }
 
-        public async Task<Result<List<PropertyListingDto>>> Handle(GetListingsByUserIdQuery request, CancellationToken token)
+        public async Task<Result<List<PropertyListingDto>>> Handle(GetListingsByUserIdQuery request, CancellationToken cancellationToken)
         {
             var result = await repository.GetListingsByUserId(request.UserId);
             if (result.IsSuccess)

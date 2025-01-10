@@ -1,100 +1,136 @@
-<<<<<<< Updated upstream
-‚
-dC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\ValidationBehavior.cs
-
- #F
-$ ,M Uh p0 8
-
-9 A, 40 83
-. 7W `	| Ö #U ^
-; E  %
-
-
-D N (
-
-% +
-5 <: A
-` d 
-	x â
- ( /
-  . 6
-  
- "& ,
-  È
-cC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\PagedResult.cs
-
- 
-   ! 
-# ' 
-- 7 #
-  
-  t
-fC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\MappingProfile.cs
-
-		 ¬
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsBySellerIdQuery.cs
-
- /
-=======
-ó
+©
 YC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\UserRepository.cs
 
- 
-		. 5 
-
-
-3 : "
+		 x
+. 5 " )  ! (11 22 >>) 0AA BB !TT! (WW XX !
+3 : "
 
-' 7
+5 E
+ 9 >
 
- *
+( 8
+> @  9 ;
+   !! %%, 0
 
-0 2
+--( 4
+--: >11- 133, 0
 
- &
+::( 7(
+::= A>>A EAAH LDD0 4
+>>  ??  AA" .
 
-, 0
+PP( 7
+PP= ?TT9 ;YY0 2
+TT UU WW) -…
+`C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\TransactionRepository.cs
 
- #
+		 &ò
+. 5 ) 0""( /00 11 >>0 7AA BB !TT( /WW XX !jj( /{{) 0
+àà) 0
+: A "
 
-) -
+< S
+  @ L
 
- #
+/ F
+L N""G I
+"" ##3 >
 
-) +
+,,( ;
+,,H S004 ?22, 7
 
-##2 E
+::( >(
+::K V>>O ZAAO ZCC0 ;
+>> '?? 'AA" 5
 
-##K Q´
+PP( >
+PPD FTTG IYY0 2
+TT UU WW0 ;
+
+ff/ N
+ffT Vjjf h
+jj kk mm7 B
+jjQ RjjV W
+
+ww< T
+wwZ `{{V \
+{{  ||@ L
+{{D E{{I J
+
+ÑÑ< U
+
+ÑÑ[ a
+ààW ]
+
+àà  
+ââ@ L
+
+ààD E
+ààI Jç
+dC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\PropertyListingRepository.cs
+
+		 *Ç
+. 5 % ,##$ +55% ,DD EE RR, 3UU VV !jj, 3mm nn !
+> E "
+
+@ S
+ D L
+
+3 F
+L N##G I
+## $$ ((7 >
+
+11@ S
+11Y _66D J
+55 88D L
+66' .662 9
+
+@@( 7
+@@H ODD8 ?FF, 3
+
+NN( :(
+NNK RRRO VUUK RXX0 7
+RR #SS #UU" 1
+
+ff( :
+ff@ BjjO Qoo0 2
+jj #kk #mm4 Cú
 bC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
 
-		 (Ç
-. 5     '  '' (( 55, 388 99 !LL$ +OO PP !
+		 (å
+. 5 & -  $ +11& -?? @@ LL, 3OO PP !bb$ +ee ff !zz' .
 < C "
 
-6 J
+> R
+ B K
 
-) <
-B DB DI K
-   
+1 D
+J L  F H
+   !! &&5 <
 
-6 L
-R X  F L
-  ' .  2 9
+--> T
+--Z b22Z b
+11 44B K
+22; B22F M
 
-##( 7
-##F M''7 >)), 3
---  .., 8
+;;( 7
+;;F M??7 >AA, 3
 
-11( :(
-11I P55N U88K R;;0 7
-55 #66 #88" 1
-DD  EE, 8
+HH( :(
+HHI PLLN UOOK RRR0 7
+LL #MM #OO" 1
 
-HH( :
-HH@ BLLF HQQ0 2
-LL MM OO3 :
-WW  XX, 8ø
+^^( :
+^^@ BbbF Hgg0 2
+bb cc ee3 :
+
+qq@ X+
+qq` kuu. 9	{{w Ç
+{{– €
+zz }}D N6
+{{/ 7{{< D{{U ]
+{{ì õ
+{{≤ ∫ˇ
 
 ^C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Persistance\ApplicationDbContext.cs
  %5 I
@@ -109,8 +145,8 @@ bC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientI
   
 
   /<
-= I  -- ;; XX ñ
-             !! "" ## $$ 
+= I  ** 44 PP †
+             !! "" ## $$ %% 
 & '+ ,
 ( )- .
 ( )- .
@@ -123,685 +159,68 @@ bC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientI
 !!( )!!- .
 ""( )""- .
 ##( )##- .
-$$( )$$- .2
-.. 00 11 22 33 
-11" #11' (
-22$ %22) *
-33$ %33) *x
-<< >> ?? @@ AA BB CC DD EE GG LL QQ 
-??" #??' (
-@@$ %@@) *
-AA$ %AA) *
-BB$ %BB) *
-CC$ %CC) *
-DD$ %DD) *
-EE$ %EE) *
-II' (II, -
-NN' (NN, -
-SS' (SS, -F
-YY [[ \\ ]] ^^ __ `` 
-\\" #\\' (
-]]$ %]]) *
-^^$ %^^) *
-__$ %__) *
-``$ %``) *Á
-`C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\TransactionRepository.cs
-
-		 &ñ
-. 5 ) 0""( /.. // 55, 3>> ?? II$ +LL MM YY( /hh  mm  
-: A "
-
-< S
-  @ L
-
-/ F
-L N""G I
-"" ##3 >
-
-,,' :
-,,G R..0 ;00 
-
-33 0P
-33= H55K V881 <99. 9::/ :;;0 ;<<- 8CC; FP
-55 #66 #88 #99 #:: #;; #<< #>>, ?
-
-GG 0
-GG6 8IIC EQQ; =
-II JJ LL, 7
-
-UU/ N
-UUT VYYf h
-YY ZZ \\7 B
-YYQ RYYV W
-
-ff4 L
-ffR XhhF L
-hh4 5hh9 :
-
-kk4 M
-kkS YmmG M
-mm4 5mm9 :¨
-dC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\PropertyListingRepository.cs
-
-		 *x
-. 5     $$ %% 22, 355 66 !KK, 3NN OO !
-> E "
-
-8 K
-
-+ >
-D F< >
-
-9 L
-
-R X
-
-  ( 7
-  H O$$8 ?&&, 3
-
-..( :(
-..K R22O V55K R880 7
-22 #33 #55" 1
-AA  BB, 8
-
-GG( :
-GG@ BKKO QPP0 2
-KK #LL #NN4 CÇ
-eC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20241111082243_InitialCreate.cs
->>>>>>> Stashed changes
+$$( )$$- .
+%%( )%%- .2
+++ -- .. // 00 
+.." #..' (
+//$ %//) *
+00$ %00) *n
+55 77 88 99 :: ;; << == ?? DD II 
+88" #88' (
+99$ %99) *
+::$ %::) *
+;;$ %;;) *
+<<$ %<<) *
+==$ %==) *
+AA' (AA, -
+FF' (FF, -
+KK' (KK, -Z
+QQ SS TT UU VV WW XX YY ZZ 
+TT" #TT' (
+UU$ %UU) *
+VV$ %VV) *
+WW$ %WW) *
+XX$ %XX) *
+YY$ %YY) *
+ZZ$ %ZZ) *Æ
+eC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20250104134210_InitialCreate.cs
 
 
 
- 
+ &
 
- 
+  "Z
+4 D  %% << KK mm rr ww d
+   % $ ! $ $' ,' ,' ,( -
+   """ 
+""; <""@ Aå
+'' ))! &** !++ #,,  -- !..$ )//' ,00( -11" '22 "33" '44  %55 "
+77 "99 
+99< =99A B<
+>> @@ "AA  BB !CC" 'DD# (
+FF "HH 
+HH1 2HH6 7F
+MM OO$ )PP! &QQ #RR $SS  %TT "2
+VV "XX YY __ ee 
+XX8 9XX= >
+[[  ![[% &
+aa  !aa% &
+gg  !gg% &
 
- ¡
-éC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsByBuyerIdQuery.cs
-
-<<<<<<< Updated upstream
- .
-=======
-íí6 F
-îî 
-óó 
-öö 
-ùù ı
+~~  $:
+~~6 F
+ÄÄ 
+ÉÉ 
+ÜÜ 
+ââ ı
 QC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\DependencyInjection.cs
->>>>>>> Stashed changes
 
 
 
- 
-
- 
-
- √
-êC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByPropertyIdQuery.cs
-
- 0
-
-		 
-
-
-
- 
-
- £
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByIdQuery.cs
-
- (
-
-		 !ó
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetAllTransactionsQuery.cs
-
- (à
-ïC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\AddTransactionCommandHandler.cs
-
- -
-
-
-0 F " /
-C X% :
-
-' -
-D KD K
-
-_ p”
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsByBuyerIdQueryHandler.cs
-
- 6
-! ' # )
-0 : % /
-; A  
-Z d (
-
-? E(
-d kI P6 =D K
-	 ê
-  $
- $ )P U
- !D U
-  > N
- ? Jâ
-üC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByPropertyIdQueryHandler.cs
-
-
-
- 9
-! ' % +
-0 :  )
-> D  
-] g (
-
-2 8
-Y `J Q
-	t Ö(
-  @ F2 8
- "6 DÄ
-óC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByIdQueryHandler.cs
-
-
-
- /
-0 :  )
-! ' % +
-E O (
-Y _  
-
-2 8
-Q XB IM T
-
-l }
-  @ F
- "6 Dç
-óC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetAllTransactionsQueryHandler.cs
-
- /
-! ' H N
-0 :  )
-6 < 
-U _ '
-
-8 >
-
-W ^
-	r É(
-  & ,  < B
- #< K
-9 Dc n≈
-äC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\UpdateTransactionCommand.cs
-
- )
-		 & 
-4 ? %≈
-äC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\DeleteTransactionCommand.cs
-
- )
- ! 
-
-
-- : )¬
-áC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\AddTransactionCommand.cs
-
- &
- & 
-
-
-1 < %·
-òC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\UpdateTransactionCommandHandler.cs
-
-
-
- 0
-0 :   
-! '  $
-F P (
-Z `  
-
-( .
-H O6 =
-
-c t
- 8 C, 7ã
-òC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\DeleteTransactionCommandHandler.cs
-
- 0
-		0 F " (
-F [% :
-
-  &
-@ G@ G
-
-[ l’
-ûC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsBySellerIdQueryHandler.cs
-
- 7
-! ' # )
-0 : % /
-< B  
-[ e (
-
-? E(
-e lJ Q6 =D K
-
-Ä ë
-  $
- $ )P U
- !D U
-  > N
- ? JË
-úC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.cs
-
-		 2
-! ( . 5
-4 ? ! ,
-9 ? 
-\ f $
-
-4 :
-
-V ]
-	q Ç
-  
-# *N U£
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingByIdQuery.cs
-
- $
-
- û
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetAllPropertyListingQuery.cs
-
- +»
-õC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommandValidator.cs
-
- 6
-		 		 
-
-
- 
-
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
- (		7 C
-. 2! %±
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommand.cs
-
- -
-
- 
-
-		 
-
-
-
- 
-
- 
-
- #
-
- &
-
- '
-
- "
-
- 
-
- #
-
-  
-
- ≠
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\DeletePropertyListingCommand.cs
-
- -
-
- Ü
-õC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommandValidator.cs
-
- 6
-		 		 
-
-
- 
-
- 
-  
-  
-  
-  
-  
-  
-  
-  ¢
-áC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByIdQuery.cs
-
- $
-
- â
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\UpdatePropertyListingCommandHandler.cs
-
-
-
- 4
-4 >  )
-! '   
-N X (
-b h  
-
-( .
-L S6 =
-
-g x
- = D(
-  , 2( .Ω
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\DeletePropertyListingCommandHandler.cs
-
- 4
-
-
-4 >  )
-N X (
-
-( .
-L S= D
-
-g x(
-  , 2( .˛
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\UpdateClientInquiryCommand.cs
-
- +
-
- 
-
-		 "
-
-
-
- 
-
- 
-
- &
-
- &
-
- &
-
- 'Ë
-ïC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
-
-
-
- +
-! '  
-4 >   *
-2 8  
-U _ (
-
-. 4
-I P? FK R
-
-d u
-  2 9Ê
-ìC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByIdQueryHandler.cs
-
-		 +
-! '  
-2 <   *
-2 8  
-S ] (
-
-, 2
-G N? FI P
-
-b s
-  0 7Ó
-ôC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
-
-		 1
-! ( / 6
-2 = " -
-8 > 
-Y c $
-
-2 8
-S ZE L
-
-n 
-  
-$ +M Tﬂ
-îC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
-
-		 ,
-! ( / 6
-2 = " -
-3 9 
-T ^ $
-
-2 8
-
-N U
-
-i z
-  
-$ +M T•
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommand.cs
-
- -
-
- 
-
-		 
-
-
-
- 
-
- #
-
- &
-
- '
-
- "
-
- 
-
- #
-
-  
-
- ®
-çC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByClientIdQuery.cs
-
- *
-
- Ü
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\UpdateClientInquiryCommandHandler.cs
-
-
-
- 2
-2 <  )
-! '   &
-J T (
-^ d  
-
-( .
-J Q: A
-
-e v
- = J(
-  , 2( .â
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\CreatePropertyListingCommandHandler.cs
-
-
-
- 4
-4 >  )
-! ' " (
-N X (
-b h  
-
-( .
-L S> E
-
-g x
- : I(
-  , 2( .˛
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\CreateClientInquiryCommand.cs
-
- +
-
- 
-
-		 "
-
-
-
- 
-
- 
-
- &
-
- &
-
- &
-
- '·
-gC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs
-
- !
-
- 
-
- 
-
- "
-
- 
-
-		 
-
-
-
- &
-
- &
-
- &
-
- '™
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\DeleteClientInquiryCommand.cs
-
- +
-
- ó
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetAllInquiriesQuery.cs
-
- %Ü
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
-
-
-
- 2
-2 <  )
-! '   &
-J T (
-^ d  
-
-( .
-J Q: A
-
-e v
- : G(
-  , 2( .∫
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\DeleteClientInquiryCommandHandler.cs
-
- 2
-
-
-2 <  )
-J T (
-
-( .
-J Q= D
-
-e v(
-  , 2( .ú
-^C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\UserDto.cs
-
- 
-
- 
-
- 
-
- 
-
- "ª
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\TransactionDto.cs
-
- 
-
- !
-
- 
-
- 
-
- 
-
-		 
-
-
-
- á
-iC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\PropertyListingDto.cs
-
- #
-
- 
-
- 
-
- 
-
- 
-
-		 #
-
-
-
- &
-
- '
-
- "
-
- 
-
- #
-
-  
-
- ”
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DependencyInjection.cs
-
-		 +
-
-) 7<
-P X     
-  #% (
+ +
+
+) :F
+S [      
+l y !
+8 ? 
+  

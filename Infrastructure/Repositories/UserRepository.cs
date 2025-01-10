@@ -30,6 +30,10 @@ namespace Infrastructure.Repositories
             try
             {
                 var user = await context.Users.FindAsync(id);
+                if (user == null)
+                {
+                    return Result<User>.Failure("User not found.");
+                }
                 return Result<User>.Success(user);
             }
             catch (Exception ex)

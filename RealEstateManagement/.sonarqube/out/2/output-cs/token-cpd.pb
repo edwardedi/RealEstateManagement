@@ -1,2355 +1,494 @@
-<<<<<<< Updated upstream
-Å
-dC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\ValidationBehavior.cs
-	namespace 	
-Application
- 
-{ 
-public 
-=======
-Ö
+®B
 YC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\UserRepository.cs
-	namespace 	
-Infrastructure
+	namespace 	
+Infrastructure
  
-. 
-Repositories %
-{ 
-public 
->>>>>>> Stashed changes
-
-class 
-ValidationBehavior #
-<# $
-TRequest$ ,
-,, -
-	TResponse. 7
->7 8
-:9 :
-IPipelineBehavior; L
-<L M
-TRequestM U
-,U V
-	TResponseW `
->` a
-whereb g
-TRequesth p
-:q r
-IRequests {
-<{ |
-	TResponse	| Ö
->
-Ö Ü
-{ 
-private 
-readonly 
-IEnumerable $
-<$ %
-
-IValidator% /
-</ 0
-TRequest0 8
->8 9
->9 :
-
-validators; E
-;E F
-public
-
- 
-ValidationBehavior
-
- !
-(
-
-! "
-IEnumerable
-
-" -
-<
-
-- .
-
-IValidator
-
-. 8
-<
-
-8 9
-TRequest
-
-9 A
->
-
-A B
->
-
-B C
-
-validators
-
-D N
-)
-
-N O
-{ 	
-this 
-. 
-
-validators 
-= 
-
-validators (
-;( )
-} 	
-<<<<<<< Updated upstream
-public 
-async 
-Task 
-< 
-	TResponse #
-># $
-Handle% +
-(+ ,
-TRequest, 4
-request5 <
-,< ="
-RequestHandlerDelegate> T
-<T U
-	TResponseU ^
->^ _
-next` d
-,d e
-CancellationTokenf w
-cancellationToken	x â
-)
-â ä
-{ 	
-var 
-context 
-= 
-new 
-ValidationContext /
-</ 0
-TRequest0 8
->8 9
-(9 :
-request: A
-)A B
-;B C
-var 
-failures 
-= 
-
-validators %
-. 
-Select 
-( 
-v 
-=> 
-v 
-. 
-Validate '
-(' (
-context( /
-)/ 0
-)0 1
-. 
-
-SelectMany 
-( 
-result "
-=># %
-result& ,
-., -
-Errors- 3
-)3 4
-. 
-Where 
-( 
-f 
-=> 
-f 
-!=  
-null! %
-)% &
-. 
-ToList 
-( 
-) 
-; 
-if 
-( 
-failures 
-. 
-Count 
-!=  
-$num! "
-)" #
-{ 
-throw 
-new 
-ValidationException -
-(- .
-failures. 6
-)6 7
-;7 8
-} 
-return 
-await 
-next 
-( 
-) 
-;  
-} 	
-} 
-} ˙
-cC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\PagedResult.cs
-	namespace 	
-Application
- 
-. 
-Utils 
-{ 
-public 
-
-class 
-PagedResult 
-< 
-T 
-> 
-{ 
-public 
-PagedResult 
-( 
-List 
-<  
-T  !
->! "
-data# '
-,' (
-int) ,
-
-totalCount- 7
-)7 8
-{ 	
-Data 
-= 
-data 
-; 
-
-TotalCount 
-= 
-
-totalCount #
-;# $
-}		 	
-public 
-List 
-< 
-T 
-> 
-Data 
-{ 
-get !
-;! "
-}# $
-public 
-int 
-
-TotalCount 
-{ 
-get  #
-;# $
-}% &
-} 
-} Ÿ
-fC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\utils\MappingProfile.cs
-	namespace 	
-Application
- 
-. 
-utils 
+. 
+Repositories %
 { 
 public		 
 
 class		 
-MappingProfile		 
-:		  
-Profile		! (
+UserRepository		 
+:		  !
+IUserRepository		" 1
 {
 
- 
-public 
-MappingProfile 
-( 
-) 
-{ 	
-	CreateMap 
-< 
-PropertyListing %
-,% &
-PropertyListingDto' 9
->9 :
-(: ;
-); <
-.< =
-
-ReverseMap= G
-(G H
-)H I
-;I J
-	CreateMap 
-< 
-ClientInquiry #
-,# $
-ClientInquiryDto% 5
->5 6
-(6 7
-)7 8
-.8 9
-
-ReverseMap9 C
-(C D
-)D E
-;E F
-	CreateMap 
-< 
-Transaction !
-,! "
-TransactionDto# 1
->1 2
-(2 3
-)3 4
-.4 5
-
-ReverseMap5 ?
-(? @
-)@ A
-;A B
-	CreateMap 
-< 
-User 
-, 
-UserDto #
-># $
-($ %
-)% &
-.& '
-
-ReverseMap' 1
-(1 2
-)2 3
-;3 4
-	CreateMap 
-< (
-CreatePropertyListingCommand 2
-,2 3
-PropertyListing4 C
->C D
-(D E
-)E F
-.F G
-
-ReverseMapG Q
-(Q R
-)R S
-;S T
-	CreateMap 
-< (
-UpdatePropertyListingCommand 2
-,2 3
-PropertyListing4 C
->C D
-(D E
-)E F
-.F G
-
-ReverseMapG Q
-(Q R
-)R S
-;S T
-	CreateMap 
-< &
-CreateClientInquiryCommand 0
-,0 1
-ClientInquiry2 ?
->? @
-(@ A
-)A B
-.B C
-
-ReverseMapC M
-(M N
-)N O
-;O P
-	CreateMap 
-< &
-UpdateClientInquiryCommand 0
-,0 1
-ClientInquiry2 ?
->? @
-(@ A
-)A B
-.B C
-
-ReverseMapC M
-(M N
-)N O
-;O P
-} 	
-} 
-} Œ
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsBySellerIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-Queries- 4
-{ 
-public 
-
-class *
-GetTransactionsBySellerIdQuery /
-:0 1
-IRequest2 :
-<: ;
-Result; A
-<A B
-PagedResultB M
-<M N
-TransactionDtoN \
->\ ]
->] ^
->^ _
-{		 
-public
-
- 
-Guid
-
- 
-SellerId
-
- 
-{
-
- 
-get
-
- "
-;
-
-" #
-set
-
-$ '
-;
-
-' (
-}
-
-) *
-public 
-int 
-Page 
-{ 
-get 
-; 
-set "
-;" #
-}$ %
-public 
-int 
-PageSize 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-} 
-} À
-éC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsByBuyerIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-Queries- 4
-{ 
-public 
-
-class )
-GetTransactionsByBuyerIdQuery .
-:/ 0
-IRequest1 9
-<9 :
-Result: @
-<@ A
-PagedResultA L
-<L M
-TransactionDtoM [
->[ \
->\ ]
->] ^
-{		 
-public
-
- 
-Guid
-
- 
-BuyerId
-
- 
-{
-
- 
-get
-
- !
-;
-
-! "
-set
-
-# &
-;
-
-& '
-}
-
-( )
-public 
-int 
-Page 
-{ 
-get 
-; 
-set "
-;" #
-}$ %
-public 
-int 
-PageSize 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-} 
-} õ
-êC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByPropertyIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-Queries- 4
-{ 
-public 
-
-class +
-GetTransactionByPropertyIdQuery 0
-:1 2
-IRequest3 ;
-<; <
-Result< B
-<B C
-TransactionDtoC Q
->Q R
->R S
-{ 
-public		 
-Guid		 
-
-PropertyId		 
-{		 
-get		  #
-;		# $
-set		% (
-;		( )
-}		* +
-public
-
- 
-int
-
- 
-Page
-
- 
-{
-
- 
-get
-
- 
-;
-
- 
-set
-
- "
-;
-
-" #
-}
-
-$ %
-public 
-int 
-PageSize 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-} 
-} ‡
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionByIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-Queries- 4
-{ 
-public 
-
-class #
-GetTransactionByIdQuery (
-:) *
-IRequest+ 3
-<3 4
-Result4 :
-<: ;
-TransactionDto; I
->I J
->J K
-{ 
-public		 
-Guid		 
-TransactionId		 !
-{		" #
-get		$ '
-;		' (
-set		) ,
-;		, -
-}		. /
-}
-
- 
-} Ò
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetAllTransactionsQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-Queries- 4
-{ 
-public 
-
-class #
-GetAllTransactionsQuery (
-:) *
-IRequest+ 3
-<3 4
-Result4 :
-<: ;
-List; ?
-<? @
-TransactionDto@ N
->N O
->O P
->P Q
-{ 
-}		 
-}
-
- ê
-ûC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsBySellerIdQueryHandler.cs
-	namespace
-
- 	
-Application
-
-
- 
-.
-
- 
-	Use_Cases
-
- 
-.
-
-  
-Transactions
-
-  ,
-.
-
-, -
-QueriesHandlers
-
-- <
-{ 
-internal 
-class 0
-$GetTransactionBySellerIdQueryHandler 7
-:8 9
-IRequestHandler: I
-<I J*
-GetTransactionsBySellerIdQueryJ h
-,h i
-Resultj p
-<p q
-PagedResultq |
-<| }
-TransactionDto	} ã
->
-ã å
->
-å ç
->
-ç é
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-public 0
-$GetTransactionBySellerIdQueryHandler 3
-(3 4
-IMapper4 ;
-mapper< B
-,B C"
-ITransactionRepositoryD Z
-
-repository[ e
-)e f
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-PagedResult! ,
-<, -
-TransactionDto- ;
->; <
->< =
->= >
-Handle? E
-(E F*
-GetTransactionsBySellerIdQueryF d
-requeste l
-,l m
-CancellationTokenn 
-cancellationToken
-Ä ë
-)
-ë í
-{ 	
-var 
-transactions 
-= 
-await $
-
-repository% /
-./ 0%
-GetTransactionsBySellerId0 I
-(I J
-requestJ Q
-.Q R
-SellerIdR Z
-)Z [
-;[ \
-var 
-query 
-= 
-transactions $
-.$ %
-AsQueryable% 0
-(0 1
-)1 2
-;2 3
-var 
-pagedTransactions !
-=" #
-query$ )
-.) *
-ApplyPaging* 5
-(5 6
-request6 =
-.= >
-Page> B
-,B C
-requestD K
-.K L
-PageSizeL T
-)T U
-;U V
-var 
-transactionsDtos  
-=! "
-mapper# )
-.) *
-Map* -
-<- .
-List. 2
-<2 3
-TransactionDto3 A
->A B
->B C
-(C D
-pagedTransactionsD U
-)U V
-;V W
-var 
-pagedResult 
-= 
-new !
-PagedResult" -
-<- .
-TransactionDto. <
->< =
-(= >
-transactionsDtos> N
-,N O
-queryP U
-.U V
-CountV [
-([ \
-)\ ]
-)] ^
-;^ _
-return 
-Result 
-< 
-PagedResult %
-<% &
-TransactionDto& 4
->4 5
->5 6
-.6 7
-Success7 >
-(> ?
-pagedResult? J
-)J K
-;K L
-}   	
-}!! 
-}"" à
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionsByBuyerIdQueryHandler.cs
-	namespace
-
- 	
-Application
-
-
- 
-.
-
- 
-	Use_Cases
-
- 
-.
-
-  
-Transactions
-
-  ,
-.
-
-, -
-QueriesHandlers
-
-- <
-{ 
-internal 
-class /
-#GetTransactionByBuyerIdQueryHandler 6
-:7 8
-IRequestHandler9 H
-<H I)
-GetTransactionsByBuyerIdQueryI f
-,f g
-Resulth n
-<n o
-PagedResulto z
-<z {
-TransactionDto	{ â
->
-â ä
->
-ä ã
->
-ã å
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-public /
-#GetTransactionByBuyerIdQueryHandler 2
-(2 3
-IMapper3 :
-mapper; A
-,A B"
-ITransactionRepositoryC Y
-
-repositoryZ d
-)d e
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-PagedResult! ,
-<, -
-TransactionDto- ;
->; <
->< =
->= >
-Handle? E
-(E F)
-GetTransactionsByBuyerIdQueryF c
-requestd k
-,k l
-CancellationTokenm ~
-cancellationToken	 ê
-)
-ê ë
-{ 	
-var 
-transactions 
-= 
-await $
-
-repository% /
-./ 0$
-GetTransactionsByBuyerId0 H
-(H I
-requestI P
-.P Q
-BuyerIdQ X
-)X Y
-;Y Z
-var 
-query 
-= 
-transactions $
-.$ %
-AsQueryable% 0
-(0 1
-)1 2
-;2 3
-var 
-pagedTransactions !
-=" #
-query$ )
-.) *
-ApplyPaging* 5
-(5 6
-request6 =
-.= >
-Page> B
-,B C
-requestD K
-.K L
-PageSizeL T
-)T U
-;U V
-var 
-transactionsDtos  
-=! "
-mapper# )
-.) *
-Map* -
-<- .
-List. 2
-<2 3
-TransactionDto3 A
->A B
->B C
-(C D
-pagedTransactionsD U
-)U V
-;V W
-var 
-pagedResult 
-= 
-new !
-PagedResult" -
-<- .
-TransactionDto. <
->< =
-(= >
-transactionsDtos> N
-,N O
-queryP U
-.U V
-CountV [
-([ \
-)\ ]
-)] ^
-;^ _
-return 
-Result 
-< 
-PagedResult %
-<% &
-TransactionDto& 4
->4 5
->5 6
-.6 7
-Success7 >
-(> ?
-pagedResult? J
-)J K
-;K L
-}   	
-}!! 
-}"" º
-üC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByPropertyIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-QueriesHandlers- <
-{		 
-internal
-
- 
-class
-
- 2
-&GetTransactionByPropertyIdQueryHandler
-
- 9
-:
-
-: ;
-IRequestHandler
-
-< K
-<
-
-K L+
-GetTransactionByPropertyIdQuery
-
-L k
-,
-
-k l
-Result
-
-m s
-<
-
-s t
-TransactionDto	
-
-t Ç
->
-
-
-Ç É
->
-
-
-É Ñ
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-public 2
-&GetTransactionByPropertyIdQueryHandler 5
-(5 6
-IMapper6 =
-mapper> D
-,D E"
-ITransactionRepositoryF \
-
-repository] g
-)g h
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-TransactionDto! /
->/ 0
->0 1
-Handle2 8
-(8 9+
-GetTransactionByPropertyIdQuery9 X
-requestY `
-,` a
-CancellationTokenb s
-cancellationToken	t Ö
-)
-Ö Ü
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *+
-GetTransactionByPropertyIdAsync* I
-(I J
-requestJ Q
-.Q R
-
-PropertyIdR \
-)\ ]
-;] ^
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-var 
-transactionDto "
-=# $
-mapper% +
-.+ ,
-Map, /
-</ 0
-TransactionDto0 >
->> ?
-(? @
-result@ F
-.F G
-DataG K
-)K L
-;L M
-return 
-Result 
-< 
-TransactionDto ,
->, -
-.- .
-Success. 5
-(5 6
-transactionDto6 D
-)D E
-;E F
-} 
-return 
-Result 
-< 
-TransactionDto (
->( )
-.) *
-Failure* 1
-(1 2
-result2 8
-.8 9
-ErrorMessage9 E
-)E F
-;F G
-}   	
-}!! 
-}"" ò
-óC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-QueriesHandlers- <
-{		 
-public
-
- 
-
-class
-
- *
-GetTransactionByIdQueryHandler
-
- /
-:
-
-0 1
-IRequestHandler
-
-2 A
-<
-
-A B#
-GetTransactionByIdQuery
-
-B Y
-,
-
-Y Z
-Result
-
-[ a
-<
-
-a b
-TransactionDto
-
-b p
->
-
-p q
->
-
-q r
-{ 
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public *
-GetTransactionByIdQueryHandler -
-(- ."
-ITransactionRepository. D
-
-repositoryE O
-,O P
-IMapperQ X
-mapperY _
-)_ `
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-TransactionDto! /
->/ 0
->0 1
-Handle2 8
-(8 9#
-GetTransactionByIdQuery9 P
-requestQ X
-,X Y
-CancellationTokenZ k
-cancellationTokenl }
-)} ~
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *#
-GetTransactionByIdAsync* A
-(A B
-requestB I
-.I J
-TransactionIdJ W
-)W X
-;X Y
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-var 
-transactionDto "
-=# $
-mapper% +
-.+ ,
-Map, /
-</ 0
-TransactionDto0 >
->> ?
-(? @
-result@ F
-.F G
-DataG K
-)K L
-;L M
-return 
-Result 
-< 
-TransactionDto ,
->, -
-.- .
-Success. 5
-(5 6
-transactionDto6 D
-)D E
-;E F
-} 
-else 
-{ 
-return 
-Result 
-< 
-TransactionDto ,
->, -
-.- .
-Failure. 5
-(5 6
-$"6 8
-$str8 L
-{L M
-requestM T
-.T U
-TransactionIdU b
-}b c
-$strc n
-"n o
-)o p
-;p q
-}   
-}## 	
-}%% 
-}&& ˇ
-óC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetAllTransactionsQueryHandler.cs
-	namespace		 	
-Application		
- 
-.		 
-	Use_Cases		 
-.		  
-Transactions		  ,
-.		, -
-QueriesHandlers		- <
-{
-
- 
-public 
-
-class *
-GetAllTransactionsQueryHandler /
-:0 1
-IRequestHandler2 A
-<A B#
-GetAllTransactionsQueryB Y
-,Y Z
-Result[ a
-<a b
-Listb f
-<f g
-TransactionDtog u
->u v
->v w
->w x
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-public *
-GetAllTransactionsQueryHandler -
-(- .
-IMapper. 5
-mapper6 <
-,< ="
-ITransactionRepository> T
-
-repositoryU _
-)_ `
-{ 	
-this 
-. 
-mapper 
-= 
-mapper 
-;  
-this 
-. 
-
-repository 
-= 
-
-repository '
-;' (
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-List! %
-<% &
-TransactionDto& 4
->4 5
->5 6
->6 7
-Handle8 >
-(> ?#
-GetAllTransactionsQuery? V
-requestW ^
-,^ _
-CancellationToken` q
-cancellationToken	r É
-)
-É Ñ
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *#
-GetAllTransactionsAsync* A
-(A B
-)B C
-;C D
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-var 
-transactionDtos #
-=$ %
-result& ,
-., -
-Data- 1
-.1 2
-Select2 8
-(8 9
-transaction9 D
-=>E G
-mapperH N
-.N O
-MapO R
-<R S
-TransactionDtoS a
->a b
-(b c
-transactionc n
-)n o
-)o p
-.p q
-ToListq w
-(w x
-)x y
-;y z
-return 
-Result 
-< 
-List "
-<" #
-TransactionDto# 1
->1 2
->2 3
-.3 4
-Success4 ;
-(; <
-transactionDtos< K
-)K L
-;L M
-} 
-else 
-{ 
-return   
-Result   
-<   
-List   "
-<  " #
-TransactionDto  # 1
->  1 2
->  2 3
-.  3 4
-Failure  4 ;
-(  ; <
-result  < B
-.  B C
-ErrorMessage  C O
-)  O P
-;  P Q
-}!! 
-}"" 	
-}## 
-}$$ ‚
-äC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\UpdateTransactionCommand.cs
-	namespace 	 
-RealEstateManagement
- 
-. 
-Application *
-.* +
-Transactions+ 7
-.7 8
-Commands8 @
-{ 
-public 
-
-class $
-UpdateTransactionCommand )
-:* +
-IRequest, 4
-<4 5
-Result5 ;
-<; <
-Guid< @
->@ A
->A B
-{ 
-public		 
-Transaction		 
-Transaction		 &
-{		' (
-get		) ,
-;		, -
-set		. 1
-;		1 2
-}		3 4
-public $
-UpdateTransactionCommand '
-(' (
-Transaction( 3
-transaction4 ?
-)? @
-{ 	
-Transaction 
-= 
-transaction %
-;% &
-} 	
-} 
-} ™
-äC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\DeleteTransactionCommand.cs
-	namespace 	 
-RealEstateManagement
- 
-. 
-Application *
-.* +
-Transactions+ 7
-.7 8
-Commands8 @
-{ 
-public 
-
-class $
-DeleteTransactionCommand )
-:* +
-IRequest, 4
-<4 5
-Unit5 9
->9 :
-{ 
-public 
-Guid 
-TransactionId !
-{" #
-get$ '
-;' (
-set) ,
-;, -
-}. /
-public
-
- $
-DeleteTransactionCommand
-
- '
-(
-
-' (
-Guid
-
-( ,
-transactionId
-
-- :
-)
-
-: ;
-{ 	
-TransactionId 
-= 
-transactionId )
-;) *
-} 	
-} 
-} Æ
-áC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\Commands\AddTransactionCommand.cs
-	namespace 	 
-RealEstateManagement
- 
-. 
-Application *
-.* +
-Transactions+ 7
-.7 8
-Commands8 @
-{ 
-public 
-
-class !
-AddTransactionCommand &
-:' (
-IRequest) 1
-<1 2
-Transaction2 =
->= >
-{ 
-public 
-Transaction 
-Transaction &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public
-
- !
-AddTransactionCommand
-
- $
-(
-
-$ %
-Transaction
-
-% 0
-transaction
-
-1 <
-)
-
-< =
-{ 	
-Transaction 
-= 
-transaction %
-;% &
-} 	
-} 
-} ∆
-òC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\UpdateTransactionCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-CommandHandlers- <
-{		 
-public
-
- 
-
-class
-
- +
-UpdateTransactionCommandHandler
-
- 0
-:
-
-1 2
-IRequestHandler
-
-3 B
-<
-
-B C$
-UpdateTransactionCommand
-
-C [
-,
-
-[ \
-Result
-
-] c
-<
-
-c d
-Guid
-
-d h
->
-
-h i
->
-
-i j
-{ 
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public +
-UpdateTransactionCommandHandler .
-(. /"
-ITransactionRepository/ E
-
-repositoryF P
-,P Q
-IMapperR Y
-mapperZ `
-)` a
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /$
-UpdateTransactionCommand/ G
-requestH O
-,O P
-CancellationTokenQ b
-cancellationTokenc t
-)t u
-{ 	
-var 
-transaction 
-= 
-mapper $
-.$ %
-Map% (
-<( )
-Transaction) 4
->4 5
-(5 6
-request6 =
-.= >
-Transaction> I
-)I J
-;J K
-try 
-{ 
-await 
-
-repository  
-.  !"
-UpdateTransactionAsync! 7
-(7 8
-transaction8 C
-)C D
-;D E
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-transaction, 7
-.7 8
-TransactionId8 E
-)E F
-;F G
-} 
-catch 
-( 
-	Exception 
-ex 
-)  
-{ 
-return   
-Result   
-<   
-Guid   "
->  " #
-.  # $
-Failure  $ +
-(  + ,
-ex  , .
-.  . /
-Message  / 6
-)  6 7
-;  7 8
-}!! 
-}"" 	
-}## 
-}$$ Ö
-òC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\DeleteTransactionCommandHandler.cs
-	namespace 	 
-RealEstateManagement
- 
-. 
-Application *
-.* +
-Transactions+ 7
-.7 8
-CommandHandlers8 G
-{ 
-public 
-
-class +
-DeleteTransactionCommandHandler 0
-:1 2
-IRequestHandler3 B
-<B C$
-DeleteTransactionCommandC [
-,[ \
-Unit] a
->a b
-{ 
-private		 
-readonly		 "
-ITransactionRepository		 /"
-_transactionRepository		0 F
-;		F G
-public +
-DeleteTransactionCommandHandler .
-(. /"
-ITransactionRepository/ E!
-transactionRepositoryF [
-)[ \
-{ 	"
-_transactionRepository "
-=# $!
-transactionRepository% :
-;: ;
-} 	
+ 
+private 
+readonly  
+ApplicationDbContext -
+context. 5
+;5 6
+public 
+UserRepository 
+(  
+ApplicationDbContext 2
+context3 :
+): ;
+{ 	
+this 
+. 
+context 
+= 
+context "
+;" #
+} 	
 public 
 async 
 Task 
-< 
-Unit 
-> 
-Handle  &
-(& '$
-DeleteTransactionCommand' ?
-request@ G
-,G H
-CancellationTokenI Z
-cancellationToken[ l
-)l m
-{ 	
-await "
-_transactionRepository (
-.( )"
-DeleteTransactionAsync) ?
-(? @
-request@ G
-.G H
-TransactionIdH U
-)U V
-;V W
-return 
-Unit 
-. 
-Value 
-; 
-} 	
-} 
-} º
-ïC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\AddTransactionCommandHandler.cs
-	namespace 	 
-RealEstateManagement
- 
-. 
-Application *
-.* +
-Transactions+ 7
-.7 8
-CommandHandlers8 G
-{ 
-public 
-
-class (
-AddTransactionCommandHandler -
-:. /
-IRequestHandler0 ?
-<? @!
-AddTransactionCommand@ U
-,U V
-TransactionW b
->b c
-{		 
-private
-
- 
-readonly
-
- "
-ITransactionRepository
-
- /"
-_transactionRepository
-
-0 F
-;
-
-F G
-public (
-AddTransactionCommandHandler +
-(+ ,"
-ITransactionRepository, B!
-transactionRepositoryC X
-)X Y
-{ 	"
-_transactionRepository "
-=# $!
-transactionRepository% :
-;: ;
-} 	
-public 
-async 
-Task 
-< 
-Transaction %
->% &
-Handle' -
-(- .!
-AddTransactionCommand. C
-requestD K
-,K L
-CancellationTokenM ^
-cancellationToken_ p
-)p q
-{ 	
-return 
-await "
-_transactionRepository /
-./ 0
-AddTransactionAsync0 C
-(C D
-requestD K
-.K L
-TransactionL W
-)W X
-;X Y
-} 	
-} 
-} ¯
-ïC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-QueryHandlers  -
-{		 
-public
-
- 
-
-class
-
- &
-GetListingByIdQueryHandler
-
- +
-:
-
-, -
-IRequestHandler
-
-. =
-<
-
-= >
-GetListingByIdQuery
-
-> Q
-,
-
-Q R
-PropertyListingDto
-
-S e
->
-
-e f
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly &
-IPropertyListingRepository 3
-
-repository4 >
-;> ?
-public &
-GetListingByIdQueryHandler )
-() *
-IMapper* 1
-mapper2 8
-,8 9&
-IPropertyListingRepository: T
-
-repositoryU _
-)_ `
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-PropertyListingDto ,
->, -
-Handle. 4
-(4 5
-GetListingByIdQuery5 H
-requestI P
-,P Q
-CancellationTokenR c
-cancellationTokend u
-)u v
-{ 	
-var 
-listing 
-= 
-await 
-
-repository  *
-.* +
-GetListingByIdAsync+ >
-(> ?
-request? F
-.F G
-
-PropertyIdG Q
-)Q R
-;R S
-if 
-( 
-listing 
-== 
-null 
-)  
-{ 
-throw 
-new  
-KeyNotFoundException .
-(. /
-$"/ 1
-$str1 J
-{J K
-requestK R
-.R S
-
-PropertyIdS ]
-}] ^
-$str^ i
-"i j
-)j k
-;k l
-} 
-return 
-mapper 
-. 
-Map 
-< 
-PropertyListingDto 0
->0 1
-(1 2
-listing2 9
-)9 :
-;: ;
-} 	
-} 
-} ±
-úC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-QueryHandlers  -
-=======
-public 
-Task 
-< 
-IEnumerable 
-<  
-User  $
->$ %
->% &
-GetAllUsersAsync' 7
-(7 8
-)8 9
-{ 	
-throw 
-new #
-NotImplementedException -
-(- .
-). /
-;/ 0
-} 	
-public 
-Task 
-< 
-User 
-> 
-GetUserByIdAsync *
-(* +
-Guid+ /
-id0 2
-)2 3
-{ 	
-throw 
-new #
-NotImplementedException -
-(- .
-). /
-;/ 0
-} 	
-public 
-Task 
-< 
-User 
-> 
-AddUserAsync &
-(& '
-User' +
-user, 0
-)0 1
-{ 	
-throw 
-new #
-NotImplementedException -
-(- .
-). /
-;/ 0
-} 	
-public 
-Task 
-UpdateUserAsync #
-(# $
-User$ (
-user) -
-)- .
-{ 	
-throw 
-new #
-NotImplementedException -
-(- .
-). /
-;/ 0
-} 	
-public 
-Task 
-DeleteUserAsync #
-(# $
-Guid$ (
-id) +
-)+ ,
-{ 	
-throw   
-new   #
-NotImplementedException   -
-(  - .
-)  . /
-;  / 0
-}!! 	
-public## 
-Task## 
-<## 
-IEnumerable## 
-<##  
-PropertyListing##  /
->##/ 0
->##0 1
-GetListingsByUserId##2 E
-(##E F
-Guid##F J
-userId##K Q
-)##Q R
-{$$ 	
-throw%% 
-new%% #
-NotImplementedException%% -
-(%%- .
-)%%. /
-;%%/ 0
-}&& 	
-}'' 
-}(( ˝N
+< 
+Result  
+<  !
+IEnumerable! ,
+<, -
+User- 1
+>1 2
+>2 3
+>3 4
+GetAllUsersAsync5 E
+(E F
+)F G
+{ 	
+try 
+{ 
+var 
+users 
+= 
+await !
+context" )
+.) *
+Users* /
+./ 0
+ToListAsync0 ;
+(; <
+)< =
+;= >
+return 
+Result 
+< 
+IEnumerable )
+<) *
+User* .
+>. /
+>/ 0
+.0 1
+Success1 8
+(8 9
+users9 >
+)> ?
+;? @
+} 
+catch 
+( 
+	Exception 
+ex 
+)  
+{ 
+return 
+Result 
+< 
+IEnumerable )
+<) *
+User* .
+>. /
+>/ 0
+.0 1
+Failure1 8
+(8 9
+$"9 ;
+$str; e
+{e f
+exf h
+.h i
+Messagei p
+}p q
+"q r
+)r s
+;s t
+} 
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+User! %
+>% &
+>& '
+GetUserByIdAsync( 8
+(8 9
+Guid9 =
+id> @
+)@ A
+{ 	
+try 
+{ 
+var   
+user   
+=   
+await    
+context  ! (
+.  ( )
+Users  ) .
+.  . /
+	FindAsync  / 8
+(  8 9
+id  9 ;
+)  ; <
+;  < =
+if!! 
+(!! 
+user!! 
+==!! 
+null!!  
+)!!  !
+{"" 
+return## 
+Result## !
+<##! "
+User##" &
+>##& '
+.##' (
+Failure##( /
+(##/ 0
+$str##0 A
+)##A B
+;##B C
+}$$ 
+return%% 
+Result%% 
+<%% 
+User%% "
+>%%" #
+.%%# $
+Success%%$ +
+(%%+ ,
+user%%, 0
+)%%0 1
+;%%1 2
+}&& 
+catch'' 
+('' 
+	Exception'' 
+ex'' 
+)''  
+{(( 
+return)) 
+Result)) 
+<)) 
+User)) "
+>))" #
+.))# $
+Failure))$ +
+())+ ,
+$")), .
+$str)). W
+{))W X
+ex))X Z
+.))Z [
+Message))[ b
+}))b c
+"))c d
+)))d e
+;))e f
+}** 
+},, 	
+public-- 
+async-- 
+Task-- 
+<-- 
+Result--  
+<--  !
+Guid--! %
+>--% &
+>--& '
+AddUserAsync--( 4
+(--4 5
+User--5 9
+user--: >
+)--> ?
+{.. 	
+try// 
+{00 
+await11 
+context11 
+.11 
+Users11 #
+.11# $
+AddAsync11$ ,
+(11, -
+user11- 1
+)111 2
+;112 3
+await22 
+context22 
+.22 
+SaveChangesAsync22 .
+(22. /
+)22/ 0
+;220 1
+return33 
+Result33 
+<33 
+Guid33 "
+>33" #
+.33# $
+Success33$ +
+(33+ ,
+user33, 0
+.330 1
+UserId331 7
+)337 8
+;338 9
+}44 
+catch55 
+(55 
+	Exception55 
+ex55 
+)55  
+{66 
+return77 
+Result77 
+<77 
+Guid77 "
+>77" #
+.77# $
+Failure77$ +
+(77+ ,
+$"77, .
+$str77. U
+{77U V
+ex77V X
+.77X Y
+Message77Y `
+}77` a
+"77a b
+)77b c
+;77c d
+}88 
+}99 	
+public:: 
+async:: 
+Task:: 
+<:: 
+Result::  
+<::  !
+Guid::! %
+>::% &
+>::& '
+UpdateUserAsync::( 7
+(::7 8
+User::8 <
+user::= A
+)::A B
+{;; 	
+try<< 
+{== 
+var>> 
+existingUser>>  
+=>>! "
+await>># (
+context>>) 0
+.>>0 1
+Users>>1 6
+.>>6 7
+	FindAsync>>7 @
+(>>@ A
+user>>A E
+.>>E F
+UserId>>F L
+)>>L M
+;>>M N
+if?? 
+(?? 
+existingUser??  
+!=??! #
+null??$ (
+)??( )
+{@@ 
+contextAA 
+.AA 
+EntryAA !
+(AA! "
+existingUserAA" .
+)AA. /
+.AA/ 0
+CurrentValuesAA0 =
+.AA= >
+	SetValuesAA> G
+(AAG H
+userAAH L
+)AAL M
+;AAM N
+awaitBB 
+contextBB !
+.BB! "
+SaveChangesAsyncBB" 2
+(BB2 3
+)BB3 4
+;BB4 5
+returnDD 
+ResultDD !
+<DD! "
+GuidDD" &
+>DD& '
+.DD' (
+SuccessDD( /
+(DD/ 0
+userDD0 4
+.DD4 5
+UserIdDD5 ;
+)DD; <
+;DD< =
+}EE 
+elseFF 
+{GG 
+returnHH 
+ResultHH !
+<HH! "
+GuidHH" &
+>HH& '
+.HH' (
+FailureHH( /
+(HH/ 0
+$strHH0 A
+)HHA B
+;HHB C
+}II 
+}JJ 
+catchKK 
+(KK 
+	ExceptionKK 
+exKK 
+)KK  
+{LL 
+returnMM 
+ResultMM 
+<MM 
+GuidMM "
+>MM" #
+.MM# $
+FailureMM$ +
+(MM+ ,
+$"MM, .
+$strMM. U
+{MMU V
+exMMV X
+.MMX Y
+MessageMMY `
+}MM` a
+"MMa b
+)MMb c
+;MMc d
+}NN 
+}OO 	
+publicPP 
+asyncPP 
+TaskPP 
+<PP 
+ResultPP  
+<PP  !
+GuidPP! %
+>PP% &
+>PP& '
+DeleteUserAsyncPP( 7
+(PP7 8
+GuidPP8 <
+idPP= ?
+)PP? @
+{QQ 	
+tryRR 
+{SS 
+varTT 
+userTT 
+=TT 
+awaitTT  
+contextTT! (
+.TT( )
+UsersTT) .
+.TT. /
+	FindAsyncTT/ 8
+(TT8 9
+idTT9 ;
+)TT; <
+;TT< =
+ifUU 
+(UU 
+userUU 
+!=UU 
+nullUU  
+)UU  !
+{VV 
+contextWW 
+.WW 
+UsersWW !
+.WW! "
+RemoveWW" (
+(WW( )
+userWW) -
+)WW- .
+;WW. /
+awaitXX 
+contextXX !
+.XX! "
+SaveChangesAsyncXX" 2
+(XX2 3
+)XX3 4
+;XX4 5
+returnYY 
+ResultYY !
+<YY! "
+GuidYY" &
+>YY& '
+.YY' (
+SuccessYY( /
+(YY/ 0
+idYY0 2
+)YY2 3
+;YY3 4
+}ZZ 
+return[[ 
+Result[[ 
+<[[ 
+Guid[[ "
+>[[" #
+.[[# $
+Failure[[$ +
+([[+ ,
+$str[[, <
+)[[< =
+;[[= >
+}\\ 
+catch]] 
+(]] 
+	Exception]] 
+ex]] 
+)]]  
+{^^ 
+return__ 
+Result__ 
+<__ 
+Guid__ "
+>__" #
+.__# $
+Failure__$ +
+(__+ ,
+ex__, .
+.__. /
+InnerException__/ =
+!__= >
+.__> ?
+ToString__? G
+(__G H
+)__H I
+)__I J
+;__J K
+}`` 
+}aa 	
+}bb 
+}cc ≤i
 `C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\TransactionRepository.cs
 	namespace 	
 Infrastructure
@@ -2532,275 +671,271 @@ PropertyIdS ]
 public,, 
 async,, 
 Task,, 
-<,, 
-Transaction,, %
->,,% &
-AddTransactionAsync,,' :
-(,,: ;
-Transaction,,; F
-transaction,,G R
-),,R S
-{-- 	
-await.. 
-context.. 
-... 
-Transactions.. &
-...& '
-AddAsync..' /
-(../ 0
-transaction..0 ;
-)..; <
-;..< =
-await// 
-context// 
-.// 
-SaveChangesAsync// *
-(//* +
-)//+ ,
-;//, -
-return00 
-transaction00 
-;00 
-}11 	
-public33 
-async33 
-Task33 "
-UpdateTransactionAsync33 0
-(330 1
-Transaction331 <
-transaction33= H
-)33H I
-{44 	
-var55 
-existingTransaction55 #
-=55$ %
-await55& +
-context55, 3
-.553 4
-Transactions554 @
-.55@ A
-	FindAsync55A J
-(55J K
-transaction55K V
-.55V W
-TransactionId55W d
-)55d e
-;55e f
-if66 
-(66 
-existingTransaction66 #
-!=66$ &
-null66' +
-)66+ ,
-{77 
-existingTransaction88 #
-.88# $
-
-PropertyId88$ .
-=88/ 0
-transaction881 <
-.88< =
-
-PropertyId88= G
-;88G H
-existingTransaction99 #
-.99# $
-BuyerId99$ +
-=99, -
-transaction99. 9
-.999 :
-BuyerId99: A
-;99A B
-existingTransaction:: #
-.::# $
-SellerId::$ ,
-=::- .
-transaction::/ :
-.::: ;
-SellerId::; C
-;::C D
-existingTransaction;; #
-.;;# $
-	SalePrice;;$ -
-=;;. /
-transaction;;0 ;
-.;;; <
-	SalePrice;;< E
-;;;E F
-existingTransaction<< #
-.<<# $
-Status<<$ *
-=<<+ ,
-transaction<<- 8
-.<<8 9
-Status<<9 ?
-;<<? @
-context>> 
-.>> 
-Transactions>> $
-.>>$ %
-Update>>% +
-(>>+ ,
-existingTransaction>>, ?
-)>>? @
-;>>@ A
-await?? 
-context?? 
-.?? 
-SaveChangesAsync?? .
-(??. /
+<,, 
+Result,,  
+<,,  !
+Guid,,! %
+>,,% &
+>,,& '
+AddTransactionAsync,,( ;
+(,,; <
+Transaction,,< G
+transaction,,H S
+),,S T
+{-- 	
+try.. 
+{// 
+await00 
+context00 
+.00 
+Transactions00 *
+.00* +
+AddAsync00+ 3
+(003 4
+transaction004 ?
+)00? @
+;00@ A
+await11 
+context11 
+.11 
+SaveChangesAsync11 .
+(11. /
+)11/ 0
+;110 1
+return22 
+Result22 
+<22 
+Guid22 "
+>22" #
+.22# $
+Success22$ +
+(22+ ,
+transaction22, 7
+.227 8
+TransactionId228 E
+)22E F
+;22F G
+}33 
+catch44 
+(44 
+	Exception44 
+ex44 
+)44  
+{55 
+return66 
+Result66 
+<66 
+Guid66 "
+>66" #
+.66# $
+Failure66$ +
+(66+ ,
+$"66, .
+$str66. \
+{66\ ]
+ex66] _
+.66_ `
+Message66` g
+}66g h
+"66h i
+)66i j
+;66j k
+}77 
+}88 	
+public:: 
+async:: 
+Task:: 
+<:: 
+Result::  
+<::  !
+Guid::! %
+>::% &
+>::& '"
+UpdateTransactionAsync::( >
+(::> ?
+Transaction::? J
+transaction::K V
+)::V W
+{;; 	
+try<< 
+{== 
+var>> 
+existingTransaction>> '
+=>>( )
+await>>* /
+context>>0 7
+.>>7 8
+Transactions>>8 D
+.>>D E
+	FindAsync>>E N
+(>>N O
+transaction>>O Z
+.>>Z [
+TransactionId>>[ h
+)>>h i
+;>>i j
+if?? 
+(?? 
+existingTransaction?? '
+!=??( *
+null??+ /
 )??/ 0
-;??0 1
-}@@ 
-elseAA 
-{BB 
-throwCC 
-newCC 
-	ExceptionCC #
-(CC# $
-$"CC$ &
-$strCC& :
-{CC: ;
-transactionCC; F
-.CCF G
-TransactionIdCCG T
-}CCT U
-$strCCU `
-"CC` a
-)CCa b
-;CCb c
-}DD 
-}EE 	
-publicGG 
-asyncGG 
-TaskGG "
-DeleteTransactionAsyncGG 0
-(GG0 1
-GuidGG1 5
-idGG6 8
-)GG8 9
-{HH 	
-varII 
-transactionII 
-=II 
-awaitII #
-contextII$ +
-.II+ ,
-TransactionsII, 8
-.II8 9
-	FindAsyncII9 B
-(IIB C
-idIIC E
-)IIE F
-;IIF G
-ifJJ 
-(JJ 
-transactionJJ 
-!=JJ 
-nullJJ #
-)JJ# $
-{KK 
-contextLL 
-.LL 
-TransactionsLL $
-.LL$ %
-RemoveLL% +
-(LL+ ,
-transactionLL, 7
-)LL7 8
-;LL8 9
-awaitMM 
-contextMM 
-.MM 
-SaveChangesAsyncMM .
-(MM. /
-)MM/ 0
-;MM0 1
-}NN 
-elseOO 
-{PP 
-throwQQ 
-newQQ 
-	ExceptionQQ #
-(QQ# $
-$"QQ$ &
-$strQQ& :
-{QQ: ;
-idQQ; =
-}QQ= >
-$strQQ> I
-"QQI J
-)QQJ K
-;QQK L
-}RR 
-}SS 	
-publicUU 
-asyncUU 
-TaskUU 
-<UU 
-ResultUU  
-<UU  !
-TransactionUU! ,
->UU, -
->UU- .+
-GetTransactionByPropertyIdAsyncUU/ N
-(UUN O
-GuidUUO S
-idUUT V
-)UUV W
-{VV 	
-tryWW 
-{XX 
-varYY 
-transactionYY 
-=YY  !
-awaitYY" '
-contextYY( /
-.YY/ 0
-TransactionsYY0 <
-.YY< =
-FirstOrDefaultAsyncYY= P
-(YYP Q
-tYYQ R
-=>YYS U
-tYYV W
-.YYW X
-
-PropertyIdYYX b
-==YYc e
-idYYf h
-)YYh i
-;YYi j
-ifZZ 
-(ZZ 
-transactionZZ 
-!=ZZ  "
-nullZZ# '
-)ZZ' (
-{[[ 
-return\\ 
-Result\\ !
-<\\! "
-Transaction\\" -
->\\- .
-.\\. /
-Success\\/ 6
-(\\6 7
-transaction\\7 B
-)\\B C
-;\\C D
-}]] 
-return^^ 
-Result^^ 
-<^^ 
-Transaction^^ )
->^^) *
-.^^* +
-Failure^^+ 2
-(^^2 3
-$str^^3 K
-)^^K L
-;^^L M
+{@@ 
+contextAA 
+.AA 
+EntryAA !
+(AA! "
+existingTransactionAA" 5
+)AA5 6
+.AA6 7
+CurrentValuesAA7 D
+.AAD E
+	SetValuesAAE N
+(AAN O
+transactionAAO Z
+)AAZ [
+;AA[ \
+awaitBB 
+contextBB !
+.BB! "
+SaveChangesAsyncBB" 2
+(BB2 3
+)BB3 4
+;BB4 5
+returnCC 
+ResultCC !
+<CC! "
+GuidCC" &
+>CC& '
+.CC' (
+SuccessCC( /
+(CC/ 0
+transactionCC0 ;
+.CC; <
+TransactionIdCC< I
+)CCI J
+;CCJ K
+}DD 
+elseEE 
+{FF 
+returnGG 
+ResultGG !
+<GG! "
+GuidGG" &
+>GG& '
+.GG' (
+FailureGG( /
+(GG/ 0
+$strGG0 H
+)GGH I
+;GGI J
+}HH 
+}II 
+catchJJ 
+(JJ 
+	ExceptionJJ 
+exJJ 
+)JJ  
+{KK 
+returnLL 
+ResultLL 
+<LL 
+GuidLL "
+>LL" #
+.LL# $
+FailureLL$ +
+(LL+ ,
+$"LL, .
+$strLL. \
+{LL\ ]
+exLL] _
+.LL_ `
+MessageLL` g
+}LLg h
+"LLh i
+)LLi j
+;LLj k
+}MM 
+}NN 	
+publicPP 
+asyncPP 
+TaskPP 
+<PP 
+ResultPP  
+<PP  !
+GuidPP! %
+>PP% &
+>PP& '"
+DeleteTransactionAsyncPP( >
+(PP> ?
+GuidPP? C
+idPPD F
+)PPF G
+{QQ 	
+tryRR 
+{SS 
+varTT 
+transactionTT 
+=TT  !
+awaitTT" '
+contextTT( /
+.TT/ 0
+TransactionsTT0 <
+.TT< =
+	FindAsyncTT= F
+(TTF G
+idTTG I
+)TTI J
+;TTJ K
+ifUU 
+(UU 
+transactionUU 
+!=UU  "
+nullUU# '
+)UU' (
+{VV 
+contextWW 
+.WW 
+TransactionsWW (
+.WW( )
+RemoveWW) /
+(WW/ 0
+transactionWW0 ;
+)WW; <
+;WW< =
+awaitXX 
+contextXX !
+.XX! "
+SaveChangesAsyncXX" 2
+(XX2 3
+)XX3 4
+;XX4 5
+returnYY 
+ResultYY !
+<YY! "
+GuidYY" &
+>YY& '
+.YY' (
+SuccessYY( /
+(YY/ 0
+idYY0 2
+)YY2 3
+;YY3 4
+}ZZ 
+else[[ 
+{\\ 
+return]] 
+Result]] !
+<]]! "
+Guid]]" &
+>]]& '
+.]]' (
+Failure]]( /
+(]]/ 0
+$str]]0 H
+)]]H I
+;]]I J
+}^^ 
 }__ 
 catch`` 
 (`` 
@@ -2810,602 +945,1162 @@ PropertyIdYYX b
 {aa 
 returnbb 
 Resultbb 
-<bb 
-Transactionbb )
->bb) *
-.bb* +
-Failurebb+ 2
-(bb2 3
-$"bb3 5
-$strbb5 i
-{bbi j
-exbbj l
-.bbl m
-Messagebbm t
-}bbt u
-"bbu v
-)bbv w
-;bbw x
+<bb 
+Guidbb "
+>bb" #
+.bb# $
+Failurebb$ +
+(bb+ ,
+$"bb, .
+$strbb. \
+{bb\ ]
+exbb] _
+.bb_ `
+Messagebb` g
+}bbg h
+"bbh i
+)bbi j
+;bbj k
 }cc 
 }dd 	
 publicff 
 asyncff 
 Taskff 
-<ff 
-IEnumerableff %
-<ff% &
-Transactionff& 1
->ff1 2
->ff2 3$
-GetTransactionsByBuyerIdff4 L
-(ffL M
-GuidffM Q
-userIdffR X
-)ffX Y
-{gg 	
-returnhh 
-awaithh 
-contexthh  
-.hh  !
-Transactionshh! -
-.hh- .
-Wherehh. 3
-(hh3 4
-thh4 5
-=>hh6 8
-thh9 :
-.hh: ;
-BuyerIdhh; B
-==hhC E
-userIdhhF L
-)hhL M
-.hhM N
-ToListAsynchhN Y
-(hhY Z
-)hhZ [
-;hh[ \
-}ii 	
-publickk 
-asynckk 
-Taskkk 
-<kk 
-IEnumerablekk %
-<kk% &
-Transactionkk& 1
->kk1 2
->kk2 3%
-GetTransactionsBySellerIdkk4 M
-(kkM N
-GuidkkN R
-userIdkkS Y
-)kkY Z
-{ll 	
-returnmm 
-awaitmm 
-contextmm  
-.mm  !
-Transactionsmm! -
-.mm- .
-Wheremm. 3
-(mm3 4
-tmm4 5
-=>mm6 8
-tmm9 :
-.mm: ;
-SellerIdmm; C
-==mmD F
-userIdmmG M
-)mmM N
-.mmN O
-ToListAsyncmmO Z
-(mmZ [
-)mm[ \
-;mm\ ]
-}nn 	
-}oo 
-}pp ÷:
+<ff 
+Resultff  
+<ff  !
+Transactionff! ,
+>ff, -
+>ff- .+
+GetTransactionByPropertyIdAsyncff/ N
+(ffN O
+GuidffO S
+idffT V
+)ffV W
+{gg 	
+tryhh 
+{ii 
+varjj 
+transactionjj 
+=jj  !
+awaitjj" '
+contextjj( /
+.jj/ 0
+Transactionsjj0 <
+.jj< =
+FirstOrDefaultAsyncjj= P
+(jjP Q
+tjjQ R
+=>jjS U
+tjjV W
+.jjW X
+
+PropertyIdjjX b
+==jjc e
+idjjf h
+)jjh i
+;jji j
+ifkk 
+(kk 
+transactionkk 
+!=kk  "
+nullkk# '
+)kk' (
+{ll 
+returnmm 
+Resultmm !
+<mm! "
+Transactionmm" -
+>mm- .
+.mm. /
+Successmm/ 6
+(mm6 7
+transactionmm7 B
+)mmB C
+;mmC D
+}nn 
+returnoo 
+Resultoo 
+<oo 
+Transactionoo )
+>oo) *
+.oo* +
+Failureoo+ 2
+(oo2 3
+$stroo3 K
+)ooK L
+;ooL M
+}pp 
+catchqq 
+(qq 
+	Exceptionqq 
+exqq 
+)qq  
+{rr 
+returnss 
+Resultss 
+<ss 
+Transactionss )
+>ss) *
+.ss* +
+Failuress+ 2
+(ss2 3
+$"ss3 5
+$strss5 i
+{ssi j
+exssj l
+.ssl m
+Messagessm t
+}sst u
+"ssu v
+)ssv w
+;ssw x
+}tt 
+}uu 	
+publicww 
+asyncww 
+Taskww 
+<ww 
+Resultww  
+<ww  !
+IEnumerableww! ,
+<ww, -
+Transactionww- 8
+>ww8 9
+>ww9 :
+>ww: ;$
+GetTransactionsByBuyerIdww< T
+(wwT U
+GuidwwU Y
+userIdwwZ `
+)ww` a
+{xx 	
+tryyy 
+{zz 
+var{{ 
+transactions{{  
+={{! "
+await{{# (
+context{{) 0
+.{{0 1
+Transactions{{1 =
+.{{= >
+Where{{> C
+({{C D
+t{{D E
+=>{{F H
+t{{I J
+.{{J K
+BuyerId{{K R
+=={{S U
+userId{{V \
+){{\ ]
+.{{] ^
+ToListAsync{{^ i
+({{i j
+){{j k
+;{{k l
+return|| 
+Result|| 
+<|| 
+IEnumerable|| )
+<||) *
+Transaction||* 5
+>||5 6
+>||6 7
+.||7 8
+Success||8 ?
+(||? @
+transactions||@ L
+)||L M
+;||M N
+}}} 
+catch~~ 
+(~~ 
+	Exception~~ 
+ex~~ 
+)~~  
+{ 
+return
+ÄÄ 
+Result
+ÄÄ 
+<
+ÄÄ 
+IEnumerable
+ÄÄ )
+<
+ÄÄ) *
+Transaction
+ÄÄ* 5
+>
+ÄÄ5 6
+>
+ÄÄ6 7
+.
+ÄÄ7 8
+Failure
+ÄÄ8 ?
+(
+ÄÄ? @
+$"
+ÄÄ@ B
+$str
+ÄÄB s
+{
+ÄÄs t
+ex
+ÄÄt v
+.
+ÄÄv w
+Message
+ÄÄw ~
+}
+ÄÄ~ 
+"ÄÄ Ä
+)ÄÄÄ Å
+;ÄÄÅ Ç
+}
+ÅÅ 
+}
+ÇÇ 	
+public
+ÑÑ 
+async
+ÑÑ 
+Task
+ÑÑ 
+<
+ÑÑ 
+Result
+ÑÑ  
+<
+ÑÑ  !
+IEnumerable
+ÑÑ! ,
+<
+ÑÑ, -
+Transaction
+ÑÑ- 8
+>
+ÑÑ8 9
+>
+ÑÑ9 :
+>
+ÑÑ: ;'
+GetTransactionsBySellerId
+ÑÑ< U
+(
+ÑÑU V
+Guid
+ÑÑV Z
+userId
+ÑÑ[ a
+)
+ÑÑa b
+{
+ÖÖ 	
+try
+ÜÜ 
+{
+áá 
+var
+àà 
+transactions
+àà  
+=
+àà! "
+await
+àà# (
+context
+àà) 0
+.
+àà0 1
+Transactions
+àà1 =
+.
+àà= >
+Where
+àà> C
+(
+ààC D
+t
+ààD E
+=>
+ààF H
+t
+ààI J
+.
+ààJ K
+SellerId
+ààK S
+==
+ààT V
+userId
+ààW ]
+)
+àà] ^
+.
+àà^ _
+ToListAsync
+àà_ j
+(
+ààj k
+)
+ààk l
+;
+ààl m
+return
+ââ 
+Result
+ââ 
+<
+ââ 
+IEnumerable
+ââ )
+<
+ââ) *
+Transaction
+ââ* 5
+>
+ââ5 6
+>
+ââ6 7
+.
+ââ7 8
+Success
+ââ8 ?
+(
+ââ? @
+transactions
+ââ@ L
+)
+ââL M
+;
+ââM N
+}
+ää 
+catch
+ãã 
+(
+ãã 
+	Exception
+ãã 
+ex
+ãã 
+)
+ãã  
+{
+åå 
+return
+çç 
+Result
+çç 
+<
+çç 
+IEnumerable
+çç )
+<
+çç) *
+Transaction
+çç* 5
+>
+çç5 6
+>
+çç6 7
+.
+çç7 8
+Failure
+çç8 ?
+(
+çç? @
+$"
+çç@ B
+$str
+ççB s
+{
+ççs t
+ex
+ççt v
+.
+ççv w
+Message
+ççw ~
+}
+çç~ 
+"çç Ä
+)ççÄ Å
+;ççÅ Ç
+}
+éé 
+}
+èè 	
+}
+êê 
+}ëë âQ
 dC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\PropertyListingRepository.cs
 	namespace 	
 Infrastructure
  
 . 
 Repositories %
->>>>>>> Stashed changes
 { 
 public		 
 
-class		 -
-!GetAllPropertyListingQueryHandler		 2
-:		3 4
-IRequestHandler		5 D
-<		D E&
-GetAllPropertyListingQuery		E _
-,		_ `
-List		a e
-<		e f
-PropertyListingDto		f x
->		x y
->		y z
+class		 %
+PropertyListingRepository		 *
+:		+ ,&
+IPropertyListingRepository		- G
 {
 
  
 private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-private 
-readonly &
-IPropertyListingRepository 3
-_repository4 ?
-;? @
-public -
-!GetAllPropertyListingQueryHandler 0
-(0 1
-IMapper1 8
-mapper9 ?
-,? @&
-IPropertyListingRepositoryA [
-
-repository\ f
-)f g
-{ 	
-_mapper 
-= 
-mapper 
-; 
-_repository 
-= 
-
-repository $
-;$ %
-} 	
-public 
-async 
-Task 
-< 
-List 
-< 
-PropertyListingDto 1
->1 2
->2 3
-Handle4 :
-(: ;&
-GetAllPropertyListingQuery; U
-requestV ]
-,] ^
-CancellationToken_ p
-cancellationToken	q Ç
+readonly  
+ApplicationDbContext -
+context. 5
+;5 6
+public %
+PropertyListingRepository (
+(( ) 
+ApplicationDbContext) =
+context> E
+)E F
+{ 	
+this 
+. 
+context 
+= 
+context "
+;" #
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+IEnumerable! ,
+<, -
+PropertyListing- <
+>< =
+>= >
+>> ?
+GetAllListingsAsync@ S
+(S T
+)T U
+{ 	
+try 
+{ 
+var 
+listings 
+= 
+await $
+context% ,
+., -
+PropertyListings- =
+.= >
+ToListAsync> I
+(I J
+)J K
+;K L
+return 
+Result 
+< 
+IEnumerable )
+<) *
+PropertyListing* 9
+>9 :
+>: ;
+.; <
+Success< C
+(C D
+listingsD L
+)L M
+;M N
+} 
+catch 
+( 
+	Exception 
+ex 
+) 
+{ 
+return 
+Result 
+< 
+IEnumerable )
+<) *
+PropertyListing* 9
+>9 :
+>: ;
+.; <
+Failure< C
+(C D
+$"D F
+$strF |
+{| }
+ex} 
+.	 Ä
+Message
+Ä á
+}
+á à
+"
+à â
 )
-Ç É
-{ 	
-var 
-listings 
-= 
-await  
-_repository! ,
-., -
-GetAllListingsAsync- @
-(@ A
-)A B
-;B C
-return 
-listings 
-. 
-Select "
-(" #
-listing# *
-=>+ -
-_mapper. 5
-.5 6
-Map6 9
-<9 :
-PropertyListingDto: L
->L M
-(M N
-listingN U
-)U V
-)V W
-.W X
-ToListX ^
-(^ _
-)_ `
-;` a
-} 	
-} 
-} Ç
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingByIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Queries  '
-{ 
-public 
-
-class 
-GetListingByIdQuery $
-:% &
-IRequest' /
-</ 0
-PropertyListingDto0 B
->B C
-{ 
-public 
-Guid 
+â ä
+;
+ä ã
+} 
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+PropertyListing! 0
+>0 1
+>1 2
+GetListingByIdAsync3 F
+(F G
+GuidG K
+idL N
+)N O
+{   	
+try!! 
+{"" 
+var## 
+listing## 
+=## 
+await## #
+context##$ +
+.##+ ,
+PropertyListings##, <
+.##< =
+	FindAsync##= F
+(##F G
+id##G I
+)##I J
+;##J K
+if$$ 
+($$ 
+listing$$ 
+==$$ 
+null$$ #
+)$$# $
+{%% 
+return&& 
+Result&& !
+<&&! "
+PropertyListing&&" 1
+>&&1 2
+.&&2 3
+Failure&&3 :
+(&&: ;
+$str&&; X
+)&&X Y
+;&&Y Z
+}'' 
+return(( 
+Result(( 
+<(( 
+PropertyListing(( -
+>((- .
+.((. /
+Success((/ 6
+(((6 7
+listing((7 >
+)((> ?
+;((? @
+})) 
+catch** 
+(** 
+	Exception** 
+ex** 
+)**  
+{++ 
+return,, 
+Result,, 
+<,, 
+PropertyListing,, -
+>,,- .
+.,,. /
+Failure,,/ 6
+(,,6 7
+$",,7 9
+$str,,9 n
+{,,n o
+ex,,o q
+.,,q r
+Message,,r y
+},,y z
+",,z {
+),,{ |
+;,,| }
+}-- 
+}// 	
+public11 
+async11 
+Task11 
+<11 
+Result11  
+<11  !
+IEnumerable11! ,
+<11, -
+PropertyListing11- <
+>11< =
+>11= >
+>11> ?
+GetListingsByUserId11@ S
+(11S T
+Guid11T X
+userId11Y _
+)11_ `
+{22 	
+try33 
+{44 
+var55 
+listings55 
+=55 
+await55 $
+context55% ,
+.55, -
+PropertyListings55- =
+.66  !
+Where66! &
+(66& '
+listing66' .
+=>66/ 1
+listing662 9
+.669 :
+UserID66: @
+==66A C
+userId66D J
+)66J K
+.77  !
+ToListAsync77! ,
+(77, -
+)77- .
+;77. /
+return88 
+Result88 
+<88 
+IEnumerable88 )
+<88) *
+PropertyListing88* 9
+>889 :
+>88: ;
+.88; <
+Success88< C
+(88C D
+listings88D L
+)88L M
+;88M N
+}99 
+catch:: 
+(:: 
+	Exception:: 
+ex:: 
+)::  
+{;; 
+return<< 
+Result<< 
+<<< 
+IEnumerable<< )
+<<<) *
+PropertyListing<<* 9
+><<9 :
+><<: ;
+.<<; <
+Failure<<< C
+(<<C D
+$"<<D F
+$str	<<F Ü
+{
+<<Ü á
+ex
+<<á â
+.
+<<â ä
+Message
+<<ä ë
+}
+<<ë í
+"
+<<í ì
+)
+<<ì î
+;
+<<î ï
+}== 
+}>> 	
+public@@ 
+async@@ 
+Task@@ 
+<@@ 
+Result@@  
+<@@  !
+Guid@@! %
+>@@% &
+>@@& '
+AddListingAsync@@( 7
+(@@7 8
+PropertyListing@@8 G
+listing@@H O
+)@@O P
+{AA 	
+tryBB 
+{CC 
+awaitDD 
+contextDD 
+.DD 
+PropertyListingsDD .
+.DD. /
+AddAsyncDD/ 7
+(DD7 8
+listingDD8 ?
+)DD? @
+;DD@ A
+awaitEE 
+contextEE 
+.EE 
+SaveChangesAsyncEE .
+(EE. /
+)EE/ 0
+;EE0 1
+returnFF 
+ResultFF 
+<FF 
+GuidFF "
+>FF" #
+.FF# $
+SuccessFF$ +
+(FF+ ,
+listingFF, 3
+.FF3 4
 
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-}		 
-}
-
- §
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetAllPropertyListingQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Queries  '
-{ 
-public 
-
-class &
-GetAllPropertyListingQuery +
-:, -
-IRequest. 6
-<6 7
-List7 ;
-<; <
-PropertyListingDto< N
->N O
->O P
-{ 
-}		 
-}
-
- ‚
-õC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommandValidator.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Commands  (
-{ 
-public 
-
-class 1
-%UpdatePropertyListingCommandValidator 6
-:7 8
-AbstractValidator9 J
-<J K(
-UpdatePropertyListingCommandK g
->g h
-{ 
-public 1
-%UpdatePropertyListingCommandValidator 4
-(4 5
-)5 6
-{ 	
-RuleFor		 
-(		 
-x		 
-=>		 
-x		 
-.		 
+PropertyIdFF4 >
+)FF> ?
+;FF? @
+}GG 
+catchHH 
+(HH 
+	ExceptionHH 
+exHH 
+)HH  
+{II 
+returnJJ 
+ResultJJ 
+<JJ 
+GuidJJ "
+>JJ" #
+.JJ# $
+FailureJJ$ +
+(JJ+ ,
+$"JJ, .
+$strJJ. a
+{JJa b
+exJJb d
+.JJd e
+MessageJJe l
+}JJl m
+"JJm n
+)JJn o
+;JJo p
+}KK 
+}LL 	
+publicNN 
+asyncNN 
+TaskNN 
+<NN 
+ResultNN  
+<NN  !
+GuidNN! %
+>NN% &
+>NN& '
+UpdateListingAsyncNN( :
+(NN: ;
+PropertyListingNN; J
+listingNNK R
+)NNR S
+{OO 	
+tryPP 
+{QQ 
+varRR 
+existingListingRR #
+=RR$ %
+awaitRR& +
+contextRR, 3
+.RR3 4
+PropertyListingsRR4 D
+.RRD E
+	FindAsyncRRE N
+(RRN O
+listingRRO V
+.RRV W
 
-PropertyId		 %
-)		% &
-.		& '
-NotEmpty		' /
-(		/ 0
-)		0 1
-.		1 2
-Must		2 6
-(		6 7
-BeAValidGuid		7 C
-)		C D
-;		D E
-RuleFor
+PropertyIdRRW a
+)RRa b
+;RRb c
+ifSS 
+(SS 
+existingListingSS #
+!=SS$ &
+nullSS' +
+)SS+ ,
+{TT 
+contextUU 
+.UU 
+EntryUU !
+(UU! "
+existingListingUU" 1
+)UU1 2
+.UU2 3
+CurrentValuesUU3 @
+.UU@ A
+	SetValuesUUA J
+(UUJ K
+listingUUK R
+)UUR S
+;UUS T
+awaitVV 
+contextVV !
+.VV! "
+SaveChangesAsyncVV" 2
+(VV2 3
+)VV3 4
+;VV4 5
+returnXX 
+ResultXX !
+<XX! "
+GuidXX" &
+>XX& '
+.XX' (
+SuccessXX( /
+(XX/ 0
+listingXX0 7
+.XX7 8
+
+PropertyIdXX8 B
+)XXB C
+;XXC D
+}YY 
+elseZZ 
+{[[ 
+return\\ 
+Result\\ !
+<\\! "
+Guid\\" &
+>\\& '
+.\\' (
+Failure\\( /
+(\\/ 0
+$str\\0 D
+)\\D E
+;\\E F
+}]] 
+}^^ 
+catch__ 
+(__ 
+	Exception__ 
+ex__ 
+)__  
+{`` 
+returnaa 
+Resultaa 
+<aa 
+Guidaa "
+>aa" #
+.aa# $
+Failureaa$ +
+(aa+ ,
+$"aa, .
+$straa. a
+{aaa b
+exaab d
+.aad e
+Messageaae l
+}aal m
+"aam n
+)aan o
+;aao p
+}bb 
+}dd 	
+publicff 
+asyncff 
+Taskff 
+<ff 
+Resultff  
+<ff  !
+Guidff! %
+>ff% &
+>ff& '
+DeleteListingAsyncff( :
+(ff: ;
+Guidff; ?
+idff@ B
+)ffB C
+{gg 	
+tryhh 
+{ii 
+varjj 
+propertyListingjj #
+=jj$ %
+awaitjj& +
+contextjj, 3
+.jj3 4
+PropertyListingsjj4 D
+.jjD E
+	FindAsyncjjE N
+(jjN O
+idjjO Q
+)jjQ R
+;jjR S
+ifkk 
+(kk 
+propertyListingkk #
+!=kk$ &
+nullkk' +
+)kk+ ,
+{ll 
+contextmm 
+.mm 
+PropertyListingsmm ,
+.mm, -
+Removemm- 3
+(mm3 4
+propertyListingmm4 C
+)mmC D
+;mmD E
+awaitnn 
+contextnn !
+.nn! "
+SaveChangesAsyncnn" 2
+(nn2 3
+)nn3 4
+;nn4 5
+returnoo 
+Resultoo !
+<oo! "
+Guidoo" &
+>oo& '
+.oo' (
+Successoo( /
+(oo/ 0
+idoo0 2
+)oo2 3
+;oo3 4
+}pp 
+returnqq 
+Resultqq 
+<qq 
+Guidqq "
+>qq" #
+.qq# $
+Failureqq$ +
+(qq+ ,
+$strqq, H
+)qqH I
+;qqI J
+}rr 
+catchss 
+(ss 
+	Exceptionss 
+exss 
+)ss  
+{tt 
+returnuu 
+Resultuu 
+<uu 
+Guiduu "
+>uu" #
+.uu# $
+Failureuu$ +
+(uu+ ,
+$"uu, .
+$struu. a
+{uua b
+exuub d
+.uud e
+Messageuue l
+}uul m
+"uum n
+)uun o
+;uuo p
+}vv 
+}ww 	
+}xx 
+}yy íf
+bC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
+	namespace 	
+Infrastructure
+ 
+. 
+Repositories %
+{ 
+public		 
+
+class		 #
+ClientInquiryRepository		 (
+:		) *$
+IClientInquiryRepository		+ C
+{
 
- 
-(
-
- 
-x
-
- 
-=>
-
- 
-x
-
- 
-.
-
- 
-Address
-
- "
-)
-
-" #
-.
-
-# $
-MaximumLength
-
-$ 1
-(
-
-1 2
-$num
-
-2 5
-)
-
-5 6
-;
-
-6 7
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Price  
-)  !
-.! "
-GreaterThan" -
-(- .
-$num. /
-)/ 0
-;0 1
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-SquareFootage (
-)( )
-.) *
-GreaterThan* 5
-(5 6
-$num6 7
-)7 8
-;8 9
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-NumberOfBedrooms +
-)+ ,
-., - 
-GreaterThanOrEqualTo- A
-(A B
-$numB C
-)C D
-;D E
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-NumberOfBathrooms ,
-), -
-.- . 
-GreaterThanOrEqualTo. B
-(B C
-$numC D
-)D E
-;E F
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Description &
-)& '
-.' (
-NotEmpty( 0
-(0 1
-)1 2
-.2 3
-MaximumLength3 @
-(@ A
-$numA D
-)D E
-;E F
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Status !
-)! "
-." #
-NotEmpty# +
-(+ ,
-), -
-;- .
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-ListingDate &
-)& '
-.' (
-NotEmpty( 0
-(0 1
-)1 2
-;2 3
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-	ImageURLs $
-)$ %
-.% &
-NotEmpty& .
-(. /
-)/ 0
-;0 1
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-UserID !
-)! "
-." #
-NotEmpty# +
-(+ ,
-), -
-;- .
-} 	
-static 
-private 
-bool 
-BeAValidGuid (
-(( )
-Guid) -
-guid. 2
-)2 3
-{ 	
-<<<<<<< Updated upstream
-return 
-Guid 
-. 
-TryParse  
-(  !
-guid! %
-.% &
-ToString& .
-(. /
-)/ 0
-,0 1
-out2 5
-_6 7
-)7 8
-;8 9
-} 	
-} 
-}  
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Commands  (
-{ 
-public 
-=======
-return 
-await 
-context  
-.  !
-PropertyListings! 1
-.1 2
-	FindAsync2 ;
-(; <
-id< >
-)> ?
-;? @
-} 	
-public 
-static 
-Task 
-< 
-IEnumerable &
-<& '
-PropertyListing' 6
->6 7
->7 8
-GetListingsByUserId9 L
-(L M
-GuidM Q
-userIdR X
-)X Y
-{ 	
-throw 
-new #
-NotImplementedException -
-(- .
-). /
-;/ 0
-} 	
-public   
-async   
-Task   
-<   
-Result    
-<    !
-Guid  ! %
->  % &
->  & '
-AddListingAsync  ( 7
-(  7 8
-PropertyListing  8 G
-listing  H O
-)  O P
-{!! 	
-try"" 
-{## 
-await$$ 
-context$$ 
-.$$ 
-PropertyListings$$ .
-.$$. /
-AddAsync$$/ 7
-($$7 8
-listing$$8 ?
-)$$? @
-;$$@ A
-await%% 
-context%% 
-.%% 
-SaveChangesAsync%% .
-(%%. /
-)%%/ 0
-;%%0 1
+ 
+private 
+readonly  
+ApplicationDbContext -
+context. 5
+;5 6
+public #
+ClientInquiryRepository &
+(& ' 
+ApplicationDbContext' ;
+context< C
+)C D
+{ 	
+this 
+. 
+context 
+= 
+context "
+;" #
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+IEnumerable! ,
+<, -
+ClientInquiry- :
+>: ;
+>; <
+>< = 
+GetAllInquiriesAsync> R
+(R S
+)S T
+{ 	
+try 
+{ 
+var 
+	inquiries 
+= 
+await  %
+context& -
+.- .
+ClientInquiries. =
+.= >
+ToListAsync> I
+(I J
+)J K
+;K L
+return 
+Result 
+< 
+IEnumerable )
+<) *
+ClientInquiry* 7
+>7 8
+>8 9
+.9 :
+Success: A
+(A B
+	inquiriesB K
+)K L
+;L M
+} 
+catch 
+( 
+	Exception 
+ex 
+)  
+{ 
+return 
+Result 
+< 
+IEnumerable )
+<) *
+ClientInquiry* 7
+>7 8
+>8 9
+.9 :
+Failure: A
+(A B
+$"B D
+$strD r
+{r s
+exs u
+.u v
+Messagev }
+}} ~
+"~ 
+)	 Ä
+;
+Ä Å
+} 
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+ClientInquiry! .
+>. /
+>/ 0
+GetInquiryByIdAsync1 D
+(D E
+GuidE I
+idJ L
+)L M
+{ 	
+try 
+{ 
+var   
+inquiry   
+=   
+await   #
+context  $ +
+.  + ,
+ClientInquiries  , ;
+.  ; <
+	FindAsync  < E
+(  E F
+id  F H
+)  H I
+;  I J
+if!! 
+(!! 
+inquiry!! 
+==!! 
+null!! #
+)!!# $
+{"" 
+return## 
+Result## !
+<##! "
+ClientInquiry##" /
+>##/ 0
+.##0 1
+Failure##1 8
+(##8 9
+$str##9 M
+)##M N
+;##N O
+}$$ 
 return&& 
 Result&& 
-<&& 
-Guid&& "
->&&" #
-.&&# $
-Success&&$ +
-(&&+ ,
-listing&&, 3
-.&&3 4
-
-PropertyId&&4 >
-)&&> ?
-;&&? @
+<&& 
+ClientInquiry&& +
+>&&+ ,
+.&&, -
+Success&&- 4
+(&&4 5
+inquiry&&5 <
+)&&< =
+;&&= >
 }'' 
 catch(( 
 ((( 
@@ -3415,1932 +2110,166 @@ PropertyId&&4 >
 {)) 
 return** 
 Result** 
-<** 
-Guid** "
->**" #
-.**# $
-Failure**$ +
-(**+ ,
-ex**, .
-.**. /
-InnerException**/ =
-!**= >
-.**> ?
-ToString**? G
-(**G H
-)**H I
-)**I J
-;**J K
+<** 
+ClientInquiry** +
+>**+ ,
+.**, -
+Failure**- 4
+(**4 5
+$"**5 7
+$str**7 c
+{**c d
+ex**d f
+.**f g
+Message**g n
+}**n o
+"**o p
+)**p q
+;**q r
 }++ 
 },, 	
-public.. 
-async.. 
-Task.. 
-<.. 
-Result..  
-<..  !
-Guid..! %
->..% &
->..& '
-UpdateListingAsync..( :
-(..: ;
-PropertyListing..; J
-listing..K R
-)..R S
-{// 	
-try00 
-{11 
-var22 
-existingListing22 #
-=22$ %
-await22& +
-context22, 3
-.223 4
-PropertyListings224 D
-.22D E
-	FindAsync22E N
-(22N O
-listing22O V
-.22V W
-
-PropertyId22W a
-)22a b
-;22b c
-if33 
-(33 
-existingListing33 #
-!=33$ &
-null33' +
-)33+ ,
-{44 
-context55 
-.55 
-Entry55 !
-(55! "
-existingListing55" 1
-)551 2
-.552 3
-CurrentValues553 @
-.55@ A
-	SetValues55A J
-(55J K
-listing55K R
-)55R S
-;55S T
-await66 
-context66 !
-.66! "
-SaveChangesAsync66" 2
-(662 3
-)663 4
-;664 5
-return88 
-Result88 !
-<88! "
-Guid88" &
->88& '
-.88' (
-Success88( /
-(88/ 0
-listing880 7
-.887 8
-
-PropertyId888 B
-)88B C
-;88C D
-}99 
-else:: 
-{;; 
-return<< 
-Result<< !
-<<<! "
-Guid<<" &
-><<& '
-.<<' (
-Failure<<( /
-(<</ 0
-$str<<0 D
-)<<D E
-;<<E F
-}== 
-}>> 
-catch?? 
-(?? 
-	Exception?? 
-ex?? 
-)??  
-{@@ 
-varAA 
-errorMessageAA  
-=AA! "
-exAA# %
-.AA% &
-InnerExceptionAA& 4
-!=AA5 7
-nullAA8 <
-?AA= >
-exAA? A
-.AAA B
-InnerExceptionAAB P
-.AAP Q
-MessageAAQ X
-:AAY Z
-exAA[ ]
-.AA] ^
-MessageAA^ e
-;AAe f
-returnBB 
-ResultBB 
-<BB 
-GuidBB "
->BB" #
-.BB# $
-FailureBB$ +
-(BB+ ,
-errorMessageBB, 8
-)BB8 9
-;BB9 :
-}CC 
-}EE 	
-publicGG 
-asyncGG 
-TaskGG 
-<GG 
-ResultGG  
-<GG  !
-GuidGG! %
->GG% &
->GG& '
-DeleteListingAsyncGG( :
-(GG: ;
-GuidGG; ?
-idGG@ B
-)GGB C
-{HH 	
-tryII 
-{JJ 
-varKK 
-propertyListingKK #
-=KK$ %
-awaitKK& +
-contextKK, 3
-.KK3 4
-PropertyListingsKK4 D
-.KKD E
-	FindAsyncKKE N
-(KKN O
-idKKO Q
-)KKQ R
-;KKR S
-ifLL 
-(LL 
-propertyListingLL #
-!=LL$ &
-nullLL' +
-)LL+ ,
-{MM 
-contextNN 
-.NN 
-PropertyListingsNN ,
-.NN, -
-RemoveNN- 3
-(NN3 4
-propertyListingNN4 C
-)NNC D
-;NND E
-awaitOO 
-contextOO !
-.OO! "
-SaveChangesAsyncOO" 2
-(OO2 3
-)OO3 4
-;OO4 5
-returnPP 
-ResultPP !
-<PP! "
-GuidPP" &
->PP& '
-.PP' (
-SuccessPP( /
-(PP/ 0
-idPP0 2
-)PP2 3
-;PP3 4
-}QQ 
-returnRR 
-ResultRR 
-<RR 
-GuidRR "
->RR" #
-.RR# $
-FailureRR$ +
-(RR+ ,
-$strRR, H
-)RRH I
-;RRI J
-}SS 
-catchTT 
-(TT 
-	ExceptionTT 
-exTT 
-)TT  
-{UU 
-returnXX 
-ResultXX 
-<XX 
-GuidXX "
->XX" #
-.XX# $
-FailureXX$ +
-(XX+ ,
-exXX, .
-.XX. /
-InnerExceptionXX/ =
-!XX= >
-.XX> ?
-ToStringXX? G
-(XXG H
-)XXH I
-)XXI J
-;XXJ K
-}YY 
-}ZZ 	
-}[[ 
-}\\ ˆC
-bC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
-	namespace 	
-Infrastructure
- 
-. 
-Repositories %
-{ 
-public		 
->>>>>>> Stashed changes
-
-class (
-UpdatePropertyListingCommand -
-:. /
-IRequest0 8
-<8 9
-Result9 ?
-<? @
-Guid@ D
->D E
->E F
-{ 
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public		 
-string		 
-?		 
-Address		 
-{		  
-get		! $
-;		$ %
-set		& )
-;		) *
-}		+ ,
-public
-
- 
-string
-
- 
-?
-
- 
-Type
-
- 
-{
-
- 
-get
-
- !
-;
-
-! "
-set
-
-# &
-;
-
-& '
-}
-
-( )
-public 
-double 
-Price 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-double 
-SquareFootage #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-public 
-string 
-? 
-Description "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-string 
-? 
-Status 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-DateTime 
-ListingDate #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-string 
-? 
-	ImageURLs  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-public 
-Guid 
-UserID 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-} ∫
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\DeletePropertyListingCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Commands  (
-{ 
-public 
-
-class (
-DeletePropertyListingCommand -
-:. /
-IRequest0 8
-<8 9
-Result9 ?
-<? @
-Guid@ D
->D E
->E F
-{ 
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-}		 
-}
-
- ˛
-õC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommandValidator.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Commands  (
-{ 
-public 
-
-class 1
-%CreatePropertyListingCommandValidator 6
-:7 8
-AbstractValidator9 J
-<J K(
-CreatePropertyListingCommandK g
->g h
-{ 
-public 1
-%CreatePropertyListingCommandValidator 4
-(4 5
-)5 6
-{ 	
-RuleFor		 
-(		 
-x		 
-=>		 
-x		 
-.		 
-Address		 "
-)		" #
-.		# $
-MaximumLength		$ 1
-(		1 2
-$num		2 5
-)		5 6
-;		6 7
-RuleFor
-
- 
-(
-
- 
-x
-
- 
-=>
-
- 
-x
-
- 
-.
-
- 
-Price
-
-  
-)
-
-  !
-.
-
-! "
-GreaterThan
-
-" -
-(
-
-- .
-$num
-
-. /
-)
-
-/ 0
-;
-
-0 1
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-SquareFootage (
-)( )
-.) *
-GreaterThan* 5
-(5 6
-$num6 7
-)7 8
-;8 9
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-NumberOfBedrooms +
-)+ ,
-., - 
-GreaterThanOrEqualTo- A
-(A B
-$numB C
-)C D
-;D E
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-NumberOfBathrooms ,
-), -
-.- . 
-GreaterThanOrEqualTo. B
-(B C
-$numC D
-)D E
-;E F
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Description &
-)& '
-.' (
-NotEmpty( 0
-(0 1
-)1 2
-.2 3
-MaximumLength3 @
-(@ A
-$numA D
-)D E
-;E F
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-Status !
-)! "
-." #
-NotEmpty# +
-(+ ,
-), -
-;- .
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-ListingDate &
-)& '
-.' (
-NotEmpty( 0
-(0 1
-)1 2
-;2 3
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-	ImageURLs $
-)$ %
-.% &
-NotEmpty& .
-(. /
-)/ 0
-;0 1
-RuleFor 
-( 
-x 
-=> 
-x 
-. 
-UserID !
-)! "
-." #
-NotEmpty# +
-(+ ,
-), -
-;- .
-} 	
-} 
-} Æ
-íC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Commands  (
-{ 
-public 
-
-class (
-CreatePropertyListingCommand -
-:. /
-IRequest0 8
-<8 9
-Result9 ?
-<? @
-Guid@ D
->D E
->E F
-{ 
-public 
-string 
-? 
-Address 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public		 
-string		 
-?		 
-Type		 
-{		 
-get		 !
-;		! "
-set		# &
-;		& '
-}		( )
-public
-
- 
-double
-
- 
-Price
-
- 
-{
-
- 
-get
-
- !
-;
-
-! "
-set
-
-# &
-;
-
-& '
-}
-
-( )
-public 
-double 
-SquareFootage #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-public 
-string 
-? 
-Description "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-string 
-? 
-Status 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-DateTime 
-ListingDate #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-string 
-? 
-	ImageURLs  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-public 
-Guid 
-UserID 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-} ù
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\UpdatePropertyListingCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-CommandHandlers  /
-{		 
-public
-
- 
-
-class
-
- /
-#UpdatePropertyListingCommandHandler
-
- 4
-:
-
-5 6
-IRequestHandler
-
-7 F
-<
-
-F G(
-UpdatePropertyListingCommand
-
-G c
-,
-
-c d
-Result
-
-e k
-<
-
-k l
-Guid
-
-l p
->
-
-p q
->
-
-q r
-{ 
-private 
-readonly &
-IPropertyListingRepository 3
-
-repository4 >
-;> ?
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public /
-#UpdatePropertyListingCommandHandler 2
-(2 3&
-IPropertyListingRepository3 M
-
-repositoryN X
-,X Y
-IMapperZ a
-mapperb h
-)h i
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /(
-UpdatePropertyListingCommand/ K
-requestL S
-,S T
-CancellationTokenU f
-cancellationTokeng x
-)x y
-{ 	
-var 
-listing 
-= 
-mapper  
-.  !
-Map! $
-<$ %
-PropertyListing% 4
->4 5
-(5 6
-request6 =
-)= >
-;> ?
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-UpdateListingAsync* <
-(< =
-listing= D
-)D E
-;E F
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-} 
-}   ‹
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\DeletePropertyListingCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-CommandHandlers  /
-{ 
-public 
-
-class /
-#DeletePropertyListingCommandHandler 4
-:5 6
-IRequestHandler7 F
-<F G(
-DeletePropertyListingCommandG c
-,c d
-Resulte k
-<k l
-Guidl p
->p q
->q r
-{		 
-private
-
- 
-readonly
-
- &
-IPropertyListingRepository
-
- 3
-
-repository
-
-4 >
-;
-
-> ?
-public /
-#DeletePropertyListingCommandHandler 2
-(2 3&
-IPropertyListingRepository3 M
-
-repositoryN X
-)X Y
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /(
-DeletePropertyListingCommand/ K
-requestL S
-,S T
-CancellationTokenU f
-cancellationTokeng x
-)x y
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-DeleteListingAsync* <
-(< =
-request= D
-.D E
-
-PropertyIdE O
-)O P
-;P Q
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-} 
-} ™
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\CreatePropertyListingCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-CommandHandlers  /
-{		 
-public
-
- 
-
-class
-
- /
-#CreatePropertyListingCommandHandler
-
- 4
-:
-
-5 6
-IRequestHandler
-
-7 F
-<
-
-F G(
-CreatePropertyListingCommand
-
-G c
-,
-
-c d
-Result
-
-e k
-<
-
-k l
-Guid
-
-l p
->
-
-p q
->
-
-q r
-{ 
-private 
-readonly &
-IPropertyListingRepository 3
-
-repository4 >
-;> ?
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public /
-#CreatePropertyListingCommandHandler 2
-(2 3&
-IPropertyListingRepository3 M
-
-repositoryN X
-,X Y
-IMapperZ a
-mapperb h
-)h i
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /(
-CreatePropertyListingCommand/ K
-requestL S
-,S T
-CancellationTokenU f
-cancellationTokeng x
-)x y
-{ 	
-var 
-propertyListing 
-=  !
-mapper" (
-.( )
-Map) ,
-<, -
-PropertyListing- <
->< =
-(= >
-request> E
-)E F
-;F G
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-AddListingAsync* 9
-(9 :
-propertyListing: I
-)I J
-;J K
-if 
-( 
-result 
-. 
-	IsSuccess 
-)  
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-}   
-}!! ï
-ìC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-QueryHandler0 <
-{ 
-public		 
-
-class		 &
-GetInquiryByIdQueryHandler		 +
-:		, -
-IRequestHandler		. =
-<		= >
-GetInquiryByIdQuery		> Q
-,		Q R
-ClientInquiryDto		S c
->		c d
-{
-
- 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly $
-IClientInquiryRepository 1
-
-repository2 <
-;< =
-public &
-GetInquiryByIdQueryHandler )
-() *
-IMapper* 1
-mapper2 8
-,8 9$
-IClientInquiryRepository: R
-
-repositoryS ]
-)] ^
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-ClientInquiryDto *
->* +
-Handle, 2
-(2 3
-GetInquiryByIdQuery3 F
-requestG N
-,N O
-CancellationTokenP a
-cancellationTokenb s
-)s t
-{ 	
-var 
-inquiry 
-= 
-await 
-
-repository  *
-.* +
-GetInquiryByIdAsync+ >
-(> ?
-request? F
-.F G
-	InquiryIdG P
-)P Q
-;Q R
-if 
-( 
-inquiry 
-== 
-null 
-)  
-{ 
-throw 
-new  
-KeyNotFoundException .
-(. /
-$"/ 1
-$str1 H
-{H I
-requestI P
-.P Q
-	InquiryIdQ Z
-}Z [
-$str[ f
-"f g
-)g h
-;h i
-} 
-<<<<<<< Updated upstream
-return 
-mapper 
-. 
-Map 
-< 
-ClientInquiryDto .
->. /
-(/ 0
-inquiry0 7
-)7 8
-;8 9
-} 	
-} 
-} à
-ôC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-QueryHandler0 <
-{ 
-public		 
-
-class		 ,
- GetInquiryByClientIdQueryHandler		 1
-:		2 3
-IRequestHandler		4 C
-<		C D%
-GetInquiryByClientIdQuery		D ]
-,		] ^
-List		_ c
-<		c d
-ClientInquiryDto		d t
->		t u
->		u v
-{
-
- 
-private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-private 
-readonly $
-IClientInquiryRepository 1
-_repository2 =
-;= >
-public ,
- GetInquiryByClientIdQueryHandler /
-(/ 0
-IMapper0 7
-mapper8 >
-,> ?$
-IClientInquiryRepository@ X
-
-repositoryY c
-)c d
-{ 	
-_mapper 
-= 
-mapper 
-; 
-_repository 
-= 
-
-repository $
-;$ %
-} 	
-public 
-async 
-Task 
-< 
-List 
-< 
-ClientInquiryDto /
->/ 0
->0 1
-Handle2 8
-(8 9%
-GetInquiryByClientIdQuery9 R
-requestS Z
-,Z [
-CancellationToken\ m
-cancellationTokenn 
-)	 Ä
-{ 	
-var 
-	inquiries 
-= 
-await !
-_repository" -
-.- ."
-GetInquiriesByClientId. D
-(D E
-requestE L
-.L M
-ClientIdM U
-)U V
-;V W
-return 
-	inquiries 
-. 
-Select #
-(# $
-inquiry$ +
-=>, .
-_mapper/ 6
-.6 7
-Map7 :
-<: ;
-ClientInquiryDto; K
->K L
-(L M
-inquiryM T
-)T U
-)U V
-.V W
-ToListW ]
-(] ^
-)^ _
-;_ `
-} 	
-} 
-} ≤
-îC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-QueryHandler0 <
-{ 
-public		 
-
-class		 '
-GetAllInquiriesQueryHandler		 ,
-:		- .
-IRequestHandler		/ >
-<		> ? 
-GetAllInquiriesQuery		? S
-,		S T
-List		U Y
-<		Y Z
-ClientInquiryDto		Z j
->		j k
->		k l
-{
-
- 
-private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-private 
-readonly $
-IClientInquiryRepository 1
-_repository2 =
-;= >
-public '
-GetAllInquiriesQueryHandler *
-(* +
-IMapper+ 2
-mapper3 9
-,9 :$
-IClientInquiryRepository; S
-
-repositoryT ^
-)^ _
-{ 	
-_mapper 
-= 
-mapper 
-; 
-_repository 
-= 
-
-repository $
-;$ %
-} 	
-public 
-async 
-Task 
-< 
-List 
-< 
-ClientInquiryDto /
->/ 0
->0 1
-Handle2 8
-(8 9 
-GetAllInquiriesQuery9 M
-requestN U
-,U V
-CancellationTokenW h
-cancellationTokeni z
-)z {
-{ 	
-var 
-	inquiries 
-= 
-await !
-_repository" -
-.- . 
-GetAllInquiriesAsync. B
-(B C
-)C D
-;D E
-return 
-	inquiries 
-. 
-Select #
-(# $
-inquiry$ +
-=>, .
-_mapper/ 6
-.6 7
-Map7 :
-<: ;
-ClientInquiryDto; K
->K L
-(L M
-inquiryM T
-)T U
-)U V
-.V W
-ToListW ]
-(] ^
-)^ _
-;_ `
-} 	
-} 
-} ™
-áC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Queries0 7
-{ 
-public 
-
-class 
-GetInquiryByIdQuery $
-:% &
-IRequest' /
-</ 0
-ClientInquiryDto0 @
->@ A
-{ 
-public 
-Guid 
-	InquiryId 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-}		 
-} Â
-çC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByClientIdQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Queries0 7
-{ 
-public 
-
-class %
-GetInquiryByClientIdQuery *
-:+ ,
-IRequest- 5
-<5 6
-List6 :
-<: ;
-ClientInquiryDto; K
->K L
->L M
-{ 
-public 
-Guid 
-ClientId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-}		 
-}
-
- ¡
-àC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetAllInquiriesQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Queries0 7
-=======
-return 
-inquiry 
-; 
-} 	
-public 
-async 
-Task 
-< 
-IEnumerable %
-<% &
-ClientInquiry& 3
->3 4
->4 5"
-GetInquiriesByClientId6 L
-(L M
-GuidM Q
-userIdR X
-)X Y
-{ 	
-return 
-await 
-context  
-.  !
-ClientInquiries! 0
-.    !
-Where  ! &
-(  & '
-inquiry  ' .
-=>  / 1
-inquiry  2 9
-.  9 :
-ClientId  : B
-==  C E
-userId  F L
-)  L M
-.!!  !
-ToListAsync!!! ,
-(!!, -
-)!!- .
-;!!. /
-}"" 	
-public## 
-async## 
-Task## 
-<## 
-Result##  
-<##  !
-Guid##! %
->##% &
->##& '
-AddInquiryAsync##( 7
-(##7 8
-ClientInquiry##8 E
-inquiry##F M
-)##M N
-{$$ 	
-try%% 
-{&& 
-await'' 
-context'' 
-.'' 
-ClientInquiries'' -
-.''- .
-AddAsync''. 6
-(''6 7
-inquiry''7 >
-)''> ?
-;''? @
-await(( 
-context(( 
-.(( 
-SaveChangesAsync(( .
-(((. /
-)((/ 0
-;((0 1
-return)) 
-Result)) 
-<)) 
-Guid)) "
->))" #
-.))# $
-Success))$ +
-())+ ,
-inquiry)), 3
-.))3 4
-	InquiryId))4 =
-)))= >
-;))> ?
-}** 
-catch++ 
-(++ 
-	Exception++ 
-ex++ 
-)++  
-{,, 
-var-- 
-errorMessage--  
-=--! "
-ex--# %
-.--% &
-InnerException--& 4
-!=--5 7
-null--8 <
-?--= >
-ex--? A
-.--A B
-InnerException--B P
-.--P Q
-ToString--Q Y
-(--Y Z
-)--Z [
-:--\ ]
-ex--^ `
-.--` a
-Message--a h
-;--h i
-return.. 
-Result.. 
-<.. 
-Guid.. "
->.." #
-...# $
-Failure..$ +
-(..+ ,
-errorMessage.., 8
-)..8 9
-;..9 :
-}// 
-}00 	
-public11 
-async11 
-Task11 
-<11 
-Result11  
-<11  !
-Guid11! %
->11% &
->11& '
-UpdateInquiryAsync11( :
-(11: ;
-ClientInquiry11; H
-inquiry11I P
-)11P Q
-{22 	
-try33 
-{44 
-var55 
-existingInquiry55 #
-=55$ %
-await55& +
-context55, 3
-.553 4
-ClientInquiries554 C
-.55C D
-	FindAsync55D M
-(55M N
-inquiry55N U
-.55U V
-	InquiryId55V _
-)55_ `
-;55` a
-if66 
-(66 
-existingInquiry66 #
-!=66$ &
-null66' +
-)66+ ,
-{77 
-context88 
-.88 
-Entry88 !
-(88! "
-existingInquiry88" 1
-)881 2
-.882 3
-CurrentValues883 @
-.88@ A
-	SetValues88A J
-(88J K
-inquiry88K R
-)88R S
-;88S T
-await99 
-context99 !
-.99! "
-SaveChangesAsync99" 2
-(992 3
-)993 4
-;994 5
-return;; 
-Result;; !
-<;;! "
-Guid;;" &
->;;& '
-.;;' (
-Success;;( /
-(;;/ 0
-inquiry;;0 7
-.;;7 8
-	InquiryId;;8 A
-);;A B
-;;;B C
-}<< 
-else== 
-{>> 
-return?? 
-Result?? !
-<??! "
-Guid??" &
->??& '
-.??' (
-Failure??( /
-(??/ 0
-$str??0 D
-)??D E
-;??E F
-}@@ 
-}AA 
-catchBB 
-(BB 
-	ExceptionBB 
-exBB 
-)BB  
-{CC 
-varDD 
-errorMessageDD  
-=DD! "
-exDD# %
-.DD% &
-InnerExceptionDD& 4
-!=DD5 7
-nullDD8 <
-?DD= >
-exDD? A
-.DDA B
-InnerExceptionDDB P
-.DDP Q
-MessageDDQ X
-:DDY Z
-exDD[ ]
-.DD] ^
-MessageDD^ e
-;DDe f
+public-- 
+async-- 
+Task-- 
+<-- 
+Result--  
+<--  !
+IEnumerable--! ,
+<--, -
+ClientInquiry--- :
+>--: ;
+>--; <
+>--< ="
+GetInquiriesByClientId--> T
+(--T U
+Guid--U Y
+clientId--Z b
+)--b c
+{.. 	
+try// 
+{00 
+var11 
+	inquiries11 
+=11 
+await11  %
+context11& -
+.11- .
+ClientInquiries11. =
+.224 5
+Where225 :
+(22: ;
+inquiry22; B
+=>22C E
+inquiry22F M
+.22M N
+ClientId22N V
+==22W Y
+clientId22Z b
+)22b c
+.334 5
+ToListAsync335 @
+(33@ A
+)33A B
+;33B C
+return44 
+Result44 
+<44 
+IEnumerable44 )
+<44) *
+ClientInquiry44* 7
+>447 8
+>448 9
+.449 :
+Success44: A
+(44A B
+	inquiries44B K
+)44K L
+;44L M
+}55 
+catch66 
+(66 
+	Exception66 
+ex66 
+)66  
+{77 
+return88 
+Result88 
+<88 
+IEnumerable88 )
+<88) *
+ClientInquiry88* 7
+>887 8
+>888 9
+.889 :
+Failure88: A
+(88A B
+$"88B D
+$str88D r
+{88r s
+ex88s u
+.88u v
+Message88v }
+}88} ~
+"88~ 
+)	88 Ä
+;
+88Ä Å
+}99 
+}:: 	
+public;; 
+async;; 
+Task;; 
+<;; 
+Result;;  
+<;;  !
+Guid;;! %
+>;;% &
+>;;& '
+AddInquiryAsync;;( 7
+(;;7 8
+ClientInquiry;;8 E
+inquiry;;F M
+);;M N
+{<< 	
+try== 
+{>> 
+await?? 
+context?? 
+.?? 
+ClientInquiries?? -
+.??- .
+AddAsync??. 6
+(??6 7
+inquiry??7 >
+)??> ?
+;??? @
+await@@ 
+context@@ 
+.@@ 
+SaveChangesAsync@@ .
+(@@. /
+)@@/ 0
+;@@0 1
+returnAA 
+ResultAA 
+<AA 
+GuidAA "
+>AA" #
+.AA# $
+SuccessAA$ +
+(AA+ ,
+inquiryAA, 3
+.AA3 4
+	InquiryIdAA4 =
+)AA= >
+;AA> ?
+}BB 
+catchCC 
+(CC 
+	ExceptionCC 
+exCC 
+)CC  
+{DD 
 returnEE 
 ResultEE 
 <EE 
@@ -5348,10 +2277,17 @@ repository $
 >EE" #
 .EE# $
 FailureEE$ +
-(EE+ ,
-errorMessageEE, 8
-)EE8 9
-;EE9 :
+(EE+ ,
+$"EE, .
+$strEE. V
+{EEV W
+exEEW Y
+.EEY Z
+MessageEEZ a
+}EEa b
+"EEb c
+)EEc d
+;EEd e
 }FF 
 }GG 	
 publicHH 
@@ -5363,43 +2299,50 @@ repository $
 GuidHH! %
 >HH% &
 >HH& '
-DeleteInquiryAsyncHH( :
-(HH: ;
-GuidHH; ?
-idHH@ B
-)HHB C
+UpdateInquiryAsyncHH( :
+(HH: ;
+ClientInquiryHH; H
+inquiryHHI P
+)HHP Q
 {II 	
 tryJJ 
 {KK 
-varLL 
-inquiryLL 
-=LL 
-awaitLL #
-contextLL$ +
-.LL+ ,
-ClientInquiriesLL, ;
-.LL; <
-	FindAsyncLL< E
-(LLE F
-idLLF H
-)LLH I
-;LLI J
+varLL 
+existingInquiryLL #
+=LL$ %
+awaitLL& +
+contextLL, 3
+.LL3 4
+ClientInquiriesLL4 C
+.LLC D
+	FindAsyncLLD M
+(LLM N
+inquiryLLN U
+.LLU V
+	InquiryIdLLV _
+)LL_ `
+;LL` a
 ifMM 
-(MM 
-inquiryMM 
-!=MM 
-nullMM #
-)MM# $
+(MM 
+existingInquiryMM #
+!=MM$ &
+nullMM' +
+)MM+ ,
 {NN 
 contextOO 
-.OO 
-ClientInquiriesOO +
-.OO+ ,
-RemoveOO, 2
-(OO2 3
-inquiryOO3 :
-)OO: ;
-;OO; <
+.OO 
+EntryOO !
+(OO! "
+existingInquiryOO" 1
+)OO1 2
+.OO2 3
+CurrentValuesOO3 @
+.OO@ A
+	SetValuesOOA J
+(OOJ K
+inquiryOOK R
+)OOR S
+;OOS T
 awaitPP 
 contextPP !
 .PP! "
@@ -5407,145 +2350,391 @@ repository $
 (PP2 3
 )PP3 4
 ;PP4 5
-returnQQ 
-ResultQQ !
-<QQ! "
-GuidQQ" &
->QQ& '
-.QQ' (
-SuccessQQ( /
-(QQ/ 0
-idQQ0 2
-)QQ2 3
-;QQ3 4
-}RR 
-returnSS 
-ResultSS 
-<SS 
-GuidSS "
->SS" #
-.SS# $
-FailureSS$ +
-(SS+ ,
-$strSS, ?
-)SS? @
-;SS@ A
-}TT 
-catchUU 
-(UU 
-	ExceptionUU 
-exUU 
-)UU  
-{VV 
-varWW 
-errorMessageWW  
-=WW! "
-exWW# %
-.WW% &
-InnerExceptionWW& 4
-!=WW5 7
-nullWW8 <
-?WW= >
-exWW? A
-.WWA B
-InnerExceptionWWB P
-.WWP Q
-ToStringWWQ Y
-(WWY Z
-)WWZ [
-:WW\ ]
-exWW^ `
-.WW` a
-MessageWWa h
-;WWh i
-returnXX 
-ResultXX 
-<XX 
-GuidXX "
->XX" #
-.XX# $
-FailureXX$ +
-(XX+ ,
-errorMessageXX, 8
-)XX8 9
-;XX9 :
-}YY 
-}ZZ 	
-}[[ 
-}\\ Âc
+returnRR 
+ResultRR !
+<RR! "
+GuidRR" &
+>RR& '
+.RR' (
+SuccessRR( /
+(RR/ 0
+inquiryRR0 7
+.RR7 8
+	InquiryIdRR8 A
+)RRA B
+;RRB C
+}SS 
+elseTT 
+{UU 
+returnVV 
+ResultVV !
+<VV! "
+GuidVV" &
+>VV& '
+.VV' (
+FailureVV( /
+(VV/ 0
+$strVV0 D
+)VVD E
+;VVE F
+}WW 
+}XX 
+catchYY 
+(YY 
+	ExceptionYY 
+exYY 
+)YY  
+{ZZ 
+return[[ 
+Result[[ 
+<[[ 
+Guid[[ "
+>[[" #
+.[[# $
+Failure[[$ +
+([[+ ,
+$"[[, .
+$str[[. X
+{[[X Y
+ex[[Y [
+.[[[ \
+Message[[\ c
+}[[c d
+"[[d e
+)[[e f
+;[[f g
+}\\ 
+}]] 	
+public^^ 
+async^^ 
+Task^^ 
+<^^ 
+Result^^  
+<^^  !
+Guid^^! %
+>^^% &
+>^^& '
+DeleteInquiryAsync^^( :
+(^^: ;
+Guid^^; ?
+id^^@ B
+)^^B C
+{__ 	
+try`` 
+{aa 
+varbb 
+inquirybb 
+=bb 
+awaitbb #
+contextbb$ +
+.bb+ ,
+ClientInquiriesbb, ;
+.bb; <
+	FindAsyncbb< E
+(bbE F
+idbbF H
+)bbH I
+;bbI J
+ifcc 
+(cc 
+inquirycc 
+!=cc 
+nullcc #
+)cc# $
+{dd 
+contextee 
+.ee 
+ClientInquiriesee +
+.ee+ ,
+Removeee, 2
+(ee2 3
+inquiryee3 :
+)ee: ;
+;ee; <
+awaitff 
+contextff !
+.ff! "
+SaveChangesAsyncff" 2
+(ff2 3
+)ff3 4
+;ff4 5
+returngg 
+Resultgg !
+<gg! "
+Guidgg" &
+>gg& '
+.gg' (
+Successgg( /
+(gg/ 0
+idgg0 2
+)gg2 3
+;gg3 4
+}hh 
+returnii 
+Resultii 
+<ii 
+Guidii "
+>ii" #
+.ii# $
+Failureii$ +
+(ii+ ,
+$strii, ?
+)ii? @
+;ii@ A
+}jj 
+catchkk 
+(kk 
+	Exceptionkk 
+exkk 
+)kk  
+{ll 
+returnmm 
+Resultmm 
+<mm 
+Guidmm "
+>mm" #
+.mm# $
+Failuremm$ +
+(mm+ ,
+$"mm, .
+$strmm. X
+{mmX Y
+exmmY [
+.mm[ \
+Messagemm\ c
+}mmc d
+"mmd e
+)mme f
+;mmf g
+}nn 
+}oo 	
+publicqq 
+asyncqq 
+Taskqq 
+<qq 
+Resultqq  
+<qq  !
+IEnumerableqq! ,
+<qq, -
+PropertyListingqq- <
+>qq< =
+>qq= >
+>qq> ?$
+SearchAllPropertiesAsyncqq@ X
+(qqX Y
+stringqqY _
+searchQueryqq` k
+)qqk l
+{rr 	
+tryss 
+{tt 
+ifuu 
+(uu 
+stringuu 
+.uu 
+IsNullOrWhiteSpaceuu -
+(uu- .
+searchQueryuu. 9
+)uu9 :
+)uu: ;
+{vv 
+returnww 
+Resultww !
+<ww! "
+IEnumerableww" -
+<ww- .
+PropertyListingww. =
+>ww= >
+>ww> ?
+.ww? @
+Failureww@ G
+(wwG H
+$strwwH o
+)wwo p
+;wwp q
+}xx 
+varzz 
+
+propertieszz 
+=zz  
+awaitzz! &
+contextzz' .
+.zz. /
+PropertyListingszz/ ?
+.{{( )
+Where{{) .
+({{. /
+property{{/ 7
+=>{{8 :
+({{; <
+property{{< D
+.{{D E
+Title{{E J
+!={{K M
+null{{M Q
+&&{{R T
+property{{U ]
+.{{] ^
+Title{{^ c
+.{{c d
+ToUpper{{d k
+({{k l
+){{l m
+.{{m n
+Contains{{n v
+({{v w
+searchQuery	{{w Ç
+.
+{{Ç É
+ToUpper
+{{É ä
+(
+{{ä ã
+)
+{{ã å
+)
+{{å ç
+)
+{{ç é
+||
+{{è ë
+(
+{{í ì
+property
+{{ì õ
+.
+{{õ ú
+Description
+{{ú ß
+!=
+{{® ™
+null
+{{™ Æ
+&&
+{{Ø ±
+property
+{{≤ ∫
+.
+{{∫ ª
+Description
+{{ª ∆
+.
+{{∆ «
+Contains
+{{« œ
+(
+{{œ –
+searchQuery
+{{– €
+)
+{{€ ‹
+)
+{{‹ ›
+)
+{{› ﬁ
+.||( )
+ToListAsync||) 4
+(||4 5
+)||5 6
+;||6 7
+return}} 
+Result}} 
+<}} 
+IEnumerable}} )
+<}}) *
+PropertyListing}}* 9
+>}}9 :
+>}}: ;
+.}}; <
+Success}}< C
+(}}C D
+
+properties}}D N
+)}}N O
+;}}O P
+}~~ 
+catch 
+( 
+	Exception 
+ex 
+)  
+{
+ÄÄ 
+return
+ÅÅ 
+Result
+ÅÅ 
+<
+ÅÅ 
+IEnumerable
+ÅÅ )
+<
+ÅÅ) *
+PropertyListing
+ÅÅ* 9
+>
+ÅÅ9 :
+>
+ÅÅ: ;
+.
+ÅÅ; <
+Failure
+ÅÅ< C
+(
+ÅÅC D
+$"
+ÅÅD F
+$str
+ÅÅF u
+{
+ÅÅu v
+ex
+ÅÅv x
+.
+ÅÅx y
+MessageÅÅy Ä
+}ÅÅÄ Å
+"ÅÅÅ Ç
+)ÅÅÇ É
+;ÅÅÉ Ñ
+}
+ÇÇ 
+}
+ÉÉ 	
+}
+ÑÑ 
+}ÖÖ ∏h
 ^C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Persistance\ApplicationDbContext.cs
 	namespace 	
 Infrastructure
  
 . 
 Persistance $
->>>>>>> Stashed changes
 { 
 public 
 
 class  
-GetAllInquiriesQuery %
-:& '
-IRequest( 0
-<0 1
-List1 5
-<5 6
-ClientInquiryDto6 F
->F G
->G H
-{ 
-}		 
-}
-
-<<<<<<< Updated upstream
- Å
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\UpdateClientInquiryCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Commands0 8
-{ 
-public 
-
-class &
-UpdateClientInquiryCommand +
-:, -
-IRequest. 6
-<6 7
-Result7 =
-<= >
-Guid> B
->B C
->C D
+ApplicationDbContext %
+:& '
+	DbContext( 1
 { 
-public 
-Guid 
-	InquiryId 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public		 
-List		 
-<		 
-string		 
->		 
-?		 
-Types		 "
-{		# $
-get		% (
-;		( )
-set		* -
-;		- .
-}		/ 0
-=======
+public  
+ApplicationDbContext #
+(# $
+DbContextOptions$ 4
+<4 5 
+ApplicationDbContext5 I
+>I J
+optionsK R
+)R S
+:T U
+baseV Z
+(Z [
+options[ b
+)b c
+{		 	
+}
+
  	
 public 
 DbSet 
@@ -5697,15 +2886,20 @@ IsRequired8 B
 e( )
 =>* ,
 e- .
-.. /
-Type/ 3
-)3 4
-.4 5
+.. /
+Title/ 4
+)4 5
+.5 6
 
-IsRequired5 ?
-(? @
-)@ A
-;A B
+IsRequired6 @
+(@ A
+)A B
+.B C
+HasMaxLengthC O
+(O P
+$numP S
+)S T
+;T U
 entity 
 . 
 Property '
@@ -5713,15 +2907,15 @@ IsRequired5 ?
 e( )
 =>* ,
 e- .
-.. /
-Price/ 4
-)4 5
-.5 6
+.. /
+Type/ 3
+)3 4
+.4 5
 
-IsRequired6 @
-(@ A
-)A B
-;B C
+IsRequired5 ?
+(? @
+)@ A
+;A B
 entity 
 . 
 Property '
@@ -5729,15 +2923,15 @@ IsRequired6 @
 e( )
 =>* ,
 e- .
-.. /
-SquareFootage/ <
-)< =
-.= >
+.. /
+Price/ 4
+)4 5
+.5 6
 
-IsRequired> H
-(H I
-)I J
-;J K
+IsRequired6 @
+(@ A
+)A B
+;B C
 entity 
 . 
 Property '
@@ -5745,15 +2939,15 @@ IsRequired> H
 e( )
 =>* ,
 e- .
-.. /
-NumberOfBedrooms/ ?
-)? @
-.@ A
+.. /
+SquareFootage/ <
+)< =
+.= >
 
-IsRequiredA K
-(K L
-)L M
-;M N
+IsRequired> H
+(H I
+)I J
+;J K
 entity 
 . 
 Property '
@@ -5761,15 +2955,15 @@ IsRequiredA K
 e( )
 =>* ,
 e- .
-.. /
-NumberOfBathrooms/ @
-)@ A
-.A B
+.. /
+NumberOfBedrooms/ ?
+)? @
+.@ A
 
-IsRequiredB L
-(L M
-)M N
-;N O
+IsRequiredA K
+(K L
+)L M
+;M N
 entity   
 .   
 Property   '
@@ -5777,20 +2971,15 @@ IsRequiredB L
 e  ( )
 =>  * ,
 e  - .
-.  . /
-Description  / :
-)  : ;
-.  ; <
+.  . /
+NumberOfBathrooms  / @
+)  @ A
+.  A B
 
-IsRequired  < F
-(  F G
-)  G H
-.  H I
-HasMaxLength  I U
-(  U V
-$num  V Y
-)  Y Z
-;  Z [
+IsRequired  B L
+(  L M
+)  M N
+;  N O
 entity!! 
 .!! 
 Property!! '
@@ -5798,15 +2987,20 @@ IsRequired  < F
 e!!( )
 =>!!* ,
 e!!- .
-.!!. /
-Status!!/ 5
-)!!5 6
-.!!6 7
+.!!. /
+Description!!/ :
+)!!: ;
+.!!; <
 
-IsRequired!!7 A
-(!!A B
-)!!B C
-;!!C D
+IsRequired!!< F
+(!!F G
+)!!G H
+.!!H I
+HasMaxLength!!I U
+(!!U V
+$num!!V Y
+)!!Y Z
+;!!Z [
 entity"" 
 ."" 
 Property"" '
@@ -5814,15 +3008,15 @@ IsRequired!!7 A
 e""( )
 =>""* ,
 e""- .
-."". /
-ListingDate""/ :
-)"": ;
-.""; <
+."". /
+Status""/ 5
+)""5 6
+.""6 7
 
-IsRequired""< F
-(""F G
-)""G H
-;""H I
+IsRequired""7 A
+(""A B
+)""B C
+;""C D
 entity## 
 .## 
 Property## '
@@ -5830,15 +3024,15 @@ IsRequired""< F
 e##( )
 =>##* ,
 e##- .
-.##. /
-	ImageURLs##/ 8
-)##8 9
-.##9 :
+.##. /
+ListingDate##/ :
+)##: ;
+.##; <
 
-IsRequired##: D
-(##D E
-)##E F
-;##F G
+IsRequired##< F
+(##F G
+)##G H
+;##H I
 entity$$ 
 .$$ 
 Property$$ '
@@ -5846,442 +3040,473 @@ IsRequired##: D
 e$$( )
 =>$$* ,
 e$$- .
-.$$. /
-UserID$$/ 5
-)$$5 6
-.$$6 7
+.$$. /
+	ImageURLs$$/ 8
+)$$8 9
+.$$9 :
 
-IsRequired$$7 A
-($$A B
-)$$B C
-;$$C D
-}** 
-)++ 
-;++ 
-modelBuilder-- 
-.-- 
-Entity-- 
-<--  
-ClientInquiry--  -
->--- .
-(--. /
-entity.. 
-=>.. 
-{// 
-entity00 
-.00 
-ToTable00 "
-(00" #
-$str00# 4
-)004 5
-;005 6
-entity11 
-.11 
-HasKey11 !
-(11! "
-e11" #
-=>11$ &
-e11' (
-.11( )
-	InquiryId11) 2
-)112 3
-;113 4
-entity22 
-.22 
-Property22 #
-(22# $
-e22$ %
-=>22& (
-e22) *
-.22* +
-	InquiryId22+ 4
-)224 5
-.225 6
-HasColumnType226 C
-(22C D
-$str22D J
-)22J K
-.22K L
-HasDefaultValueSql22L ^
-(22^ _
-$str22_ s
-)22s t
-.22t u 
-ValueGeneratedOnAdd	22u à
+IsRequired$$: D
+($$D E
+)$$E F
+;$$F G
+entity%% 
+.%% 
+Property%% '
+(%%' (
+e%%( )
+=>%%* ,
+e%%- .
+.%%. /
+UserID%%/ 5
+)%%5 6
+.%%6 7
+
+IsRequired%%7 A
+(%%A B
+)%%B C
+;%%C D
+}'' 
+)(( 
+;(( 
+modelBuilder** 
+.** 
+Entity** 
+<**  
+ClientInquiry**  -
+>**- .
+(**. /
+entity++ 
+=>++ 
+{,, 
+entity-- 
+.-- 
+ToTable-- "
+(--" #
+$str--# 4
+)--4 5
+;--5 6
+entity.. 
+... 
+HasKey.. !
+(..! "
+e.." #
+=>..$ &
+e..' (
+...( )
+	InquiryId..) 2
+)..2 3
+;..3 4
+entity// 
+.// 
+Property// #
+(//# $
+e//$ %
+=>//& (
+e//) *
+.//* +
+	InquiryId//+ 4
+)//4 5
+.//5 6
+HasColumnType//6 C
+(//C D
+$str//D J
+)//J K
+.//K L
+HasDefaultValueSql//L ^
+(//^ _
+$str//_ s
+)//s t
+.//t u 
+ValueGeneratedOnAdd	//u à
 (
-22à â
+//à â
 )
-22â ä
+//â ä
 ;
-22ä ã
-entity33 
-.33 
-Property33 #
-(33# $
-e33$ %
-=>33& (
-e33) *
-.33* +
-ClientId33+ 3
-)333 4
-.334 5
+//ä ã
+entity00 
+.00 
+Property00 #
+(00# $
+e00$ %
+=>00& (
+e00) *
+.00* +
+ClientId00+ 3
+)003 4
+.004 5
 
-IsRequired335 ?
-(33? @
-)33@ A
-;33A B
-}99 
-)99 
-;99 
-modelBuilder;; 
-.;; 
-Entity;; 
-<;;  
-Transaction;;  +
->;;+ ,
-(;;, -
-entity<< 
-=><< 
-{== 
-entity>> 
-.>> 
-ToTable>> "
-(>>" #
-$str>># 1
-)>>1 2
-;>>2 3
+IsRequired005 ?
+(00? @
+)00@ A
+;00A B
+}22 
+)22 
+;22 
+modelBuilder44 
+.44 
+Entity44 
+<44  
+Transaction44  +
+>44+ ,
+(44, -
+entity55 
+=>55 
+{66 
+entity77 
+.77 
+ToTable77 "
+(77" #
+$str77# 1
+)771 2
+;772 3
+entity88 
+.88 
+HasKey88 !
+(88! "
+e88" #
+=>88$ &
+e88' (
+.88( )
+TransactionId88) 6
+)886 7
+;887 8
+entity99 
+.99 
+Property99 #
+(99# $
+e99$ %
+=>99& (
+e99) *
+.99* +
+TransactionId99+ 8
+)998 9
+.999 :
+HasColumnType99: G
+(99G H
+$str99H N
+)99N O
+.99O P
+HasDefaultValueSql99P b
+(99b c
+$str99c w
+)99w x
+.99x y 
+ValueGeneratedOnAdd	99y å
+(
+99å ç
+)
+99ç é
+;
+99é è
+entity:: 
+.:: 
+Property:: #
+(::# $
+e::$ %
+=>::& (
+e::) *
+.::* +
+
+PropertyId::+ 5
+)::5 6
+.::6 7
+
+IsRequired::7 A
+(::A B
+)::B C
+;::C D
+entity;; 
+.;; 
+Property;; #
+(;;# $
+e;;$ %
+=>;;& (
+e;;) *
+.;;* +
+BuyerId;;+ 2
+);;2 3
+.;;3 4
+
+IsRequired;;4 >
+(;;> ?
+);;? @
+;;;@ A
+entity<< 
+.<< 
+Property<< #
+(<<# $
+e<<$ %
+=><<& (
+e<<) *
+.<<* +
+SellerId<<+ 3
+)<<3 4
+.<<4 5
+
+IsRequired<<5 ?
+(<<? @
+)<<@ A
+;<<A B
+entity== 
+.== 
+Property== #
+(==# $
+e==$ %
+=>==& (
+e==) *
+.==* +
+	SalePrice==+ 4
+)==4 5
+.==5 6
+
+IsRequired==6 @
+(==@ A
+)==A B
+;==B C
 entity?? 
 .?? 
-HasKey?? !
-(??! "
-e??" #
-=>??$ &
-e??' (
-.??( )
-TransactionId??) 6
-)??6 7
-;??7 8
-entity@@ 
-.@@ 
-Property@@ #
-(@@# $
-e@@$ %
-=>@@& (
-e@@) *
-.@@* +
-TransactionId@@+ 8
-)@@8 9
-.@@9 :
-HasColumnType@@: G
-(@@G H
-$str@@H N
-)@@N O
-.@@O P
-HasDefaultValueSql@@P b
-(@@b c
-$str@@c w
-)@@w x
-.@@x y 
-ValueGeneratedOnAdd	@@y å
-(
-@@å ç
-)
-@@ç é
-;
-@@é è
-entityAA 
-.AA 
-PropertyAA #
-(AA# $
-eAA$ %
-=>AA& (
-eAA) *
-.AA* +
+HasOne?? !
+<??! "
+PropertyListing??" 1
+>??1 2
+(??2 3
+)??3 4
+.@@ 
+WithMany@@ !
+(@@! "
+)@@" #
+.AA 
+HasForeignKeyAA &
+(AA& '
+eAA' (
+=>AA) +
+eAA, -
+.AA- .
 
-PropertyIdAA+ 5
-)AA5 6
-.AA6 7
-
-IsRequiredAA7 A
-(AAA B
-)AAB C
-;AAC D
-entityBB 
-.BB 
-PropertyBB #
-(BB# $
-eBB$ %
-=>BB& (
-eBB) *
-.BB* +
-BuyerIdBB+ 2
-)BB2 3
-.BB3 4
-
-IsRequiredBB4 >
-(BB> ?
-)BB? @
-;BB@ A
-entityCC 
-.CC 
-PropertyCC #
-(CC# $
-eCC$ %
-=>CC& (
-eCC) *
-.CC* +
-SellerIdCC+ 3
-)CC3 4
-.CC4 5
-
-IsRequiredCC5 ?
-(CC? @
-)CC@ A
-;CCA B
+PropertyIdAA. 8
+)AA8 9
+.BB 
+OnDeleteBB !
+(BB! "
+DeleteBehaviorBB" 0
+.BB0 1
+CascadeBB1 8
+)BB8 9
+;BB9 :
 entityDD 
-.DD 
-PropertyDD #
-(DD# $
-eDD$ %
-=>DD& (
-eDD) *
-.DD* +
-	SalePriceDD+ 4
-)DD4 5
-.DD5 6
-
-IsRequiredDD6 @
-(DD@ A
-)DDA B
-;DDB C
-entityEE 
-.EE 
-PropertyEE #
-(EE# $
-eEE$ %
-=>EE& (
-eEE) *
-.EE* +
-StatusEE+ 1
-)EE1 2
-.EE2 3
-
-IsRequiredEE3 =
-(EE= >
-)EE> ?
-;EE? @
-entityGG 
-.GG 
-HasOneGG !
-<GG! "
-PropertyListingGG" 1
->GG1 2
-(GG2 3
-)GG3 4
-.HH 
-WithManyHH !
-(HH! "
-)HH" #
-.II 
-HasForeignKeyII &
-(II& '
-eII' (
-=>II) +
-eII, -
-.II- .
-
-PropertyIdII. 8
-)II8 9
+.DD 
+HasOneDD !
+<DD! "
+UserDD" &
+>DD& '
+(DD' (
+)DD( )
+.EE 
+WithManyEE !
+(EE! "
+)EE" #
+.FF 
+HasForeignKeyFF &
+(FF& '
+eFF' (
+=>FF) +
+eFF, -
+.FF- .
+BuyerIdFF. 5
+)FF5 6
+.GG 
+OnDeleteGG !
+(GG! "
+DeleteBehaviorGG" 0
+.GG0 1
+CascadeGG1 8
+)GG8 9
+;GG9 :
+entityII 
+.II 
+HasOneII !
+<II! "
+UserII" &
+>II& '
+(II' (
+)II( )
 .JJ 
-OnDeleteJJ !
-(JJ! "
-DeleteBehaviorJJ" 0
-.JJ0 1
-CascadeJJ1 8
-)JJ8 9
-;JJ9 :
-entityLL 
-.LL 
-HasOneLL !
-<LL! "
-UserLL" &
->LL& '
-(LL' (
-)LL( )
-.MM 
-WithManyMM !
-(MM! "
-)MM" #
-.NN 
-HasForeignKeyNN &
-(NN& '
-eNN' (
-=>NN) +
-eNN, -
-.NN- .
-BuyerIdNN. 5
-)NN5 6
-.OO 
-OnDeleteOO !
-(OO! "
-DeleteBehaviorOO" 0
-.OO0 1
-CascadeOO1 8
-)OO8 9
-;OO9 :
-entityQQ 
-.QQ 
-HasOneQQ !
-<QQ! "
-UserQQ" &
->QQ& '
-(QQ' (
-)QQ( )
-.RR 
-WithManyRR !
-(RR! "
-)RR" #
-.SS 
-HasForeignKeySS &
-(SS& '
-eSS' (
-=>SS) +
-eSS, -
-.SS- .
-SellerIdSS. 6
-)SS6 7
-.TT 
-OnDeleteTT !
-(TT! "
-DeleteBehaviorTT" 0
-.TT0 1
-CascadeTT1 8
-)TT8 9
-;TT9 :
-}VV 
-)VV 
-;VV 
-modelBuilderXX 
-.XX 
-EntityXX 
-<XX  
-UserXX  $
->XX$ %
-(XX% &
-entityYY 
-=>YY 
-{ZZ 
-entity[[ 
-.[[ 
-ToTable[[ "
-([[" #
-$str[[# *
-)[[* +
-;[[+ ,
-entity\\ 
-.\\ 
-HasKey\\ !
-(\\! "
-e\\" #
-=>\\$ &
-e\\' (
-.\\( )
-UserId\\) /
-)\\/ 0
-;\\0 1
-entity]] 
-.]] 
-Property]] #
-(]]# $
-e]]$ %
-=>]]& (
-e]]) *
-.]]* +
-UserId]]+ 1
-)]]1 2
-.]]2 3
-HasColumnType]]3 @
-(]]@ A
-$str]]A G
-)]]G H
-.]]H I
-HasDefaultValueSql]]I [
-(]][ \
-$str]]\ p
-)]]p q
-.]]q r 
-ValueGeneratedOnAdd	]]r Ö
+WithManyJJ !
+(JJ! "
+)JJ" #
+.KK 
+HasForeignKeyKK &
+(KK& '
+eKK' (
+=>KK) +
+eKK, -
+.KK- .
+SellerIdKK. 6
+)KK6 7
+.LL 
+OnDeleteLL !
+(LL! "
+DeleteBehaviorLL" 0
+.LL0 1
+CascadeLL1 8
+)LL8 9
+;LL9 :
+}NN 
+)NN 
+;NN 
+modelBuilderPP 
+.PP 
+EntityPP 
+<PP  
+UserPP  $
+>PP$ %
+(PP% &
+entityQQ 
+=>QQ 
+{RR 
+entitySS 
+.SS 
+ToTableSS "
+(SS" #
+$strSS# *
+)SS* +
+;SS+ ,
+entityTT 
+.TT 
+HasKeyTT !
+(TT! "
+eTT" #
+=>TT$ &
+eTT' (
+.TT( )
+UserIdTT) /
+)TT/ 0
+;TT0 1
+entityUU 
+.UU 
+PropertyUU #
+(UU# $
+eUU$ %
+=>UU& (
+eUU) *
+.UU* +
+UserIdUU+ 1
+)UU1 2
+.UU2 3
+HasColumnTypeUU3 @
+(UU@ A
+$strUUA G
+)UUG H
+.UUH I
+HasDefaultValueSqlUUI [
+(UU[ \
+$strUU\ p
+)UUp q
+.UUq r 
+ValueGeneratedOnAdd	UUr Ö
 (
-]]Ö Ü
+UUÖ Ü
 )
-]]Ü á
+UUÜ á
 ;
-]]á à
-entity^^ 
-.^^ 
-Property^^ #
-(^^# $
-e^^$ %
-=>^^& (
-e^^) *
-.^^* +
-Name^^+ /
-)^^/ 0
-.^^0 1
+UUá à
+entityVV 
+.VV 
+PropertyVV #
+(VV# $
+eVV$ %
+=>VV& (
+eVV) *
+.VV* +
+NameVV+ /
+)VV/ 0
+.VV0 1
 
-IsRequired^^1 ;
-(^^; <
-)^^< =
-.^^= >
-HasMaxLength^^> J
-(^^J K
-$num^^K M
-)^^M N
-;^^N O
-entity__ 
-.__ 
-Property__ #
-(__# $
-e__$ %
-=>__& (
-e__) *
-.__* +
-Email__+ 0
-)__0 1
-.__1 2
+IsRequiredVV1 ;
+(VV; <
+)VV< =
+.VV= >
+HasMaxLengthVV> J
+(VVJ K
+$numVVK M
+)VVM N
+;VVN O
+entityWW 
+.WW 
+PropertyWW #
+(WW# $
+eWW$ %
+=>WW& (
+eWW) *
+.WW* +
+EmailWW+ 0
+)WW0 1
+.WW1 2
 
-IsRequired__2 <
-(__< =
-)__= >
-.__> ?
-HasMaxLength__? K
-(__K L
-$num__L N
-)__N O
-;__O P
-entity`` 
-.`` 
-Property`` #
-(``# $
-e``$ %
-=>``& (
-e``) *
-.``* +
-PhoneNumber``+ 6
-)``6 7
-.``7 8
+IsRequiredWW2 <
+(WW< =
+)WW= >
+.WW> ?
+HasMaxLengthWW? K
+(WWK L
+$numWWL N
+)WWN O
+;WWO P
+entityXX 
+.XX 
+HasIndexXX #
+(XX# $
+eXX$ %
+=>XX& (
+eXX) *
+.XX* +
+EmailXX+ 0
+)XX0 1
+.XX1 2
+IsUniqueXX2 :
+(XX: ;
+)XX; <
+;XX< =
+entityYY 
+.YY 
+PropertyYY #
+(YY# $
+eYY$ %
+=>YY& (
+eYY) *
+.YY* +
+PhoneNumberYY+ 6
+)YY6 7
+.YY7 8
 
-IsRequired``8 B
-(``B C
-)``C D
-;``D E
-}bb 
-)bb 
-;bb 
-}cc 	
-}dd 
-}ee ˘î
-eC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20241111082243_InitialCreate.cs
+IsRequiredYY8 B
+(YYB C
+)YYC D
+;YYD E
+entityZZ 
+.ZZ 
+PropertyZZ #
+(ZZ# $
+eZZ$ %
+=>ZZ& (
+eZZ) *
+.ZZ* +
+PasswordHashZZ+ 7
+)ZZ7 8
+.ZZ8 9
+
+IsRequiredZZ9 C
+(ZZC D
+)ZZD E
+;ZZE F
+}\\ 
+)\\ 
+;\\ 
+}]] 	
+}^^ 
+}__ ¬ä
+eC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\20250104134210_InitialCreate.cs
 	namespace 	
 Infrastructure
  
@@ -6289,250 +3514,24 @@ eC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Migrations\202411110
 
 Migrations #
 { 
->>>>>>> Stashed changes
 public
 
- 
-double
+ 
+
+partial
 
- 
-MinPrice
+ 
+class
 
- 
-{
+ 
+InitialCreate
 
-  
-get
+ &
+:
 
-! $
-;
+' (
+	Migration
 
-<<<<<<< Updated upstream
-$ %
-set
-
-& )
-;
-
-) *
-}
-
-+ ,
-public 
-double 
-MaxPrice 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-double 
-MinSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-MaxSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-} 
-} Ä
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\CreateClientInquiryCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Commands0 8
-{ 
-public 
-
-class &
-CreateClientInquiryCommand +
-:, -
-IRequest. 6
-<6 7
-Result7 =
-<= >
-Guid> B
->B C
->C D
-{ 
-public 
-Guid 
-ClientId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public		 
-List		 
-<		 
-string		 
->		 
-?		 
-Types		 "
-{		# $
-get		% (
-;		( )
-set		* -
-;		- .
-}		/ 0
-public
-
- 
-double
-
- 
-MinPrice
-
- 
-{
-
-  
-get
-
-! $
-;
-
-$ %
-set
-
-& )
-;
-
-) *
-}
-
-+ ,
-public 
-double 
-MaxPrice 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-double 
-MinSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-MaxSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-} 
-} ‡
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\DeleteClientInquiryCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-Commands0 8
-{ 
-public 
-
-class &
-DeleteClientInquiryCommand +
-:, -
-IRequest. 6
-<6 7
-Result7 =
-<= >
-Guid> B
->B C
->C D
-{ 
-public 
-Guid 
-	InquiryId 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-}		 
-}
-
- ƒ
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\UpdateClientInquiryCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-CommandHandlers0 ?
-=======
 ) 2
 { 
 	protected 
@@ -6564,2106 +3563,1136 @@ Annotation 
 (( )
 name 
 : 
-$str 
-, 
+$str '
+,' (
 columns 
 : 
 table 
 => !
 new" %
-{ 
-UserId 
-= 
-table "
-." #
-Column# )
-<) *
-Guid* .
->. /
-(/ 0
-type0 4
-:4 5
-$str6 <
-,< =
-nullable> F
-:F G
-falseH M
-,M N
-defaultValueSqlO ^
-:^ _
-$str` t
-)t u
-,u v
-Name 
-= 
-table  
-.  !
-Column! '
-<' (
-string( .
->. /
-(/ 0
-type0 4
-:4 5
-$str6 M
-,M N
-	maxLengthO X
-:X Y
-$numZ \
-,\ ]
-nullable^ f
-:f g
-falseh m
-)m n
-,n o
-Email 
+{ 
+	InquiryId 
+= 
+table  %
+.% &
+Column& ,
+<, -
+Guid- 1
+>1 2
+(2 3
+type3 7
+:7 8
+$str9 ?
+,? @
+nullableA I
+:I J
+falseK P
+,P Q
+defaultValueSqlR a
+:a b
+$strc w
+)w x
+,x y
+ClientId 
+= 
+table $
+.$ %
+Column% +
+<+ ,
+Guid, 0
+>0 1
+(1 2
+type2 6
+:6 7
+$str8 >
+,> ?
+nullable@ H
+:H I
+falseJ O
+)O P
+,P Q
+Types 
 = 
 table !
 .! "
 Column" (
-<( )
-string) /
->/ 0
-(0 1
-type1 5
-:5 6
-$str7 N
-,N O
-	maxLengthP Y
-:Y Z
-$num[ ]
-,] ^
-nullable_ g
-:g h
-falsei n
-)n o
-,o p
-PhoneNumber 
-=  !
-table" '
-.' (
-Column( .
-<. /
-string/ 5
->5 6
-(6 7
-type7 ;
-:; <
-$str= C
-,C D
-nullableE M
-:M N
-falseO T
-)T U
-} 
-, 
-constraints 
-: 
-table "
-=># %
-{ 
-table 
-. 
+<( )
+List) -
+<- .
+string. 4
+>4 5
+>5 6
+(6 7
+type7 ;
+:; <
+$str= E
+,E F
+nullableG O
+:O P
+trueQ U
+)U V
+,V W
+MinPrice 
+= 
+table $
+.$ %
+Column% +
+<+ ,
+double, 2
+>2 3
+(3 4
+type4 8
+:8 9
+$str: L
+,L M
+nullableN V
+:V W
+falseX ]
+)] ^
+,^ _
+MaxPrice 
+= 
+table $
+.$ %
+Column% +
+<+ ,
+double, 2
+>2 3
+(3 4
+type4 8
+:8 9
+$str: L
+,L M
+nullableN V
+:V W
+falseX ]
+)] ^
+,^ _
+MinSquareFootage $
+=% &
+table' ,
+., -
+Column- 3
+<3 4
+double4 :
+>: ;
+(; <
+type< @
+:@ A
+$strB T
+,T U
+nullableV ^
+:^ _
+false` e
+)e f
+,f g
+MaxSquareFootage $
+=% &
+table' ,
+., -
+Column- 3
+<3 4
+double4 :
+>: ;
+(; <
+type< @
+:@ A
+$strB T
+,T U
+nullableV ^
+:^ _
+false` e
+)e f
+,f g
+NumberOfBedrooms $
+=% &
+table' ,
+., -
+Column- 3
+<3 4
+double4 :
+>: ;
+(; <
+type< @
+:@ A
+$strB T
+,T U
+nullableV ^
+:^ _
+false` e
+)e f
+,f g
+NumberOfBathrooms %
+=& '
+table( -
+.- .
+Column. 4
+<4 5
+double5 ;
+>; <
+(< =
+type= A
+:A B
+$strC U
+,U V
+nullableW _
+:_ `
+falsea f
+)f g
+} 
+, 
+constraints   
+:   
+table   "
+=>  # %
+{!! 
+table"" 
+."" 
 
-PrimaryKey $
-($ %
-$str% /
-,/ 0
-x1 2
-=>3 5
-x6 7
-.7 8
-UserId8 >
-)> ?
-;? @
-} 
-) 
-; 
-migrationBuilder   
-.   
-CreateTable   (
-(  ( )
-name!! 
-:!! 
-$str!! '
-,!!' (
-columns"" 
-:"" 
-table"" 
-=>"" !
-new""" %
-{## 
-	InquiryId$$ 
-=$$ 
-table$$  %
-.$$% &
-Column$$& ,
-<$$, -
-Guid$$- 1
->$$1 2
-($$2 3
-type$$3 7
-:$$7 8
-$str$$9 ?
-,$$? @
-nullable$$A I
-:$$I J
-false$$K P
-,$$P Q
-defaultValueSql$$R a
-:$$a b
-$str$$c w
-)$$w x
-,$$x y
-ClientId%% 
-=%% 
-table%% $
-.%%$ %
-Column%%% +
-<%%+ ,
-Guid%%, 0
->%%0 1
-(%%1 2
-type%%2 6
-:%%6 7
-$str%%8 >
-,%%> ?
-nullable%%@ H
-:%%H I
-false%%J O
-)%%O P
-,%%P Q
-Types&& 
-=&& 
-table&& !
-.&&! "
-Column&&" (
-<&&( )
-List&&) -
-<&&- .
-string&&. 4
->&&4 5
->&&5 6
-(&&6 7
-type&&7 ;
-:&&; <
-$str&&= E
-,&&E F
-nullable&&G O
-:&&O P
-false&&Q V
-)&&V W
-,&&W X
-MinPrice'' 
-='' 
-table'' $
-.''$ %
-Column''% +
-<''+ ,
-double'', 2
->''2 3
-(''3 4
-type''4 8
-:''8 9
-$str'': L
-,''L M
-nullable''N V
-:''V W
-false''X ]
-)''] ^
-,''^ _
-MaxPrice(( 
-=(( 
-table(( $
-.(($ %
-Column((% +
-<((+ ,
-double((, 2
->((2 3
-(((3 4
-type((4 8
-:((8 9
-$str((: L
-,((L M
-nullable((N V
-:((V W
-false((X ]
-)((] ^
-,((^ _
-MinSquareFootage)) $
-=))% &
-table))' ,
-.)), -
-Column))- 3
-<))3 4
-double))4 :
->)): ;
-()); <
-type))< @
-:))@ A
-$str))B T
-,))T U
-nullable))V ^
-:))^ _
-false))` e
-)))e f
-,))f g
-MaxSquareFootage** $
-=**% &
-table**' ,
-.**, -
-Column**- 3
-<**3 4
-double**4 :
->**: ;
-(**; <
-type**< @
-:**@ A
-$str**B T
-,**T U
-nullable**V ^
-:**^ _
-false**` e
-)**e f
-,**f g
-NumberOfBedrooms++ $
-=++% &
-table++' ,
-.++, -
-Column++- 3
-<++3 4
-double++4 :
->++: ;
-(++; <
-type++< @
-:++@ A
-$str++B T
-,++T U
-nullable++V ^
-:++^ _
-false++` e
-)++e f
-,++f g
-NumberOfBathrooms,, %
-=,,& '
-table,,( -
-.,,- .
-Column,,. 4
-<,,4 5
-double,,5 ;
->,,; <
-(,,< =
-type,,= A
-:,,A B
-$str,,C U
-,,,U V
-nullable,,W _
-:,,_ `
-false,,a f
-),,f g
-,,,g h
-UserId-- 
-=-- 
-table-- "
-.--" #
-Column--# )
-<--) *
-Guid--* .
->--. /
-(--/ 0
-type--0 4
-:--4 5
-$str--6 <
-,--< =
-nullable--> F
-:--F G
-true--H L
-)--L M
-}.. 
-,.. 
-constraints// 
-:// 
-table// "
-=>//# %
-{00 
-table11 
-.11 
+PrimaryKey"" $
+(""$ %
+$str""% 9
+,""9 :
+x""; <
+=>""= ?
+x""@ A
+.""A B
+	InquiryId""B K
+)""K L
+;""L M
+}## 
+)## 
+;## 
+migrationBuilder%% 
+.%% 
+CreateTable%% (
+(%%( )
+name&& 
+:&& 
+$str&& (
+,&&( )
+columns'' 
+:'' 
+table'' 
+=>'' !
+new''" %
+{(( 
 
-PrimaryKey11 $
-(11$ %
-$str11% 9
-,119 :
-x11; <
-=>11= ?
-x11@ A
-.11A B
-	InquiryId11B K
-)11K L
-;11L M
-table22 
-.22 
+PropertyId)) 
+=))  
+table))! &
+.))& '
+Column))' -
+<))- .
+Guid)). 2
+>))2 3
+())3 4
+type))4 8
+:))8 9
+$str)): @
+,))@ A
+nullable))B J
+:))J K
+false))L Q
+,))Q R
+defaultValueSql))S b
+:))b c
+$str))d x
+)))x y
+,))y z
+Title** 
+=** 
+table** !
+.**! "
+Column**" (
+<**( )
+string**) /
+>**/ 0
+(**0 1
+type**1 5
+:**5 6
+$str**7 O
+,**O P
+	maxLength**Q Z
+:**Z [
+$num**\ _
+,**_ `
+nullable**a i
+:**i j
+false**k p
+)**p q
+,**q r
+Address++ 
+=++ 
+table++ #
+.++# $
+Column++$ *
+<++* +
+string+++ 1
+>++1 2
+(++2 3
+type++3 7
+:++7 8
+$str++9 Q
+,++Q R
+	maxLength++S \
+:++\ ]
+$num++^ a
+,++a b
+nullable++c k
+:++k l
+false++m r
+)++r s
+,++s t
+Type,, 
+=,, 
+table,,  
+.,,  !
+Column,,! '
+<,,' (
+string,,( .
+>,,. /
+(,,/ 0
+type,,0 4
+:,,4 5
+$str,,6 <
+,,,< =
+nullable,,> F
+:,,F G
+false,,H M
+),,M N
+,,,N O
+Price-- 
+=-- 
+table-- !
+.--! "
+Column--" (
+<--( )
+double--) /
+>--/ 0
+(--0 1
+type--1 5
+:--5 6
+$str--7 I
+,--I J
+nullable--K S
+:--S T
+false--U Z
+)--Z [
+,--[ \
+SquareFootage.. !
+=.." #
+table..$ )
+...) *
+Column..* 0
+<..0 1
+double..1 7
+>..7 8
+(..8 9
+type..9 =
+:..= >
+$str..? Q
+,..Q R
+nullable..S [
+:..[ \
+false..] b
+)..b c
+,..c d
+NumberOfBedrooms// $
+=//% &
+table//' ,
+.//, -
+Column//- 3
+<//3 4
+double//4 :
+>//: ;
+(//; <
+type//< @
+://@ A
+$str//B T
+,//T U
+nullable//V ^
+://^ _
+false//` e
+)//e f
+,//f g
+NumberOfBathrooms00 %
+=00& '
+table00( -
+.00- .
+Column00. 4
+<004 5
+double005 ;
+>00; <
+(00< =
+type00= A
+:00A B
+$str00C U
+,00U V
+nullable00W _
+:00_ `
+false00a f
+)00f g
+,00g h
+Description11 
+=11  !
+table11" '
+.11' (
+Column11( .
+<11. /
+string11/ 5
+>115 6
+(116 7
+type117 ;
+:11; <
+$str11= U
+,11U V
+	maxLength11W `
+:11` a
+$num11b e
+,11e f
+nullable11g o
+:11o p
+false11q v
+)11v w
+,11w x
+Status22 
+=22 
+table22 "
+.22" #
+Column22# )
+<22) *
+string22* 0
+>220 1
+(221 2
+type222 6
+:226 7
+$str228 >
+,22> ?
+nullable22@ H
+:22H I
+false22J O
+)22O P
+,22P Q
+ListingDate33 
+=33  !
+table33" '
+.33' (
+Column33( .
+<33. /
+DateTime33/ 7
+>337 8
+(338 9
+type339 =
+:33= >
+$str33? Y
+,33Y Z
+nullable33[ c
+:33c d
+false33e j
+)33j k
+,33k l
+	ImageURLs44 
+=44 
+table44  %
+.44% &
+Column44& ,
+<44, -
+string44- 3
+>443 4
+(444 5
+type445 9
+:449 :
+$str44; A
+,44A B
+nullable44C K
+:44K L
+false44M R
+)44R S
+,44S T
+UserID55 
+=55 
+table55 "
+.55" #
+Column55# )
+<55) *
+Guid55* .
+>55. /
+(55/ 0
+type550 4
+:554 5
+$str556 <
+,55< =
+nullable55> F
+:55F G
+false55H M
+)55M N
+}66 
+,66 
+constraints77 
+:77 
+table77 "
+=>77# %
+{88 
+table99 
+.99 
 
-ForeignKey22 $
-(22$ %
-name33 
-:33 
-$str33 ?
-,33? @
-column44 
-:44 
-x44  !
-=>44" $
-x44% &
-.44& '
-UserId44' -
-,44- .
-principalTable55 &
-:55& '
-$str55( /
-,55/ 0
-principalColumn66 '
-:66' (
-$str66) 1
-)661 2
-;662 3
-}77 
-)77 
-;77 
-migrationBuilder99 
-.99 
-CreateTable99 (
-(99( )
-name:: 
-::: 
-$str:: (
-,::( )
-columns;; 
-:;; 
-table;; 
-=>;; !
-new;;" %
-{<< 
+PrimaryKey99 $
+(99$ %
+$str99% :
+,99: ;
+x99< =
+=>99> @
+x99A B
+.99B C
 
-PropertyId== 
-===  
-table==! &
-.==& '
-Column==' -
-<==- .
-Guid==. 2
->==2 3
-(==3 4
-type==4 8
-:==8 9
-$str==: @
-,==@ A
-nullable==B J
-:==J K
-false==L Q
-,==Q R
-defaultValueSql==S b
-:==b c
-$str==d x
-)==x y
-,==y z
-Address>> 
-=>> 
-table>> #
-.>># $
-Column>>$ *
-<>>* +
-string>>+ 1
->>>1 2
-(>>2 3
-type>>3 7
-:>>7 8
-$str>>9 Q
-,>>Q R
-	maxLength>>S \
-:>>\ ]
-$num>>^ a
-,>>a b
-nullable>>c k
-:>>k l
-false>>m r
-)>>r s
-,>>s t
-Type?? 
-=?? 
-table??  
-.??  !
-Column??! '
-<??' (
-string??( .
->??. /
-(??/ 0
-type??0 4
-:??4 5
-$str??6 <
-,??< =
-nullable??> F
-:??F G
-false??H M
-)??M N
-,??N O
-Price@@ 
-=@@ 
-table@@ !
-.@@! "
-Column@@" (
-<@@( )
-double@@) /
->@@/ 0
-(@@0 1
-type@@1 5
-:@@5 6
-$str@@7 I
-,@@I J
-nullable@@K S
-:@@S T
-false@@U Z
-)@@Z [
-,@@[ \
-SquareFootageAA !
-=AA" #
-tableAA$ )
-.AA) *
-ColumnAA* 0
-<AA0 1
-doubleAA1 7
->AA7 8
-(AA8 9
-typeAA9 =
-:AA= >
-$strAA? Q
-,AAQ R
-nullableAAS [
-:AA[ \
-falseAA] b
-)AAb c
-,AAc d
-NumberOfBedroomsBB $
-=BB% &
-tableBB' ,
-.BB, -
-ColumnBB- 3
-<BB3 4
-doubleBB4 :
->BB: ;
-(BB; <
-typeBB< @
-:BB@ A
-$strBBB T
-,BBT U
-nullableBBV ^
-:BB^ _
-falseBB` e
-)BBe f
-,BBf g
-NumberOfBathroomsCC %
-=CC& '
-tableCC( -
-.CC- .
-ColumnCC. 4
-<CC4 5
-doubleCC5 ;
->CC; <
-(CC< =
-typeCC= A
-:CCA B
-$strCCC U
-,CCU V
-nullableCCW _
-:CC_ `
-falseCCa f
-)CCf g
-,CCg h
-DescriptionDD 
-=DD  !
-tableDD" '
-.DD' (
-ColumnDD( .
-<DD. /
-stringDD/ 5
->DD5 6
-(DD6 7
-typeDD7 ;
-:DD; <
-$strDD= U
-,DDU V
-	maxLengthDDW `
-:DD` a
-$numDDb e
-,DDe f
-nullableDDg o
-:DDo p
-falseDDq v
-)DDv w
-,DDw x
-StatusEE 
-=EE 
-tableEE "
-.EE" #
-ColumnEE# )
-<EE) *
-stringEE* 0
->EE0 1
-(EE1 2
-typeEE2 6
-:EE6 7
-$strEE8 >
-,EE> ?
-nullableEE@ H
-:EEH I
-falseEEJ O
-)EEO P
-,EEP Q
-ListingDateFF 
-=FF  !
-tableFF" '
-.FF' (
-ColumnFF( .
-<FF. /
-DateTimeFF/ 7
->FF7 8
-(FF8 9
-typeFF9 =
-:FF= >
-$strFF? Y
-,FFY Z
-nullableFF[ c
-:FFc d
-falseFFe j
-)FFj k
-,FFk l
-	ImageURLsGG 
-=GG 
-tableGG  %
-.GG% &
-ColumnGG& ,
-<GG, -
-stringGG- 3
->GG3 4
-(GG4 5
-typeGG5 9
-:GG9 :
-$strGG; A
-,GGA B
-nullableGGC K
-:GGK L
-falseGGM R
-)GGR S
-,GGS T
-UserIDHH 
-=HH 
-tableHH "
-.HH" #
-ColumnHH# )
-<HH) *
-GuidHH* .
->HH. /
-(HH/ 0
-typeHH0 4
-:HH4 5
-$strHH6 <
-,HH< =
-nullableHH> F
-:HHF G
-falseHHH M
-)HHM N
+PropertyId99C M
+)99M N
+;99N O
+}:: 
+):: 
+;:: 
+migrationBuilder<< 
+.<< 
+CreateTable<< (
+(<<( )
+name== 
+:== 
+$str== 
+,== 
+columns>> 
+:>> 
+table>> 
+=>>> !
+new>>" %
+{?? 
+UserId@@ 
+=@@ 
+table@@ "
+.@@" #
+Column@@# )
+<@@) *
+Guid@@* .
+>@@. /
+(@@/ 0
+type@@0 4
+:@@4 5
+$str@@6 <
+,@@< =
+nullable@@> F
+:@@F G
+false@@H M
+,@@M N
+defaultValueSql@@O ^
+:@@^ _
+$str@@` t
+)@@t u
+,@@u v
+NameAA 
+=AA 
+tableAA  
+.AA  !
+ColumnAA! '
+<AA' (
+stringAA( .
+>AA. /
+(AA/ 0
+typeAA0 4
+:AA4 5
+$strAA6 M
+,AAM N
+	maxLengthAAO X
+:AAX Y
+$numAAZ \
+,AA\ ]
+nullableAA^ f
+:AAf g
+falseAAh m
+)AAm n
+,AAn o
+EmailBB 
+=BB 
+tableBB !
+.BB! "
+ColumnBB" (
+<BB( )
+stringBB) /
+>BB/ 0
+(BB0 1
+typeBB1 5
+:BB5 6
+$strBB7 N
+,BBN O
+	maxLengthBBP Y
+:BBY Z
+$numBB[ ]
+,BB] ^
+nullableBB_ g
+:BBg h
+falseBBi n
+)BBn o
+,BBo p
+PhoneNumberCC 
+=CC  !
+tableCC" '
+.CC' (
+ColumnCC( .
+<CC. /
+stringCC/ 5
+>CC5 6
+(CC6 7
+typeCC7 ;
+:CC; <
+$strCC= C
+,CCC D
+nullableCCE M
+:CCM N
+falseCCO T
+)CCT U
+,CCU V
+PasswordHashDD  
+=DD! "
+tableDD# (
+.DD( )
+ColumnDD) /
+<DD/ 0
+stringDD0 6
+>DD6 7
+(DD7 8
+typeDD8 <
+:DD< =
+$strDD> D
+,DDD E
+nullableDDF N
+:DDN O
+falseDDP U
+)DDU V
+}EE 
+,EE 
+constraintsFF 
+:FF 
+tableFF "
+=>FF# %
+{GG 
+tableHH 
+.HH 
+
+PrimaryKeyHH $
+(HH$ %
+$strHH% /
+,HH/ 0
+xHH1 2
+=>HH3 5
+xHH6 7
+.HH7 8
+UserIdHH8 >
+)HH> ?
+;HH? @
 }II 
-,II 
-constraintsJJ 
-:JJ 
-tableJJ "
-=>JJ# %
-{KK 
-tableLL 
-.LL 
+)II 
+;II 
+migrationBuilderKK 
+.KK 
+CreateTableKK (
+(KK( )
+nameLL 
+:LL 
+$strLL $
+,LL$ %
+columnsMM 
+:MM 
+tableMM 
+=>MM !
+newMM" %
+{NN 
+TransactionIdOO !
+=OO" #
+tableOO$ )
+.OO) *
+ColumnOO* 0
+<OO0 1
+GuidOO1 5
+>OO5 6
+(OO6 7
+typeOO7 ;
+:OO; <
+$strOO= C
+,OOC D
+nullableOOE M
+:OOM N
+falseOOO T
+,OOT U
+defaultValueSqlOOV e
+:OOe f
+$strOOg {
+)OO{ |
+,OO| }
 
-PrimaryKeyLL $
-(LL$ %
-$strLL% :
-,LL: ;
-xLL< =
-=>LL> @
-xLLA B
-.LLB C
+PropertyIdPP 
+=PP  
+tablePP! &
+.PP& '
+ColumnPP' -
+<PP- .
+GuidPP. 2
+>PP2 3
+(PP3 4
+typePP4 8
+:PP8 9
+$strPP: @
+,PP@ A
+nullablePPB J
+:PPJ K
+falsePPL Q
+)PPQ R
+,PPR S
+BuyerIdQQ 
+=QQ 
+tableQQ #
+.QQ# $
+ColumnQQ$ *
+<QQ* +
+GuidQQ+ /
+>QQ/ 0
+(QQ0 1
+typeQQ1 5
+:QQ5 6
+$strQQ7 =
+,QQ= >
+nullableQQ? G
+:QQG H
+falseQQI N
+)QQN O
+,QQO P
+SellerIdRR 
+=RR 
+tableRR $
+.RR$ %
+ColumnRR% +
+<RR+ ,
+GuidRR, 0
+>RR0 1
+(RR1 2
+typeRR2 6
+:RR6 7
+$strRR8 >
+,RR> ?
+nullableRR@ H
+:RRH I
+falseRRJ O
+)RRO P
+,RRP Q
+	SalePriceSS 
+=SS 
+tableSS  %
+.SS% &
+ColumnSS& ,
+<SS, -
+doubleSS- 3
+>SS3 4
+(SS4 5
+typeSS5 9
+:SS9 :
+$strSS; M
+,SSM N
+nullableSSO W
+:SSW X
+falseSSY ^
+)SS^ _
+,SS_ `
+StatusTT 
+=TT 
+tableTT "
+.TT" #
+ColumnTT# )
+<TT) *
+stringTT* 0
+>TT0 1
+(TT1 2
+typeTT2 6
+:TT6 7
+$strTT8 >
+,TT> ?
+nullableTT@ H
+:TTH I
+falseTTJ O
+)TTO P
+}UU 
+,UU 
+constraintsVV 
+:VV 
+tableVV "
+=>VV# %
+{WW 
+tableXX 
+.XX 
 
-PropertyIdLLC M
-)LLM N
-;LLN O
-tableMM 
-.MM 
+PrimaryKeyXX $
+(XX$ %
+$strXX% 6
+,XX6 7
+xXX8 9
+=>XX: <
+xXX= >
+.XX> ?
+TransactionIdXX? L
+)XXL M
+;XXM N
+tableYY 
+.YY 
 
-ForeignKeyMM $
-(MM$ %
-nameNN 
-:NN 
-$strNN @
-,NN@ A
-columnOO 
-:OO 
-xOO  !
-=>OO" $
-xOO% &
-.OO& '
-UserIDOO' -
-,OO- .
-principalTablePP &
-:PP& '
-$strPP( /
-,PP/ 0
-principalColumnQQ '
-:QQ' (
-$strQQ) 1
-,QQ1 2
-onDeleteRR  
-:RR  !
-ReferentialActionRR" 3
-.RR3 4
-CascadeRR4 ;
-)RR; <
-;RR< =
-}SS 
-)SS 
-;SS 
-migrationBuilderUU 
-.UU 
-CreateTableUU (
-(UU( )
-nameVV 
-:VV 
-$strVV $
-,VV$ %
-columnsWW 
-:WW 
-tableWW 
-=>WW !
-newWW" %
-{XX 
-TransactionIdYY !
-=YY" #
-tableYY$ )
-.YY) *
-ColumnYY* 0
-<YY0 1
-GuidYY1 5
->YY5 6
-(YY6 7
-typeYY7 ;
-:YY; <
-$strYY= C
-,YYC D
-nullableYYE M
-:YYM N
-falseYYO T
-,YYT U
-defaultValueSqlYYV e
-:YYe f
-$strYYg {
-)YY{ |
-,YY| }
+ForeignKeyYY $
+(YY$ %
+nameZZ 
+:ZZ 
+$strZZ K
+,ZZK L
+column[[ 
+:[[ 
+x[[  !
+=>[[" $
+x[[% &
+.[[& '
 
-PropertyIdZZ 
-=ZZ  
-tableZZ! &
-.ZZ& '
-ColumnZZ' -
-<ZZ- .
-GuidZZ. 2
->ZZ2 3
-(ZZ3 4
-typeZZ4 8
-:ZZ8 9
-$strZZ: @
-,ZZ@ A
-nullableZZB J
-:ZZJ K
-falseZZL Q
-)ZZQ R
-,ZZR S
-BuyerId[[ 
-=[[ 
-table[[ #
-.[[# $
-Column[[$ *
-<[[* +
-Guid[[+ /
->[[/ 0
-([[0 1
-type[[1 5
-:[[5 6
-$str[[7 =
-,[[= >
-nullable[[? G
-:[[G H
-false[[I N
-)[[N O
-,[[O P
-SellerId\\ 
-=\\ 
-table\\ $
-.\\$ %
-Column\\% +
-<\\+ ,
-Guid\\, 0
->\\0 1
-(\\1 2
-type\\2 6
-:\\6 7
-$str\\8 >
-,\\> ?
-nullable\\@ H
-:\\H I
-false\\J O
-)\\O P
-,\\P Q
-	SalePrice]] 
-=]] 
-table]]  %
-.]]% &
-Column]]& ,
-<]], -
-double]]- 3
->]]3 4
-(]]4 5
-type]]5 9
-:]]9 :
-$str]]; M
-,]]M N
-nullable]]O W
-:]]W X
-false]]Y ^
-)]]^ _
-,]]_ `
-Status^^ 
-=^^ 
-table^^ "
-.^^" #
-Column^^# )
-<^^) *
-string^^* 0
->^^0 1
-(^^1 2
-type^^2 6
-:^^6 7
-$str^^8 >
-,^^> ?
-nullable^^@ H
-:^^H I
-false^^J O
-)^^O P
-}__ 
-,__ 
-constraints`` 
-:`` 
-table`` "
-=>``# %
-{aa 
-tablebb 
-.bb 
+PropertyId[[' 1
+,[[1 2
+principalTable\\ &
+:\\& '
+$str\\( :
+,\\: ;
+principalColumn]] '
+:]]' (
+$str]]) 5
+,]]5 6
+onDelete^^  
+:^^  !
+ReferentialAction^^" 3
+.^^3 4
+Cascade^^4 ;
+)^^; <
+;^^< =
+table__ 
+.__ 
 
-PrimaryKeybb $
-(bb$ %
-$strbb% 6
-,bb6 7
-xbb8 9
-=>bb: <
-xbb= >
-.bb> ?
-TransactionIdbb? L
-)bbL M
-;bbM N
-tablecc 
-.cc 
+ForeignKey__ $
+(__$ %
+name`` 
+:`` 
+$str`` =
+,``= >
+columnaa 
+:aa 
+xaa  !
+=>aa" $
+xaa% &
+.aa& '
+BuyerIdaa' .
+,aa. /
+principalTablebb &
+:bb& '
+$strbb( /
+,bb/ 0
+principalColumncc '
+:cc' (
+$strcc) 1
+,cc1 2
+onDeletedd  
+:dd  !
+ReferentialActiondd" 3
+.dd3 4
+Cascadedd4 ;
+)dd; <
+;dd< =
+tableee 
+.ee 
 
-ForeignKeycc $
-(cc$ %
-namedd 
-:dd 
-$strdd K
-,ddK L
-columnee 
-:ee 
-xee  !
-=>ee" $
-xee% &
-.ee& '
-
-PropertyIdee' 1
-,ee1 2
-principalTableff &
-:ff& '
-$strff( :
-,ff: ;
-principalColumngg '
-:gg' (
-$strgg) 5
-,gg5 6
-onDeletehh  
-:hh  !
-ReferentialActionhh" 3
-.hh3 4
-Cascadehh4 ;
-)hh; <
-;hh< =
-tableii 
-.ii 
-
-ForeignKeyii $
-(ii$ %
-namejj 
-:jj 
-$strjj =
-,jj= >
-columnkk 
-:kk 
-xkk  !
-=>kk" $
-xkk% &
-.kk& '
-BuyerIdkk' .
-,kk. /
-principalTablell &
-:ll& '
-$strll( /
-,ll/ 0
-principalColumnmm '
-:mm' (
-$strmm) 1
-,mm1 2
-onDeletenn  
-:nn  !
-ReferentialActionnn" 3
-.nn3 4
-Cascadenn4 ;
-)nn; <
-;nn< =
-tableoo 
-.oo 
-
-ForeignKeyoo $
-(oo$ %
-namepp 
-:pp 
-$strpp >
-,pp> ?
-columnqq 
-:qq 
-xqq  !
-=>qq" $
-xqq% &
-.qq& '
-SellerIdqq' /
-,qq/ 0
-principalTablerr &
-:rr& '
-$strrr( /
-,rr/ 0
-principalColumnss '
-:ss' (
-$strss) 1
-,ss1 2
-onDeletett  
-:tt  !
-ReferentialActiontt" 3
-.tt3 4
-Cascadett4 ;
-)tt; <
-;tt< =
-}uu 
-)uu 
-;uu 
+ForeignKeyee $
+(ee$ %
+nameff 
+:ff 
+$strff >
+,ff> ?
+columngg 
+:gg 
+xgg  !
+=>gg" $
+xgg% &
+.gg& '
+SellerIdgg' /
+,gg/ 0
+principalTablehh &
+:hh& '
+$strhh( /
+,hh/ 0
+principalColumnii '
+:ii' (
+$strii) 1
+,ii1 2
+onDeletejj  
+:jj  !
+ReferentialActionjj" 3
+.jj3 4
+Cascadejj4 ;
+)jj; <
+;jj< =
+}kk 
+)kk 
+;kk 
+migrationBuildermm 
+.mm 
+CreateIndexmm (
+(mm( )
+namenn 
+:nn 
+$strnn /
+,nn/ 0
+tableoo 
+:oo 
+$stroo %
+,oo% &
+columnpp 
+:pp 
+$strpp !
+)pp! "
+;pp" #
+migrationBuilderrr 
+.rr 
+CreateIndexrr (
+(rr( )
+namess 
+:ss 
+$strss 2
+,ss2 3
+tablett 
+:tt 
+$strtt %
+,tt% &
+columnuu 
+:uu 
+$struu $
+)uu$ %
+;uu% &
 migrationBuilderww 
 .ww 
 CreateIndexww (
 (ww( )
 namexx 
 :xx 
-$strxx 1
-,xx1 2
+$strxx 0
+,xx0 1
 tableyy 
 :yy 
-$stryy (
-,yy( )
+$stryy %
+,yy% &
 columnzz 
 :zz 
-$strzz  
-)zz  !
-;zz! "
-migrationBuilder|| 
-.|| 
-CreateIndex|| (
-(||( )
-name}} 
-:}} 
-$str}} 2
-,}}2 3
-table~~ 
-:~~ 
-$str~~ )
-,~~) *
-column 
-: 
-$str  
-)  !
-;! "
+$strzz "
+)zz" #
+;zz# $
+}{{ 	
+	protected~~ 
+override~~ 
+void~~ 
+Down~~  $
+(~~$ %
+MigrationBuilder~~% 5
+migrationBuilder~~6 F
+)~~F G
+{ 	
 migrationBuilder
-ÅÅ 
+ÄÄ 
 .
-ÅÅ 
-CreateIndex
-ÅÅ (
+ÄÄ 
+	DropTable
+ÄÄ &
 (
-ÅÅ( )
+ÄÄ& '
 name
-ÇÇ 
+ÅÅ 
 :
-ÇÇ 
+ÅÅ 
 $str
-ÇÇ /
-,
-ÇÇ/ 0
-table
-ÉÉ 
-:
-ÉÉ 
-$str
-ÉÉ %
-,
-ÉÉ% &
-column
-ÑÑ 
-:
-ÑÑ 
-$str
-ÑÑ !
+ÅÅ '
 )
-ÑÑ! "
+ÅÅ' (
 ;
-ÑÑ" #
+ÅÅ( )
+migrationBuilder
+ÉÉ 
+.
+ÉÉ 
+	DropTable
+ÉÉ &
+(
+ÉÉ& '
+name
+ÑÑ 
+:
+ÑÑ 
+$str
+ÑÑ $
+)
+ÑÑ$ %
+;
+ÑÑ% &
 migrationBuilder
 ÜÜ 
 .
-ÜÜ 
-CreateIndex
-ÜÜ (
+ÜÜ 
+	DropTable
+ÜÜ &
 (
-ÜÜ( )
+ÜÜ& '
 name
 áá 
 :
 áá 
 $str
-áá 2
-,
-áá2 3
-table
-àà 
-:
-àà 
-$str
-àà %
-,
-àà% &
-column
-ââ 
-:
-ââ 
-$str
-ââ $
+áá (
 )
-ââ$ %
+áá( )
 ;
-ââ% &
+áá) *
 migrationBuilder
-ãã 
+ââ 
 .
-ãã 
-CreateIndex
-ãã (
+ââ 
+	DropTable
+ââ &
 (
-ãã( )
+ââ& '
 name
-åå 
+ää 
 :
-åå 
+ää 
 $str
-åå 0
-,
-åå0 1
-table
-çç 
-:
-çç 
-$str
-çç %
-,
-çç% &
-column
-éé 
-:
-éé 
-$str
-éé "
+ää 
 )
-éé" #
+ää 
 ;
-éé# $
+ää 
 }
-èè 	
-	protected
-íí 
-override
-íí 
-void
-íí 
-Down
-íí  $
-(
-íí$ %
-MigrationBuilder
-íí% 5
-migrationBuilder
-íí6 F
-)
-ííF G
-{
-ìì 	
-migrationBuilder
-îî 
-.
-îî 
-	DropTable
-îî &
-(
-îî& '
-name
-ïï 
-:
-ïï 
-$str
-ïï '
-)
-ïï' (
-;
-ïï( )
-migrationBuilder
-óó 
-.
-óó 
-	DropTable
-óó &
-(
-óó& '
-name
-òò 
-:
-òò 
-$str
-òò $
-)
-òò$ %
-;
-òò% &
-migrationBuilder
-öö 
-.
-öö 
-	DropTable
-öö &
-(
-öö& '
-name
-õõ 
-:
-õõ 
-$str
-õõ (
-)
-õõ( )
-;
-õõ) *
-migrationBuilder
-ùù 
-.
-ùù 
-	DropTable
-ùù &
-(
-ùù& '
-name
-ûû 
-:
-ûû 
-$str
-ûû 
-)
-ûû 
-;
-ûû 
+ãã 	
 }
-üü 	
-}
-†† 
-}°° ¡
+åå 
+}çç ¡
 QC:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\DependencyInjection.cs
 	namespace 	
 Infrastructure
  
->>>>>>> Stashed changes
 {		 
 public
 
  
-
+
+static
+
+ 
 class
 
- -
-!UpdateClientInquiryCommandHandler
+ 
+DependencyInjection
 
- 2
-:
-
-3 4
-IRequestHandler
-
-5 D
-<
-
-D E&
-UpdateClientInquiryCommand
-
-E _
-,
-
-_ `
-Result
-
-a g
-<
-
-g h
-Guid
-
-h l
->
-
-l m
->
-
-m n
-{ 
-private 
-readonly $
-IClientInquiryRepository 1
-
-repository2 <
-;< =
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public -
-!UpdateClientInquiryCommandHandler 0
-(0 1$
-IClientInquiryRepository1 I
-
-repositoryJ T
-,T U
-IMapperV ]
-mapper^ d
-)d e
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /&
-UpdateClientInquiryCommand/ I
-requestJ Q
-,Q R
-CancellationTokenS d
-cancellationTokene v
-)v w
-{ 	
-var 
-clientInquiry 
-= 
-mapper  &
-.& '
-Map' *
-<* +
-ClientInquiry+ 8
->8 9
-(9 :
-request: A
-)A B
-;B C
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-UpdateInquiryAsync* <
-(< =
-clientInquiry= J
-)J K
-;K L
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-} 
-} ¯
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\DeleteClientInquiryCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-CommandHandlers0 ?
-{ 
-public 
-
-class -
-!DeleteClientInquiryCommandHandler 2
-:3 4
-IRequestHandler5 D
-<D E&
-DeleteClientInquiryCommandE _
-,_ `
-Resulta g
-<g h
-Guidh l
->l m
->m n
-{		 
-private
-
- 
-readonly
-
- $
-IClientInquiryRepository
-
- 1
-
-repository
-
-2 <
-;
-
-< =
-public -
-!DeleteClientInquiryCommandHandler 0
-(0 1$
-IClientInquiryRepository1 I
-
-repositoryJ T
-)T U
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /&
-DeleteClientInquiryCommand/ I
-requestJ Q
-,Q R
-CancellationTokenS d
-cancellationTokene v
-)v w
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-DeleteInquiryAsync* <
-(< =
-request= D
-.D E
-	InquiryIdE N
-)N O
-;O P
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
+ +
+{ 
+public 
+static 
+IServiceCollection (
+AddInfrastructure) :
+(: ;
+this; ?
+IServiceCollection@ R
+servicesS [
+,[ \
+IConfiguration] k
+configurationl y
+)y z
+{ 	
+services 
+. 
+AddDbContext !
+<! " 
+ApplicationDbContext" 6
+>6 7
+(7 8
+options8 ?
+=>@ B
+options 
+. 
+	UseNpgsql !
+(! "
+configuration !
+.! "
+GetConnectionString" 5
+(5 6
+$str6 I
+)I J
+,J K
+b 
+=> 
+b 
+. 
+MigrationsAssembly -
+(- .
+typeof. 4
+(4 5 
+ApplicationDbContext5 I
+)I J
+.J K
+AssemblyK S
+.S T
+FullNameT \
+)\ ]
+)] ^
+)^ _
+;_ `
+services 
+. 
+	AddScoped 
+< &
+IPropertyListingRepository 9
+,9 :%
+PropertyListingRepository; T
+>T U
+(U V
+)V W
+;W X
+services 
+. 
+	AddScoped 
+< $
+IClientInquiryRepository 7
+,7 8#
+ClientInquiryRepository9 P
+>P Q
+(Q R
+)R S
+;S T
+services 
+. 
+	AddScoped 
+< "
+ITransactionRepository 5
+,5 6!
+TransactionRepository7 L
+>L M
+(M N
+)N O
+;O P
+services 
+. 
+	AddScoped 
+< 
+IUserRepository .
+,. /
+UserRepository0 >
+>> ?
+(? @
+)@ A
+;A B
+return 
+services 
+; 
 } 	
 } 
-} ¡
-ùC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-CommandHandlers0 ?
-{		 
-public
-
- 
-
-class
-
- -
-!CreateClientInquiryCommandHandler
-
- 2
-:
-
-3 4
-IRequestHandler
-
-5 D
-<
-
-D E&
-CreateClientInquiryCommand
-
-E _
-,
-
-_ `
-Result
-
-a g
-<
-
-g h
-Guid
-
-h l
->
-
-l m
->
-
-m n
-{ 
-private 
-readonly $
-IClientInquiryRepository 1
-
-repository2 <
-;< =
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public -
-!CreateClientInquiryCommandHandler 0
-(0 1$
-IClientInquiryRepository1 I
-
-repositoryJ T
-,T U
-IMapperV ]
-mapper^ d
-)d e
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /&
-CreateClientInquiryCommand/ I
-requestJ Q
-,Q R
-CancellationTokenS d
-cancellationTokene v
-)v w
-{ 	
-var 
-clientInquiry 
-= 
-mapper  &
-.& '
-Map' *
-<* +
-ClientInquiry+ 8
->8 9
-(9 :
-request: A
-)A B
-;B C
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-AddInquiryAsync* 9
-(9 :
-clientInquiry: G
-)G H
-;H I
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-}   
-}!! ∏
-^C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\UserDto.cs
-	namespace 	
-Application
- 
-. 
-DTOs 
-{ 
-public 
-
-class 
-UserDto 
-{ 
-public 
-Guid 
-UserId 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-public 
-string 
-? 
-Name 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-string 
-? 
-Email 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-string 
-? 
-PhoneNumber "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-}		 
-}
-
- Â	
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\TransactionDto.cs
-	namespace 	
-Application
- 
-. 
-DTOs 
-{ 
-public 
-
-class 
-TransactionDto 
-{ 
-public 
-Guid 
-TransactionId !
-{" #
-get$ '
-;' (
-set) ,
-;, -
-}. /
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-Guid 
-BuyerId 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-Guid 
-SellerId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public		 
-double		 
-	SalePrice		 
-{		  !
-get		" %
-;		% &
-set		' *
-;		* +
-}		, -
-public
-
- 
-string
-
- 
-?
-
- 
-Status
-
- 
-{
-
- 
-get
-
-  #
-;
-
-# $
-set
-
-% (
-;
-
-( )
-}
-
-* +
-} 
-} ã
-gC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs
-	namespace 	
-Application
- 
-. 
-DTOs 
-{ 
-public 
-
-class 
-ClientInquiryDto !
-{ 
-public 
-Guid 
-	InquiryId 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-Guid 
-ClientId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-List 
-< 
-string 
-> 
-? 
-Types "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-double 
-MinPrice 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public		 
-double		 
-MaxPrice		 
-{		  
-get		! $
-;		$ %
-set		& )
-;		) *
-}		+ ,
-public
-
- 
-double
-
- 
-MinSquareFootage
-
- &
-{
-
-' (
-get
-
-) ,
-;
-
-, -
-set
-
-. 1
-;
-
-1 2
-}
-
-3 4
-public 
-double 
-MaxSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-} 
-} Â
-iC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DTOs\PropertyListingDto.cs
-	namespace 	
-Application
- 
-. 
-DTOs 
-{ 
-public 
-
-class 
-PropertyListingDto #
-{ 
-public 
-Guid 
-
-PropertyId 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-string 
-? 
-Address 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public 
-string 
-? 
-Type 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-double 
-Price 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public		 
-double		 
-SquareFootage		 #
-{		$ %
-get		& )
-;		) *
-set		+ .
-;		. /
-}		0 1
-public
-
- 
-double
-
- 
-NumberOfBedrooms
-
- &
-{
-
-' (
-get
-
-) ,
-;
-
-, -
-set
-
-. 1
-;
-
-1 2
-}
-
-3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-public 
-string 
-? 
-Description "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-string 
-? 
-Status 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-DateTime 
-ListingDate #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public 
-string 
-? 
-	ImageURLs  
-{! "
-get# &
-;& '
-set( +
-;+ ,
-}- .
-public 
-Guid 
-UserID 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-} ≥
-eC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\DependencyInjection.cs
-	namespace 	
-Application
- 
-{ 
-public		 
-
-static		 
-class		 
-DependencyInjection		 +
-{
-
- 
-public 
-static 
-IServiceCollection (
-AddApplication) 7
-(7 8
-this8 <
-IServiceCollection= O
-servicesP X
-)X Y
-{ 	
-services 
-. 
-
-AddMediatR 
-(  
-cfg  #
-=># %
-cfg% (
-.( )(
-RegisterServicesFromAssembly) E
-(E F
-AssemblyF N
-.N O 
-GetExecutingAssemblyO c
-(c d
-)d e
-)e f
-)f g
-;g h
-services 
-. 
-AddAutoMapper "
-(" #
-typeof# )
-() *
-MappingProfile* 8
-)8 9
-)9 :
-;: ;
-services 
-. %
-AddValidatorsFromAssembly .
-(. /
-Assembly/ 7
-.7 8 
-GetExecutingAssembly8 L
-(L M
-)M N
-)N O
-;O P
-services 
-. 
-AddTransient !
-(! "
-typeof" (
-(( )
-IPipelineBehavior) :
-<: ;
-,; <
->< =
-)= >
-,> ?
-typeof@ F
-(F G
-ValidationBehaviorG Y
-<Y Z
-,Z [
->[ \
-)\ ]
-)] ^
-;^ _
-return 
-services 
-; 
-} 	
-} 
-} 
+} 

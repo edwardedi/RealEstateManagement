@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-<<<<<<< Updated upstream
-  <ProjectName>Application</ProjectName>
-  <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Product</ProjectType>
-  <ProjectGuid>42181a45-f5a7-4b63-b27e-3660825106f0</ProjectGuid>
-  <FullPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\Application\Application.csproj</FullPath>
-  <IsExcluded>false</IsExcluded>
-  <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\2\FilesToAnalyze.txt" />
-  </AnalysisResults>
-  <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out\2\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out\2</Property>
-=======
   <ProjectName>Infrastructure</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
@@ -26,9 +12,8 @@
   <AnalysisSettings>
     <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2\Issues.json</Property>
     <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2</Property>
->>>>>>> Stashed changes
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net9.0</TargetFramework>
 </ProjectInfo>

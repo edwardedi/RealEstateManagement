@@ -1,74 +1,83 @@
 using Application.Use_Cases.PropertyListings.Queries;
 using Domain.Entities;
 
-public class TypeFilterStrategy : IPropertyListingFilterStrategy
+namespace Application.Use_Cases.PropertyListings.Filtering
 {
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+    public class TypeFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (!string.IsNullOrEmpty(request.Type))
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.Type.ToLower() == request.Type.ToLower());
+            if (!string.IsNullOrEmpty(request.Type))
+            {
+                query = query.Where(x => string.Equals(x.Type.ToLower(),request.Type.ToLower()));
+            }
+            return query;
         }
-        return query;
     }
-}
 
-public class PriceFilterStrategy : IPropertyListingFilterStrategy
-{
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+    public class PriceFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (request.Price > 0)
+        readonly float epsilon = 0.0001f;
+
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.Price == request.Price);
+            if (request.Price > 0)
+            {
+                query = query.Where(x => Math.Abs(x.Price - request.Price) < epsilon);
+            }
+            return query;
         }
-        return query;
     }
-}
 
-public class SquareFootageFilterStrategy : IPropertyListingFilterStrategy
-{
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+
+    public class SquareFootageFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (request.SquareFootage > 0)
+        readonly float epsilon = 0.0001f;
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.SquareFootage == request.SquareFootage);
+            if (request.SquareFootage > 0)
+            {
+                query = query.Where(x => Math.Abs(x.SquareFootage - request.SquareFootage) < epsilon);
+            }
+            return query;
         }
-        return query;
     }
-}
 
-public class NumberOfBedroomsFilterStrategy : IPropertyListingFilterStrategy
-{
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+    public class NumberOfBedroomsFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (request.NumberOfBedrooms > 0)
+        readonly float epsilon = 0.0001f;
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.NumberOfBedrooms == request.NumberOfBedrooms);
+            if (request.NumberOfBedrooms > 0)
+            {
+                query = query.Where(x => Math.Abs(x.NumberOfBedrooms - request.NumberOfBedrooms) < epsilon);
+            }
+            return query;
         }
-        return query;
     }
-}
 
-public class NumberOfBathroomsFilterStrategy : IPropertyListingFilterStrategy
-{
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+    public class NumberOfBathroomsFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (request.NumberOfBathrooms > 0)
+        readonly float epsilon = 0.0001f;
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.NumberOfBathrooms == request.NumberOfBathrooms);
+            if (request.NumberOfBathrooms > 0)
+            {
+                query = query.Where(x => Math.Abs(x.NumberOfBathrooms - request.NumberOfBathrooms) < epsilon);
+            }
+            return query;
         }
-        return query;
     }
-}
 
-public class StatusFilterStrategy : IPropertyListingFilterStrategy
-{
-    public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
+    public class StatusFilterStrategy : IPropertyListingFilterStrategy
     {
-        if (!string.IsNullOrEmpty(request.Status))
+        public IQueryable<PropertyListing> ApplyFilter(IQueryable<PropertyListing> query, GetFilteredPropertyListingsQuery request)
         {
-            query = query.Where(x => x.Status == request.Status);
+            if (!string.IsNullOrEmpty(request.Status))
+            {
+                query = query.Where(x => x.Status == request.Status);
+            }
+            return query;
         }
-        return query;
     }
 }

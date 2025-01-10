@@ -1,23 +1,12 @@
-<<<<<<< Updated upstream
-¨
-†C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.MvcApplicationPartsAssemblyInfo.csutf-8ô
-çC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.AssemblyInfo.csutf-8£
-óC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8õ
-èC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.GlobalUsings.g.csutf-8k
-bC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Program.csutf-8
-vC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\UsersController.csutf-8Ü
-}C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\TransactionsController.csutf-8ã
-ÅC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingsController.csutf-8ä
-ÄC:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\Controllers\ClientInquiriesController.csutf-8
-=======
-ï
-âC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.MvcApplicationPartsAssemblyInfo.csutf-8Å
-vC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.AssemblyInfo.csutf-8å
-ÄC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8É
-xC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\obj\Debug\net8.0\RealEstateManagement.GlobalUsings.g.csutf-8T
-KC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Program.csutf-8h
-_C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\UsersController.csutf-8o
-fC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\TransactionsController.csutf-8s
-jC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingsController.csutf-8r
-iC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\Controllers\ClientInquiriesController.csutf-8
->>>>>>> Stashed changes
+Æ
+¢C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\obj\Debug\net9.0\RealEstateManagement.Application.UnitTests.AssemblyInfo.csutf-8¢
+ñC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.csutf-8~
+sC:\Users\cezar\.nuget\packages\microsoft.net.test.sdk\17.12.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8∞
+§C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\obj\Debug\net9.0\RealEstateManagement.Application.UnitTests.GlobalUsings.g.csutf-8Ç
+yC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetListingByIdQueryHandlerTests.csutf-8å
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\UpdatePropertyListingCommandHandlerTests.csutf-8Ç
+yC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetInquiryByIdQueryHandlerTests.csutf-8ã
+ÅC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetAllPropertyListingsQueryHandlerTests.csutf-8É
+zC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\GetAllInquiriesQueryHandlerTests.csutf-8å
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\DeletePropertyListingCommandHandlerTests.csutf-8å
+ÇC:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\CreatePropertyListingCommandHandlerTests.csutf-8

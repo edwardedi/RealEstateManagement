@@ -5,842 +5,38 @@
     {
       "tool": {
         "name": "Microsoft (R) Visual C# Compiler",
-        "version": "4.11.0.0",
-<<<<<<< Updated upstream
-        "fileVersion": "4.11.0-3.24468.6 (b4e5d1dd)",
-=======
-        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
->>>>>>> Stashed changes
-        "semanticVersion": "4.11.0",
+        "version": "4.12.0.0",
+        "fileVersion": "4.12.0-3.24523.4 (f3348c2a)",
+        "semanticVersion": "4.12.0",
         "language": "en-US"
       },
       "results": [
-<<<<<<< Updated upstream
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'PropertyListings' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
+          "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 11,
-                  "startColumn": 39,
-                  "endLine": 11,
-                  "endColumn": 55
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'ClientInquiries' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 12,
-                  "startColumn": 37,
-                  "endLine": 12,
-                  "endColumn": 52
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Transactions' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 35,
-                  "endLine": 13,
-                  "endColumn": 47
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 28,
-                  "endLine": 14,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8603",
-          "level": "warning",
-          "message": "Possible null reference return.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/PropertyListingRepository.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 20,
-                  "endLine": 24,
-                  "endColumn": 64
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'data' in 'Result<Transaction> Result<Transaction>.Success(Transaction data)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/TransactionRepository.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 52,
-                  "endLine": 35,
-                  "endColumn": 63
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 1,
-                  "endLine": 41,
-                  "endColumn": 65
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 21,
-                  "endLine": 56,
-                  "endColumn": 61
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'Users' 6 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 23,
-                  "endLine": 19,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 41,
-                  "endLine": 53,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 80,
-                  "startColumn": 41,
-                  "endLine": 80,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 108,
-                  "startColumn": 41,
-                  "endLine": 108,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 114,
-                  "startColumn": 41,
-                  "endLine": 114,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 158,
-                  "startColumn": 23,
-                  "endLine": 158,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null,
-              "4": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'uuid_generate_v4()' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 97,
-                  "endLine": 22,
-                  "endColumn": 117
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 100,
-                  "endLine": 36,
-                  "endColumn": 120
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 61,
-                  "startColumn": 101,
-                  "endLine": 61,
-                  "endColumn": 121
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 89,
-                  "startColumn": 104,
-                  "endLine": 89,
-                  "endColumn": 124
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'double precision' 11 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 39,
-                  "startColumn": 59,
-                  "endLine": 39,
-                  "endColumn": 77
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 59,
-                  "endLine": 40,
-                  "endColumn": 77
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 67,
-                  "endLine": 41,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 67,
-                  "endLine": 42,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 67,
-                  "endLine": 43,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 44,
-                  "startColumn": 68,
-                  "endLine": 44,
-                  "endColumn": 86
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 64,
-                  "startColumn": 56,
-                  "endLine": 64,
-                  "endColumn": 74
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 65,
-                  "startColumn": 64,
-                  "endLine": 65,
-                  "endColumn": 82
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 67,
-                  "endLine": 66,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 67,
-                  "startColumn": 68,
-                  "endLine": 67,
-                  "endColumn": 86
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 93,
-                  "startColumn": 60,
-                  "endLine": 93,
-                  "endColumn": 78
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null,
-              "4": null,
-              "5": null,
-              "6": null,
-              "7": null,
-              "8": null,
-              "9": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'UserId' 5 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 42,
-                  "endLine": 54,
-                  "endColumn": 50
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 81,
-                  "startColumn": 42,
-                  "endLine": 81,
-                  "endColumn": 50
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 109,
-                  "startColumn": 42,
-                  "endLine": 109,
-                  "endColumn": 50
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 115,
-                  "startColumn": 42,
-                  "endLine": 115,
-                  "endColumn": 50
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 122,
-                  "startColumn": 25,
-                  "endLine": 122,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'PropertyListings' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 58,
-                  "startColumn": 23,
-                  "endLine": 58,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 102,
-                  "startColumn": 41,
-                  "endLine": 102,
-                  "endColumn": 59
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 24,
-                  "endLine": 126,
-                  "endColumn": 42
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 155,
-                  "startColumn": 23,
-                  "endLine": 155,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'Transactions' 5 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 86,
-                  "startColumn": 23,
-                  "endLine": 86,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 131,
-                  "startColumn": 24,
-                  "endLine": 131,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 136,
-                  "startColumn": 24,
-                  "endLine": 136,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 141,
-                  "startColumn": 24,
-                  "endLine": 141,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Migrations/20241111115529_InitialCreate.cs",
-                "region": {
-                  "startLine": 152,
-                  "startColumn": 23,
-                  "endLine": 152,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null
-            }
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/PropertyListingRepository.cs",
-                "region": {
-                  "startLine": 86,
-                  "startColumn": 17,
-                  "endLine": 86,
-                  "endColumn": 108
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'uuid_generate_v4()' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 101,
-                  "endLine": 25,
-                  "endColumn": 121
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 96,
-                  "endLine": 50,
-                  "endColumn": 116
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 64,
-                  "startColumn": 100,
-                  "endLine": 64,
-                  "endColumn": 120
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 93,
-                  "startColumn": 93,
-                  "endLine": 93,
-                  "endColumn": 113
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S4487",
-          "level": "warning",
-          "message": "Remove this unread private field 'context' or refactor the code to use its value.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/UserRepository.cs",
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
                   "startLine": 9,
-                  "startColumn": 47,
+                  "startColumn": 16,
                   "endLine": 9,
-                  "endColumn": 54
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 30,
+                  "endLine": 8,
+                  "endColumn": 35
                 }
               }
             }
@@ -850,18 +46,18 @@
           }
         },
         {
-          "ruleId": "S2325",
+          "ruleId": "CS8602",
           "level": "warning",
-          "message": "Make 'GetListingsByUserId' a static method.",
+          "message": "Dereference of a possibly null reference.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/PropertyListingRepository.cs",
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/Use%20Cases/PropertyListings/Filtering/TypeFilterStrategy.cs",
                 "region": {
-                  "startLine": 27,
-                  "startColumn": 51,
-                  "endLine": 27,
-                  "endColumn": 70
+                  "startLine": 12,
+                  "startColumn": 56,
+                  "endLine": 12,
+                  "endColumn": 62
                 }
               }
             }
@@ -871,18 +67,18 @@
           }
         },
         {
-          "ruleId": "S927",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Rename parameter 'userId' to 'clientId' to match the interface declaration.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/ClientInquiryRepository.cs",
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 29,
-                  "startColumn": 83,
-                  "endLine": 29,
-                  "endColumn": 89
+                  "startLine": 21,
+                  "startColumn": 1,
+                  "endLine": 21,
+                  "endColumn": 14
                 }
               }
             }
@@ -892,39 +88,18 @@
           }
         },
         {
-          "ruleId": "S112",
+          "ruleId": "S1118",
           "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/TransactionRepository.cs",
+                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyLisingDataGenerator.cs",
                 "region": {
-                  "startLine": 81,
-                  "startColumn": 23,
-                  "endLine": 81,
-                  "endColumn": 76
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S112",
-          "level": "warning",
-          "message": "'System.Exception' should not be thrown by user code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/marin/OneDrive/Desktop/Projects/.NET/RealEstateManagement/Infrastructure/Repositories/TransactionRepository.cs",
-                "region": {
-                  "startLine": 67,
-                  "startColumn": 23,
-                  "endLine": 67,
-                  "endColumn": 99
+                  "startLine": 3,
+                  "startColumn": 18,
+                  "endLine": 3,
+                  "endColumn": 45
                 }
               }
             }
@@ -935,25 +110,11 @@
         }
       ],
       "rules": {
-        "CS8603": {
-          "id": "CS8603",
-          "shortDescription": "Possible null reference return.",
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "CS8604": {
-          "id": "CS8604",
-          "shortDescription": "Possible null reference argument.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,
@@ -977,34 +138,19 @@
             ]
           }
         },
-        "S112": {
-          "id": "S112",
-          "shortDescription": "General or reserved exceptions should never be thrown",
-          "fullDescription": "This rule raises an issue when a general or reserved exception is thrown.",
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-112",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
           "properties": {
             "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S1192": {
-          "id": "S1192",
-          "shortDescription": "String literals should not be duplicated",
-          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": false,
-            "tags": [
-              "C#",
-              "MainSourceScope",
+              "TestSourceScope",
               "SonarWay"
             ]
           }
@@ -1025,62 +171,8 @@
               "SonarWay"
             ]
           }
-        },
-        "S2325": {
-          "id": "S2325",
-          "shortDescription": "Methods and properties that don't access instance data should be static",
-          "fullDescription": "Methods and properties that don’t access instance data should be marked as static for the following reasons:",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2325",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S4487": {
-          "id": "S4487",
-          "shortDescription": "Unread \"private\" fields should be removed",
-          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
-          "properties": {
-            "category": "Critical Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S927": {
-          "id": "S927",
-          "shortDescription": "Parameter names should match base declaration and other partial definitions",
-          "fullDescription": "Parameters are part of the method signature and its identity.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
-          "properties": {
-            "category": "Critical Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
         }
       }
-=======
-      ]
->>>>>>> Stashed changes
     }
   ]
 }

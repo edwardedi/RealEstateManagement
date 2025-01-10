@@ -1,4 +1,5 @@
-﻿using Application.utils;
+﻿using Application.Use_Cases.PropertyListings.Filtering;
+using Application.utils;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;

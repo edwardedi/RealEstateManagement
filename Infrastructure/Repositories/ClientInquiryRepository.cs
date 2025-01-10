@@ -30,6 +30,11 @@ namespace Infrastructure.Repositories
         {
             try{
                 var inquiry = await context.ClientInquiries.FindAsync(id);
+                if (inquiry == null)
+                {
+                    return Result<ClientInquiry>.Failure("Inquiry not found.");
+                }
+
                 return Result<ClientInquiry>.Success(inquiry);
             }
             catch (Exception ex)
@@ -37,12 +42,12 @@ namespace Infrastructure.Repositories
                 return Result<ClientInquiry>.Failure($"An error occurred while retrieving inquiry: {ex.Message}");
             }
         }
-        public async Task<Result<IEnumerable<ClientInquiry>>> GetInquiriesByClientId(Guid userId)
+        public async Task<Result<IEnumerable<ClientInquiry>>> GetInquiriesByClientId(Guid clientId)
         {
             try
             {
                 var inquiries = await context.ClientInquiries
-                                                    .Where(inquiry => inquiry.ClientId == userId)
+                                                    .Where(inquiry => inquiry.ClientId == clientId)
                                                     .ToListAsync();
                 return Result<IEnumerable<ClientInquiry>>.Success(inquiries);
             }
@@ -109,8 +114,13 @@ namespace Infrastructure.Repositories
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(searchQuery))
+                {
+                    return Result<IEnumerable<PropertyListing>>.Failure("Search query cannot be null or empty.");
+                }
+
                 var properties = await context.PropertyListings
-                                        .Where(property => property.Title.ToUpper().Contains(searchQuery.ToUpper()) || property.Description.Contains(searchQuery))
+                                        .Where(property => (property.Title !=null && property.Title.ToUpper().Contains(searchQuery.ToUpper())) || (property.Description !=null && property.Description.Contains(searchQuery)))
                                         .ToListAsync();
                 return Result<IEnumerable<PropertyListing>>.Success(properties);
             }

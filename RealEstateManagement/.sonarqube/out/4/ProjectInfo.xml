@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>RealEstateManagement.Application.UnitTests</ProjectName>
+  <ProjectName>Identity</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Test</ProjectType>
-  <ProjectGuid>2db27ae0-9c23-4923-89ab-f3571b5f4d2d</ProjectGuid>
-<<<<<<< Updated upstream
-  <FullPath>C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement.Application.UnitTests\RealEstateManagement.Application.UnitTests.csproj</FullPath>
-  <IsExcluded>false</IsExcluded>
-  <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\conf\4\FilesToAnalyze.txt" />
-  </AnalysisResults>
-  <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out\4\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out\4</Property>
-=======
-  <FullPath>C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\RealEstateManagement.Application.UnitTests.csproj</FullPath>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>fe6c4d1f-c458-453f-8256-1509aa642fcb</ProjectGuid>
+  <FullPath>C:\Users\cezar\Desktop\RealEstateManagement\Identity\Identity.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\4\FilesToAnalyze.txt" />
@@ -22,9 +12,8 @@
   <AnalysisSettings>
     <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\4\Issues.json</Property>
     <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\4</Property>
->>>>>>> Stashed changes
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net9.0</TargetFramework>
 </ProjectInfo>

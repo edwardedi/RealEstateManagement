@@ -2,29 +2,31 @@
 using Domain.Entities;
 using Domain.Repositories;
 using MediatR;
-
-public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, Result<Guid>>
+namespace Application.Use_Cases.Authentication.Commands
 {
-    private readonly IUserAuthRepository repository;
-
-    public RegisterUserCommandHandler(IUserAuthRepository repository) => this.repository = repository;
-
-    public async Task<Result<Guid>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+    public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, Result<Guid>>
     {
-        var user = new User
-        {
-            Email = request.Email,
-            Name = request.Name,
-            PhoneNumber = request.PhoneNumber,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
-        };
+        private readonly IUserAuthRepository repository;
 
-        var result = await repository.Register(user, cancellationToken);
-        if (result.IsSuccess)
+        public RegisterUserCommandHandler(IUserAuthRepository repository) => this.repository = repository;
+
+        public async Task<Result<Guid>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
-            return Result<Guid>.Success(result.Data);
+            var user = new User
+            {
+                Email = request.Email,
+                Name = request.Name,
+                PhoneNumber = request.PhoneNumber,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
+            };
+
+            var result = await repository.Register(user, cancellationToken);
+            if (result.IsSuccess)
+            {
+                return Result<Guid>.Success(result.Data);
+            }
+            return Result<Guid>.Failure(result.ErrorMessage);
+
         }
-        return Result<Guid>.Failure(result.ErrorMessage);
-
     }
 }

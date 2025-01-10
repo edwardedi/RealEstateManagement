@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-C:\Users\marin\OneDrive\Desktop\Projects\.NET\RealEstateManagement\RealEstateManagement\.sonarqube\out\4
-=======
 C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\4
->>>>>>> Stashed changes

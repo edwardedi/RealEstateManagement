@@ -37,9 +37,9 @@ namespace Identity.Repositories
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim(ClaimTypes.NameIdentifier, existingUser.UserId.ToString()),
-                    new Claim("name", existingUser.Name),
+                    new Claim("name", existingUser.Name ?? string.Empty),
                     new Claim(ClaimTypes.Email, existingUser.Email),
-                    new Claim("phone_number", existingUser.PhoneNumber)
+                    new Claim("phone_number", existingUser.PhoneNumber ?? string.Empty)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

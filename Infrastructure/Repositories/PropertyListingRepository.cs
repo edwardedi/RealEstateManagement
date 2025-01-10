@@ -33,6 +33,10 @@ namespace Infrastructure.Repositories
             try
             {
                 var listing = await context.PropertyListings.FindAsync(id);
+                if (listing == null)
+                {
+                    return Result<PropertyListing>.Failure("Property listing not found.");
+                }
                 return Result<PropertyListing>.Success(listing);
             }
             catch (Exception ex)
