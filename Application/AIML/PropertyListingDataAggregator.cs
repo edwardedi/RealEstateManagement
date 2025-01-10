@@ -13,11 +13,18 @@ namespace Application.AIML
             PropertyListingData = new List<PropertyListingData>();
         }
 
-        public List<PropertyListingData> GetPropertyListingData()
+        public List<PropertyListingData> GetPropertyListingData(bool trainingData = true)
         {
             string filePath = "data.csv";
+            int lineCount = File.ReadLines(filePath).Count();
+            int currentLine = 0;
             foreach (var line in File.ReadLines(filePath))
             {
+                currentLine++;
+                if (trainingData == true && currentLine > lineCount * 0.75)
+                    break;
+                if (trainingData == false && currentLine <= lineCount * 0.75)
+                    continue;
                 var fields = line.Split(',');
 
                 string Price = fields[0];
@@ -30,7 +37,7 @@ namespace Application.AIML
                 PropertyListingData.Add(new PropertyListingData
                 {
                     Label = float.Parse(Price),
-                    Features = new float[] { float.Parse(NumberOfBedrooms), float.Parse(SquareFootage) }
+                    Features = new float[] { float.Parse(NumberOfBedrooms), (float)(float.Parse(SquareFootage) * 0.092903) }
                 });
             }
             return PropertyListingData;

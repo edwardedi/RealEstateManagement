@@ -21,5 +21,13 @@ namespace RealEstateManagement.Controllers
         {
             return propertyListingPricePredictionModel.Predict(propertyListing);
         }
+
+        [HttpGet("evaluate")]
+        public ActionResult<float> Evaluate()
+        {
+            var data = new PropertyListingDataAggregator();
+            var sampleData = data.GetPropertyListingData();
+            return propertyListingPricePredictionModel.Evaluate(sampleData);
+        }
     }
 }

@@ -13,15 +13,23 @@ namespace Application.AIML
         public void Train(List<PropertyListingData> dataPoints)
         {
             var trainingData = mlContext.Data.LoadFromEnumerable(dataPoints);
+
+            // Define the data preparation pipeline
+            var dataPrepPipeline = mlContext.Transforms.NormalizeMinMax(nameof(PropertyListingData.Features));
+
+            // Apply data preparation pipeline to the training data
+            var preprocessedData = dataPrepPipeline.Fit(trainingData).Transform(trainingData);
+
             var options = new SdcaRegressionTrainer.Options
             {
                 LabelColumnName = nameof(PropertyListingData.Label),
                 FeatureColumnName = nameof(PropertyListingData.Features),
                 ConvergenceTolerance = 0.02f,
-                MaximumNumberOfIterations = 30,
+                MaximumNumberOfIterations = 100,
                 BiasLearningRate = 0.1f
             };
-            var pipeline = mlContext.Regression.Trainers.Sdca(options);
+
+            var pipeline = dataPrepPipeline.Append(mlContext.Regression.Trainers.Sdca(options));
             model = pipeline.Fit(trainingData);
         }
 
@@ -37,6 +45,14 @@ namespace Application.AIML
         {
             public float Label { get; set; }
             public float Score { get; set; }
+        }
+
+        public float Evaluate(List<PropertyListingData> dataPoints)
+        {
+            var testData = mlContext.Data.LoadFromEnumerable(dataPoints);
+            var predictions = model.Transform(testData);
+            var metrics = mlContext.Regression.Evaluate(predictions, labelColumnName: nameof(PropertyListingData.Label));
+            return (float)metrics.RSquared;
         }
     }
 }
