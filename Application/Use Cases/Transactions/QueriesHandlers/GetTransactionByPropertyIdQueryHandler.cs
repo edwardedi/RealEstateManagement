@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Application.Use_Cases.Transactions.QueriesHandlers
 {
-    internal class GetTransactionByPropertyIdQueryHandler : IRequestHandler<GetTransactionByPropertyIdQuery, Result<TransactionDto>>
+    public class GetTransactionByPropertyIdQueryHandler : IRequestHandler<GetTransactionByPropertyIdQuery, Result<TransactionDto>>
     {
         private readonly IMapper mapper;
         private readonly ITransactionRepository repository;

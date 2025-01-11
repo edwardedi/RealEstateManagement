@@ -1,9 +1,4 @@
-﻿using CsvHelper.Configuration;
-using CsvHelper;
-using System.Globalization;
-using Domain.Entities;
-
-namespace Application.AIML
+﻿namespace Application.AIML
 {
     public class PropertyListingDataAggregator
     {

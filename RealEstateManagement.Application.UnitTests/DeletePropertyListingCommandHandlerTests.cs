@@ -1,13 +1,9 @@
-﻿using Application.Use_Cases.Commands;
-using Application.Use_Cases.CommandHandlers;
+﻿using Application.Use_Cases.CommandHandlers;
+using Application.Use_Cases.Commands;
 using Domain.Common;
 using Domain.Repositories;
 using FluentAssertions;
 using NSubstitute;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
 
 namespace RealEstateManagement.Application.UnitTests
 {
