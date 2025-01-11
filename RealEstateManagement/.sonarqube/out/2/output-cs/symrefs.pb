@@ -83,10 +83,18 @@ cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries
 
  !
 
- q
-cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.cs
+ 
+sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\CommandHandlers\DeleteUserCommandHandler.cs
 
- !€
+		 )
+) 3  )
+8 B (
+
+( .
+A H: A
+
+\ m(
+  , 2( .€
 nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommandValidator.cs
 
  +
@@ -135,29 +143,10 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Command
 
 \ m
   : >(
-  !!, 2##( .
-sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\CommandHandlers\DeleteUserCommandHandler.cs
+  !!, 2##( .q
+cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.cs
 
-		 )
-) 3  )
-8 B (
-
-( .
-A H: A
-
-\ m(
-  , 2( .ª
-xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsBySellerIdQuery.cs
-
- /
-
-
-
- 
-
- 
-
- ©
+ !©
 wC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsByBuyerIdQuery.cs
 
  .
@@ -184,10 +173,7 @@ qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 
  (
 
-		 !
-qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetAllTransactionsQuery.cs
-
- (ò
+		 !ò
 ˆC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetTransactionByPropertyIdQueryHandler.cs
 
 
@@ -218,7 +204,18 @@ qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 
 l }
   @ F
- "6 Dö
+ "6 Dª
+xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetTransactionsBySellerIdQuery.cs
+
+ /
+
+
+
+ 
+
+ 
+
+ ö
 €C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\QueriesHandlers\GetAllTransactionsQueryHandler.cs
 
  /
@@ -249,7 +246,10 @@ qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
  (
 
 : F7 C4 @5 A
-. 2! %½
+. 2! %
+qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Queries\GetAllTransactionsQuery.cs
+
+ (½
 sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Commands\UpdateTransactionCommand.cs
 
  )
@@ -326,7 +326,23 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 H OA H
 
 c t(
-  , 2( .ê
+  , 2( .ƒ
+ƒC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.cs
+
+
+
+ 0
+! ' @ F
+4 >  )
+7 =  
+Z d (
+
+< B
+\ c> E
+	w ˆ(
+  " (@ F
+ @ K
+5 <_ fê
 C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.cs
 
 
@@ -342,7 +358,21 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 
 c t
  > I(
-  , 2( .¸
+  , 2( .æ
+~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
+
+ +
+! ' ! '
+4 >  )
+2 8  
+U _ (
+
+6 <
+Q X> E
+
+l }(
+  @ F  : @
+ : D¸
 ‹C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetFilteredPropertyListingsQueryHandler.cs
 
  8
@@ -363,37 +393,7 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 %% ** **- 2..( -22W \
 .. %00K `
 00 #22B U
-22 44C Nƒ
-ƒC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.cs
-
-
-
- 0
-! ' @ F
-4 >  )
-7 =  
-Z d (
-
-< B
-\ c> E
-	w ˆ(
-  " (@ F
- @ K
-5 <_ fæ
-~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
-
- +
-! ' ! '
-4 >  )
-2 8  
-U _ (
-
-6 <
-Q X> E
-
-l }(
-  @ F  : @
- : Dû
+22 44C Nû
 …C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.cs
 
 
@@ -410,7 +410,17 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 	y Š(
   " (@ F
  @ K
-5 <` gì
+5 <` g
+vC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingsByUserIdQuery.cs
+
+ )
+
+		 ‹
+qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingByIdQuery.cs
+
+ $
+
+		 ì
 ~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetFilteredPropertyListingsQuery.cs
 
  1
@@ -434,12 +444,7 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
  †
 xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetAllPropertyListingQuery.cs
 
- +‹
-qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingByIdQuery.cs
-
- $
-
-		 ¢
+ +¢
 rC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Filtering\TypeFilterStrategy.cs
 
  #
@@ -488,7 +493,16 @@ rC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 JJ+ 6(
 JJS XNN NN PP 
 	JJ{ ‚LL& -NN5 <
-NN$ %NN) *ç
+NN$ %NN) *°
+~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Filtering\IPropertyListingFilterStrategy.cs
+
+ 3
+
+		$ /
+
+		L Q
+
+		t {ç
 „C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\UpdatePropertyListingCommandValidator.cs
 
  6
@@ -541,7 +555,12 @@ rC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 
   
 
- ¥
+ •
+{C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\DeletePropertyListingCommand.cs
+
+ -
+
+ ¥
 „C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\CreatePropertyListingCommandValidator.cs
 
  6
@@ -605,7 +624,20 @@ rC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 
 g x
  = D(
-  , 2( .ò
+  , 2( .¦
+‰C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\DeletePropertyListingCommandHandler.cs
+
+ 4
+
+
+4 >  )
+N X (
+
+( .
+L S= D
+
+g x(
+  , 2( .ò
 ‰C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\CreatePropertyListingCommandHandler.cs
 
 
@@ -621,12 +653,7 @@ rC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 
 g x
  : I(
-  , 2( .
-vC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Queries\GetListingsByUserIdQuery.cs
-
- )
-
-		 
+  , 2( .
 C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\SearchAllPropertiesQueryHandler.cs
 
 
@@ -658,7 +685,23 @@ vC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 
 j {
   > D
- 8 Bò
+ 8 B‚
+‚C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
+
+
+
+ 1
+! ( A H
+2 =  *
+8 > 
+Y c $
+
+: @
+[ bB I
+	v ‡(
+  # )> D
+  > J
+6 =_ fò
 }C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
 
 
@@ -675,42 +718,12 @@ vC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListi
 	q ‚(
   # )> D
   > J
-6 =_ f‚
-‚C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
-
-
-
- 1
-! ( A H
-2 =  *
-8 > 
-Y c $
-
-: @
-[ bB I
-	v ‡(
-  # )> D
-  > J
-6 =_ f°
-~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Filtering\IPropertyListingFilterStrategy.cs
-
- 3
-
-		$ /
-
-		L Q
-
-		t {
+6 =_ f
 uC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\SearchAllPropertiesQuery.cs
 
  )
 
-		 *•
-{C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\Commands\DeletePropertyListingCommand.cs
-
- -
-
- Š
+		 *Š
 pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetInquiryByIdQuery.cs
 
  $
@@ -723,20 +736,7 @@ vC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiri
 		 
 qC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\Queries\GetAllInquiriesQuery.cs
 
- %¦
-‰C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\CommandHandlers\DeletePropertyListingCommandHandler.cs
-
- 4
-
-
-4 >  )
-N X (
-
-( .
-L S= D
-
-g x(
-  , 2( .æ
+ %æ
 xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\UpdateClientInquiryCommand.cs
 
  +
@@ -762,7 +762,63 @@ xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiri
 
  +
 
- æ
+ Ö
+pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandValidator.cs
+
+ -
+  
+		 		 
+
+
+ 
+
+ 
+  ï
+†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\UpdateClientInquiryCommandHandler.cs
+
+
+
+ 2
+2 <  )
+! '   &
+J T (
+^ d  
+
+( .
+J Q: A
+
+e v
+ = J(
+  , 2( .£
+†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\DeleteClientInquiryCommandHandler.cs
+
+ 2
+
+
+2 <  )
+J T (
+
+( .
+J Q= D
+
+e v(
+  , 2( .ï
+†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
+
+
+
+ 2
+2 <  )
+! '   &
+J T (
+^ d  
+
+( .
+J Q: A
+
+e v
+ : G(
+  , 2( .æ
 xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\Commands\CreateClientInquiryCommand.cs
 
  +
@@ -783,23 +839,18 @@ xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiri
 
  &
 
- 'ï
-†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\UpdateClientInquiryCommandHandler.cs
+ 'È
+nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandHandler.cs
 
-
-
- 2
-2 <  )
-! '   &
-J T (
-^ d  
+ +
+		- 7R \ )
+> H_ i
 
-( .
-J Q: A
-
-e v
- = J(
-  , 2( .¥
+( .2
+C J   %> E
+^ o9 J
+ 3 7(
+  , 2( .¥
 gC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommand.cs
 
  $
@@ -812,43 +863,7 @@ gC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authenticatio
 
 
 
- 'ï
-†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
-
-
-
- 2
-2 <  )
-! '   &
-J T (
-^ d  
-
-( .
-J Q: A
-
-e v
- : G(
-  , 2( .ø
-NC:\Users\cezar\desktop\RealEstateManagement\Application\DependencyInjection.cs
-
-
-
- +
-
-) 7x
-P X           
-  #% (Ö
-pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandValidator.cs
-
- -
-  
-		 		 
-
-
- 
-
- 
-  §
+ '§
 kC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommandHandler.cs
 
  (
@@ -869,30 +884,31 @@ dC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authenticatio
 
 
 
- 'Ê
-PC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs
+ '…
+GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.cs
 
- !
+ 
 
- 
+ 
 
- 
+ 
 
- "
+ 
 
- 
+ "˜
+NC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\TransactionDto.cs
 
-		 
+ 
 
-
-
- &
+ !
 
- &
+ 
 
- &
+ 
 
- 'ü
+ 
+
+		 ü
 RC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\PropertyListingDto.cs
 
  #
@@ -923,60 +939,39 @@ RC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\PropertyListingDto
 
   
 
- £
-†C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\DeleteClientInquiryCommandHandler.cs
+ Ê
+PC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs
 
- 2
+ !
+
+ 
+
+ 
+
+ "
+
+ 
+
+		 
+
 
 
-2 <  )
-J T (
+ &
 
-( .
-J Q= D
+ &
 
-e v(
-  , 2( .È
-nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandHandler.cs
+ &
 
- +
-		- 7R \ )
-> H_ i
+ 'ø
+NC:\Users\cezar\desktop\RealEstateManagement\Application\DependencyInjection.cs
 
-( .2
-C J   %> E
-^ o9 J
- 3 7(
-  , 2( .w
-]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
+
+
+ +
 
- .
-
- ˜
-NC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\TransactionDto.cs
-
- 
-
- !
-
- 
-
- 
-
- 
-
-		 …
-GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.cs
-
- 
-
- 
-
- 
-
- 
-
- "›
+) 7x
+P X           
+  #% (›
 cC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPricePredictionModel.cs
 
  4Z
@@ -1008,7 +1003,12 @@ cC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPri
 118 B33= G
 33 44. 6
 44 558 C
-55 66 !Ë
+55 66 !w
+]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
+
+ .
+
+ Ë
 ]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataAggregator.cs
 
  .2

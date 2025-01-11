@@ -21,43 +21,7 @@ YC:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Repositories\UserRep
 
 JJ( 7
 JJ= ?NN9 ;SS0 2
-NN OO QQ) -œ
-bC:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
-
-		 (Œ
-. 5 & -  $ +11& -?? @@ LL, 3OO PP !bb$ +ee ff !zz' .
-< C "
-
-> R
- B K
-
-1 D
-J L  F H
-   !! &&5 <
-
---> T
---Z b22Z b
-11 44B K
-22; B22F M
-
-;;( 7
-;;F M??7 >AA, 3
-
-HH( :(
-HHI PLLN UOOK RRR0 7
-LL #MM #OO" 1
-
-^^( :
-^^@ BbbF Hgg0 2
-bb cc ee3 :
-
-qq@ X+
-qq` kuu. 9	{{w ‚
-{{Ð Û
-zz }}D N6
-{{/ 7{{< D{{U ]
-{{“ ›
-{{² º
+NN OO QQ) -
 dC:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Repositories\PropertyListingRepository.cs
 
 		 *‚
@@ -130,7 +94,43 @@ dC:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Repositories\Propert
 ‰‰@ L
 
 ˆˆD E
-ˆˆI Jÿ
+ˆˆI Jœ
+bC:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Repositories\ClientInquiryRepository.cs
+
+		 (Œ
+. 5 & -  $ +11& -?? @@ LL, 3OO PP !bb$ +ee ff !zz' .
+< C "
+
+> R
+ B K
+
+1 D
+J L  F H
+   !! &&5 <
+
+--> T
+--Z b22Z b
+11 44B K
+22; B22F M
+
+;;( 7
+;;F M??7 >AA, 3
+
+HH( :(
+HHI PLLN UOOK RRR0 7
+LL #MM #OO" 1
+
+^^( :
+^^@ BbbF Hgg0 2
+bb cc ee3 :
+
+qq@ X+
+qq` kuu. 9	{{w ‚
+{{Ð Û
+zz }}D N6
+{{/ 7{{< D{{U ]
+{{“ ›
+{{² ºÿ
 
 ^C:\Users\cezar\desktop\RealEstateManagement\Infrastructure\Persistance\ApplicationDbContext.cs
  %		5 I

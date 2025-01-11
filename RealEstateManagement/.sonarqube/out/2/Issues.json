@@ -14,40 +14,6 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
-                "region": {
-                  "startLine": 10,
-                  "startColumn": 16,
-                  "endLine": 10,
-                  "endColumn": 51
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 30,
-                  "endLine": 9,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
           "message": "Non-nullable property 'Features' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
@@ -71,6 +37,40 @@
                   "startColumn": 24,
                   "endLine": 9,
                   "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 16,
+                  "endLine": 10,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 30,
+                  "endLine": 9,
+                  "endColumn": 35
                 }
               }
             }
@@ -185,48 +185,6 @@
           }
         },
         {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 34,
-                  "endLine": 19,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 34,
-                  "endLine": 21,
-                  "endColumn": 42
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S1481",
           "level": "warning",
           "message": "Remove the unused local variable 'preprocessedData'.",
@@ -260,6 +218,48 @@
                   "startColumn": 30,
                   "endLine": 9,
                   "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 34,
+                  "endLine": 19,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1125",
+          "level": "warning",
+          "message": "Remove the unnecessary Boolean literal(s).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 34,
+                  "endLine": 21,
+                  "endColumn": 42
                 }
               }
             }

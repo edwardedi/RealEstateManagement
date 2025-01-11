@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>RealEstateManagement.Application.UnitTests</ProjectName>
+  <ProjectName>RealEstateManagement</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
-  <ProjectType>Test</ProjectType>
-  <ProjectGuid>2db27ae0-9c23-4923-89ab-f3571b5f4d2d</ProjectGuid>
-  <FullPath>C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement.Application.UnitTests\RealEstateManagement.Application.UnitTests.csproj</FullPath>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>35be79dd-1083-410d-9254-947adebeb78b</ProjectGuid>
+  <FullPath>C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\RealEstateManagement.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
     <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\4\FilesToAnalyze.txt" />

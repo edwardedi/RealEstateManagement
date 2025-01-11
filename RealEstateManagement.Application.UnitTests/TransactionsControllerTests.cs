@@ -26,6 +26,7 @@ namespace RealEstateManagement.Application.UnitTests
             _propertyListingRepository = Substitute.For<IPropertyListingRepository>();
             _mapper = Substitute.For<IMapper>();
             _controller = new TransactionsController(_mediator, _propertyListingRepository, _mapper);
+            
         }
 
         [Fact]

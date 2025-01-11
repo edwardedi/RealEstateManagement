@@ -3266,7 +3266,211 @@ repository )
 ;< =
 } 	
 } 
-} î
+} ±
+ÉC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.cs
+	namespace 	
+Application
+ 
+. 
+	Use_Cases 
+.  
+PropertyListings  0
+.0 1
+QueryHandlers1 >
+{		 
+public
+
+ 
+
+class
+
+ +
+GetListingsByUserIdQueryHandler
+
+ 0
+:
+
+1 2
+IRequestHandler
+
+3 B
+<
+
+B C$
+GetListingsByUserIdQuery
+
+C [
+,
+
+[ \
+Result
+
+] c
+<
+
+c d
+List
+
+d h
+<
+
+h i
+PropertyListingDto
+
+i {
+>
+
+{ |
+>
+
+| }
+>
+
+} ~
+{ 
+private 
+readonly 
+IMapper  
+mapper! '
+;' (
+private 
+readonly &
+IPropertyListingRepository 3
+
+repository4 >
+;> ?
+public +
+GetListingsByUserIdQueryHandler .
+(. /
+IMapper/ 6
+mapper7 =
+,= >&
+IPropertyListingRepository? Y
+
+repositoryZ d
+)d e
+{ 	
+this 
+. 
+mapper 
+= 
+mapper  
+;  !
+this 
+. 
+
+repository 
+= 
+
+repository (
+;( )
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+List! %
+<% &
+PropertyListingDto& 8
+>8 9
+>9 :
+>: ;
+Handle< B
+(B C$
+GetListingsByUserIdQueryC [
+request\ c
+,c d
+CancellationTokene v
+cancellationToken	w à
+)
+à â
+{ 	
+var 
+result 
+= 
+await 
+
+repository )
+.) *
+GetListingsByUserId* =
+(= >
+request> E
+.E F
+UserIdF L
+)L M
+;M N
+if 
+( 
+result 
+. 
+	IsSuccess  
+)  !
+{ 
+var 
+listingsDto 
+=  !
+result" (
+.( )
+Data) -
+.- .
+Select. 4
+(4 5
+listing5 <
+=>= ?
+mapper@ F
+.F G
+MapG J
+<J K
+PropertyListingDtoK ]
+>] ^
+(^ _
+listing_ f
+)f g
+)g h
+.h i
+ToListi o
+(o p
+)p q
+;q r
+return 
+Result 
+< 
+List "
+<" #
+PropertyListingDto# 5
+>5 6
+>6 7
+.7 8
+Success8 ?
+(? @
+listingsDto@ K
+)K L
+;L M
+} 
+else 
+{ 
+return 
+Result 
+< 
+List "
+<" #
+PropertyListingDto# 5
+>5 6
+>6 7
+.7 8
+Failure8 ?
+(? @
+result@ F
+.F G
+ErrorMessageG S
+)S T
+;T U
+}   
+}!! 	
+}"" 
+}## î
 ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.cs
 	namespace 	
 Application
@@ -3435,7 +3639,158 @@ repository )
 ;< =
 } 	
 } 
-}   ´&
+}   Ì
+~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
+	namespace		 	
+Application		
+ 
+.		 
+	Use_Cases		 
+.		  
+QueryHandlers		  -
+{
+
+ 
+public 
+
+class &
+GetListingByIdQueryHandler +
+:, -
+IRequestHandler. =
+<= >
+GetListingByIdQuery> Q
+,Q R
+ResultS Y
+<Y Z
+PropertyListingDtoZ l
+>l m
+>m n
+{ 
+private 
+readonly 
+IMapper  
+mapper! '
+;' (
+private 
+readonly &
+IPropertyListingRepository 3
+
+repository4 >
+;> ?
+public &
+GetListingByIdQueryHandler )
+() *
+IMapper* 1
+mapper2 8
+,8 9&
+IPropertyListingRepository: T
+
+repositoryU _
+)_ `
+{ 	
+this 
+. 
+mapper 
+= 
+mapper  
+;  !
+this 
+. 
+
+repository 
+= 
+
+repository (
+;( )
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+PropertyListingDto! 3
+>3 4
+>4 5
+Handle6 <
+(< =
+GetListingByIdQuery= P
+requestQ X
+,X Y
+CancellationTokenZ k
+cancellationTokenl }
+)} ~
+{ 	
+var 
+result 
+= 
+await 
+
+repository )
+.) *
+GetListingByIdAsync* =
+(= >
+request> E
+.E F
+
+PropertyIdF P
+)P Q
+;Q R
+if 
+( 
+result 
+. 
+	IsSuccess !
+)! "
+{ 
+var 
+
+listingDto 
+=  
+mapper! '
+.' (
+Map( +
+<+ ,
+PropertyListingDto, >
+>> ?
+(? @
+result@ F
+.F G
+DataG K
+)K L
+;L M
+return 
+Result 
+< 
+PropertyListingDto 0
+>0 1
+.1 2
+Success2 9
+(9 :
+
+listingDto: D
+)D E
+;E F
+} 
+else 
+{ 
+return   
+Result   
+<   
+PropertyListingDto   0
+>  0 1
+.  1 2
+Failure  2 9
+(  9 :
+result  : @
+.  @ A
+ErrorMessage  A M
+)  M N
+;  N O
+}!! 
+}"" 	
+}## 
+}$$ ´&
 ãC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetFilteredPropertyListingsQueryHandler.cs
 	namespace 	
 Application
@@ -3690,362 +4045,7 @@ repository/ 9
 ;44O P
 }66 	
 }77 
-}88 ±
-ÉC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-PropertyListings  0
-.0 1
-QueryHandlers1 >
-{		 
-public
-
- 
-
-class
-
- +
-GetListingsByUserIdQueryHandler
-
- 0
-:
-
-1 2
-IRequestHandler
-
-3 B
-<
-
-B C$
-GetListingsByUserIdQuery
-
-C [
-,
-
-[ \
-Result
-
-] c
-<
-
-c d
-List
-
-d h
-<
-
-h i
-PropertyListingDto
-
-i {
->
-
-{ |
->
-
-| }
->
-
-} ~
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly &
-IPropertyListingRepository 3
-
-repository4 >
-;> ?
-public +
-GetListingsByUserIdQueryHandler .
-(. /
-IMapper/ 6
-mapper7 =
-,= >&
-IPropertyListingRepository? Y
-
-repositoryZ d
-)d e
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-List! %
-<% &
-PropertyListingDto& 8
->8 9
->9 :
->: ;
-Handle< B
-(B C$
-GetListingsByUserIdQueryC [
-request\ c
-,c d
-CancellationTokene v
-cancellationToken	w à
-)
-à â
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-GetListingsByUserId* =
-(= >
-request> E
-.E F
-UserIdF L
-)L M
-;M N
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-var 
-listingsDto 
-=  !
-result" (
-.( )
-Data) -
-.- .
-Select. 4
-(4 5
-listing5 <
-=>= ?
-mapper@ F
-.F G
-MapG J
-<J K
-PropertyListingDtoK ]
->] ^
-(^ _
-listing_ f
-)f g
-)g h
-.h i
-ToListi o
-(o p
-)p q
-;q r
-return 
-Result 
-< 
-List "
-<" #
-PropertyListingDto# 5
->5 6
->6 7
-.7 8
-Success8 ?
-(? @
-listingsDto@ K
-)K L
-;L M
-} 
-else 
-{ 
-return 
-Result 
-< 
-List "
-<" #
-PropertyListingDto# 5
->5 6
->6 7
-.7 8
-Failure8 ?
-(? @
-result@ F
-.F G
-ErrorMessageG S
-)S T
-;T U
-}   
-}!! 	
-}"" 
-}## Ì
-~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
-	namespace		 	
-Application		
- 
-.		 
-	Use_Cases		 
-.		  
-QueryHandlers		  -
-{
-
- 
-public 
-
-class &
-GetListingByIdQueryHandler +
-:, -
-IRequestHandler. =
-<= >
-GetListingByIdQuery> Q
-,Q R
-ResultS Y
-<Y Z
-PropertyListingDtoZ l
->l m
->m n
-{ 
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-private 
-readonly &
-IPropertyListingRepository 3
-
-repository4 >
-;> ?
-public &
-GetListingByIdQueryHandler )
-() *
-IMapper* 1
-mapper2 8
-,8 9&
-IPropertyListingRepository: T
-
-repositoryU _
-)_ `
-{ 	
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-PropertyListingDto! 3
->3 4
->4 5
-Handle6 <
-(< =
-GetListingByIdQuery= P
-requestQ X
-,X Y
-CancellationTokenZ k
-cancellationTokenl }
-)} ~
-{ 	
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-GetListingByIdAsync* =
-(= >
-request> E
-.E F
-
-PropertyIdF P
-)P Q
-;Q R
-if 
-( 
-result 
-. 
-	IsSuccess !
-)! "
-{ 
-var 
-
-listingDto 
-=  
-mapper! '
-.' (
-Map( +
-<+ ,
-PropertyListingDto, >
->> ?
-(? @
-result@ F
-.F G
-DataG K
-)K L
-;L M
-return 
-Result 
-< 
-PropertyListingDto 0
->0 1
-.1 2
-Success2 9
-(9 :
-
-listingDto: D
-)D E
-;E F
-} 
-else 
-{ 
-return   
-Result   
-<   
-PropertyListingDto   0
->  0 1
-.  1 2
-Failure  2 9
-(  9 :
-result  : @
-.  @ A
-ErrorMessage  A M
-)  M N
-;  N O
-}!! 
-}"" 	
-}## 
-}$$ ü
+}88 ü
 ÖC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.cs
 	namespace 	
 Application
@@ -6673,200 +6673,6 @@ inquiryDto8 B
 }   
 }!! 	
 }"" 
-}## ô
-}C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-ClientInquiries  /
-./ 0
-QueryHandler0 <
-{		 
-public
-
- 
-
-class
-
- '
-GetAllInquiriesQueryHandler
-
- ,
-:
-
-- .
-IRequestHandler
-
-/ >
-<
-
-> ? 
-GetAllInquiriesQuery
-
-? S
-,
-
-S T
-Result
-
-U [
-<
-
-[ \
-List
-
-\ `
-<
-
-` a
-ClientInquiryDto
-
-a q
->
-
-q r
->
-
-r s
->
-
-s t
-{ 
-private 
-readonly 
-IMapper  
-_mapper! (
-;( )
-private 
-readonly $
-IClientInquiryRepository 1
-_repository2 =
-;= >
-public '
-GetAllInquiriesQueryHandler *
-(* +
-IMapper+ 2
-mapper3 9
-,9 :$
-IClientInquiryRepository; S
-
-repositoryT ^
-)^ _
-{ 	
-_mapper 
-= 
-mapper 
-; 
-_repository 
-= 
-
-repository $
-;$ %
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-List! %
-<% &
-ClientInquiryDto& 6
->6 7
->7 8
->8 9
-Handle: @
-(@ A 
-GetAllInquiriesQueryA U
-requestV ]
-,] ^
-CancellationToken_ p
-cancellationToken	q Ç
-)
-Ç É
-{ 	
-var 
-result 
-= 
-await 
-_repository *
-.* + 
-GetAllInquiriesAsync+ ?
-(? @
-)@ A
-;A B
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-var 
-inquiriesDto  
-=! "
-result# )
-.) *
-Data* .
-.. /
-Select/ 5
-(5 6
-inquiry6 =
-=>> @
-_mapperA H
-.H I
-MapI L
-<L M
-ClientInquiryDtoM ]
->] ^
-(^ _
-inquiry_ f
-)f g
-)g h
-.h i
-ToListi o
-(o p
-)p q
-;q r
-return 
-Result 
-< 
-List "
-<" #
-ClientInquiryDto# 3
->3 4
->4 5
-.5 6
-Success6 =
-(= >
-inquiriesDto> J
-)J K
-;K L
-} 
-else 
-{ 
-return 
-Result 
-< 
-List "
-<" #
-ClientInquiryDto# 3
->3 4
->4 5
-.5 6
-Failure6 =
-(= >
-result> D
-.D E
-ErrorMessageE Q
-)Q R
-;R S
-}   
-}!! 	
-}"" 
 }## Ô
 ÇC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetInquiryByClientIdQueryHandler.cs
 	namespace 	
@@ -6995,6 +6801,200 @@ repository $
 ClientIdJ R
 )R S
 ;S T
+if 
+( 
+result 
+. 
+	IsSuccess  
+)  !
+{ 
+var 
+inquiriesDto  
+=! "
+result# )
+.) *
+Data* .
+.. /
+Select/ 5
+(5 6
+inquiry6 =
+=>> @
+_mapperA H
+.H I
+MapI L
+<L M
+ClientInquiryDtoM ]
+>] ^
+(^ _
+inquiry_ f
+)f g
+)g h
+.h i
+ToListi o
+(o p
+)p q
+;q r
+return 
+Result 
+< 
+List "
+<" #
+ClientInquiryDto# 3
+>3 4
+>4 5
+.5 6
+Success6 =
+(= >
+inquiriesDto> J
+)J K
+;K L
+} 
+else 
+{ 
+return 
+Result 
+< 
+List "
+<" #
+ClientInquiryDto# 3
+>3 4
+>4 5
+.5 6
+Failure6 =
+(= >
+result> D
+.D E
+ErrorMessageE Q
+)Q R
+;R S
+}   
+}!! 	
+}"" 
+}## ô
+}C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\QueryHandler\GetAllInquiriesQueryHandler.cs
+	namespace 	
+Application
+ 
+. 
+	Use_Cases 
+.  
+ClientInquiries  /
+./ 0
+QueryHandler0 <
+{		 
+public
+
+ 
+
+class
+
+ '
+GetAllInquiriesQueryHandler
+
+ ,
+:
+
+- .
+IRequestHandler
+
+/ >
+<
+
+> ? 
+GetAllInquiriesQuery
+
+? S
+,
+
+S T
+Result
+
+U [
+<
+
+[ \
+List
+
+\ `
+<
+
+` a
+ClientInquiryDto
+
+a q
+>
+
+q r
+>
+
+r s
+>
+
+s t
+{ 
+private 
+readonly 
+IMapper  
+_mapper! (
+;( )
+private 
+readonly $
+IClientInquiryRepository 1
+_repository2 =
+;= >
+public '
+GetAllInquiriesQueryHandler *
+(* +
+IMapper+ 2
+mapper3 9
+,9 :$
+IClientInquiryRepository; S
+
+repositoryT ^
+)^ _
+{ 	
+_mapper 
+= 
+mapper 
+; 
+_repository 
+= 
+
+repository $
+;$ %
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+List! %
+<% &
+ClientInquiryDto& 6
+>6 7
+>7 8
+>8 9
+Handle: @
+(@ A 
+GetAllInquiriesQueryA U
+requestV ]
+,] ^
+CancellationToken_ p
+cancellationToken	q Ç
+)
+Ç É
+{ 	
+var 
+result 
+= 
+await 
+_repository *
+.* + 
+GetAllInquiriesAsync+ ?
+(? @
+)@ A
+;A B
 if 
 ( 
 result 
@@ -7787,93 +7787,7 @@ repository )
 ;< =
 } 	
 } 
-} ÿ	
-gC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommand.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Authentication  .
-.. /
-Commands/ 7
-{ 
-public 
-
-class 
-RegisterUserCommand $
-:% &
-IRequest' /
-</ 0
-Result0 6
-<6 7
-Guid7 ;
->; <
->< =
-{ 
-public 
-required 
-string 
-Email $
-{% &
-get' *
-;* +
-set, /
-;/ 0
-}1 2
-public 
-required 
-string 
-Name #
-{$ %
-get& )
-;) *
-set+ .
-;. /
-}0 1
-public		 
-required		 
-string		 
-PhoneNumber		 *
-{		+ ,
-get		- 0
-;		0 1
-set		2 5
-;		5 6
-}		7 8
-public
-
- 
-required
-
- 
-string
-
- 
-Password
-
- '
-{
-
-( )
-get
-
-* -
-;
-
-- .
-set
-
-/ 2
-;
-
-2 3
-}
-
-4 5
-} 
-} ™
+} ™
 ÜC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiries\CommandHandlers\CreateClientInquiryCommandHandler.cs
 	namespace 	
 Application
@@ -8335,7 +8249,93 @@ repository )
 ;< =
 } 	
 } 
-}   æ
+}   ÿ	
+gC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommand.cs
+	namespace 	
+Application
+ 
+. 
+	Use_Cases 
+.  
+Authentication  .
+.. /
+Commands/ 7
+{ 
+public 
+
+class 
+RegisterUserCommand $
+:% &
+IRequest' /
+</ 0
+Result0 6
+<6 7
+Guid7 ;
+>; <
+>< =
+{ 
+public 
+required 
+string 
+Email $
+{% &
+get' *
+;* +
+set, /
+;/ 0
+}1 2
+public 
+required 
+string 
+Name #
+{$ %
+get& )
+;) *
+set+ .
+;. /
+}0 1
+public		 
+required		 
+string		 
+PhoneNumber		 *
+{		+ ,
+get		- 0
+;		0 1
+set		2 5
+;		5 6
+}		7 8
+public
+
+ 
+required
+
+ 
+string
+
+ 
+Password
+
+ '
+{
+
+( )
+get
+
+* -
+;
+
+- .
+set
+
+/ 2
+;
+
+2 3
+}
+
+4 5
+} 
+} æ
 kC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommandHandler.cs
 	namespace 	
 Application
@@ -9083,30 +9083,7 @@ AddMediatR 
 ; 
 } 	
 } 
-} –
-]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
-	namespace 	
-Application
- 
-. 
-AIML 
-{ 
-public 
-
-class )
-PropertyListingDataPrediction .
-{ 
-public 
-float 
-Price 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-} á.
+} á.
 cC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPricePredictionModel.cs
 	namespace 	
 Application
@@ -9449,7 +9426,30 @@ Regression55$ .
 ;66* +
 }77 	
 }88 
-}99 ∏"
+}99 –
+]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
+	namespace 	
+Application
+ 
+. 
+AIML 
+{ 
+public 
+
+class )
+PropertyListingDataPrediction .
+{ 
+public 
+float 
+Price 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+} 
+} ∏"
 ]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataAggregator.cs
 	namespace 	
 Application
