@@ -3,7 +3,6 @@ using Domain.Entities;
 using Domain.Repositories;
 using Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 namespace Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
@@ -42,19 +41,7 @@ namespace Infrastructure.Repositories
             }
 
         }
-        public async Task<Result<Guid>> AddUserAsync(User user)
-        {
-            try
-            {
-                await context.Users.AddAsync(user);
-                await context.SaveChangesAsync();
-                return Result<Guid>.Success(user.UserId);
-            }
-            catch (Exception ex)
-            {
-                return Result<Guid>.Failure($"An error occurred while creating user: {ex.Message}");
-            }
-        }
+
         public async Task<Result<Guid>> UpdateUserAsync(User user)
         {
             try
@@ -62,9 +49,16 @@ namespace Infrastructure.Repositories
                 var existingUser = await context.Users.FindAsync(user.UserId);
                 if (existingUser != null)
                 {
-                    context.Entry(existingUser).CurrentValues.SetValues(user);
-                    await context.SaveChangesAsync();
+                    foreach (var property in typeof(User).GetProperties())
+                    {
+                        var newValue = property.GetValue(user);
+                        if (newValue != null)
+                        {
+                            property.SetValue(existingUser, newValue);
+                        }
+                    }
 
+                    await context.SaveChangesAsync();
                     return Result<Guid>.Success(user.UserId);
                 }
                 else

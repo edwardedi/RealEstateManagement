@@ -18,20 +18,6 @@ namespace RealEstateManagement.Controllers
             this.mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Result<Guid>>> CreateUser(CreateUserCommand command)
-        {
-            var result = await mediator.Send(command);
-            if (result.IsSuccess)
-            {
-                return Ok(result.Data);
-            }
-            else
-            {
-                return BadRequest(result.ErrorMessage);
-            }
-        }
-
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<Result<Unit>>> UpdateUser(Guid id, UpdateUserCommand command)
         {

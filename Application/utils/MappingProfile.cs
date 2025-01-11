@@ -25,7 +25,6 @@ namespace Application.utils
             CreateMap<UpdateClientInquiryCommand, ClientInquiry>().ReverseMap();
             CreateMap<CreateTransactionCommand, Transaction>().ReverseMap();
             CreateMap<UpdateTransactionCommand, Transaction>().ReverseMap();
-            CreateMap<CreateUserCommand, User>().ReverseMap();
             CreateMap<UpdateUserCommand, User>().ReverseMap();
 
 

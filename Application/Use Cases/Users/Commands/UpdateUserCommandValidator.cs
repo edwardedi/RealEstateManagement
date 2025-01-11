@@ -7,9 +7,9 @@ namespace Application.Use_Cases.Users.Commands
         public UpdateUserCommandValidator()
         {
             RuleFor(x => x.UserId).NotEmpty().Must(BeAValidGuid);
-            RuleFor(x => x.Name).NotEmpty().MaximumLength(50);
-            RuleFor(x => x.Email).NotEmpty().EmailAddress();
-            RuleFor(x => x.PhoneNumber).NotEmpty().MaximumLength(15);
+            RuleFor(x => x.Name).MaximumLength(50);
+            RuleFor(x => x.Email).EmailAddress();
+            RuleFor(x => x.PhoneNumber).MaximumLength(15);
         }
         private static bool BeAValidGuid(Guid guid)
         {

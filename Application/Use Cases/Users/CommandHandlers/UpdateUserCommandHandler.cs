@@ -21,6 +21,12 @@ namespace Application.Use_Cases.Users.CommandHandlers
         public async Task<Result<Guid>> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             var user = mapper.Map<User>(request);
+
+            if (!string.IsNullOrEmpty(request.Password))
+            {
+                user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+            }
+
             var result = await repository.UpdateUserAsync(user);
             if (result.IsSuccess)
             {
