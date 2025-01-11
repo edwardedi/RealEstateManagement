@@ -1,14 +1,12 @@
 using Application.DTOs;
 using Application.Use_Cases.ClientInquiries.Commands;
 using Application.Use_Cases.ClientInquiries.Queries;
-using Application.Utils;
 using Domain.Common;
 using FluentAssertions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NSubstitute;
 using RealEstateManagement.Controllers;
-using Xunit;
 
 namespace RealEstateManagement.Application.UnitTests
 {

@@ -25,7 +25,8 @@
                 string Price = fields[0];
                 string NumberOfBedrooms = fields[1];
                 string SquareFootage = fields[2];
-                if (Price == null || NumberOfBedrooms == null || SquareFootage == null)
+                if (Price == null || NumberOfBedrooms == null || SquareFootage == null || 
+                    float.Parse(Price) == 0 || float.Parse(NumberOfBedrooms) == 0 || float.Parse(SquareFootage) == 0)
                 {
                     continue;
                 }

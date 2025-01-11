@@ -8,7 +8,7 @@ using Domain.Repositories;
 using FluentAssertions;
 using NSubstitute;
 
-namespace Application.Tests.Use_Cases.QueryHandlers
+namespace RealEstateManagement.Application.UnitTests
 {
     public class GetAllPropertyListingQueryHandlerTests
     {
