@@ -12,18 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GenerateCreatePropertyListingCommand' does not access instance data and can be marked as static",
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement/appsettings.json",
                 "region": {
-                  "startLine": 60,
-                  "startColumn": 46,
-                  "endLine": 60,
-                  "endColumn": 82
+                  "startLine": 3,
+                  "startColumn": 27,
+                  "endLine": 3,
+                  "endColumn": 115
                 }
               }
             }
@@ -33,18 +33,18 @@
           }
         },
         {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GeneratePropertyListing' does not access instance data and can be marked as static",
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement/Program.cs",
                 "region": {
-                  "startLine": 78,
-                  "startColumn": 33,
-                  "endLine": 78,
-                  "endColumn": 56
+                  "startLine": 85,
+                  "startColumn": 22,
+                  "endLine": 85,
+                  "endColumn": 29
                 }
               }
             }
@@ -54,18 +54,18 @@
           }
         },
         {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GenerateUpdatePropertyListingCommand' does not access instance data and can be marked as static",
+          "ruleId": "S107",
+          "level": "warning",
+          "message": "Method has 8 parameters, which is greater than the 7 authorized.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UpdatePropertyListingCommandHandlerTests.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement/Controllers/PropertyListingsController.cs",
                 "region": {
-                  "startLine": 74,
-                  "startColumn": 46,
-                  "endLine": 74,
-                  "endColumn": 82
+                  "startLine": 145,
+                  "startColumn": 101,
+                  "endLine": 145,
+                  "endColumn": 330
                 }
               }
             }
@@ -76,19 +76,53 @@
         }
       ],
       "rules": {
-        "CA1822": {
-          "id": "CA1822",
-          "shortDescription": "Mark members as static",
-          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
-          "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+        "S107": {
+          "id": "S107",
+          "shortDescription": "Methods should not have too many parameters",
+          "fullDescription": "Methods with a long parameter list are difficult to use because maintainers must figure out the role of each parameter and keep track of their position.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-107",
           "properties": {
-            "category": "Performance",
+            "category": "Major Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
-              "PortedFromFxCop",
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Hard-coded credentials are security-sensitive",
+          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "properties": {
+            "category": "Blocker Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }

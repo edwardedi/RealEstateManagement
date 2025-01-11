@@ -30,6 +30,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealEstateManagement.Application.UnitTests", "..\RealEstateManagement.Application.UnitTests\RealEstateManagement.Application.UnitTests.csproj", "{2DB27AE0-9C23-4923-89AB-F3571B5F4D2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateManagement.IntegrationTests", "..\RealEstateManagement.IntegrationTests\RealEstateManagement.IntegrationTests.csproj", "{2FFF5E2B-8E4B-4BD2-A1FD-84F72CA9ACA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA07558D-5F25-486E-9456-359270047C79} = {FA07558D-5F25-486E-9456-359270047C79}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "..\Identity\Identity.csproj", "{FE6C4D1F-C458-453F-8256-1509AA642FCB}"
 EndProject

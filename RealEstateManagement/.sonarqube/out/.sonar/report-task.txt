@@ -2,5 +2,5 @@ projectKey=RealEstateManagement
 serverUrl=http://localhost:9000
 serverVersion=10.7.0.96327
 dashboardUrl=http://localhost:9000/dashboard?id=RealEstateManagement
-ceTaskId=c768b78b-6e47-4c95-b92b-e4cdfe90617e
-ceTaskUrl=http://localhost:9000/api/ce/task?id=c768b78b-6e47-4c95-b92b-e4cdfe90617e
+ceTaskId=1ec2d02c-2c05-4e85-9c37-d8d55ff0a413
+ceTaskUrl=http://localhost:9000/api/ce/task?id=1ec2d02c-2c05-4e85-9c37-d8d55ff0a413

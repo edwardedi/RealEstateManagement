@@ -14,19 +14,16 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'PropertyListings' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
+          "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 8,
+                  "startLine": 10,
                   "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
+                  "endLine": 10,
+                  "endColumn": 51
                 }
               }
             }
@@ -34,12 +31,12 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 11,
-                  "startColumn": 39,
-                  "endLine": 11,
-                  "endColumn": 55
+                  "startLine": 9,
+                  "startColumn": 30,
+                  "endLine": 9,
+                  "endColumn": 35
                 }
               }
             }
@@ -51,19 +48,16 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'ClientInquiries' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
+          "message": "Non-nullable property 'Features' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingData.cs",
                 "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
+                  "startLine": 9,
+                  "startColumn": 24,
+                  "endLine": 9,
+                  "endColumn": 32
                 }
               }
             }
@@ -71,12 +65,33 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingData.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 24,
+                  "endLine": 9,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/Use%20Cases/PropertyListings/Filtering/TypeFilterStrategy.cs",
                 "region": {
                   "startLine": 12,
-                  "startColumn": 37,
+                  "startColumn": 56,
                   "endLine": 12,
-                  "endColumn": 52
+                  "endColumn": 62
                 }
               }
             }
@@ -86,70 +101,17 @@
           }
         },
         {
-          "ruleId": "CS8618",
+          "ruleId": "S3260",
           "level": "warning",
-          "message": "Non-nullable property 'Transactions' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
+          "message": "Private classes which are not derived in the current assembly should be marked as 'sealed'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 35,
-                  "endLine": 13,
-                  "endColumn": 47
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
-          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "suppressionStates": [
-            "suppressedInSource"
-          ],
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 16,
-                  "endLine": 8,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 14,
-                  "startColumn": 28,
-                  "endLine": 14,
+                  "startLine": 43,
+                  "startColumn": 23,
+                  "endLine": 43,
                   "endColumn": 33
                 }
               }
@@ -160,18 +122,18 @@
           }
         },
         {
-          "ruleId": "CS8604",
+          "ruleId": "S3459",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'data' in 'Result<Transaction> Result<Transaction>.Success(Transaction data)'.",
+          "message": "Remove unassigned auto-property 'Score', or set its value.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Repositories/TransactionRepository.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 35,
-                  "startColumn": 52,
-                  "endLine": 35,
-                  "endColumn": 63
+                  "startLine": 46,
+                  "startColumn": 26,
+                  "endLine": 46,
+                  "endColumn": 31
                 }
               }
             }
@@ -181,439 +143,139 @@
           }
         },
         {
-          "ruleId": "S1192",
+          "ruleId": "S1144",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'uuid_generate_v4()' 4 times.",
+          "message": "Remove the unused private set accessor in property 'Score'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 22,
-                  "startColumn": 100,
-                  "endLine": 22,
-                  "endColumn": 120
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 101,
-                  "endLine": 41,
-                  "endColumn": 121
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 64,
-                  "startColumn": 97,
-                  "endLine": 64,
-                  "endColumn": 117
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 79,
-                  "startColumn": 104,
-                  "endLine": 79,
-                  "endColumn": 124
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'double precision' 11 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 59,
-                  "endLine": 25,
-                  "endColumn": 77
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 26,
-                  "startColumn": 59,
-                  "endLine": 26,
-                  "endColumn": 77
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 27,
-                  "startColumn": 67,
-                  "endLine": 27,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 28,
-                  "startColumn": 67,
-                  "endLine": 28,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 67,
-                  "endLine": 29,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 30,
-                  "startColumn": 68,
-                  "endLine": 30,
-                  "endColumn": 86
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 56,
-                  "endLine": 45,
-                  "endColumn": 74
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
                   "startLine": 46,
-                  "startColumn": 64,
+                  "startColumn": 39,
                   "endLine": 46,
-                  "endColumn": 82
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 47,
-                  "startColumn": 67,
-                  "endLine": 47,
-                  "endColumn": 85
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 68,
-                  "endLine": 48,
-                  "endColumn": 86
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 83,
-                  "startColumn": 60,
-                  "endLine": 83,
-                  "endColumn": 78
+                  "endColumn": 42
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null,
-              "4": null,
-              "5": null,
-              "6": null,
-              "7": null,
-              "8": null,
-              "9": null
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "S1192",
+          "ruleId": "S1144",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'Users' 4 times.",
+          "message": "Remove the unused private property 'Label'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 61,
-                  "startColumn": 23,
-                  "endLine": 61,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 98,
-                  "startColumn": 41,
-                  "endLine": 98,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 104,
-                  "startColumn": 41,
-                  "endLine": 104,
-                  "endColumn": 48
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 138,
-                  "startColumn": 23,
-                  "endLine": 138,
-                  "endColumn": 30
+                  "startLine": 45,
+                  "startColumn": 26,
+                  "endLine": 45,
+                  "endColumn": 31
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "S1192",
+          "ruleId": "S1125",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'Transactions' 5 times.",
+          "message": "Remove the unnecessary Boolean literal(s).",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
                 "region": {
-                  "startLine": 76,
-                  "startColumn": 23,
-                  "endLine": 76,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 111,
-                  "startColumn": 24,
-                  "endLine": 111,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 116,
-                  "startColumn": 24,
-                  "endLine": 116,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 121,
-                  "startColumn": 24,
-                  "endLine": 121,
-                  "endColumn": 38
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Migrations/20250104134210_InitialCreate.cs",
-                "region": {
-                  "startLine": 132,
-                  "startColumn": 23,
-                  "endLine": 132,
-                  "endColumn": 37
+                  "startLine": 19,
+                  "startColumn": 34,
+                  "endLine": 19,
+                  "endColumn": 41
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null,
-              "3": null
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "S1192",
+          "ruleId": "S1125",
           "level": "warning",
-          "message": "Define a constant instead of using this literal 'uuid_generate_v4()' 4 times.",
+          "message": "Remove the unnecessary Boolean literal(s).",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
                 "region": {
-                  "startLine": 25,
-                  "startColumn": 101,
-                  "endLine": 25,
-                  "endColumn": 121
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 47,
-                  "startColumn": 96,
-                  "endLine": 47,
-                  "endColumn": 116
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 57,
-                  "startColumn": 100,
-                  "endLine": 57,
-                  "endColumn": 120
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 85,
-                  "startColumn": 93,
-                  "endLine": 85,
-                  "endColumn": 113
+                  "startLine": 21,
+                  "startColumn": 34,
+                  "endLine": 21,
+                  "endColumn": 42
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
+            "warningLevel": 1
           }
         },
         {
-          "ruleId": "CA1862",
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'preprocessedData'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 17,
+                  "endLine": 20,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1859",
           "level": "note",
-          "message": "Prefer the string comparison method overload of 'string.Contains(string)' that takes a 'StringComparison' enum value to perform a case-insensitive comparison, but keep in mind that this might cause subtle changes in behavior, so make sure to conduct thorough testing after applying the suggestion, or if culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'",
+          "message": "Change type of field 'model' from 'Microsoft.ML.ITransformer' to 'Microsoft.ML.Data.TransformerChain<Microsoft.ML.Data.RegressionPredictionTransformer<Microsoft.ML.Trainers.LinearRegressionModelParameters>>' for improved performance",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Infrastructure/Repositories/ClientInquiryRepository.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 123,
-                  "startColumn": 86,
-                  "endLine": 123,
-                  "endColumn": 142
+                  "startLine": 9,
+                  "startColumn": 30,
+                  "endLine": 9,
+                  "endColumn": 35
                 }
               }
             }
           ],
           "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "LeftOffendingMethod": "ToUpper",
-              "RightOffendingMethod": "ToUpper"
-            }
+            "warningLevel": 1
           }
         }
       ],
       "rules": {
-        "CA1862": {
-          "id": "CA1862",
-          "shortDescription": "Use the 'StringComparison' method overloads to perform case-insensitive string comparisons",
-          "fullDescription": "Avoid calling 'ToLower', 'ToUpper', 'ToLowerInvariant' and 'ToUpperInvariant' to perform case-insensitive string comparisons because they lead to an allocation. Instead, prefer calling the method overloads of 'Contains', 'IndexOf' and 'StartsWith' that take a 'StringComparison' enum value to perform case-insensitive comparisons. Switching to using an overload that takes a 'StringComparison' might cause subtle changes in behavior, so it's important to conduct thorough testing after applying the suggestion. Additionally, if a culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'.",
+        "CA1859": {
+          "id": "CA1859",
+          "shortDescription": "Use concrete types when possible for improved performance",
+          "fullDescription": "Using concrete types avoids virtual or interface call overhead and enables inlining.",
           "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1862",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1859",
           "properties": {
             "category": "Performance",
             "isEnabledByDefault": true,
@@ -623,11 +285,11 @@
             ]
           }
         },
-        "CS8604": {
-          "id": "CS8604",
-          "shortDescription": "Possible null reference argument.",
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,
@@ -651,18 +313,86 @@
             ]
           }
         },
-        "S1192": {
-          "id": "S1192",
-          "shortDescription": "String literals should not be duplicated",
-          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+        "S1125": {
+          "id": "S1125",
+          "shortDescription": "Boolean literals should not be redundant",
+          "fullDescription": "A boolean literal can be represented in two different ways: true or false. They can be combined with logical operators (!, &&, ||, ==, !=) to produce logical expressions that represent truth values. However, comparing a boolean literal to a variable or expression that evaluates to a boolean value is unnecessary and can make the code harder to read and understand. The more complex a boolean expression is, the harder it will be for developers to understand its meaning and expected behavior, and it will favour the introduction of new bugs.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
           "properties": {
             "category": "Minor Code Smell",
-            "isEnabledByDefault": false,
+            "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1144": {
+          "id": "S1144",
+          "shortDescription": "Unused private types or members should be removed",
+          "fullDescription": "This rule raises an issue when a private/internal type or member is never referenced in the code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1144",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "An unused local variable is a variable that has been declared but is not used anywhere in the block of code where it is defined. It is dead code, contributing to unnecessary complexity and leading to confusion when reading the code. Therefore, it should be removed from your code to maintain clarity and efficiency.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3260": {
+          "id": "S3260",
+          "shortDescription": "Non-derived \"private\" classes and records should be \"sealed\"",
+          "fullDescription": "Classes and records with either private or file access modifiers aren’t visible outside of their assemblies or files, so if they’re not extended inside their scope, they should be made explicitly non-extensible with the addition of the sealed keyword.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3260",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3459": {
+          "id": "S3459",
+          "shortDescription": "Unassigned members should be removed",
+          "fullDescription": "Fields and auto-properties that are never assigned to hold the default values for their types. They are either pointless code or, more likely, mistakes.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3459",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
               "SonarWay"
             ]
           }

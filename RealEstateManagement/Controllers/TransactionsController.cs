@@ -21,7 +21,7 @@ namespace RealEstateManagement.Controllers
         private readonly IPropertyListingRepository propertyListingRepository;
         private readonly IMapper mapper;
 
-        public TransactionsController(IMediator mediator, ITransactionRepository transactionRepository, IPropertyListingRepository propertyListingRepository, IMapper mapper)
+        public TransactionsController(IMediator mediator, IPropertyListingRepository propertyListingRepository, IMapper mapper)
         {
             this.mediator = mediator;
             this.propertyListingRepository = propertyListingRepository;

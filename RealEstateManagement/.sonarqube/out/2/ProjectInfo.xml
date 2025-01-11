@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <ProjectName>Infrastructure</ProjectName>
+  <ProjectName>Application</ProjectName>
   <ProjectLanguage>C#</ProjectLanguage>
   <ProjectType>Product</ProjectType>
-  <ProjectGuid>fa07558d-5f25-486e-9456-359270047c79</ProjectGuid>
-  <FullPath>C:\Users\cezar\Desktop\RealEstateManagement\Infrastructure\Infrastructure.csproj</FullPath>
+  <ProjectGuid>42181a45-f5a7-4b63-b27e-3660825106f0</ProjectGuid>
+  <FullPath>C:\Users\cezar\desktop\RealEstateManagement\Application\Application.csproj</FullPath>
   <IsExcluded>false</IsExcluded>
   <AnalysisResults>
-    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\2\FilesToAnalyze.txt" />
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\.sonarqube\conf\2\FilesToAnalyze.txt" />
   </AnalysisResults>
   <AnalysisSettings>
-    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2\Issues.json</Property>
-    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\cezar\Desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2</Property>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\.sonarqube\out\2</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

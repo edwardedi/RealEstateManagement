@@ -12,31 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "CS8618",
+          "ruleId": "CS8604",
           "level": "warning",
-          "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "message": "Possible null reference argument for parameter 'value' in 'Claim.Claim(string type, string value)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Identity/Repositories/UserAuthRepository.cs",
                 "region": {
-                  "startLine": 9,
-                  "startColumn": 16,
-                  "endLine": 9,
-                  "endColumn": 51
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 30,
-                  "endLine": 8,
-                  "endColumn": 35
+                  "startLine": 41,
+                  "startColumn": 49,
+                  "endLine": 41,
+                  "endColumn": 67
                 }
               }
             }
@@ -46,60 +33,18 @@
           }
         },
         {
-          "ruleId": "CS8602",
+          "ruleId": "S6781",
           "level": "warning",
-          "message": "Dereference of a possibly null reference.",
+          "message": "JWT secret keys should not be disclosed.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/Use%20Cases/PropertyListings/Filtering/TypeFilterStrategy.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Identity/Repositories/UserAuthRepository.cs",
                 "region": {
-                  "startLine": 12,
-                  "startColumn": 56,
-                  "endLine": 12,
-                  "endColumn": 62
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 1,
-                  "endLine": 21,
-                  "endColumn": 14
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1118",
-          "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Application/AIML/PropertyLisingDataGenerator.cs",
-                "region": {
-                  "startLine": 3,
-                  "startColumn": 18,
-                  "endLine": 3,
-                  "endColumn": 45
+                  "startLine": 45,
+                  "startColumn": 61,
+                  "endLine": 45,
+                  "endColumn": 90
                 }
               }
             }
@@ -110,11 +55,11 @@
         }
       ],
       "rules": {
-        "CS8602": {
-          "id": "CS8602",
-          "shortDescription": "Dereference of a possibly null reference.",
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,
@@ -124,45 +69,14 @@
             ]
           }
         },
-        "CS8618": {
-          "id": "CS8618",
-          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+        "S6781": {
+          "id": "S6781",
+          "shortDescription": "JWT secret keys should not be disclosed",
+          "fullDescription": "Secret leaks often occur when a sensitive piece of authentication data is stored with the source code of an application. Considering the source code is intended to be deployed across multiple assets, including source code repositories or application hosting servers, the secrets might get exposed to an unintended audience.",
           "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6781",
           "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
-        "S1118": {
-          "id": "S1118",
-          "shortDescription": "Utility classes should not have public constructors",
-          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
-          "properties": {
-            "category": "Major Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S125": {
-          "id": "S125",
-          "shortDescription": "Sections of code should not be commented out",
-          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
-          "properties": {
-            "category": "Major Code Smell",
+            "category": "Blocker Vulnerability",
             "isEnabledByDefault": true,
             "tags": [
               "C#",

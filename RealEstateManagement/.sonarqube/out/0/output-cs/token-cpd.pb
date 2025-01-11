@@ -1,5 +1,5 @@
-û
-RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository.cs
+ø	
+RC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserRepository.cs
 	namespace 	
 Domain
  
@@ -58,25 +58,25 @@ RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository
  
 >
 
- 
-AddUserAsync
+ 
+UpdateUserAsync
 
- '
+ *
 (
 
-' (
+* +
 User
 
-( ,
++ /
 user
 
-- 1
+0 4
 )
 
-1 2
+4 5
 ;
 
-2 3
+5 6
 Task 
 < 
 Result 
@@ -84,28 +84,15 @@ RC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserRepository
 Guid 
 > 
 > 
-UpdateUserAsync *
+DeleteUserAsync *
 (* +
-User+ /
-user0 4
-)4 5
-;5 6
-Task 
-< 
-Result 
-< 
-Guid 
-> 
-> 
-DeleteUserAsync *
-(* +
-Guid+ /
-id0 2
-)2 3
-;3 4
-} 
-} ∞
-VC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.cs
+Guid+ /
+id0 2
+)2 3
+;3 4
+} 
+} ∞
+VC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.cs
 	namespace 	
 Domain
  
@@ -149,136 +136,8 @@ VC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IUserAuthReposi
 }
 
  
-} ü
-]C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.cs
-	namespace 	
-Domain
- 
-. 
-Repositories 
-{ 
-public 
-
-	interface &
-IPropertyListingRepository /
-{ 
-Task 
-< 
-Result 
-< 
-IEnumerable 
-<  
-PropertyListing  /
->/ 0
->0 1
->1 2
-GetAllListingsAsync3 F
-(F G
-)G H
-;H I
-Task		 
-<		 
-Result		 
-<		 
-PropertyListing		 #
->		# $
->		$ %
-GetListingByIdAsync		& 9
-(		9 :
-Guid		: >
-id		? A
-)		A B
-;		B C
-Task
-
- 
-<
-
- 
-Result
-
- 
-<
-
- 
-IEnumerable
-
- 
-<
-
-  
-PropertyListing
-
-  /
->
-
-/ 0
->
-
-0 1
->
-
-1 2
-GetListingsByUserId
-
-3 F
-(
-
-F G
-Guid
-
-G K
-userId
-
-L R
-)
-
-R S
-;
-
-S T
-Task 
-< 
-Result 
-< 
-Guid 
-> 
-> 
-AddListingAsync *
-(* +
-PropertyListing+ :
-listing; B
-)B C
-;C D
-Task 
-< 
-Result 
-< 
-Guid 
-> 
-> 
-UpdateListingAsync -
-(- .
-PropertyListing. =
-listing> E
-)E F
-;F G
-Task 
-< 
-Result 
-< 
-Guid 
-> 
-> 
-DeleteListingAsync -
-(- .
-Guid. 2
-id3 5
-)5 6
-;6 7
-} 
-} «
-YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.cs
+} «
+YC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.cs
 	namespace 	
 Domain
  
@@ -428,8 +287,136 @@ YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRep
 )9 :
 ;: ;
 } 
-} Õ
-[C:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.cs
+} ü
+]C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.cs
+	namespace 	
+Domain
+ 
+. 
+Repositories 
+{ 
+public 
+
+	interface &
+IPropertyListingRepository /
+{ 
+Task 
+< 
+Result 
+< 
+IEnumerable 
+<  
+PropertyListing  /
+>/ 0
+>0 1
+>1 2
+GetAllListingsAsync3 F
+(F G
+)G H
+;H I
+Task		 
+<		 
+Result		 
+<		 
+PropertyListing		 #
+>		# $
+>		$ %
+GetListingByIdAsync		& 9
+(		9 :
+Guid		: >
+id		? A
+)		A B
+;		B C
+Task
+
+ 
+<
+
+ 
+Result
+
+ 
+<
+
+ 
+IEnumerable
+
+ 
+<
+
+  
+PropertyListing
+
+  /
+>
+
+/ 0
+>
+
+0 1
+>
+
+1 2
+GetListingsByUserId
+
+3 F
+(
+
+F G
+Guid
+
+G K
+userId
+
+L R
+)
+
+R S
+;
+
+S T
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+AddListingAsync *
+(* +
+PropertyListing+ :
+listing; B
+)B C
+;C D
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+UpdateListingAsync -
+(- .
+PropertyListing. =
+listing> E
+)E F
+;F G
+Task 
+< 
+Result 
+< 
+Guid 
+> 
+> 
+DeleteListingAsync -
+(- .
+Guid. 2
+id3 5
+)5 6
+;6 7
+} 
+} Õ
+[C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.cs
 	namespace 	
 Domain
  
@@ -572,8 +559,8 @@ YC:\Users\cezar\Desktop\RealEstateManagement\Domain\Repositories\ITransactionRep
 )^ _
 ;_ `
 } 
-} ÷
-CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
+} »
+CC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\User.cs
 	namespace 	
 Domain
  
@@ -604,16 +591,16 @@ CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
 set# &
 ;& '
 }( )
-public 
-required 
-string 
-Email $
-{% &
-get' *
-;* +
-set, /
-;/ 0
-}1 2
+public 
+string 
+? 
+Email 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
 public 
 string 
 ? 
@@ -624,138 +611,21 @@ CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\User.cs
 set* -
 ;- .
 }/ 0
-public		 
-required		 
-string		 
-PasswordHash		 +
-{		, -
-get		. 1
-;		1 2
-set		3 6
-;		6 7
-}		8 9
+public		 
+string		 
+?		 
+PasswordHash		 #
+{		$ %
+get		& )
+;		) *
+set		+ .
+;		. /
+}		0 1
 }
 
  
-} Ï
-LC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
-	namespace 	
-Domain
- 
-. 
-Entities 
-{ 
-public 
-
-class 
-ClientInquiry 
-{ 
-public 
-Guid 
-	InquiryId 
-{ 
-get  #
-;# $
-set% (
-;( )
-}* +
-public 
-Guid 
-ClientId 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-List 
-< 
-string 
-> 
-? 
-Types "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-public 
-double 
-MinPrice 
-{  
-get! $
-;$ %
-set& )
-;) *
-}+ ,
-public		 
-double		 
-MaxPrice		 
-{		  
-get		! $
-;		$ %
-set		& )
-;		) *
-}		+ ,
-public
-
- 
-double
-
- 
-MinSquareFootage
-
- &
-{
-
-' (
-get
-
-) ,
-;
-
-, -
-set
-
-. 1
-;
-
-1 2
-}
-
-3 4
-public 
-double 
-MaxSquareFootage &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBedrooms &
-{' (
-get) ,
-;, -
-set. 1
-;1 2
-}3 4
-public 
-double 
-NumberOfBathrooms '
-{( )
-get* -
-;- .
-set/ 2
-;2 3
-}4 5
-} 
-} ù
-JC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\Transaction.cs
+} ù
+JC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\Transaction.cs
 	namespace 	
 Domain
  
@@ -817,7 +687,7 @@ PropertyId 
 
  
 } Ó
-NC:\Users\cezar\Desktop\RealEstateManagement\Domain\Entities\PropertyListing.cs
+NC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\PropertyListing.cs
 	namespace 	
 Domain
  
@@ -972,8 +842,125 @@ PropertyId 
 ;% &
 }' (
 } 
-} ‘
-CC:\Users\cezar\Desktop\RealEstateManagement\Domain\Common\Result.cs
+} Ï
+LC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
+	namespace 	
+Domain
+ 
+. 
+Entities 
+{ 
+public 
+
+class 
+ClientInquiry 
+{ 
+public 
+Guid 
+	InquiryId 
+{ 
+get  #
+;# $
+set% (
+;( )
+}* +
+public 
+Guid 
+ClientId 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+List 
+< 
+string 
+> 
+? 
+Types "
+{# $
+get% (
+;( )
+set* -
+;- .
+}/ 0
+public 
+double 
+MinPrice 
+{  
+get! $
+;$ %
+set& )
+;) *
+}+ ,
+public		 
+double		 
+MaxPrice		 
+{		  
+get		! $
+;		$ %
+set		& )
+;		) *
+}		+ ,
+public
+
+ 
+double
+
+ 
+MinSquareFootage
+
+ &
+{
+
+' (
+get
+
+) ,
+;
+
+, -
+set
+
+. 1
+;
+
+1 2
+}
+
+3 4
+public 
+double 
+MaxSquareFootage &
+{' (
+get) ,
+;, -
+set. 1
+;1 2
+}3 4
+public 
+double 
+NumberOfBedrooms &
+{' (
+get) ,
+;, -
+set. 1
+;1 2
+}3 4
+public 
+double 
+NumberOfBathrooms '
+{( )
+get* -
+;- .
+set/ 2
+;2 3
+}4 5
+} 
+} ‘
+CC:\Users\cezar\desktop\RealEstateManagement\Domain\Common\Result.cs
 	namespace 	
 Domain
  

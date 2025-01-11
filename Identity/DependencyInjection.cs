@@ -14,11 +14,10 @@ namespace Identity
     {
         public static IServiceCollection AddIdentity(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+                services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-
             // Add Authentication
             var key = Encoding.ASCII.GetBytes("My TOP Secret Key For Identity Module");
             services.AddAuthentication(options =>

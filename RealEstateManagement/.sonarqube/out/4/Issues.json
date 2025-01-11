@@ -12,18 +12,60 @@
       },
       "results": [
         {
-          "ruleId": "S6781",
-          "level": "warning",
-          "message": "JWT secret keys should not be disclosed.",
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GenerateCreatePropertyListingCommand' does not access instance data and can be marked as static",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/Desktop/RealEstateManagement/Identity/Repositories/UserAuthRepository.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
                 "region": {
-                  "startLine": 45,
-                  "startColumn": 61,
-                  "endLine": 45,
-                  "endColumn": 90
+                  "startLine": 60,
+                  "startColumn": 46,
+                  "endLine": 60,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GeneratePropertyListing' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 33,
+                  "endLine": 78,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "Member 'GenerateUpdatePropertyListingCommand' does not access instance data and can be marked as static",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UpdatePropertyListingCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 46,
+                  "endLine": 74,
+                  "endColumn": 82
                 }
               }
             }
@@ -34,20 +76,19 @@
         }
       ],
       "rules": {
-        "S6781": {
-          "id": "S6781",
-          "shortDescription": "JWT secret keys should not be disclosed",
-          "fullDescription": "Secret leaks often occur when a sensitive piece of authentication data is stored with the source code of an application. Considering the source code is intended to be deployed across multiple assets, including source code repositories or application hosting servers, the secrets might get exposed to an unintended audience.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6781",
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Mark members as static",
+          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
           "properties": {
-            "category": "Blocker Vulnerability",
+            "category": "Performance",
             "isEnabledByDefault": true,
             "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
             ]
           }
         }
