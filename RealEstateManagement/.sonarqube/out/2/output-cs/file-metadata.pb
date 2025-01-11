@@ -8,9 +8,9 @@ LC:\Users\cezar\desktop\RealEstateManagement\Application\utils\PagedResult.csu
 OC:\Users\cezar\desktop\RealEstateManagement\Application\utils\MappingProfile.csutf-8y
 pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\QueryHandlers\GetUserByIdQueryHandler.csutf-8y
 pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\QueryHandlers\GetAllUsersQueryHandler.csutf-8l
-cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetUserByIdQuery.csutf-8l
-cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.csutf-8w
-nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommandValidator.csutf-8n
+cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetUserByIdQuery.csutf-8w
+nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommandValidator.csutf-8l
+cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.csutf-8n
 eC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommand.csutf-8n
 eC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\DeleteUserCommand.csutf-8|
 sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\CommandHandlers\UpdateUserCommandHandler.csutf-8|
@@ -29,9 +29,9 @@ sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\
 |C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Commands\CreateTransactionCommandValidator.csutf-8|
 sC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\Commands\CreateTransactionCommand.csutf-8ã
 ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\UpdateTransactionCommandHandler.csutf-8ã
-ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\DeleteTransactionCommandHandler.csutf-8ç
-ÉC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.csutf-8ã
-ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.csutf-8á
+ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\DeleteTransactionCommandHandler.csutf-8ã
+ÅC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.csutf-8ç
+ÉC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.csutf-8á
 ~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.csutf-8ï
 ãC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetFilteredPropertyListingsQueryHandler.csutf-8è
 ÖC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetAllPropertyListingQueryHandler.csutf-8
@@ -66,14 +66,13 @@ xC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\ClientInquiri
 pC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandValidator.csutf-8w
 nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommandHandler.csutf-8p
 gC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\RegisterUserCommand.csutf-8t
-kC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommandHandler.csutf-8m
-dC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommand.csutf-8P
-GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.csutf-8W
+kC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommandHandler.csutf-8P
+GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.csutf-8m
+dC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommand.csutf-8W
 NC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\TransactionDto.csutf-8[
 RC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\PropertyListingDto.csutf-8Y
 PC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\ClientInquiryDto.csutf-8W
 NC:\Users\cezar\desktop\RealEstateManagement\Application\DependencyInjection.csutf-8l
 cC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPricePredictionModel.csutf-8f
-]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.csutf-8f
 ]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataAggregator.csutf-8\
 SC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingData.csutf-8

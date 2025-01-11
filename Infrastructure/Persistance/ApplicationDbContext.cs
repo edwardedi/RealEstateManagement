@@ -6,6 +6,7 @@ namespace Infrastructure.Persistance
 {
     public class ApplicationDbContext : DbContext
     {
+        private readonly string uuid_opt = "uuid_generate_v4()";
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
@@ -23,7 +24,7 @@ namespace Infrastructure.Persistance
                     {
                         entity.ToTable("PropertyListings");
                         entity.HasKey(e => e.PropertyId);
-                        entity.Property(e => e.PropertyId).HasColumnType("uuid").HasDefaultValueSql("uuid_generate_v4()").ValueGeneratedOnAdd();
+                        entity.Property(e => e.PropertyId).HasColumnType("uuid").HasDefaultValueSql(uuid_opt).ValueGeneratedOnAdd();
                         entity.Property(e => e.Address).IsRequired().HasMaxLength(200);
                         entity.Property(e => e.Title).IsRequired().HasMaxLength(100);
                         entity.Property(e => e.Type).IsRequired();
@@ -45,7 +46,7 @@ namespace Infrastructure.Persistance
                 {
                     entity.ToTable("ClientInquiries");
                     entity.HasKey(e => e.InquiryId);
-                    entity.Property(e => e.InquiryId).HasColumnType("uuid").HasDefaultValueSql("uuid_generate_v4()").ValueGeneratedOnAdd();
+                    entity.Property(e => e.InquiryId).HasColumnType("uuid").HasDefaultValueSql(uuid_opt).ValueGeneratedOnAdd();
                     entity.Property(e => e.ClientId).IsRequired();
 
                 });
@@ -55,7 +56,7 @@ namespace Infrastructure.Persistance
                 {
                     entity.ToTable("Transactions");
                     entity.HasKey(e => e.TransactionId);
-                    entity.Property(e => e.TransactionId).HasColumnType("uuid").HasDefaultValueSql("uuid_generate_v4()").ValueGeneratedOnAdd();
+                    entity.Property(e => e.TransactionId).HasColumnType("uuid").HasDefaultValueSql(uuid_opt).ValueGeneratedOnAdd();
                     entity.Property(e => e.PropertyId).IsRequired();
                     entity.Property(e => e.BuyerId).IsRequired();
                     entity.Property(e => e.SellerId).IsRequired();
@@ -83,7 +84,7 @@ namespace Infrastructure.Persistance
                 {
                     entity.ToTable("Users");
                     entity.HasKey(e => e.UserId);
-                    entity.Property(e => e.UserId).HasColumnType("uuid").HasDefaultValueSql("uuid_generate_v4()").ValueGeneratedOnAdd();
+                    entity.Property(e => e.UserId).HasColumnType("uuid").HasDefaultValueSql(uuid_opt).ValueGeneratedOnAdd();
                     entity.Property(e => e.Name).IsRequired().HasMaxLength(50);
                     entity.Property(e => e.Email).IsRequired().HasMaxLength(50);
                     entity.HasIndex(e => e.Email).IsUnique();

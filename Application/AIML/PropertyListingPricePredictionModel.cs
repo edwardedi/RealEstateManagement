@@ -16,8 +16,6 @@ namespace Application.AIML
             // Define the data preparation pipeline
             var dataPrepPipeline = mlContext.Transforms.NormalizeMinMax(nameof(PropertyListingData.Features));
 
-            // Apply data preparation pipeline to the training data
-            var preprocessedData = dataPrepPipeline.Fit(trainingData).Transform(trainingData);
 
             var options = new SdcaRegressionTrainer.Options
             {
@@ -40,9 +38,8 @@ namespace Application.AIML
             return prediction.Score;
         }
 
-        private class Prediction
+        private sealed class Prediction
         {
-            public float Label { get; set; }
             public float Score { get; set; }
         }
 

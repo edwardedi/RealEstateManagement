@@ -9,6 +9,7 @@ namespace Infrastructure.Repositories
     public class TransactionRepository : ITransactionRepository
     {
         private readonly ApplicationDbContext context;
+        private readonly string transactionNotFound = "Transaction not found.";
 
         public TransactionRepository(ApplicationDbContext context)
         {
@@ -32,6 +33,10 @@ namespace Infrastructure.Repositories
             try
             {
                 var transaction = await context.Transactions.FindAsync(id);
+                if (transaction == null)
+                {
+                    return Result<Transaction>.Failure(transactionNotFound);
+                }
                 return Result<Transaction>.Success(transaction);
             }
             catch (Exception ex)
@@ -68,7 +73,7 @@ namespace Infrastructure.Repositories
                 }
                 else
                 {
-                    return Result<Guid>.Failure("Transaction not found.");
+                    return Result<Guid>.Failure(transactionNotFound);
                 }
             }
             catch (Exception ex)
@@ -90,7 +95,7 @@ namespace Infrastructure.Repositories
                 }
                 else
                 {
-                    return Result<Guid>.Failure("Transaction not found.");
+                    return Result<Guid>.Failure(transactionNotFound);  
                 }
             }
             catch (Exception ex)
@@ -108,7 +113,7 @@ namespace Infrastructure.Repositories
                 {
                     return Result<Transaction>.Success(transaction);
                 }
-                return Result<Transaction>.Failure("Transaction not found.");
+                return Result<Transaction>.Failure(transactionNotFound);
             }
             catch (Exception ex)
             {

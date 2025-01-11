@@ -12,27 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'value' in 'Claim.Claim(string type, string value)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Identity/Repositories/UserAuthRepository.cs",
-                "region": {
-                  "startLine": 41,
-                  "startColumn": 49,
-                  "endLine": 41,
-                  "endColumn": 67
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S6781",
           "level": "warning",
           "message": "JWT secret keys should not be disclosed.",
@@ -55,20 +34,6 @@
         }
       ],
       "rules": {
-        "CS8604": {
-          "id": "CS8604",
-          "shortDescription": "Possible null reference argument.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
         "S6781": {
           "id": "S6781",
           "shortDescription": "JWT secret keys should not be disclosed",

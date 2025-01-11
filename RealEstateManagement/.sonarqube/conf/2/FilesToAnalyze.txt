@@ -1,6 +1,5 @@
 ﻿C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingData.cs
 C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataAggregator.cs
-C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
 C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPricePredictionModel.cs
 C:\Users\cezar\desktop\RealEstateManagement\Application\DependencyInjection.cs
 C:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\ClientInquiryDto.cs

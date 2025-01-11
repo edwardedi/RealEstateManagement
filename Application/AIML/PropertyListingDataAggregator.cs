@@ -16,9 +16,9 @@
             foreach (var line in File.ReadLines(filePath))
             {
                 currentLine++;
-                if (trainingData == true && currentLine > lineCount * 0.75)
+                if (trainingData && currentLine > lineCount * 0.75)
                     break;
-                if (trainingData == false && currentLine <= lineCount * 0.75)
+                if (!trainingData && currentLine <= lineCount * 0.75)
                     continue;
                 var fields = line.Split(',');
 

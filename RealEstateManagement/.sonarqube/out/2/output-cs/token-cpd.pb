@@ -977,37 +977,6 @@ cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries
 }		 
 }
 
- ¶
-cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Users  %
-.% &
-Queries& -
-{ 
-public 
-
-class 
-GetAllUsersQuery !
-:" #
-IRequest$ ,
-<, -
-Result- 3
-<3 4
-List4 8
-<8 9
-UserDto9 @
->@ A
->A B
->B C
-{ 
-}		 
-}
-
  ‹
 nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommandValidator.cs
 	namespace 	
@@ -1149,7 +1118,38 @@ nC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Command
 ;8 9
 } 	
 } 
-} Ç
+} ¶
+cC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Queries\GetAllUsersQuery.cs
+	namespace 	
+Application
+ 
+. 
+	Use_Cases 
+.  
+Users  %
+.% &
+Queries& -
+{ 
+public 
+
+class 
+GetAllUsersQuery !
+:" #
+IRequest$ ,
+<, -
+Result- 3
+<3 4
+List4 8
+<8 9
+UserDto9 @
+>@ A
+>A B
+>B C
+{ 
+}		 
+}
+
+ Ç
 
 eC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Users\Commands\UpdateUserCommand.cs
 	namespace 	
@@ -3266,7 +3266,176 @@ repository )
 ;< =
 } 	
 } 
-} ±
+} ”
+C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.cs
+	namespace 	
+Application
+ 
+. 
+	Use_Cases 
+.  
+Transactions  ,
+., -
+CommandHandlers- <
+{		 
+public
+
+ 
+
+class
+
+ +
+CreateTransactionCommandHandler
+
+ 0
+:
+
+1 2
+IRequestHandler
+
+3 B
+<
+
+B C$
+CreateTransactionCommand
+
+C [
+,
+
+[ \
+Result
+
+] c
+<
+
+c d
+Guid
+
+d h
+>
+
+h i
+>
+
+i j
+{ 
+private 
+readonly "
+ITransactionRepository /
+
+repository0 :
+;: ;
+private 
+readonly 
+IMapper  
+mapper! '
+;' (
+public +
+CreateTransactionCommandHandler .
+(. /"
+ITransactionRepository/ E
+
+repositoryF P
+,P Q
+IMapperR Y
+mapperZ `
+)` a
+{ 	
+this 
+. 
+
+repository 
+= 
+
+repository (
+;( )
+this 
+. 
+mapper 
+= 
+mapper  
+;  !
+} 	
+public 
+async 
+Task 
+< 
+Result  
+<  !
+Guid! %
+>% &
+>& '
+Handle( .
+(. /$
+CreateTransactionCommand/ G
+requestH O
+,O P
+CancellationTokenQ b
+cancellationTokenc t
+)t u
+{ 	
+var 
+transaction 
+= 
+mapper $
+.$ %
+Map% (
+<( )
+Transaction) 4
+>4 5
+(5 6
+request6 =
+)= >
+;> ?
+var 
+result 
+= 
+await 
+
+repository )
+.) *
+AddTransactionAsync* =
+(= >
+transaction> I
+)I J
+;J K
+if 
+( 
+result 
+. 
+	IsSuccess  
+)  !
+{ 
+return 
+Result 
+< 
+Guid "
+>" #
+.# $
+Success$ +
+(+ ,
+result, 2
+.2 3
+Data3 7
+)7 8
+;8 9
+} 
+return 
+Result 
+< 
+Guid 
+> 
+.  
+Failure  '
+(' (
+result( .
+.. /
+ErrorMessage/ ;
+); <
+;< =
+} 	
+} 
+}   ±
 ƒC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingsByUserIdQueryHandler.cs
 	namespace 	
 Application
@@ -3470,176 +3639,7 @@ repository )
 }   
 }!! 	
 }"" 
-}## ”
-C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Transactions\CommandHandlers\CreateTransactionCommandHandler.cs
-	namespace 	
-Application
- 
-. 
-	Use_Cases 
-.  
-Transactions  ,
-., -
-CommandHandlers- <
-{		 
-public
-
- 
-
-class
-
- +
-CreateTransactionCommandHandler
-
- 0
-:
-
-1 2
-IRequestHandler
-
-3 B
-<
-
-B C$
-CreateTransactionCommand
-
-C [
-,
-
-[ \
-Result
-
-] c
-<
-
-c d
-Guid
-
-d h
->
-
-h i
->
-
-i j
-{ 
-private 
-readonly "
-ITransactionRepository /
-
-repository0 :
-;: ;
-private 
-readonly 
-IMapper  
-mapper! '
-;' (
-public +
-CreateTransactionCommandHandler .
-(. /"
-ITransactionRepository/ E
-
-repositoryF P
-,P Q
-IMapperR Y
-mapperZ `
-)` a
-{ 	
-this 
-. 
-
-repository 
-= 
-
-repository (
-;( )
-this 
-. 
-mapper 
-= 
-mapper  
-;  !
-} 	
-public 
-async 
-Task 
-< 
-Result  
-<  !
-Guid! %
->% &
->& '
-Handle( .
-(. /$
-CreateTransactionCommand/ G
-requestH O
-,O P
-CancellationTokenQ b
-cancellationTokenc t
-)t u
-{ 	
-var 
-transaction 
-= 
-mapper $
-.$ %
-Map% (
-<( )
-Transaction) 4
->4 5
-(5 6
-request6 =
-)= >
-;> ?
-var 
-result 
-= 
-await 
-
-repository )
-.) *
-AddTransactionAsync* =
-(= >
-transaction> I
-)I J
-;J K
-if 
-( 
-result 
-. 
-	IsSuccess  
-)  !
-{ 
-return 
-Result 
-< 
-Guid "
->" #
-.# $
-Success$ +
-(+ ,
-result, 2
-.2 3
-Data3 7
-)7 8
-;8 9
-} 
-return 
-Result 
-< 
-Guid 
-> 
-.  
-Failure  '
-(' (
-result( .
-.. /
-ErrorMessage/ ;
-); <
-;< =
-} 	
-} 
-}   í
+}## í
 ~C:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\PropertyListings\QueryHandlers\GetListingByIdQueryHandler.cs
 	namespace		 	
 Application		
@@ -8465,7 +8465,62 @@ kC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authenticatio
 ;> ?
 } 	
 } 
-} ñ
+} ¡
+GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.cs
+	namespace 	
+Application
+ 
+. 
+DTOs 
+{ 
+public 
+
+class 
+UserDto 
+{ 
+public 
+Guid 
+UserId 
+{ 
+get  
+;  !
+set" %
+;% &
+}' (
+public 
+string 
+? 
+Name 
+{ 
+get !
+;! "
+set# &
+;& '
+}( )
+public 
+string 
+? 
+Email 
+{ 
+get "
+;" #
+set$ '
+;' (
+}) *
+public 
+string 
+? 
+PhoneNumber "
+{# $
+get% (
+;( )
+set* -
+;- .
+}/ 0
+}		 
+}
+
+ ñ
 dC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authentication\LoginUserCommand.cs
 	namespace 	
 Application
@@ -8531,62 +8586,7 @@ dC:\Users\cezar\desktop\RealEstateManagement\Application\Use Cases\Authenticatio
 
 4 5
 } 
-} ¡
-GC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\UserDto.cs
-	namespace 	
-Application
- 
-. 
-DTOs 
-{ 
-public 
-
-class 
-UserDto 
-{ 
-public 
-Guid 
-UserId 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-public 
-string 
-? 
-Name 
-{ 
-get !
-;! "
-set# &
-;& '
-}( )
-public 
-string 
-? 
-Email 
-{ 
-get "
-;" #
-set$ '
-;' (
-}) *
-public 
-string 
-? 
-PhoneNumber "
-{# $
-get% (
-;( )
-set* -
-;- .
-}/ 0
-}		 
-}
-
- ¥
+} ¥
 NC:\Users\cezar\desktop\RealEstateManagement\Application\DTOs\TransactionDto.cs
 	namespace 	
 Application
@@ -9083,7 +9083,7 @@ AddMediatR 
 ; 
 } 	
 } 
-} ‡.
+} â*
 cC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingPricePredictionModel.cs
 	namespace 	
 Application
@@ -9184,272 +9184,226 @@ Transforms- 7
 )k l
 )l m
 ;m n
-var 
-preprocessedData  
-=! "
-dataPrepPipeline# 3
-.3 4
-Fit4 7
-(7 8
-trainingData8 D
-)D E
-.E F
-	TransformF O
-(O P
-trainingDataP \
-)\ ]
-;] ^
-var 
-options 
-= 
-new !
-SdcaRegressionTrainer 3
-.3 4
-Options4 ;
-{ 
-LabelColumnName 
-=  !
-nameof" (
-(( )
-PropertyListingData) <
-.< =
-Label= B
-)B C
-,C D
-FeatureColumnName !
-=" #
-nameof$ *
-(* +
-PropertyListingData+ >
-.> ?
-Features? G
-)G H
-,H I 
-ConvergenceTolerance $
-=% &
-$num' ,
-,, -%
-MaximumNumberOfIterations )
-=* +
-$num, /
-,/ 0
-BiasLearningRate  
-=! "
-$num# '
-} 
-; 
-var 
-pipeline 
-= 
-dataPrepPipeline +
-.+ ,
-Append, 2
-(2 3
-	mlContext3 <
-.< =
+var 
+options 
+= 
+new !
+SdcaRegressionTrainer 3
+.3 4
+Options4 ;
+{ 
+LabelColumnName 
+=  !
+nameof" (
+(( )
+PropertyListingData) <
+.< =
+Label= B
+)B C
+,C D
+FeatureColumnName !
+=" #
+nameof$ *
+(* +
+PropertyListingData+ >
+.> ?
+Features? G
+)G H
+,H I 
+ConvergenceTolerance $
+=% &
+$num' ,
+,, -%
+MaximumNumberOfIterations )
+=* +
+$num, /
+,/ 0
+BiasLearningRate  
+=! "
+$num# '
+} 
+; 
+var 
+pipeline 
+= 
+dataPrepPipeline +
+.+ ,
+Append, 2
+(2 3
+	mlContext3 <
+.< =
 
-Regression= G
-.G H
-TrainersH P
-.P Q
-SdcaQ U
-(U V
-optionsV ]
-)] ^
-)^ _
-;_ `
-model   
-=   
-pipeline   
-.   
-Fit    
-(    !
-trainingData  ! -
-)  - .
-;  . /
-}!! 	
-public## 
-float## 
-Predict## 
-(## 
-PropertyListingData## 0
-propertyListingData##1 D
-)##D E
-{$$ 	
-var%% 
-singleTestData%% 
-=%%  
-	mlContext%%! *
-.%%* +
-Data%%+ /
-.%%/ 0
-LoadFromEnumerable%%0 B
-(%%B C
-new%%C F
-[%%F G
-]%%G H
-{%%I J
-propertyListingData%%K ^
-}%%_ `
-)%%` a
-;%%a b
-var&& 
-transformedTestData&& #
-=&&$ %
-model&&& +
-.&&+ ,
-	Transform&&, 5
-(&&5 6
-singleTestData&&6 D
-)&&D E
-;&&E F
-var'' 
+Regression= G
+.G H
+TrainersH P
+.P Q
+SdcaQ U
+(U V
+optionsV ]
+)] ^
+)^ _
+;_ `
+model 
+= 
+pipeline 
+. 
+Fit  
+(  !
+trainingData! -
+)- .
+;. /
+} 	
+public!! 
+float!! 
+Predict!! 
+(!! 
+PropertyListingData!! 0
+propertyListingData!!1 D
+)!!D E
+{"" 	
+var## 
+singleTestData## 
+=##  
+	mlContext##! *
+.##* +
+Data##+ /
+.##/ 0
+LoadFromEnumerable##0 B
+(##B C
+new##C F
+[##F G
+]##G H
+{##I J
+propertyListingData##K ^
+}##_ `
+)##` a
+;##a b
+var$$ 
+transformedTestData$$ #
+=$$$ %
+model$$& +
+.$$+ ,
+	Transform$$, 5
+($$5 6
+singleTestData$$6 D
+)$$D E
+;$$E F
+var%% 
 
-prediction'' 
-='' 
-	mlContext'' &
-.''& '
-Data''' +
-.''+ ,
-CreateEnumerable'', <
-<''< =
+prediction%% 
+=%% 
+	mlContext%% &
+.%%& '
+Data%%' +
+.%%+ ,
+CreateEnumerable%%, <
+<%%< =
 
-Prediction''= G
->''G H
-(''H I
-transformedTestData''I \
-,''\ ]
-reuseRowObject''^ l
-:''l m
-false''n s
-)''s t
-.''t u
-First''u z
-(''z {
-)''{ |
-;''| }
-return(( 
+Prediction%%= G
+>%%G H
+(%%H I
+transformedTestData%%I \
+,%%\ ]
+reuseRowObject%%^ l
+:%%l m
+false%%n s
+)%%s t
+.%%t u
+First%%u z
+(%%z {
+)%%{ |
+;%%| }
+return&& 
 
-prediction(( 
-.(( 
-Score(( #
-;((# $
-})) 	
-private++ 
-class++ 
+prediction&& 
+.&& 
+Score&& #
+;&&# $
+}'' 	
+private)) 
+sealed)) 
+class)) 
 
-Prediction++  
-{,, 	
-public-- 
-float-- 
-Label-- 
-{--  
-get--! $
-;--$ %
-set--& )
-;--) *
-}--+ ,
-public.. 
-float.. 
-Score.. 
-{..  
-get..! $
-;..$ %
-set..& )
-;..) *
-}..+ ,
-}// 	
-public11 
-float11 
-Evaluate11 
-(11 
-List11 "
-<11" #
-PropertyListingData11# 6
->116 7
+Prediction)) '
+{** 	
+public++ 
+float++ 
+Score++ 
+{++  
+get++! $
+;++$ %
+set++& )
+;++) *
+}+++ ,
+},, 	
+public.. 
+float.. 
+Evaluate.. 
+(.. 
+List.. "
+<.." #
+PropertyListingData..# 6
+>..6 7
 
-dataPoints118 B
-)11B C
-{22 	
-var33 
-testData33 
-=33 
-	mlContext33 $
-.33$ %
-Data33% )
-.33) *
-LoadFromEnumerable33* <
-(33< =
+dataPoints..8 B
+)..B C
+{// 	
+var00 
+testData00 
+=00 
+	mlContext00 $
+.00$ %
+Data00% )
+.00) *
+LoadFromEnumerable00* <
+(00< =
 
-dataPoints33= G
-)33G H
-;33H I
-var44 
-predictions44 
-=44 
-model44 #
-.44# $
-	Transform44$ -
-(44- .
-testData44. 6
-)446 7
-;447 8
-var55 
-metrics55 
-=55 
-	mlContext55 #
-.55# $
+dataPoints00= G
+)00G H
+;00H I
+var11 
+predictions11 
+=11 
+model11 #
+.11# $
+	Transform11$ -
+(11- .
+testData11. 6
+)116 7
+;117 8
+var22 
+metrics22 
+=22 
+	mlContext22 #
+.22# $
 
-Regression55$ .
-.55. /
-Evaluate55/ 7
-(557 8
-predictions558 C
-,55C D
-labelColumnName55E T
-:55T U
-nameof55V \
-(55\ ]
-PropertyListingData55] p
-.55p q
-Label55q v
-)55v w
-)55w x
-;55x y
-return66 
-(66 
-float66 
-)66 
-metrics66 !
-.66! "
-RSquared66" *
-;66* +
-}77 	
-}88 
-}99 Ð
-]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataPrediction.cs
-	namespace 	
-Application
- 
-. 
-AIML 
-{ 
-public 
-
-class )
-PropertyListingDataPrediction .
-{ 
-public 
-float 
-Price 
-{ 
-get  
-;  !
-set" %
-;% &
-}' (
-} 
-} ¸"
+Regression22$ .
+.22. /
+Evaluate22/ 7
+(227 8
+predictions228 C
+,22C D
+labelColumnName22E T
+:22T U
+nameof22V \
+(22\ ]
+PropertyListingData22] p
+.22p q
+Label22q v
+)22v w
+)22w x
+;22x y
+return33 
+(33 
+float33 
+)33 
+metrics33 !
+.33! "
+RSquared33" *
+;33* +
+}44 	
+}55 
+}66 Ý%
 ]C:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingDataAggregator.cs
 	namespace 	
 Application
@@ -9546,29 +9500,26 @@ Regression55$ .
 if 
 ( 
 trainingData  
-==! #
-true$ (
-&&) +
-currentLine, 7
->8 9
-	lineCount: C
-*D E
-$numF J
-)J K
+&&! #
+currentLine$ /
+>0 1
+	lineCount2 ;
+*< =
+$num> B
+)B C
 break 
 ; 
 if 
-( 
-trainingData  
-==! #
-false$ )
-&&* ,
-currentLine- 8
-<=9 ;
-	lineCount< E
-*F G
-$numH L
-)L M
+( 
+! 
+trainingData !
+&&" $
+currentLine% 0
+<=1 3
+	lineCount4 =
+*> ?
+$num@ D
+)D E
 continue 
 ; 
 var 
@@ -9617,78 +9568,105 @@ Regression55$ .
 ||> @
 SquareFootageA N
 ==O Q
-nullR V
-)V W
-{ 
-continue 
-; 
-} 
-PropertyListingData   #
-.  # $
-Add  $ '
-(  ' (
-new  ( +
-PropertyListingData  , ?
-{!! 
-Label"" 
-="" 
-float"" !
-.""! "
-Parse""" '
-(""' (
-Price""( -
-)""- .
-,"". /
-Features## 
-=## 
-new## "
-float### (
-[##( )
-]##) *
-{##+ ,
-float##- 2
-.##2 3
-Parse##3 8
-(##8 9
-NumberOfBedrooms##9 I
-)##I J
-,##J K
-(##L M
-float##M R
-)##R S
-(##S T
-float##T Y
-.##Y Z
-Parse##Z _
-(##_ `
-SquareFootage##` m
-)##m n
-*##o p
-$num##q y
-)##y z
-}##{ |
-}$$ 
-)$$ 
-;$$ 
-}%% 
-return&& 
-PropertyListingData&& &
-;&&& '
-}'' 	
-public(( 
-int(( '
-GetPropertyListingDataCount(( .
-(((. /
-)((/ 0
-{)) 	
-return** 
-PropertyListingData** &
-.**& '
-Count**' ,
-;**, -
-}++ 	
-},, 
-}-- Û
+nullR V
+||W Y
+float 
+. 
+Parse 
+(  
+Price  %
+)% &
+==' )
+$num* +
+||, .
+float/ 4
+.4 5
+Parse5 :
+(: ;
+NumberOfBedrooms; K
+)K L
+==M O
+$numP Q
+||R T
+floatU Z
+.Z [
+Parse[ `
+(` a
+SquareFootagea n
+)n o
+==p r
+$nums t
+)t u
+{ 
+continue 
+; 
+}   
+PropertyListingData!! #
+.!!# $
+Add!!$ '
+(!!' (
+new!!( +
+PropertyListingData!!, ?
+{"" 
+Label## 
+=## 
+float## !
+.##! "
+Parse##" '
+(##' (
+Price##( -
+)##- .
+,##. /
+Features$$ 
+=$$ 
+new$$ "
+float$$# (
+[$$( )
+]$$) *
+{$$+ ,
+float$$- 2
+.$$2 3
+Parse$$3 8
+($$8 9
+NumberOfBedrooms$$9 I
+)$$I J
+,$$J K
+($$L M
+float$$M R
+)$$R S
+($$S T
+float$$T Y
+.$$Y Z
+Parse$$Z _
+($$_ `
+SquareFootage$$` m
+)$$m n
+*$$o p
+$num$$q y
+)$$y z
+}$${ |
+}%% 
+)%% 
+;%% 
+}&& 
+return'' 
+PropertyListingData'' &
+;''& '
+}(( 	
+public)) 
+int)) '
+GetPropertyListingDataCount)) .
+()). /
+)))/ 0
+{** 	
+return++ 
+PropertyListingData++ &
+.++& '
+Count++' ,
+;++, -
+},, 	
+}-- 
+}.. ñ
 SC:\Users\cezar\desktop\RealEstateManagement\Application\AIML\PropertyListingData.cs
 	namespace 	
 Application
@@ -9717,17 +9695,18 @@ VectorType	 
 $num 
 ) 
 ] 
-public		 
-float		 
-[		 
-]		 
-Features		 
-{		  !
-get		" %
-;		% &
-set		' *
-;		* +
-}		, -
+public		 
+required		 
+float		 
+[		 
+]		 
+Features		  (
+{		) *
+get		+ .
+;		. /
+set		0 3
+;		3 4
+}		5 6
 }
 
  

@@ -18,12 +18,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UsersControllerTests.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/PropertyListingsControllerTests.cs",
                 "region": {
-                  "startLine": 63,
-                  "startColumn": 50,
-                  "endLine": 63,
-                  "endColumn": 54
+                  "startLine": 62,
+                  "startColumn": 61,
+                  "endLine": 62,
+                  "endColumn": 65
                 }
               }
             }
@@ -39,12 +39,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/PropertyListingsControllerTests.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UsersControllerTests.cs",
                 "region": {
-                  "startLine": 62,
-                  "startColumn": 61,
-                  "endLine": 62,
-                  "endColumn": 65
+                  "startLine": 63,
+                  "startColumn": 50,
+                  "endLine": 63,
+                  "endColumn": 54
                 }
               }
             }
@@ -94,88 +94,9 @@
           "properties": {
             "warningLevel": 1
           }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GenerateCreatePropertyListingCommand' does not access instance data and can be marked as static",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
-                "region": {
-                  "startLine": 60,
-                  "startColumn": 46,
-                  "endLine": 60,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GeneratePropertyListing' does not access instance data and can be marked as static",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/CreatePropertyListingCommandHandlerTests.cs",
-                "region": {
-                  "startLine": 78,
-                  "startColumn": 33,
-                  "endLine": 78,
-                  "endColumn": 56
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CA1822",
-          "level": "note",
-          "message": "Member 'GenerateUpdatePropertyListingCommand' does not access instance data and can be marked as static",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/RealEstateManagement.Application.UnitTests/UpdatePropertyListingCommandHandlerTests.cs",
-                "region": {
-                  "startLine": 74,
-                  "startColumn": 46,
-                  "endLine": 74,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
         }
       ],
       "rules": {
-        "CA1822": {
-          "id": "CA1822",
-          "shortDescription": "Mark members as static",
-          "fullDescription": "Members that do not access instance data or call instance methods can be marked as static. After you mark the methods as static, the compiler will emit nonvirtual call sites to these members. This can give you a measurable performance gain for performance-sensitive code.",
-          "defaultLevel": "note",
-          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
-          "properties": {
-            "category": "Performance",
-            "isEnabledByDefault": true,
-            "tags": [
-              "PortedFromFxCop",
-              "Telemetry",
-              "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
         "CS8625": {
           "id": "CS8625",
           "shortDescription": "Cannot convert null literal to non-nullable reference type.",

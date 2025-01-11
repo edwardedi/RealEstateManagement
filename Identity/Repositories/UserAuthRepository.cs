@@ -38,7 +38,7 @@ namespace Identity.Repositories
                 {
                     new Claim(ClaimTypes.NameIdentifier, existingUser.UserId.ToString()),
                     new Claim("name", existingUser.Name ?? string.Empty),
-                    new Claim(ClaimTypes.Email, existingUser.Email),
+                    new Claim(ClaimTypes.Email, existingUser.Email ?? string.Empty),
                     new Claim("phone_number", existingUser.PhoneNumber ?? string.Empty)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),

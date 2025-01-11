@@ -4,10 +4,10 @@ rC:\Users\cezar\desktop\RealEstateManagement\Domain\obj\Debug\net9.0\.NETCoreApp
 \C:\Users\cezar\desktop\RealEstateManagement\Domain\obj\Debug\net9.0\Domain.GlobalUsings.g.csutf-8[
 RC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserRepository.csutf-8_
 VC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.csutf-8b
-YC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.csutf-8f
-]C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.csutf-8d
-[C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.csutf-8L
-CC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\User.csutf-8S
+YC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.csutf-8L
+CC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\User.csutf-8d
+[C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.csutf-8f
+]C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IPropertyListingRepository.csutf-8S
 JC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\Transaction.csutf-8W
 NC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\PropertyListing.csutf-8U
 LC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\ClientInquiry.csutf-8L

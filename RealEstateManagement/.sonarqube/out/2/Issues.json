@@ -14,40 +14,6 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable property 'Features' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingData.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 24,
-                  "endLine": 9,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingData.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 24,
-                  "endLine": 9,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
           "message": "Non-nullable field 'model' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
@@ -101,27 +67,6 @@
           }
         },
         {
-          "ruleId": "S3260",
-          "level": "warning",
-          "message": "Private classes which are not derived in the current assembly should be marked as 'sealed'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
-                "region": {
-                  "startLine": 43,
-                  "startColumn": 23,
-                  "endLine": 43,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "S3459",
           "level": "warning",
           "message": "Remove unassigned auto-property 'Score', or set its value.",
@@ -130,9 +75,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 46,
+                  "startLine": 43,
                   "startColumn": 26,
-                  "endLine": 46,
+                  "endLine": 43,
                   "endColumn": 31
                 }
               }
@@ -151,9 +96,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
                 "region": {
-                  "startLine": 46,
+                  "startLine": 43,
                   "startColumn": 39,
-                  "endLine": 46,
+                  "endLine": 43,
                   "endColumn": 42
                 }
               }
@@ -164,18 +109,18 @@
           }
         },
         {
-          "ruleId": "S1144",
+          "ruleId": "S1244",
           "level": "warning",
-          "message": "Remove the unused private property 'Label'.",
+          "message": "Do not check floating point equality with exact values, use a range instead.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
                 "region": {
-                  "startLine": 45,
-                  "startColumn": 26,
-                  "endLine": 45,
-                  "endColumn": 31
+                  "startLine": 29,
+                  "startColumn": 40,
+                  "endLine": 29,
+                  "endColumn": 42
                 }
               }
             }
@@ -185,18 +130,39 @@
           }
         },
         {
-          "ruleId": "S1481",
+          "ruleId": "S1244",
           "level": "warning",
-          "message": "Remove the unused local variable 'preprocessedData'.",
+          "message": "Do not check floating point equality with exact values, use a range instead.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingPricePredictionModel.cs",
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
                 "region": {
-                  "startLine": 20,
-                  "startColumn": 17,
-                  "endLine": 20,
-                  "endColumn": 33
+                  "startLine": 29,
+                  "startColumn": 78,
+                  "endLine": 29,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1244",
+          "level": "warning",
+          "message": "Do not check floating point equality with exact values, use a range instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 113,
+                  "endLine": 29,
+                  "endColumn": 115
                 }
               }
             }
@@ -218,48 +184,6 @@
                   "startColumn": 30,
                   "endLine": 9,
                   "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
-                "region": {
-                  "startLine": 19,
-                  "startColumn": 34,
-                  "endLine": 19,
-                  "endColumn": 41
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1125",
-          "level": "warning",
-          "message": "Remove the unnecessary Boolean literal(s).",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Application/AIML/PropertyListingDataAggregator.cs",
-                "region": {
-                  "startLine": 21,
-                  "startColumn": 34,
-                  "endLine": 21,
-                  "endColumn": 42
                 }
               }
             }
@@ -313,23 +237,6 @@
             ]
           }
         },
-        "S1125": {
-          "id": "S1125",
-          "shortDescription": "Boolean literals should not be redundant",
-          "fullDescription": "A boolean literal can be represented in two different ways: true or false. They can be combined with logical operators (!, &&, ||, ==, !=) to produce logical expressions that represent truth values. However, comparing a boolean literal to a variable or expression that evaluates to a boolean value is unnecessary and can make the code harder to read and understand. The more complex a boolean expression is, the harder it will be for developers to understand its meaning and expected behavior, and it will favour the introduction of new bugs.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1125",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
         "S1144": {
           "id": "S1144",
           "shortDescription": "Unused private types or members should be removed",
@@ -347,35 +254,19 @@
             ]
           }
         },
-        "S1481": {
-          "id": "S1481",
-          "shortDescription": "Unused local variables should be removed",
-          "fullDescription": "An unused local variable is a variable that has been declared but is not used anywhere in the block of code where it is defined. It is dead code, contributing to unnecessary complexity and leading to confusion when reading the code. Therefore, it should be removed from your code to maintain clarity and efficiency.",
+        "S1244": {
+          "id": "S1244",
+          "shortDescription": "Floating point numbers should not be tested for equality",
+          "fullDescription": "Floating point numbers in C# (and in most other programming languages) are not precise. They are a binary approximation of the actual value. This means that even if two floating point numbers appear to be equal, they might not be due to the tiny differences in their binary representation.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1244",
           "properties": {
-            "category": "Minor Code Smell",
+            "category": "Major Bug",
             "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",
               "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S3260": {
-          "id": "S3260",
-          "shortDescription": "Non-derived \"private\" classes and records should be \"sealed\"",
-          "fullDescription": "Classes and records with either private or file access modifiers aren’t visible outside of their assemblies or files, so if they’re not extended inside their scope, they should be made explicitly non-extensible with the addition of the sealed keyword.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3260",
-          "properties": {
-            "category": "Minor Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
               "SonarWay"
             ]
           }

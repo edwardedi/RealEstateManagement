@@ -22,7 +22,7 @@ namespace RealEstateManagement.IntegrationTests
         {
             dbContext.Database.EnsureDeleted();
             dbContext.Dispose();
-            //GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
 
         [Fact]

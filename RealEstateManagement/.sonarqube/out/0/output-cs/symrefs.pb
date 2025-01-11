@@ -1,27 +1,38 @@
-∆
-LC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
+¥
+RC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserRepository.cs
 
- 
+ $
 
- 
+( 8
 
- 
+		 +
 
- "
-
- 
-
-		 
+		1 3
 
 
 
- &
+ *
 
- &
+
+
+0 4
 
- &
+ *
 
- 'õ
+0 2†
+VC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.cs
+
+ (
+
+ #
+
+) -
+
+A R
+
+		 "
+
+		( ,õ
 YC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\ITransactionRepository.cs
 
  +
@@ -58,20 +69,20 @@ YC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\ITransactionRep
 
  1
 
-7 9†
-VC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserAuthRepository.cs
+7 9ç
+CC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\User.cs
 
- (
+ 
 
- #
+ 
 
-) -
+ 
 
-A R
+ 
 
-		 "
+ "
 
-		( ,Ö
+		 #Ö
 [C:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IClientInquiryRepository.cs
 
  -
@@ -133,20 +144,7 @@ VC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserAuthReposi
 
  -
 
-3 5ç
-CC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\User.cs
-
- 
-
- 
-
- 
-
- 
-
- "
-
-		 #î
+3 5î
 JC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\Transaction.cs
 
  
@@ -190,28 +188,30 @@ NC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\PropertyListing.cs
 
   
 
- ¥
-RC:\Users\cezar\desktop\RealEstateManagement\Domain\Repositories\IUserRepository.cs
+ ∆
+LC:\Users\cezar\desktop\RealEstateManagement\Domain\Entities\ClientInquiry.cs
 
- $
+ 
 
-( 8
+ 
 
-		 +
+ 
 
-		1 3
+ "
+
+ 
+
+		 
 
 
 
- *
+ &
 
-
-
-0 4
+ &
 
- *
+ &
 
-0 2ı
+ 'ı
 CC:\Users\cezar\desktop\RealEstateManagement\Domain\Common\Result.cs
    F
   		  ( )  

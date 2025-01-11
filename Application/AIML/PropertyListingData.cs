@@ -6,6 +6,6 @@ namespace Application.AIML
     {
         public float Label { get; set; }
         [VectorType(2)]
-        public float[] Features { get; set; }
+        public required float[] Features { get; set; }
     }
 }

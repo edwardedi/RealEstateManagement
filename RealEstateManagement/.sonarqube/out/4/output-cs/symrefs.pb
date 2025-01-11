@@ -202,22 +202,7 @@ jC:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\Pr
 °° 
 ±± 
 ±±( /
-±±@ GÀ
-xC:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingPricePredictionController.cs
-
- 92
-
-
-= ` / / 6 6
-  !
- 6 @
-
-# /
-D S? N
-
-# +
-  !
- @ J·
+±±@ G·
 iC:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\ClientInquiriesController.cs
 
  *Z
@@ -250,7 +235,22 @@ iC:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\Cl
 
 LLB Z
 LLb mNNZ e
-NN OO Ä
+NN OO À
+xC:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\PropertyListingPricePredictionController.cs
+
+ 92
+
+
+= ` / / 6 6
+  !
+ 6 @
+
+# /
+D S? N
+
+# +
+  !
+ @ JÄ
 ^C:\Users\cezar\desktop\RealEstateManagement\RealEstateManagement\Controllers\AuthController.cs
 
 		 (

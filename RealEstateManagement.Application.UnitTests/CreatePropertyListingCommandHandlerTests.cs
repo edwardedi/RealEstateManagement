@@ -57,7 +57,7 @@ namespace RealEstateManagement.Application.UnitTests
             result.ErrorMessage.Should().Be("Database error");
         }
 
-        private CreatePropertyListingCommand GenerateCreatePropertyListingCommand()
+        private static CreatePropertyListingCommand GenerateCreatePropertyListingCommand()
         {
             return new CreatePropertyListingCommand
             {
@@ -75,7 +75,7 @@ namespace RealEstateManagement.Application.UnitTests
             };
         }
 
-        private PropertyListing GeneratePropertyListing(CreatePropertyListingCommand command)
+        private static PropertyListing GeneratePropertyListing(CreatePropertyListingCommand command)
         {
             return new PropertyListing
             {

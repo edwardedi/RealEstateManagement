@@ -139,7 +139,7 @@
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
     <Property Name="sonar.core.id">147B411E-AZMgyOHPqO90bDCGvENw</Property>
-    <Property Name="sonar.core.startTime">1/11/2025 15:56:44</Property>
+    <Property Name="sonar.core.startTime">1/11/2025 20:07:39</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.cs.vscoveragexml.reportsPaths">coverage.xml</Property>

@@ -23,9 +23,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 9,
+                  "startLine": 10,
                   "startColumn": 16,
-                  "endLine": 9,
+                  "endLine": 10,
                   "endColumn": 36
                 }
               }
@@ -36,9 +36,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 12,
+                  "startLine": 13,
                   "startColumn": 39,
-                  "endLine": 12,
+                  "endLine": 13,
                   "endColumn": 55
                 }
               }
@@ -60,9 +60,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 9,
+                  "startLine": 10,
                   "startColumn": 16,
-                  "endLine": 9,
+                  "endLine": 10,
                   "endColumn": 36
                 }
               }
@@ -73,9 +73,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 13,
+                  "startLine": 14,
                   "startColumn": 37,
-                  "endLine": 13,
+                  "endLine": 14,
                   "endColumn": 52
                 }
               }
@@ -97,9 +97,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 9,
+                  "startLine": 10,
                   "startColumn": 16,
-                  "endLine": 9,
+                  "endLine": 10,
                   "endColumn": 36
                 }
               }
@@ -110,9 +110,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 14,
+                  "startLine": 15,
                   "startColumn": 35,
-                  "endLine": 14,
+                  "endLine": 15,
                   "endColumn": 47
                 }
               }
@@ -134,9 +134,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 9,
+                  "startLine": 10,
                   "startColumn": 16,
-                  "endLine": 9,
+                  "endLine": 10,
                   "endColumn": 36
                 }
               }
@@ -147,31 +147,10 @@
               "physicalLocation": {
                 "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
                 "region": {
-                  "startLine": 15,
+                  "startLine": 16,
                   "startColumn": 28,
-                  "endLine": 15,
+                  "endLine": 16,
                   "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'data' in 'Result<Transaction> Result<Transaction>.Success(Transaction data)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Repositories/TransactionRepository.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 52,
-                  "endLine": 35,
-                  "endColumn": 63
                 }
               }
             }
@@ -521,67 +500,6 @@
           }
         },
         {
-          "ruleId": "S1192",
-          "level": "warning",
-          "message": "Define a constant instead of using this literal 'uuid_generate_v4()' 4 times.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 26,
-                  "startColumn": 101,
-                  "endLine": 26,
-                  "endColumn": 121
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 96,
-                  "endLine": 48,
-                  "endColumn": 116
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 58,
-                  "startColumn": 100,
-                  "endLine": 58,
-                  "endColumn": 120
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/cezar/desktop/RealEstateManagement/Infrastructure/Persistance/ApplicationDbContext.cs",
-                "region": {
-                  "startLine": 86,
-                  "startColumn": 93,
-                  "endLine": 86,
-                  "endColumn": 113
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null,
-              "1": null,
-              "2": null
-            }
-          }
-        },
-        {
           "ruleId": "CA1862",
           "level": "note",
           "message": "Prefer the string comparison method overload of 'string.Contains(string)' that takes a 'StringComparison' enum value to perform a case-insensitive comparison, but keep in mind that this might cause subtle changes in behavior, so make sure to conduct thorough testing after applying the suggestion, or if culturally sensitive comparison is not required, consider using 'StringComparison.OrdinalIgnoreCase'",
@@ -620,20 +538,6 @@
             "tags": [
               "Telemetry",
               "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
-        "CS8604": {
-          "id": "CS8604",
-          "shortDescription": "Possible null reference argument.",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
             ]
           }
         },

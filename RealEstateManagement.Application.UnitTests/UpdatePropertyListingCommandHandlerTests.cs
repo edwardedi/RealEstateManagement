@@ -71,7 +71,7 @@ namespace RealEstateManagement.Application.UnitTests
             result.ErrorMessage.Should().Be("Listing not found.");
         }
 
-        private UpdatePropertyListingCommand GenerateUpdatePropertyListingCommand()
+        private  static UpdatePropertyListingCommand GenerateUpdatePropertyListingCommand()
         {
             return new UpdatePropertyListingCommand
             {

@@ -1,4 +1,161 @@
-Ä4
+œ
+KC:\Users\cezar\desktop\RealEstateManagement\Identity\DependencyInjection.cs
+	namespace 	
+Identity
+ 
+{ 
+public 
+
+static 
+class 
+DependencyInjection +
+{ 
+public 
+static 
+IServiceCollection (
+AddIdentity) 4
+(4 5
+this5 9
+IServiceCollection: L
+servicesM U
+,U V
+IConfigurationW e
+configurationf s
+)s t
+{ 	
+services 
+. 
+AddDbContext %
+<% & 
+ApplicationDbContext& :
+>: ;
+(; <
+options< C
+=>D F
+options 
+. 
+	UseNpgsql !
+(! "
+configuration !
+.! "
+GetConnectionString" 5
+(5 6
+$str6 I
+)I J
+,J K
+b 
+=> 
+b 
+. 
+MigrationsAssembly -
+(- .
+typeof. 4
+(4 5 
+ApplicationDbContext5 I
+)I J
+.J K
+AssemblyK S
+.S T
+FullNameT \
+)\ ]
+)] ^
+)^ _
+;_ `
+var 
+key 
+= 
+Encoding 
+. 
+ASCII $
+.$ %
+GetBytes% -
+(- .
+$str. U
+)U V
+;V W
+services 
+. 
+AddAuthentication &
+(& '
+options' .
+=>/ 1
+{ 
+options 
+. %
+DefaultAuthenticateScheme 1
+=2 3
+JwtBearerDefaults4 E
+.E F 
+AuthenticationSchemeF Z
+;Z [
+options 
+. "
+DefaultChallengeScheme .
+=/ 0
+JwtBearerDefaults1 B
+.B C 
+AuthenticationSchemeC W
+;W X
+} 
+) 
+. 
+AddJwtBearer 
+( 
+options !
+=>" $
+{ 
+options 
+. %
+TokenValidationParameters 1
+=2 3
+new4 7%
+TokenValidationParameters8 Q
+{ 
+ValidateIssuer   "
+=  # $
+false  % *
+,  * +
+ValidateAudience!! $
+=!!% &
+false!!' ,
+,!!, -
+ValidateLifetime"" $
+=""% &
+true""' +
+,""+ ,$
+ValidateIssuerSigningKey## ,
+=##- .
+true##/ 3
+,##3 4
+IssuerSigningKey$$ $
+=$$% &
+new$$' * 
+SymmetricSecurityKey$$+ ?
+($$? @
+key$$@ C
+)$$C D
+}%% 
+;%% 
+}&& 
+)&& 
+;&& 
+services(( 
+.(( 
+	AddScoped(( 
+<(( 
+IUserAuthRepository(( 2
+,((2 3
+UserAuthRepository((4 F
+>((F G
+(((G H
+)((H I
+;((I J
+return** 
+services** 
+;** 
+}++ 	
+},, 
+}-- Š5
 WC:\Users\cezar\desktop\RealEstateManagement\Identity\Repositories\UserAuthRepository.cs
 	namespace 	
 Identity
@@ -199,9 +356,13 @@ ClaimTypes)) (
 ,)). /
 existingUser))0 <
 .))< =
-Email))= B
-)))B C
-,))C D
+Email))= B
+??))C E
+string))F L
+.))L M
+Empty))M R
+)))R S
+,))S T
 new** 
 Claim** 
 (** 
@@ -367,161 +528,4 @@ WriteToken117 A
 ;>>4 5
 }?? 	
 }@@ 
-}AA œ
-KC:\Users\cezar\desktop\RealEstateManagement\Identity\DependencyInjection.cs
-	namespace 	
-Identity
- 
-{ 
-public 
-
-static 
-class 
-DependencyInjection +
-{ 
-public 
-static 
-IServiceCollection (
-AddIdentity) 4
-(4 5
-this5 9
-IServiceCollection: L
-servicesM U
-,U V
-IConfigurationW e
-configurationf s
-)s t
-{ 	
-services 
-. 
-AddDbContext %
-<% & 
-ApplicationDbContext& :
->: ;
-(; <
-options< C
-=>D F
-options 
-. 
-	UseNpgsql !
-(! "
-configuration !
-.! "
-GetConnectionString" 5
-(5 6
-$str6 I
-)I J
-,J K
-b 
-=> 
-b 
-. 
-MigrationsAssembly -
-(- .
-typeof. 4
-(4 5 
-ApplicationDbContext5 I
-)I J
-.J K
-AssemblyK S
-.S T
-FullNameT \
-)\ ]
-)] ^
-)^ _
-;_ `
-var 
-key 
-= 
-Encoding 
-. 
-ASCII $
-.$ %
-GetBytes% -
-(- .
-$str. U
-)U V
-;V W
-services 
-. 
-AddAuthentication &
-(& '
-options' .
-=>/ 1
-{ 
-options 
-. %
-DefaultAuthenticateScheme 1
-=2 3
-JwtBearerDefaults4 E
-.E F 
-AuthenticationSchemeF Z
-;Z [
-options 
-. "
-DefaultChallengeScheme .
-=/ 0
-JwtBearerDefaults1 B
-.B C 
-AuthenticationSchemeC W
-;W X
-} 
-) 
-. 
-AddJwtBearer 
-( 
-options !
-=>" $
-{ 
-options 
-. %
-TokenValidationParameters 1
-=2 3
-new4 7%
-TokenValidationParameters8 Q
-{ 
-ValidateIssuer   "
-=  # $
-false  % *
-,  * +
-ValidateAudience!! $
-=!!% &
-false!!' ,
-,!!, -
-ValidateLifetime"" $
-=""% &
-true""' +
-,""+ ,$
-ValidateIssuerSigningKey## ,
-=##- .
-true##/ 3
-,##3 4
-IssuerSigningKey$$ $
-=$$% &
-new$$' * 
-SymmetricSecurityKey$$+ ?
-($$? @
-key$$@ C
-)$$C D
-}%% 
-;%% 
-}&& 
-)&& 
-;&& 
-services(( 
-.(( 
-	AddScoped(( 
-<(( 
-IUserAuthRepository(( 2
-,((2 3
-UserAuthRepository((4 F
->((F G
-(((G H
-)((H I
-;((I J
-return** 
-services** 
-;** 
-}++ 	
-},, 
-}-- 
+}AA 
