@@ -9,6 +9,7 @@ using Application.Use_Cases.Transactions.Commands;
 using Application.Use_Cases.Commands;
 using AutoMapper;
 using RealEstateManagement.Application.Transactions.Commands;
+using System.Security.Claims;
 
 namespace RealEstateManagement.Controllers
 {
@@ -30,10 +31,20 @@ namespace RealEstateManagement.Controllers
         [HttpPost]
         public async Task<ActionResult<Guid>> AddTransaction([FromBody] CreateTransactionCommand command)
         {
+            if (!IsUserAuthorized(command.BuyerId))
+            {
+                return Forbid();
+            }
+
             var propertyListing = await propertyListingRepository.GetListingByIdAsync(command.PropertyId);
             if (!propertyListing.IsSuccess)
             {
                 return BadRequest(propertyListing.ErrorMessage);
+            }
+
+            if(propertyListing.Data.UserID != command.SellerId)
+            {
+                return BadRequest("Property does not belong to seller");
             }
 
             var updatePropertyListingCommand = mapper.Map<UpdatePropertyListingCommand>(propertyListing.Data);
@@ -164,6 +175,12 @@ namespace RealEstateManagement.Controllers
             {
                 return NotFound();
             }
+        }
+
+        private bool IsUserAuthorized(Guid userId)
+        {
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return currentUserId != null && currentUserId == userId.ToString();
         }
     }
 }

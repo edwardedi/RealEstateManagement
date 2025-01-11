@@ -21,13 +21,7 @@ namespace RealEstateManagement.Controllers
         {
             this.mediator = mediator;
         }
-
-        private bool IsUserAuthorized(Guid userId)
-        {
-            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return currentUserId != null && currentUserId == userId.ToString();
-        }
-
+        
         [HttpPost]
         [Authorize]
         public async Task<ActionResult<Result<Guid>>> CreatePropertyListing(CreatePropertyListingCommand command)
@@ -59,6 +53,11 @@ namespace RealEstateManagement.Controllers
             }
 
             if (!IsUserAuthorized(command.UserID))
+            {
+                return Forbid();
+            }
+
+            if (!DoesPropertyListingBelongToUser(id))
             {
                 return Forbid();
             }
@@ -127,6 +126,10 @@ namespace RealEstateManagement.Controllers
         [Authorize]
         public async Task<IActionResult> DeletePropertyListing(Guid id)
         {
+            if(!DoesPropertyListingBelongToUser(id))
+            {
+                return Forbid();
+            }
             var result = await mediator.Send(new DeletePropertyListingCommand { PropertyId = id });
             if (result.IsSuccess)
             {
@@ -154,6 +157,24 @@ namespace RealEstateManagement.Controllers
             };
             var result = await mediator.Send(query);
             return Ok(result);
+        }
+
+        private bool IsUserAuthorized(Guid userId)
+        {
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return currentUserId != null && currentUserId == userId.ToString();
+        }
+
+        private bool DoesPropertyListingBelongToUser(Guid propertyId)
+        {
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (currentUserId == null)
+            {
+                return false;
+            }
+
+            var listing = mediator.Send(new GetListingByIdQuery { PropertyId = propertyId }).Result;
+            return listing.IsSuccess && listing.Data != null && listing.Data.UserID.ToString() == currentUserId;
         }
     }
 }

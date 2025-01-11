@@ -5,6 +5,8 @@ using Application.Use_Cases.Users.Queries;
 using Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace RealEstateManagement.Controllers
 {
@@ -21,6 +23,10 @@ namespace RealEstateManagement.Controllers
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<Result<Unit>>> UpdateUser(Guid id, UpdateUserCommand command)
         {
+            if (!IsUserAuthorized(command.UserId))
+            {
+                return Forbid();
+            }
             if (id != command.UserId)
             {
                 return BadRequest();
@@ -34,12 +40,15 @@ namespace RealEstateManagement.Controllers
             {
                 return BadRequest(result.ErrorMessage);
             }
-
         }
 
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
+            if (!IsUserAuthorized(id))
+            {
+                return Forbid();
+            }
             var result = await mediator.Send(new DeleteUserCommand { UserId = id });
             if (result.IsSuccess)
             {
@@ -79,6 +88,12 @@ namespace RealEstateManagement.Controllers
             {
                 return BadRequest(result.ErrorMessage);
             }
+        }
+
+        private bool IsUserAuthorized(Guid userId)
+        {
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return currentUserId != null && currentUserId == userId.ToString();
         }
     }
 }
